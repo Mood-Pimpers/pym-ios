@@ -1,0 +1,2097 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1FB7701259109A30010F791 /* PymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7700259109A30010F791 /* PymApp.swift */; };
+		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
+		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
+		B1FB7708259109A60010F791 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7707259109A60010F791 /* Preview Assets.xcassets */; };
+		B1FB7713259109A60010F791 /* PymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7712259109A60010F791 /* PymTests.swift */; };
+		B1FB773A25910C060010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B1FB773B25910C060010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB774525910C940010F791 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1FB774425910C940010F791 /* ComposableArchitecture */; };
+		B1FB7791259135030010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
+		B1FB7798259135030010F791 /* PymCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7797259135030010F791 /* PymCoreTests.swift */; };
+		B1FB779D259135030010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
+		B1FB779E259135030010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB77D8259141B10010F791 /* PymCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB77D7259141B10010F791 /* PymCore.swift */; };
+		B1FB77FA259147620010F791 /* PymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB771D259109A60010F791 /* PymUITests.swift */; };
+		B1FB7818259147CB0010F791 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB780F259147CB0010F791 /* Onboarding.framework */; };
+		B1FB781F259147CB0010F791 /* OnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB781E259147CB0010F791 /* OnboardingTests.swift */; };
+		B1FB7824259147CB0010F791 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB780F259147CB0010F791 /* Onboarding.framework */; };
+		B1FB7825259147CB0010F791 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB780F259147CB0010F791 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB7836259147F90010F791 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7835259147F90010F791 /* Onboarding.swift */; };
+		B1FB7858259149540010F791 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
+		B1FB785F259149540010F791 /* CheckInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB785E259149540010F791 /* CheckInTests.swift */; };
+		B1FB7864259149540010F791 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
+		B1FB7865259149540010F791 /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB7883259149C80010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
+		B1FB7884259149C80010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB788F259149D50010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
+		B1FB7890259149D50010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB789B259149E00010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B1FB789C259149E00010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB78F025914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
+		B1FB78F725914A230010F791 /* InsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB78F625914A230010F791 /* InsightsTests.swift */; };
+		B1FB78FC25914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
+		B1FB78FD25914A230010F791 /* Insights.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1FB791725914A490010F791 /* Insights.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* Insights.swift */; };
+		B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckIn.swift */; };
+		B1FB792A25914A720010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
+		B1FB792B25914A720010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1FB770F259109A60010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB771A259109A60010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB773825910C060010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B1FB7792259135030010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB7787259135030010F791;
+			remoteInfo = PymCore;
+		};
+		B1FB7794259135030010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB779B259135030010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB7787259135030010F791;
+			remoteInfo = PymCore;
+		};
+		B1FB7819259147CB0010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB780E259147CB0010F791;
+			remoteInfo = Onboarding;
+		};
+		B1FB781B259147CB0010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB7822259147CB0010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB780E259147CB0010F791;
+			remoteInfo = Onboarding;
+		};
+		B1FB7859259149540010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB784E259149540010F791;
+			remoteInfo = CheckIn;
+		};
+		B1FB785B259149540010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB7862259149540010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB784E259149540010F791;
+			remoteInfo = CheckIn;
+		};
+		B1FB7885259149C80010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB7787259135030010F791;
+			remoteInfo = PymCore;
+		};
+		B1FB7891259149D50010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB7787259135030010F791;
+			remoteInfo = PymCore;
+		};
+		B1FB789D259149E00010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B1FB78F125914A230010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB78E625914A230010F791;
+			remoteInfo = Insights;
+		};
+		B1FB78F325914A230010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB76FC259109A30010F791;
+			remoteInfo = Pym;
+		};
+		B1FB78FA25914A230010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB78E625914A230010F791;
+			remoteInfo = Insights;
+		};
+		B1FB792C25914A720010F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB7787259135030010F791;
+			remoteInfo = PymCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1FB773F25910C060010F791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FB779E259135030010F791 /* PymCore.framework in Embed Frameworks */,
+				B1FB7825259147CB0010F791 /* Onboarding.framework in Embed Frameworks */,
+				B1FB7865259149540010F791 /* CheckIn.framework in Embed Frameworks */,
+				B1FB773B25910C060010F791 /* PymCommon.framework in Embed Frameworks */,
+				B1FB78FD25914A230010F791 /* Insights.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7882259149B70010F791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FB7884259149C80010F791 /* PymCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7893259149D50010F791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FB7890259149D50010F791 /* PymCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB789F259149E00010F791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FB789C259149E00010F791 /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB792E25914A720010F791 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1FB792B25914A720010F791 /* PymCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B1FB76FD259109A30010F791 /* Pym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pym.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7700259109A30010F791 /* PymApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymApp.swift; sourceTree = "<group>"; };
+		B1FB7702259109A30010F791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B1FB7704259109A60010F791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1FB7707259109A60010F791 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B1FB7709259109A60010F791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1FB770E259109A60010F791 /* PymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7712259109A60010F791 /* PymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymTests.swift; sourceTree = "<group>"; };
+		B1FB7719259109A60010F791 /* PymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB771D259109A60010F791 /* PymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymUITests.swift; sourceTree = "<group>"; };
+		B1FB773325910C060010F791 /* PymCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PymCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7788259135030010F791 /* PymCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PymCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7790259135030010F791 /* PymCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7797259135030010F791 /* PymCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymCoreTests.swift; sourceTree = "<group>"; };
+		B1FB77D7259141B10010F791 /* PymCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymCore.swift; sourceTree = "<group>"; };
+		B1FB780F259147CB0010F791 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7817259147CB0010F791 /* OnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB781E259147CB0010F791 /* OnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTests.swift; sourceTree = "<group>"; };
+		B1FB7835259147F90010F791 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		B1FB784F259149540010F791 /* CheckIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB7857259149540010F791 /* CheckInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB785E259149540010F791 /* CheckInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTests.swift; sourceTree = "<group>"; };
+		B1FB78E725914A230010F791 /* Insights.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Insights.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB78EF25914A230010F791 /* InsightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FB78F625914A230010F791 /* InsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTests.swift; sourceTree = "<group>"; };
+		B1FB791625914A490010F791 /* Insights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insights.swift; sourceTree = "<group>"; };
+		B1FB792025914A5F0010F791 /* CheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1FB76FA259109A30010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB779D259135030010F791 /* PymCore.framework in Frameworks */,
+				B1FB7824259147CB0010F791 /* Onboarding.framework in Frameworks */,
+				B1FB7864259149540010F791 /* CheckIn.framework in Frameworks */,
+				B1FB773A25910C060010F791 /* PymCommon.framework in Frameworks */,
+				B1FB78FC25914A230010F791 /* Insights.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB770B259109A60010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7716259109A60010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB773025910C060010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB774525910C940010F791 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7785259135030010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB789B259149E00010F791 /* PymCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB778D259135030010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7791259135030010F791 /* PymCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB780C259147CB0010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB788F259149D50010F791 /* PymCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7814259147CB0010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7818259147CB0010F791 /* Onboarding.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB784C259149540010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7883259149C80010F791 /* PymCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7854259149540010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7858259149540010F791 /* CheckIn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78E425914A230010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB792A25914A720010F791 /* PymCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78EC25914A230010F791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB78F025914A230010F791 /* Insights.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1FB76F4259109A30010F791 = {
+			isa = PBXGroup;
+			children = (
+				B1FB7709259109A60010F791 /* Info.plist */,
+				B1FB77C625913FA50010F791 /* App */,
+				B1FB7789259135030010F791 /* PymCore */,
+				B1FB7810259147CB0010F791 /* Onboarding */,
+				B1FB7850259149540010F791 /* CheckIn */,
+				B1FB78E825914A230010F791 /* Insights */,
+				B1FB76FE259109A30010F791 /* Products */,
+				B1FB783E2591481E0010F791 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B1FB76FE259109A30010F791 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB76FD259109A30010F791 /* Pym.app */,
+				B1FB770E259109A60010F791 /* PymTests.xctest */,
+				B1FB7719259109A60010F791 /* PymUITests.xctest */,
+				B1FB773325910C060010F791 /* PymCommon.framework */,
+				B1FB7788259135030010F791 /* PymCore.framework */,
+				B1FB7790259135030010F791 /* PymCoreTests.xctest */,
+				B1FB780F259147CB0010F791 /* Onboarding.framework */,
+				B1FB7817259147CB0010F791 /* OnboardingTests.xctest */,
+				B1FB784F259149540010F791 /* CheckIn.framework */,
+				B1FB7857259149540010F791 /* CheckInTests.xctest */,
+				B1FB78E725914A230010F791 /* Insights.framework */,
+				B1FB78EF25914A230010F791 /* InsightsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1FB7706259109A60010F791 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7707259109A60010F791 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B1FB7789259135030010F791 /* PymCore */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB77D4259141800010F791 /* Sources */,
+				B1FB77D62591419A0010F791 /* Tests */,
+			);
+			path = PymCore;
+			sourceTree = "<group>";
+		};
+		B1FB77C625913FA50010F791 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB77C725913FB80010F791 /* Resources */,
+				B1FB77C8259140150010F791 /* Sources */,
+				B1FB77DE259147110010F791 /* Tests */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B1FB77C725913FB80010F791 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7700259109A30010F791 /* PymApp.swift */,
+				B1FB7704259109A60010F791 /* Assets.xcassets */,
+				B1FB7706259109A60010F791 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1FB77C8259140150010F791 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7702259109A30010F791 /* RootView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1FB77D4259141800010F791 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB77D7259141B10010F791 /* PymCore.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1FB77D62591419A0010F791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7797259135030010F791 /* PymCoreTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1FB77DE259147110010F791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7712259109A60010F791 /* PymTests.swift */,
+				B1FB771D259109A60010F791 /* PymUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1FB7810259147CB0010F791 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7833259147DA0010F791 /* Sources */,
+				B1FB7834259147DF0010F791 /* Tests */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B1FB7833259147DA0010F791 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7835259147F90010F791 /* Onboarding.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1FB7834259147DF0010F791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB781E259147CB0010F791 /* OnboardingTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1FB783E2591481E0010F791 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1FB7850259149540010F791 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7874259149890010F791 /* Sources */,
+				B1FB78752591498E0010F791 /* Tests */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		B1FB7874259149890010F791 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB792025914A5F0010F791 /* CheckIn.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1FB78752591498E0010F791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB785E259149540010F791 /* CheckInTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1FB78E825914A230010F791 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB790C25914A2B0010F791 /* Sources */,
+				B1FB790D25914A320010F791 /* Tests */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		B1FB790C25914A2B0010F791 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB791625914A490010F791 /* Insights.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1FB790D25914A320010F791 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB78F625914A230010F791 /* InsightsTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B1FB772E25910C060010F791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7783259135030010F791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB780A259147CB0010F791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB784A259149540010F791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78E225914A230010F791 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B1FB76FC259109A30010F791 /* Pym */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7722259109A60010F791 /* Build configuration list for PBXNativeTarget "Pym" */;
+			buildPhases = (
+				B1FB76F9259109A30010F791 /* Sources */,
+				B1FB76FA259109A30010F791 /* Frameworks */,
+				B1FB76FB259109A30010F791 /* Resources */,
+				B1FB775E25910E3B0010F791 /* SwiftLint */,
+				B1FB775F25910E680010F791 /* SwiftFormat */,
+				B1FB773F25910C060010F791 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB773925910C060010F791 /* PBXTargetDependency */,
+				B1FB779C259135030010F791 /* PBXTargetDependency */,
+				B1FB7823259147CB0010F791 /* PBXTargetDependency */,
+				B1FB7863259149540010F791 /* PBXTargetDependency */,
+				B1FB78FB25914A230010F791 /* PBXTargetDependency */,
+			);
+			name = Pym;
+			productName = Pym;
+			productReference = B1FB76FD259109A30010F791 /* Pym.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1FB770D259109A60010F791 /* PymTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7725259109A60010F791 /* Build configuration list for PBXNativeTarget "PymTests" */;
+			buildPhases = (
+				B1FB770A259109A60010F791 /* Sources */,
+				B1FB770B259109A60010F791 /* Frameworks */,
+				B1FB770C259109A60010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB7710259109A60010F791 /* PBXTargetDependency */,
+			);
+			name = PymTests;
+			productName = PymTests;
+			productReference = B1FB770E259109A60010F791 /* PymTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1FB7718259109A60010F791 /* PymUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7728259109A60010F791 /* Build configuration list for PBXNativeTarget "PymUITests" */;
+			buildPhases = (
+				B1FB7715259109A60010F791 /* Sources */,
+				B1FB7716259109A60010F791 /* Frameworks */,
+				B1FB7717259109A60010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB771B259109A60010F791 /* PBXTargetDependency */,
+			);
+			name = PymUITests;
+			productName = PymUITests;
+			productReference = B1FB7719259109A60010F791 /* PymUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B1FB773225910C060010F791 /* PymCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB773C25910C060010F791 /* Build configuration list for PBXNativeTarget "PymCommon" */;
+			buildPhases = (
+				B1FB772E25910C060010F791 /* Headers */,
+				B1FB772F25910C060010F791 /* Sources */,
+				B1FB773025910C060010F791 /* Frameworks */,
+				B1FB773125910C060010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PymCommon;
+			packageProductDependencies = (
+				B1FB774425910C940010F791 /* ComposableArchitecture */,
+			);
+			productName = PymCommon;
+			productReference = B1FB773325910C060010F791 /* PymCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1FB7787259135030010F791 /* PymCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB779F259135030010F791 /* Build configuration list for PBXNativeTarget "PymCore" */;
+			buildPhases = (
+				B1FB7783259135030010F791 /* Headers */,
+				B1FB7784259135030010F791 /* Sources */,
+				B1FB7785259135030010F791 /* Frameworks */,
+				B1FB7786259135030010F791 /* Resources */,
+				B1FB789F259149E00010F791 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB789E259149E00010F791 /* PBXTargetDependency */,
+			);
+			name = PymCore;
+			productName = PymCore;
+			productReference = B1FB7788259135030010F791 /* PymCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1FB778F259135030010F791 /* PymCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB77A2259135030010F791 /* Build configuration list for PBXNativeTarget "PymCoreTests" */;
+			buildPhases = (
+				B1FB778C259135030010F791 /* Sources */,
+				B1FB778D259135030010F791 /* Frameworks */,
+				B1FB778E259135030010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB7793259135030010F791 /* PBXTargetDependency */,
+				B1FB7795259135030010F791 /* PBXTargetDependency */,
+			);
+			name = PymCoreTests;
+			productName = PymCoreTests;
+			productReference = B1FB7790259135030010F791 /* PymCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1FB780E259147CB0010F791 /* Onboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7826259147CB0010F791 /* Build configuration list for PBXNativeTarget "Onboarding" */;
+			buildPhases = (
+				B1FB780A259147CB0010F791 /* Headers */,
+				B1FB780B259147CB0010F791 /* Sources */,
+				B1FB780C259147CB0010F791 /* Frameworks */,
+				B1FB780D259147CB0010F791 /* Resources */,
+				B1FB7893259149D50010F791 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB7892259149D50010F791 /* PBXTargetDependency */,
+			);
+			name = Onboarding;
+			productName = Onboarding;
+			productReference = B1FB780F259147CB0010F791 /* Onboarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1FB7816259147CB0010F791 /* OnboardingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7829259147CB0010F791 /* Build configuration list for PBXNativeTarget "OnboardingTests" */;
+			buildPhases = (
+				B1FB7813259147CB0010F791 /* Sources */,
+				B1FB7814259147CB0010F791 /* Frameworks */,
+				B1FB7815259147CB0010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB781A259147CB0010F791 /* PBXTargetDependency */,
+				B1FB781C259147CB0010F791 /* PBXTargetDependency */,
+			);
+			name = OnboardingTests;
+			productName = OnboardingTests;
+			productReference = B1FB7817259147CB0010F791 /* OnboardingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1FB784E259149540010F791 /* CheckIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7866259149540010F791 /* Build configuration list for PBXNativeTarget "CheckIn" */;
+			buildPhases = (
+				B1FB784A259149540010F791 /* Headers */,
+				B1FB784B259149540010F791 /* Sources */,
+				B1FB784C259149540010F791 /* Frameworks */,
+				B1FB784D259149540010F791 /* Resources */,
+				B1FB7882259149B70010F791 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB7886259149C80010F791 /* PBXTargetDependency */,
+			);
+			name = CheckIn;
+			productName = CheckIn;
+			productReference = B1FB784F259149540010F791 /* CheckIn.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1FB7856259149540010F791 /* CheckInTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB7869259149540010F791 /* Build configuration list for PBXNativeTarget "CheckInTests" */;
+			buildPhases = (
+				B1FB7853259149540010F791 /* Sources */,
+				B1FB7854259149540010F791 /* Frameworks */,
+				B1FB7855259149540010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB785A259149540010F791 /* PBXTargetDependency */,
+				B1FB785C259149540010F791 /* PBXTargetDependency */,
+			);
+			name = CheckInTests;
+			productName = CheckInTests;
+			productReference = B1FB7857259149540010F791 /* CheckInTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1FB78E625914A230010F791 /* Insights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB78FE25914A230010F791 /* Build configuration list for PBXNativeTarget "Insights" */;
+			buildPhases = (
+				B1FB78E225914A230010F791 /* Headers */,
+				B1FB78E325914A230010F791 /* Sources */,
+				B1FB78E425914A230010F791 /* Frameworks */,
+				B1FB78E525914A230010F791 /* Resources */,
+				B1FB792E25914A720010F791 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB792D25914A720010F791 /* PBXTargetDependency */,
+			);
+			name = Insights;
+			productName = Insights;
+			productReference = B1FB78E725914A230010F791 /* Insights.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1FB78EE25914A230010F791 /* InsightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1FB790125914A230010F791 /* Build configuration list for PBXNativeTarget "InsightsTests" */;
+			buildPhases = (
+				B1FB78EB25914A230010F791 /* Sources */,
+				B1FB78EC25914A230010F791 /* Frameworks */,
+				B1FB78ED25914A230010F791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1FB78F225914A230010F791 /* PBXTargetDependency */,
+				B1FB78F425914A230010F791 /* PBXTargetDependency */,
+			);
+			name = InsightsTests;
+			productName = InsightsTests;
+			productReference = B1FB78EF25914A230010F791 /* InsightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1FB76F5259109A30010F791 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B1FB76FC259109A30010F791 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B1FB770D259109A60010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+					B1FB7718259109A60010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+					B1FB773225910C060010F791 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B1FB7787259135030010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					B1FB778F259135030010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+					B1FB780E259147CB0010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					B1FB7816259147CB0010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+					B1FB784E259149540010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					B1FB7856259149540010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+					B1FB78E625914A230010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					B1FB78EE25914A230010F791 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B1FB76FC259109A30010F791;
+					};
+				};
+			};
+			buildConfigurationList = B1FB76F8259109A30010F791 /* Build configuration list for PBXProject "Pym" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1FB76F4259109A30010F791;
+			packageReferences = (
+				B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1FB76FC259109A30010F791 /* Pym */,
+				B1FB770D259109A60010F791 /* PymTests */,
+				B1FB7718259109A60010F791 /* PymUITests */,
+				B1FB773225910C060010F791 /* PymCommon */,
+				B1FB7787259135030010F791 /* PymCore */,
+				B1FB778F259135030010F791 /* PymCoreTests */,
+				B1FB780E259147CB0010F791 /* Onboarding */,
+				B1FB7816259147CB0010F791 /* OnboardingTests */,
+				B1FB784E259149540010F791 /* CheckIn */,
+				B1FB7856259149540010F791 /* CheckInTests */,
+				B1FB78E625914A230010F791 /* Insights */,
+				B1FB78EE25914A230010F791 /* InsightsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1FB76FB259109A30010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7708259109A60010F791 /* Preview Assets.xcassets in Resources */,
+				B1FB7705259109A60010F791 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB770C259109A60010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7717259109A60010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB773125910C060010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7786259135030010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB778E259135030010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB780D259147CB0010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7815259147CB0010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB784D259149540010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7855259149540010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78E525914A230010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78ED25914A230010F791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1FB775E25910E3B0010F791 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if mint which swiftlint >/dev/null; then\n    if [ $CONFIGURATION = \"Debug\" ]; then\n        mint run swiftlint\n    fi\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		B1FB775F25910E680010F791 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if mint which swiftformat >/dev/null; then\n    if [ $CONFIGURATION = \"Debug\" ]; then\n        mint run swiftformat swiftformat . --disable trailingCommas --swiftversion 5.3\n    fi\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1FB76F9259109A30010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
+				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB770A259109A60010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7713259109A60010F791 /* PymTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7715259109A60010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB77FA259147620010F791 /* PymUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB772F25910C060010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7784259135030010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB77D8259141B10010F791 /* PymCore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB778C259135030010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7798259135030010F791 /* PymCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB780B259147CB0010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB7836259147F90010F791 /* Onboarding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7813259147CB0010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB781F259147CB0010F791 /* OnboardingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB784B259149540010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB7853259149540010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB785F259149540010F791 /* CheckInTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78E325914A230010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB791725914A490010F791 /* Insights.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1FB78EB25914A230010F791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1FB78F725914A230010F791 /* InsightsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1FB7710259109A60010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB770F259109A60010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB771B259109A60010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB771A259109A60010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB773925910C060010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B1FB773825910C060010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7793259135030010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB7787259135030010F791 /* PymCore */;
+			targetProxy = B1FB7792259135030010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7795259135030010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB7794259135030010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB779C259135030010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB7787259135030010F791 /* PymCore */;
+			targetProxy = B1FB779B259135030010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB781A259147CB0010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB780E259147CB0010F791 /* Onboarding */;
+			targetProxy = B1FB7819259147CB0010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB781C259147CB0010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB781B259147CB0010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7823259147CB0010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB780E259147CB0010F791 /* Onboarding */;
+			targetProxy = B1FB7822259147CB0010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB785A259149540010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB784E259149540010F791 /* CheckIn */;
+			targetProxy = B1FB7859259149540010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB785C259149540010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB785B259149540010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7863259149540010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB784E259149540010F791 /* CheckIn */;
+			targetProxy = B1FB7862259149540010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7886259149C80010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB7787259135030010F791 /* PymCore */;
+			targetProxy = B1FB7885259149C80010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB7892259149D50010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB7787259135030010F791 /* PymCore */;
+			targetProxy = B1FB7891259149D50010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB789E259149E00010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B1FB789D259149E00010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB78F225914A230010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB78E625914A230010F791 /* Insights */;
+			targetProxy = B1FB78F125914A230010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB78F425914A230010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB76FC259109A30010F791 /* Pym */;
+			targetProxy = B1FB78F325914A230010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB78FB25914A230010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB78E625914A230010F791 /* Insights */;
+			targetProxy = B1FB78FA25914A230010F791 /* PBXContainerItemProxy */;
+		};
+		B1FB792D25914A720010F791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB7787259135030010F791 /* PymCore */;
+			targetProxy = B1FB792C25914A720010F791 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B1FB7720259109A60010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1FB7721259109A60010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1FB7723259109A60010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"App/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1FB7724259109A60010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"App/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1FB7726259109A60010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				INFOPLIST_FILE = PymTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Debug;
+		};
+		B1FB7727259109A60010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				INFOPLIST_FILE = PymTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Release;
+		};
+		B1FB7729259109A60010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				INFOPLIST_FILE = PymUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pym;
+			};
+			name = Debug;
+		};
+		B1FB772A259109A60010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				INFOPLIST_FILE = PymUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pym;
+			};
+			name = Release;
+		};
+		B1FB773D25910C060010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1FB773E25910C060010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1FB77A0259135030010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1FB77A1259135030010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1FB77A3259135030010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PymCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Debug;
+		};
+		B1FB77A4259135030010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PymCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Release;
+		};
+		B1FB7827259147CB0010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Onboarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1FB7828259147CB0010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Onboarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1FB782A259147CB0010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OnboardingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.OnboardingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Debug;
+		};
+		B1FB782B259147CB0010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OnboardingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.OnboardingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Release;
+		};
+		B1FB7867259149540010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.CheckIn;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1FB7868259149540010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.CheckIn;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1FB786A259149540010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CheckInTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.CheckInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Debug;
+		};
+		B1FB786B259149540010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CheckInTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.CheckInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Release;
+		};
+		B1FB78FF25914A230010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Insights;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1FB790025914A230010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Insights;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1FB790225914A230010F791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InsightsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.InsightsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Debug;
+		};
+		B1FB790325914A230010F791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InsightsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.pym.InsightsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1FB76F8259109A30010F791 /* Build configuration list for PBXProject "Pym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7720259109A60010F791 /* Debug */,
+				B1FB7721259109A60010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7722259109A60010F791 /* Build configuration list for PBXNativeTarget "Pym" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7723259109A60010F791 /* Debug */,
+				B1FB7724259109A60010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7725259109A60010F791 /* Build configuration list for PBXNativeTarget "PymTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7726259109A60010F791 /* Debug */,
+				B1FB7727259109A60010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7728259109A60010F791 /* Build configuration list for PBXNativeTarget "PymUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7729259109A60010F791 /* Debug */,
+				B1FB772A259109A60010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB773C25910C060010F791 /* Build configuration list for PBXNativeTarget "PymCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB773D25910C060010F791 /* Debug */,
+				B1FB773E25910C060010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB779F259135030010F791 /* Build configuration list for PBXNativeTarget "PymCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB77A0259135030010F791 /* Debug */,
+				B1FB77A1259135030010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB77A2259135030010F791 /* Build configuration list for PBXNativeTarget "PymCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB77A3259135030010F791 /* Debug */,
+				B1FB77A4259135030010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7826259147CB0010F791 /* Build configuration list for PBXNativeTarget "Onboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7827259147CB0010F791 /* Debug */,
+				B1FB7828259147CB0010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7829259147CB0010F791 /* Build configuration list for PBXNativeTarget "OnboardingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB782A259147CB0010F791 /* Debug */,
+				B1FB782B259147CB0010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7866259149540010F791 /* Build configuration list for PBXNativeTarget "CheckIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB7867259149540010F791 /* Debug */,
+				B1FB7868259149540010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB7869259149540010F791 /* Build configuration list for PBXNativeTarget "CheckInTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB786A259149540010F791 /* Debug */,
+				B1FB786B259149540010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB78FE25914A230010F791 /* Build configuration list for PBXNativeTarget "Insights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB78FF25914A230010F791 /* Debug */,
+				B1FB790025914A230010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1FB790125914A230010F791 /* Build configuration list for PBXNativeTarget "InsightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FB790225914A230010F791 /* Debug */,
+				B1FB790325914A230010F791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1FB774425910C940010F791 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B1FB76F5259109A30010F791 /* Project object */;
+}
