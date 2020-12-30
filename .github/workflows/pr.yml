@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: sh ./bootstrap.sh
       - name: Run tests
-      run: bundle exec fastlane test
+        run: bundle exec fastlane test
       - name: Run code validation
         run: bundle exec danger
         env:
