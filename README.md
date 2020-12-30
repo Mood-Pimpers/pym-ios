@@ -7,5 +7,5 @@ The iOS Pym client.
 ## 🚀 Get started
 
 ```bash
-mint bootstrap
+make
 ```
