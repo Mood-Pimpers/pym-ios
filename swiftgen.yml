@@ -17,3 +17,9 @@ xcassets:
       params:
         forceProvidesNamespaces: true
       output: Assets+Generated.swift
+      
+coredata:
+  inputs: Pym.xcdatamodeld
+  outputs:
+    templateName: swift5
+    output: CoreData+Generated.swift
