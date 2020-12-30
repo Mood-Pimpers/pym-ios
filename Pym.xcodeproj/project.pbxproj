@@ -462,7 +462,7 @@
 		B1FB76FD259109A30010F791 /* Pym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB7700259109A30010F791 /* PymApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymApp.swift; sourceTree = "<group>"; };
 		B1FB7702259109A30010F791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		B1FB7704259109A60010F791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1FB7704259109A60010F791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Pym/Assets.xcassets; sourceTree = "<group>"; };
 		B1FB7707259109A60010F791 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FB7709259109A60010F791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pym/Info.plist; sourceTree = "<group>"; };
 		B1FB770E259109A60010F791 /* PymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -730,6 +730,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FB7709259109A60010F791 /* Info.plist */,
+				B1FB7704259109A60010F791 /* Assets.xcassets */,
 				B1FB77C625913FA50010F791 /* App */,
 				B1FB7789259135030010F791 /* PymCore */,
 				B1FB7810259147CB0010F791 /* Onboarding */,
@@ -801,7 +802,6 @@
 			isa = PBXGroup;
 			children = (
 				B1FB7700259109A30010F791 /* PymApp.swift */,
-				B1FB7704259109A60010F791 /* Assets.xcassets */,
 				B1FB7706259109A60010F791 /* Preview Content */,
 			);
 			path = Resources;
