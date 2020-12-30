@@ -34,6 +34,19 @@
 		B16D4365259C799700D507BE /* Explorer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16D42A0259C769500D507BE /* Explorer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16D4368259C79A200D507BE /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
 		B16D4369259C79A200D507BE /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D438B259C7A3600D507BE /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = B16D438A259C7A3600D507BE /* SwiftyBeaver */; };
+		B16D43C8259C7A8D00D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D43C9259C7A8D00D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D43E2259C7A9400D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D43E3259C7A9400D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D43FC259C7A9A00D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D43FD259C7A9A00D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D4401259C7AA100D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D4402259C7AA100D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D4406259C7AD600D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D4407259C7AD600D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D440B259C7ADC00D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
+		B16D440C259C7ADC00D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB7701259109A30010F791 /* PymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7700259109A30010F791 /* PymApp.swift */; };
 		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
 		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
@@ -57,10 +70,6 @@
 		B1FB785F259149540010F791 /* CheckInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB785E259149540010F791 /* CheckInTests.swift */; };
 		B1FB7864259149540010F791 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
 		B1FB7865259149540010F791 /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1FB7883259149C80010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
-		B1FB7884259149C80010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1FB788F259149D50010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
-		B1FB7890259149D50010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB789B259149E00010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B1FB789C259149E00010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB78F025914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
@@ -69,8 +78,6 @@
 		B1FB78FD25914A230010F791 /* Insights.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB791725914A490010F791 /* Insights.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* Insights.swift */; };
 		B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckIn.swift */; };
-		B1FB792A25914A720010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
-		B1FB792B25914A720010F791 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +186,48 @@
 			remoteGlobalIDString = B1FB784E259149540010F791;
 			remoteInfo = CheckIn;
 		};
+		B16D43CA259C7A8D00D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B16D43E4259C7A9400D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B16D43FE259C7A9A00D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B16D4403259C7AA100D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B16D4408259C7AD600D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
+		B16D440D259C7ADC00D507BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB773225910C060010F791;
+			remoteInfo = PymCommon;
+		};
 		B1FB770F259109A60010F791 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
@@ -263,20 +312,6 @@
 			remoteGlobalIDString = B1FB784E259149540010F791;
 			remoteInfo = CheckIn;
 		};
-		B1FB7885259149C80010F791 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1FB7787259135030010F791;
-			remoteInfo = PymCore;
-		};
-		B1FB7891259149D50010F791 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1FB7787259135030010F791;
-			remoteInfo = PymCore;
-		};
 		B1FB789D259149E00010F791 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
@@ -305,16 +340,75 @@
 			remoteGlobalIDString = B1FB78E625914A230010F791;
 			remoteInfo = Insights;
 		};
-		B1FB792C25914A720010F791 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1FB76F5259109A30010F791 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1FB7787259135030010F791;
-			remoteInfo = PymCore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B16D43CC259C7A8D00D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D43C9259C7A8D00D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D43E6259C7A9400D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D43E3259C7A9400D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D4400259C7A9A00D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D43FD259C7A9A00D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D4405259C7AA100D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D4402259C7AA100D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D440A259C7AD600D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D4407259C7AD600D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16D440F259C7ADC00D507BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B16D440C259C7ADC00D507BE /* PymCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1FB773F25910C060010F791 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,28 +427,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1FB7882259149B70010F791 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B1FB7884259149C80010F791 /* PymCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1FB7893259149D50010F791 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B1FB7890259149D50010F791 /* PymCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1FB789F259149E00010F791 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,17 +440,6 @@
 				B16D4355259C798300D507BE /* Home.framework in Embed Frameworks */,
 				B16D435D259C798D00D507BE /* Settings.framework in Embed Frameworks */,
 				B16D4361259C799200D507BE /* Insights.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1FB792E25914A720010F791 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B1FB792B25914A720010F791 /* PymCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +493,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16D43FC259C7A9A00D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +509,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16D43E2259C7A9400D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +525,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16D43C8259C7A8D00D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB774525910C940010F791 /* ComposableArchitecture in Frameworks */,
+				B16D438B259C7A3600D507BE /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +601,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB788F259149D50010F791 /* PymCore.framework in Frameworks */,
+				B16D440B259C7ADC00D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +617,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB7883259149C80010F791 /* PymCore.framework in Frameworks */,
+				B16D4406259C7AD600D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +633,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB792A25914A720010F791 /* PymCore.framework in Frameworks */,
+				B16D4401259C7AA100D507BE /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,10 +987,12 @@
 				B16D423F259C75F200D507BE /* Sources */,
 				B16D4240259C75F200D507BE /* Frameworks */,
 				B16D4241259C75F200D507BE /* Resources */,
+				B16D4400259C7A9A00D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B16D43FF259C7A9A00D507BE /* PBXTargetDependency */,
 			);
 			name = Home;
 			productName = Home;
@@ -959,10 +1026,12 @@
 				B16D429C259C769500D507BE /* Sources */,
 				B16D429D259C769500D507BE /* Frameworks */,
 				B16D429E259C769500D507BE /* Resources */,
+				B16D43E6259C7A9400D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B16D43E5259C7A9400D507BE /* PBXTargetDependency */,
 			);
 			name = Explorer;
 			productName = Explorer;
@@ -996,10 +1065,12 @@
 				B16D42EE259C771E00D507BE /* Sources */,
 				B16D42EF259C771E00D507BE /* Frameworks */,
 				B16D42F0259C771E00D507BE /* Resources */,
+				B16D43CC259C7A8D00D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B16D43CB259C7A8D00D507BE /* PBXTargetDependency */,
 			);
 			name = Settings;
 			productName = Settings;
@@ -1049,6 +1120,8 @@
 				B16D4306259C771E00D507BE /* PBXTargetDependency */,
 			);
 			name = Pym;
+			packageProductDependencies = (
+			);
 			productName = Pym;
 			productReference = B1FB76FD259109A30010F791 /* Pym.app */;
 			productType = "com.apple.product-type.application";
@@ -1105,6 +1178,7 @@
 			name = PymCommon;
 			packageProductDependencies = (
 				B1FB774425910C940010F791 /* ComposableArchitecture */,
+				B16D438A259C7A3600D507BE /* SwiftyBeaver */,
 			);
 			productName = PymCommon;
 			productReference = B1FB773325910C060010F791 /* PymCommon.framework */;
@@ -1163,12 +1237,12 @@
 				B1FB780B259147CB0010F791 /* Sources */,
 				B1FB780C259147CB0010F791 /* Frameworks */,
 				B1FB780D259147CB0010F791 /* Resources */,
-				B1FB7893259149D50010F791 /* Embed Frameworks */,
+				B16D440F259C7ADC00D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1FB7892259149D50010F791 /* PBXTargetDependency */,
+				B16D440E259C7ADC00D507BE /* PBXTargetDependency */,
 			);
 			name = Onboarding;
 			productName = Onboarding;
@@ -1202,12 +1276,12 @@
 				B1FB784B259149540010F791 /* Sources */,
 				B1FB784C259149540010F791 /* Frameworks */,
 				B1FB784D259149540010F791 /* Resources */,
-				B1FB7882259149B70010F791 /* Embed Frameworks */,
+				B16D440A259C7AD600D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1FB7886259149C80010F791 /* PBXTargetDependency */,
+				B16D4409259C7AD600D507BE /* PBXTargetDependency */,
 			);
 			name = CheckIn;
 			productName = CheckIn;
@@ -1241,12 +1315,12 @@
 				B1FB78E325914A230010F791 /* Sources */,
 				B1FB78E425914A230010F791 /* Frameworks */,
 				B1FB78E525914A230010F791 /* Resources */,
-				B1FB792E25914A720010F791 /* Embed Frameworks */,
+				B16D4405259C7AA100D507BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1FB792D25914A720010F791 /* PBXTargetDependency */,
+				B16D4404259C7AA100D507BE /* PBXTargetDependency */,
 			);
 			name = Insights;
 			productName = Insights;
@@ -1364,6 +1438,7 @@
 			mainGroup = B1FB76F4259109A30010F791;
 			packageReferences = (
 				B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
 			projectDirPath = "";
@@ -1784,6 +1859,36 @@
 			target = B1FB784E259149540010F791 /* CheckIn */;
 			targetProxy = B16D436A259C79A200D507BE /* PBXContainerItemProxy */;
 		};
+		B16D43CB259C7A8D00D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D43CA259C7A8D00D507BE /* PBXContainerItemProxy */;
+		};
+		B16D43E5259C7A9400D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D43E4259C7A9400D507BE /* PBXContainerItemProxy */;
+		};
+		B16D43FF259C7A9A00D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D43FE259C7A9A00D507BE /* PBXContainerItemProxy */;
+		};
+		B16D4404259C7AA100D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D4403259C7AA100D507BE /* PBXContainerItemProxy */;
+		};
+		B16D4409259C7AD600D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D4408259C7AD600D507BE /* PBXContainerItemProxy */;
+		};
+		B16D440E259C7ADC00D507BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB773225910C060010F791 /* PymCommon */;
+			targetProxy = B16D440D259C7ADC00D507BE /* PBXContainerItemProxy */;
+		};
 		B1FB7710259109A60010F791 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B1FB76FC259109A30010F791 /* Pym */;
@@ -1844,16 +1949,6 @@
 			target = B1FB784E259149540010F791 /* CheckIn */;
 			targetProxy = B1FB7862259149540010F791 /* PBXContainerItemProxy */;
 		};
-		B1FB7886259149C80010F791 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1FB7787259135030010F791 /* PymCore */;
-			targetProxy = B1FB7885259149C80010F791 /* PBXContainerItemProxy */;
-		};
-		B1FB7892259149D50010F791 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1FB7787259135030010F791 /* PymCore */;
-			targetProxy = B1FB7891259149D50010F791 /* PBXContainerItemProxy */;
-		};
 		B1FB789E259149E00010F791 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B1FB773225910C060010F791 /* PymCommon */;
@@ -1873,11 +1968,6 @@
 			isa = PBXTargetDependency;
 			target = B1FB78E625914A230010F791 /* Insights */;
 			targetProxy = B1FB78FA25914A230010F791 /* PBXContainerItemProxy */;
-		};
-		B1FB792D25914A720010F791 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1FB7787259135030010F791 /* PymCore */;
-			targetProxy = B1FB792C25914A720010F791 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3049,6 +3139,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
 		B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -3060,6 +3158,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B16D438A259C7A3600D507BE /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
 		B1FB774425910C940010F791 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
