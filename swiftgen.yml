@@ -7,7 +7,7 @@ strings:
   filter: .+\.strings$
   outputs:
     - templateName: structured-swift5
-      output: Strings+Generated.swift
+      output: Strings.generated.swift
 
 xcassets:
   inputs:
@@ -16,10 +16,10 @@ xcassets:
     - templateName: swift5
       params:
         forceProvidesNamespaces: true
-      output: Assets+Generated.swift
+      output: Assets.generated.swift
       
 coredata:
   inputs: Pym.xcdatamodeld
   outputs:
     templateName: swift5
-    output: CoreData+Generated.swift
+    output: CoreData.generated.swift
