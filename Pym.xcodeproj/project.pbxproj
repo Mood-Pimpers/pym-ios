@@ -34,7 +34,6 @@
 		B16D4365259C799700D507BE /* Explorer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16D42A0259C769500D507BE /* Explorer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16D4368259C79A200D507BE /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
 		B16D4369259C79A200D507BE /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B16D438B259C7A3600D507BE /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = B16D438A259C7A3600D507BE /* SwiftyBeaver */; };
 		B16D43C8259C7A8D00D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B16D43C9259C7A8D00D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16D43E2259C7A9400D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
@@ -47,6 +46,8 @@
 		B16D4407259C7AD600D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16D440B259C7ADC00D507BE /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B16D440C259C7ADC00D507BE /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B16D4478259C80F000D507BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B16D4477259C80F000D507BE /* ComposableArchitecture */; };
+		B16D448F259C810000D507BE /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = B16D448E259C810000D507BE /* SwiftyBeaver */; };
 		B1FB7701259109A30010F791 /* PymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7700259109A30010F791 /* PymApp.swift */; };
 		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
 		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
@@ -54,7 +55,6 @@
 		B1FB7713259109A60010F791 /* PymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7712259109A60010F791 /* PymTests.swift */; };
 		B1FB773A25910C060010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B1FB773B25910C060010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1FB774525910C940010F791 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1FB774425910C940010F791 /* ComposableArchitecture */; };
 		B1FB7791259135030010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
 		B1FB7798259135030010F791 /* PymCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7797259135030010F791 /* PymCoreTests.swift */; };
 		B1FB779D259135030010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
@@ -464,7 +464,7 @@
 		B1FB7702259109A30010F791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B1FB7704259109A60010F791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FB7707259109A60010F791 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B1FB7709259109A60010F791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1FB7709259109A60010F791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pym/Info.plist; sourceTree = "<group>"; };
 		B1FB770E259109A60010F791 /* PymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB7712259109A60010F791 /* PymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymTests.swift; sourceTree = "<group>"; };
 		B1FB7719259109A60010F791 /* PymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -570,8 +570,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB774525910C940010F791 /* ComposableArchitecture in Frameworks */,
-				B16D438B259C7A3600D507BE /* SwiftyBeaver in Frameworks */,
+				B16D4478259C80F000D507BE /* ComposableArchitecture in Frameworks */,
+				B16D448F259C810000D507BE /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +654,8 @@
 				B16D427C259C760700D507BE /* Sources */,
 				B16D427D259C760C00D507BE /* Tests */,
 			);
-			path = Home;
+			name = Home;
+			path = Pym/Home;
 			sourceTree = "<group>";
 		};
 		B16D427C259C760700D507BE /* Sources */ = {
@@ -679,7 +680,8 @@
 				B16D42C8259C769E00D507BE /* Sources */,
 				B16D42C9259C76A300D507BE /* Tests */,
 			);
-			path = Explorer;
+			name = Explorer;
+			path = Pym/Explorer;
 			sourceTree = "<group>";
 		};
 		B16D42C8259C769E00D507BE /* Sources */ = {
@@ -704,7 +706,8 @@
 				B16D432A259C772F00D507BE /* Sources */,
 				B16D431C259C772400D507BE /* Tests */,
 			);
-			path = Settings;
+			name = Settings;
+			path = Pym/Settings;
 			sourceTree = "<group>";
 		};
 		B16D431C259C772400D507BE /* Tests */ = {
@@ -779,7 +782,8 @@
 				B1FB77D4259141800010F791 /* Sources */,
 				B1FB77D62591419A0010F791 /* Tests */,
 			);
-			path = PymCore;
+			name = PymCore;
+			path = Pym/PymCore;
 			sourceTree = "<group>";
 		};
 		B1FB77C625913FA50010F791 /* App */ = {
@@ -789,7 +793,8 @@
 				B1FB77C8259140150010F791 /* Sources */,
 				B1FB77DE259147110010F791 /* Tests */,
 			);
-			path = App;
+			name = App;
+			path = Pym/App;
 			sourceTree = "<group>";
 		};
 		B1FB77C725913FB80010F791 /* Resources */ = {
@@ -841,7 +846,8 @@
 				B1FB7833259147DA0010F791 /* Sources */,
 				B1FB7834259147DF0010F791 /* Tests */,
 			);
-			path = Onboarding;
+			name = Onboarding;
+			path = Pym/Onboarding;
 			sourceTree = "<group>";
 		};
 		B1FB7833259147DA0010F791 /* Sources */ = {
@@ -873,7 +879,8 @@
 				B1FB7874259149890010F791 /* Sources */,
 				B1FB78752591498E0010F791 /* Tests */,
 			);
-			path = CheckIn;
+			name = CheckIn;
+			path = Pym/CheckIn;
 			sourceTree = "<group>";
 		};
 		B1FB7874259149890010F791 /* Sources */ = {
@@ -898,7 +905,8 @@
 				B1FB790C25914A2B0010F791 /* Sources */,
 				B1FB790D25914A320010F791 /* Tests */,
 			);
-			path = Insights;
+			name = Insights;
+			path = Pym/Insights;
 			sourceTree = "<group>";
 		};
 		B1FB790C25914A2B0010F791 /* Sources */ = {
@@ -1177,8 +1185,8 @@
 			);
 			name = PymCommon;
 			packageProductDependencies = (
-				B1FB774425910C940010F791 /* ComposableArchitecture */,
-				B16D438A259C7A3600D507BE /* SwiftyBeaver */,
+				B16D4477259C80F000D507BE /* ComposableArchitecture */,
+				B16D448E259C810000D507BE /* SwiftyBeaver */,
 			);
 			productName = PymCommon;
 			productReference = B1FB773325910C060010F791 /* PymCommon.framework */;
@@ -1437,8 +1445,8 @@
 			);
 			mainGroup = B1FB76F4259109A30010F791;
 			packageReferences = (
-				B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
 			projectDirPath = "";
@@ -1632,7 +1640,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if mint which swiftformat >/dev/null; then\n    if [ $CONFIGURATION = \"Debug\" ]; then\n        mint run swiftformat swiftformat . --disable trailingCommas --swiftversion 5.3\n    fi\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+			shellScript = "if mint which swiftformat >/dev/null; then\n    if [ $CONFIGURATION = \"Debug\" ]; then\n        mint run swiftformat . --disable trailingCommas --swiftversion 5.3\n    fi\nelse\n    echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1982,7 +1990,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2010,7 +2018,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2079,7 +2087,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2109,7 +2117,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2178,7 +2186,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2208,7 +2216,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2389,10 +2397,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ADEA59CAEV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2412,10 +2420,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = ADEA59CAEV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2522,7 +2530,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2549,7 +2557,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2577,7 +2585,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2607,7 +2615,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2676,7 +2684,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2706,7 +2714,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2775,7 +2783,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2805,7 +2813,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2874,7 +2882,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2904,7 +2912,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Pym/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3139,15 +3147,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.3;
-			};
-		};
-		B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
@@ -3155,18 +3155,26 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B16D438A259C7A3600D507BE /* SwiftyBeaver */ = {
+		B16D4477259C80F000D507BE /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B16D4389259C7A3600D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
-			productName = SwiftyBeaver;
-		};
-		B1FB774425910C940010F791 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1FB774325910C940010F791 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		B16D448E259C810000D507BE /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
