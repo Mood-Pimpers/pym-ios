@@ -9,7 +9,7 @@ import SwiftUI
 {% macro casesBlock assets type prefix %}
   {% for asset in assets %}
   {% if asset.type == type %}
-  static var {% if prefix %}{{prefix}}{% endif %}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : {{type|capitalize}} { {{type|capitalize}}("{{asset.value}}", bundle: BundleToken.bundle) }
+  static var {% if prefix %}{{prefix}}{% endif %}{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : {{type|capitalize}} { {{type|capitalize}}("{{asset.value}}") }
   {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
 	{% set prefixed_asset %}{% if prefix == "" %}{{asset.name|lowerFirstWord|swiftIdentifier:"pretty"}}_{% else %}{{prefix}}{{asset.name|lowerFirstWord|swiftIdentifier:"pretty"}}_{% endif %}{% endset %}
 	{% call casesBlock asset.items type prefixed_asset %}
@@ -48,11 +48,6 @@ import SwiftUI
 
 {% if resourceCount.image > 0 %}
 {% endif %}
-private final class BundleToken {
-  static let bundle: Bundle = {
-	Bundle(for: BundleToken.self)
-  }()
-}
 {% else %}
 // No assets found
 {% endif %}
