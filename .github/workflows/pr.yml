@@ -24,7 +24,7 @@ jobs:
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
       - name: Install dependencies
-        run: sh ./bootstrap.sh
+        run: sh ./scripts/bootstrap.sh
       - name: Run tests
         run: bundle exec fastlane test
       - name: Run code validation
