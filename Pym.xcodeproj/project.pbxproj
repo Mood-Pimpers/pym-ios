@@ -1084,7 +1084,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FB7722259109A60010F791 /* Build configuration list for PBXNativeTarget "Pym" */;
 			buildPhases = (
-				B16D44CD259C855800D507BE /* SwiftGen */,
 				B1FB76F9259109A30010F791 /* Sources */,
 				B1FB76FA259109A30010F791 /* Frameworks */,
 				B1FB76FB259109A30010F791 /* Resources */,
@@ -1173,6 +1172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FB779F259135030010F791 /* Build configuration list for PBXNativeTarget "PymCore" */;
 			buildPhases = (
+				B188A6A5259DDE6800F1AFB9 /* SwiftGen */,
 				B1FB7783259135030010F791 /* Headers */,
 				B1FB7784259135030010F791 /* Sources */,
 				B1FB7785259135030010F791 /* Frameworks */,
@@ -1579,7 +1579,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B16D44CD259C855800D507BE /* SwiftGen */ = {
+		B188A6A5259DDE6800F1AFB9 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
