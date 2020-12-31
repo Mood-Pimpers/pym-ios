@@ -1,4 +1,4 @@
-devices(["iPhone 11"])
+devices(["iPhone 12"])
 reset_simulator(true)
 clean(true)
 skip_build(true)

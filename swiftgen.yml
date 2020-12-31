@@ -7,6 +7,8 @@ strings:
   filter: .+\.strings$
   outputs:
     - templateName: structured-swift5
+      params:
+        publicAccess: true
       output: Strings.generated.swift
 
 xcassets:
@@ -16,10 +18,17 @@ xcassets:
     - templateName: swift5
       params:
         forceProvidesNamespaces: true
+        publicAccess: true
+      output: UIKitAssets.generated.swift
+    - templatePath: scripts/templates/xcassets/swiftui-swift5.stencil
+      params:
+        publicAccess: true
       output: Assets.generated.swift
       
 coredata:
   inputs: Pym.xcdatamodeld
   outputs:
     templateName: swift5
+    params:
+      publicAccess: true
     output: CoreData.generated.swift
