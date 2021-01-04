@@ -23,6 +23,11 @@ public struct Quote {
     let url: URL
 }
 
+let fade = LinearGradient(gradient: Gradient(
+    colors: [Color.black.opacity(0), .black]),
+startPoint: .top,
+endPoint: .bottom)
+
 public struct QuoteCard: View {
     let quote: Quote
 
@@ -34,20 +39,23 @@ public struct QuoteCard: View {
         ZStack(alignment: .bottom) {
             KFImage(quote.url)
                 .frame(width: 300, height: 200)
-                .cornerRadius(8)
                 .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
+            fade
+                .frame(width: 300, height: 200)
             HStack(alignment: .top, spacing: 8) {
                 Text("\"")
                     .font(.title)
                     .bold()
                 VStack(alignment: .leading, spacing: 16) {
                     Text(quote.text)
-                    Text(quote.author)
+                    Text("- \(quote.author)")
                 }
             }
+            .foregroundColor(.white)
             .padding(16)
             .frame(width: 300)
         }
+        .cornerRadius(8)
         .padding(8) // So dropshadow is shown
     }
 }
@@ -71,6 +79,12 @@ public struct HomeView: View {
             text: "This is a really long quote, that doesn't make any sense but I just wanted to test it!",
             author: "Daniel Bauer",
             url: URL(string: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80")!
+        ),
+        Quote(
+            id: 4,
+            text: "White photo to see that fade ;)",
+            author: "Daniel Bauer",
+            url: URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80")!
         )
     ]
 
@@ -96,8 +110,16 @@ public struct HomeView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             Button(action: {}, label: {
-                Text("mood checkin")
+                HStack(alignment: .center) {
+                    Text("mood checkin")
+                        .bold()
+                }
             })
+                .padding(16)
+                .background(Color.yellow)
+                .foregroundColor(.black)
+                .cornerRadius(8.0)
+                .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
             Spacer()
         }
         .padding(20)
