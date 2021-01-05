@@ -20,11 +20,20 @@ public struct Title: View {
     }
 }
 
+public struct Selectable<T> {
+    @State var isSelected = false
+    var item: T
+
+    init(_ item: T) {
+        self.item = item
+    }
+}
+
 public struct Quote {
     let id: Int
     let text: String
     let author: String
-    let url: (_ width: Int) -> URL
+    let url: (_ width: Int, _ heigth: Int) -> URL
 }
 
 let fade = LinearGradient(gradient: Gradient(
@@ -46,7 +55,7 @@ public struct QuoteCard: View {
         let height: CGFloat = width / 1.5
 
         ZStack(alignment: .bottom) {
-            KFImage(quote.url(Int(width)))
+            KFImage(quote.url(Int(width), Int(height)))
                 .frame(width: width, height: height)
                 .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
             fade
@@ -70,61 +79,144 @@ public struct QuoteCard: View {
     }
 }
 
+struct QuoteModalView: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    let quote: Quote
+    let metrics: GeometryProxy
+
+    init(_ quote: Quote, _ metrics: GeometryProxy) {
+        self.quote = quote
+        self.metrics = metrics
+    }
+
+    var body: some View {
+        let width = metrics.size.width +
+            metrics.safeAreaInsets.leading +
+            metrics.safeAreaInsets.trailing
+        let height = metrics.size.height + metrics.safeAreaInsets.bottom + metrics.safeAreaInsets.top
+
+        ZStack(alignment: .center) {
+            KFImage(quote.url(Int(width), Int(height)))
+                .frame(width: width, height: height)
+                .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
+            fade
+                .frame(width: width, height: height)
+            HStack(alignment: .top, spacing: 8) {
+                Text("\"")
+                    .font(.title)
+                    .bold()
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(quote.text)
+                        .font(.title)
+                    Text("- \(quote.author)")
+                        .font(.title2)
+                }
+            }
+            .foregroundColor(.white)
+            .padding(16)
+            .frame(width: width)
+        }
+
+        // KFImage(quote.url(Int(width), Int(height)))
+        // .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: width, maxHeight: height)
+        .background(Color.red)
+        .edgesIgnoringSafeArea(.all)
+        .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
+
+struct FullScreenModalView: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    var body: some View {
+        VStack {
+            Text("This is a modal view")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.red)
+        .edgesIgnoringSafeArea(.all)
+        .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
+
 public struct HomeView: View {
-    private let quotes = [
+    @State private var quotes: [Selectable<Quote>] = [
         Quote(
             id: 1,
             text: "Be yourself; everyone else is already taken.",
             author: "Oscar Wilde",
-            url: { width in URL(string: "https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&q=80")! }
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         ),
         Quote(
             id: 2,
             text: "Life is what happens when you’re busy making other plans.",
             author: "John Lennon",
-            url: { width in URL(string: "https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&q=80")! }
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         ),
         Quote(
             id: 3,
             text: "This is a really long quote, that doesn't make any sense but I just wanted to test it!",
             author: "Daniel Bauer",
-            url: { width in URL(string: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&q=80")! }
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         ),
         Quote(
             id: 4,
             text: "White photo to see that fade ;)",
             author: "Daniel Bauer",
-            url: { width in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&q=80")! }
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         )
     ]
+    .map { Selectable($0) }
 
     public init() {}
 
+    @State private var showQuoteModal = [false, false, false, false]
+    @State private var showMoodCheckin = false
+
     public var body: some View {
         GeometryReader { metrics in
-            VStack {
-                Title("good morning.")
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 0) {
-                        ForEach(quotes, id: \.id) { quote in
-                            QuoteCard(quote, metrics)
+            ScrollView(.vertical) {
+                VStack {
+                    Title("good morning.")
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 0) {
+                            ForEach(quotes.indices) { idx in
+                                QuoteCard(quotes[idx].item, metrics)
+                                    .fullScreenCover(isPresented: $showQuoteModal[idx], content: { QuoteModalView(quotes[idx].item, metrics) })
+                                    .onTapGesture {
+                                        // self.showQuoteModal.toggle()
+                                        // self.currentQuote = quote
+                                        showQuoteModal[idx].toggle()
+                                    }
+                            }
                         }
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                     }
-                    .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                    Title("track your mood")
+                    Button(action: {}, label: {
+                        HStack(alignment: .center) {
+                            Text("mood checkin")
+                                .bold()
+                        }
+                    })
+                        .padding(16)
+                        .background(Color.yellow)
+                        .foregroundColor(.black)
+                        .cornerRadius(8.0)
+                        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
+                        .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
+
+                    Button("Present!") {
+                        self.showMoodCheckin.toggle()
+                    }
+                    Spacer()
                 }
-                Title("track your mood")
-                Button(action: {}, label: {
-                    HStack(alignment: .center) {
-                        Text("mood checkin")
-                            .bold()
-                    }
-                })
-                    .padding(16)
-                    .background(Color.yellow)
-                    .foregroundColor(.black)
-                    .cornerRadius(8.0)
-                    .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
-                Spacer()
             }
         }
     }
