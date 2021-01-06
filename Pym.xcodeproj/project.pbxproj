@@ -74,7 +74,6 @@
 		B1FB791725914A490010F791 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* InsightsView.swift */; };
 		B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckIn.swift */; };
 		F50E35AC25A21A64001D3A8E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F50E35AB25A21A64001D3A8E /* Kingfisher */; };
-		F51B334B25A5CF2E00C08F21 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
 		F51B335825A5CFE300C08F21 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B335725A5CFE300C08F21 /* Quote.swift */; };
 		F52DC89725A61E8C00809061 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
 		F52DC89825A61E8C00809061 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,10 +81,12 @@
 		F52DC8B225A61EF700809061 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F52DC8C025A61FC100809061 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
 		F52DC8C125A61FC100809061 /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F52DC8CF25A620E800809061 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
+		F5322F2325A62AC000D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
+		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
+		F5322F5825A62B0300D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
+		F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */; };
-		F5AC0DE725A603A3007ACEF5 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DE625A603A3007ACEF5 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,12 +463,11 @@
 		B1FB78F625914A230010F791 /* InsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTests.swift; sourceTree = "<group>"; };
 		B1FB791625914A490010F791 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
 		B1FB792025914A5F0010F791 /* CheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn.swift; sourceTree = "<group>"; };
-		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		F51B335725A5CFE300C08F21 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
-		F5AC0DE625A603A3007ACEF5 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -942,7 +942,6 @@
 			isa = PBXGroup;
 			children = (
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
-				F5AC0DE625A603A3007ACEF5 /* Button.swift */,
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
 			);
 			path = Components;
@@ -1692,11 +1691,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F51B334B25A5CF2E00C08F21 /* Title.swift in Sources */,
-				F5AC0DE725A603A3007ACEF5 /* Button.swift in Sources */,
 				F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */,
 				F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */,
-				F52DC8CF25A620E800809061 /* PrimaryButton.swift in Sources */,
 				F51B335825A5CFE300C08F21 /* Quote.swift in Sources */,
 				B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */,
 			);
@@ -1746,6 +1742,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */,
+				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
 				B10E7A8A259C96D400337DDC /* Pym.xcdatamodeld in Sources */,
@@ -1785,9 +1783,11 @@
 			files = (
 				B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B10E7AAD259C97DC00337DDC /* CoreData.generated.swift in Sources */,
+				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
 				B1FB77D8259141B10010F791 /* PymCore.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
+				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

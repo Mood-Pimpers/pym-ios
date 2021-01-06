@@ -3,7 +3,7 @@ import SwiftUI
 public struct Title: View {
     let text: String
 
-    init(_ text: String) {
+    public init(_ text: String) {
         self.text = text
     }
 
@@ -14,6 +14,6 @@ public struct Title: View {
                 .font(.title)
             Spacer()
         }
-        .padding(EdgeInsets(top: 16 + 8, leading: 16, bottom: 8, trailing: 16))
+        .padding(EdgeInsets(top: 16 + 8, leading: 0, bottom: 8, trailing: 0))
     }
 }

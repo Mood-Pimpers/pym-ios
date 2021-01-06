@@ -55,9 +55,17 @@ public struct HomeView: View {
             ScrollView(.vertical) {
                 VStack {
                     QuoteView(quotes: quotes, metrics: metrics)
-                    Title("track your mood")
-                    PrimaryButton(label: "mood checkin", action: toggleMoodCheckin)
+
+                    VStack {
+                        Title("track your mood")
+                        PrimaryButton(action: toggleMoodCheckin) {
+                            Text("mood checkin")
+                            Spacer()
+                        }
                         .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
+                    }
+                    .padding(8)
+
                     Spacer()
                 }
             }

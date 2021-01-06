@@ -1,35 +1,12 @@
 import PymCore
 import SwiftUI
 
-// TODO: don't know why this is not found?!
-public struct PrimaryButton<Content>: View where Content: View {
-    let content: () -> Content
-    let action: () -> Void
-
-    public init(action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
-        self.content = content
-        self.action = action
-    }
-
-    public var body: some View {
-        Button(action: self.action) {
-            HStack(alignment: .center) {
-                content()
-            }
-        }
-        .padding(16)
-        .background(Color.primaryColor)
-        .foregroundColor(.black)
-        .cornerRadius(8.0)
-        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
-    }
-}
-
 public struct MoodView: View {
     @StateObject var viewRouter: ViewRouter
 
     public var body: some View {
         VStack {
+            Text("MOOD")
             Spacer()
 
             PrimaryButton(action: next) {
@@ -47,14 +24,46 @@ public struct MoodView: View {
 }
 
 struct FeelingView: View {
+    @StateObject var viewRouter: ViewRouter
+
     public var body: some View {
-        Text("Feeling")
+        VStack {
+            Text("FEELING")
+            Spacer()
+
+            PrimaryButton(action: next) {
+                Text("continue")
+                    .bold()
+                Spacer()
+            }
+            .padding(16)
+        }
+    }
+
+    private func next() {
+        viewRouter.currentPage = .activity
     }
 }
 
 struct ActivityView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     public var body: some View {
-        Text("Activity")
+        VStack {
+            Text("ACTIVITY")
+            Spacer()
+
+            PrimaryButton(action: finish) {
+                Text("finish")
+                    .bold()
+                Spacer()
+            }
+            .padding(16)
+        }
+    }
+
+    private func finish() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
@@ -92,7 +101,7 @@ public struct CheckInView: View {
             Spacer()
             switch viewRouter.currentPage {
             case .mood: MoodView(viewRouter: viewRouter)
-            case .feeling: FeelingView()
+            case .feeling: FeelingView(viewRouter: viewRouter)
             case .activity: ActivityView()
             }
             Spacer()
