@@ -1,3 +1,4 @@
+import CheckIn
 import PymCore
 import SwiftUI
 
@@ -6,13 +7,13 @@ struct FullScreenModalView: View {
 
     var body: some View {
         VStack {
-            Text("This is a modal view")
+            CheckInView()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.red)
+        .background(Color.backgroundColor)
         .edgesIgnoringSafeArea(.all)
         .onTapGesture {
-            presentationMode.wrappedValue.dismiss()
+            // presentationMode.wrappedValue.dismiss()
         }
     }
 }
@@ -55,26 +56,16 @@ public struct HomeView: View {
                 VStack {
                     QuoteView(quotes: quotes, metrics: metrics)
                     Title("track your mood")
-                    Button(action: {}, label: {
-                        HStack(alignment: .center) {
-                            Text("mood checkin")
-                                .bold()
-                        }
-                    })
-                        .padding(16)
-                        .background(Color.yellow)
-                        .foregroundColor(.black)
-                        .cornerRadius(8.0)
-                        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
+                    PrimaryButton(label: "mood checkin", action: toggleMoodCheckin)
                         .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
-
-                    Button("Present!") {
-                        self.showMoodCheckin.toggle()
-                    }
                     Spacer()
                 }
             }
         }
+    }
+
+    private func toggleMoodCheckin() {
+        showMoodCheckin.toggle()
     }
 }
 
