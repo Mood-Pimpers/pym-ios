@@ -17,3 +17,9 @@ public struct Title: View {
         .padding(EdgeInsets(top: 16 + 8, leading: 0, bottom: 8, trailing: 0))
     }
 }
+
+struct Title_Previews: PreviewProvider {
+    static var previews: some View {
+        Title("Nicer title")
+    }
+}

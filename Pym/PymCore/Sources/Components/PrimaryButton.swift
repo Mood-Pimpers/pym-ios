@@ -22,3 +22,11 @@ public struct PrimaryButton<Content>: View where Content: View {
         .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
     }
 }
+
+struct PrimaryButton_Previews: PreviewProvider {
+    static var previews: some View {
+        PrimaryButton(action: { print("Action") }, content: {
+            Text("Nicer button")
+        })
+    }
+}
