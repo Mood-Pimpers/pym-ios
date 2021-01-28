@@ -1,12 +1,43 @@
 import PymCore
 import SwiftUI
 
+public struct MoodEntry {
+    let mood: Int
+    let feelings: [String]
+    let activities: [String]
+}
+
+struct SelectableElement<TContent>: View where TContent: View {
+    let isSelected: Bool
+    let content: TContent
+    let action: () -> Void
+
+    var body: some View {
+        content
+            .frame(width: 64, height: 64)
+            .background(isSelected ? Color.primaryColor : Color.white)
+            .cornerRadius(4)
+            .shadow(color: .neutralLightColor, radius: 8)
+            .onTapGesture(perform: action)
+    }
+}
+
 public struct MoodView: View {
     @StateObject var viewRouter: ViewRouter
+    @State private var mood: Int?
 
     public var body: some View {
         VStack {
-            Text("MOOD")
+            HStack {
+                ForEach(1 ..< 6) { index in
+                    SelectableElement(
+                        isSelected: mood == index,
+                        content: Text("\(index)"),
+                        action: { mood = index }
+                    )
+                }
+            }
+
             Spacer()
 
             PrimaryButton(action: next) {
@@ -14,6 +45,7 @@ public struct MoodView: View {
                     .bold()
                 Spacer()
             }
+            .disabled(mood == nil)
             .padding(16)
         }
     }
