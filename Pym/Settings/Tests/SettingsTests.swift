@@ -1,10 +1,3 @@
-//
-//  SettingsTests.swift
-//  SettingsTests
-//
-//  Created by Simon Ammer on 30.12.20.
-//
-
 @testable import Settings
 import XCTest
 

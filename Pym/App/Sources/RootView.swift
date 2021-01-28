@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Pym
-//
-//  Created by Simon Ammer on 21.12.20.
-//
-
 import Explorer
 import Home
 import Insights
@@ -12,11 +5,16 @@ import Settings
 import SwiftUI
 
 struct RootView: View {
+    public init() {
+        UITabBar.appearance().barTintColor = Asset.whiteColor.color
+    }
+
     var body: some View {
         ZStack {
             GeometryReader { geometry in
                 TabView {
                     HomeView()
+                        .background(Color.backgroundColor)
                         .tabItem {
                             Image.home.colorMultiply(.blackColor)
                         }
@@ -34,9 +32,6 @@ struct RootView: View {
                         .tabItem {
                             Image.settings.colorMultiply(.blackColor)
                         }
-                }
-                .onAppear {
-                    UITabBar.appearance().barTintColor = Asset.whiteColor.color
                 }
                 .accentColor(.primaryColor)
 
