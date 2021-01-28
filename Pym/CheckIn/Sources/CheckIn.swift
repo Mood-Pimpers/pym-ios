@@ -1,10 +1,3 @@
-//
-//  CheckIn.swift
-//  CheckIn
-//
-//  Created by Daniel Bauer on 21.12.20.
-//
-
 import PymCore
 import SwiftUI
 
@@ -74,7 +67,7 @@ struct ActivityView: View {
     }
 }
 
-enum Test {
+enum CheckInPage {
     case mood
     case feeling
     case activity
@@ -116,10 +109,8 @@ public struct CheckInView: View {
     }
 }
 
-#if DEBUG
-    struct CheckInView_Previews: PreviewProvider {
-        static var previews: some View {
-            CheckInView()
-        }
+struct CheckInView_Previews: PreviewProvider {
+    static var previews: some View {
+        CheckInView()
     }
-#endif
+}
