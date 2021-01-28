@@ -1,17 +1,12 @@
-//
-//  QuoteCard.swift
-//  Home
-//
-//  Created by Daniel Bauer on 21.12.20.
-//
-
 import Kingfisher
 import SwiftUI
 
-let fade = LinearGradient(gradient: Gradient(
-    colors: [Color.black.opacity(0), .black]),
-startPoint: .top,
-endPoint: .bottom)
+let fade = LinearGradient(
+    gradient: Gradient(
+        colors: [Color.black.opacity(0), .black]),
+    startPoint: .top,
+    endPoint: .bottom
+)
 
 public struct QuoteCard: View {
     let quote: Quote

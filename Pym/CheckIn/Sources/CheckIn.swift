@@ -74,7 +74,7 @@ enum CheckInPage {
 }
 
 class ViewRouter: ObservableObject {
-    @Published var currentPage: Test = .mood
+    @Published var currentPage: CheckInPage = .mood
 }
 
 public struct CheckInView: View {
