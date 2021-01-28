@@ -2,7 +2,7 @@
 //  CheckInTests.swift
 //  CheckInTests
 //
-//  Created by Simon Ammer on 21.12.20.
+//  Created by Daniel Bauer on 21.12.20.
 //
 
 @testable import CheckIn

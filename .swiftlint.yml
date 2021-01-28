@@ -10,6 +10,22 @@ included:
 excluded:
 - Pym/PymCore/Sources/Generated
 
+opt_in_rules:
+  - file_header
+
 disabled_rules:
   - line_length
   - type_body_length
+  
+identifier_name:
+  excluded:
+    - id
+    
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  .*?\.swift
+                    \/\/  (Pym|Pym.*?|Unit Tests|Explorer|*?Tests)
+                    \/\/
+                    \/\/  (Created by .*? on .*?)
+                    \/\/
