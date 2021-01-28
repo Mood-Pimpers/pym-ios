@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  Home
-//
-//  Created by Daniel Bauer on 21.12.20.
-//
-
 import CheckIn
 import PymCore
 import SwiftUI

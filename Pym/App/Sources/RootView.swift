@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Pym
-//
-//  Created by Simon Ammer on 21.12.20.
-//
-
 import Explorer
 import Home
 import Insights

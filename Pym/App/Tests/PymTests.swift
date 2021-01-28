@@ -1,10 +1,3 @@
-//
-//  PymTests.swift
-//  PymTests
-//
-//  Created by Simon Ammer on 21.12.20.
-//
-
 @testable import Pym
 import XCTest
 

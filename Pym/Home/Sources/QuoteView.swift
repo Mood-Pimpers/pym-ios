@@ -1,10 +1,3 @@
-//
-//  QuoteView.swift
-//  Home
-//
-//  Created by Daniel Bauer on 21.12.20.
-//
-
 import PymCore
 import SwiftUI
 
@@ -21,7 +14,6 @@ public struct QuoteView: View {
                         QuoteCard(quote, metrics)
                     }
                 }
-                // .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
             }
         }
         .padding(8)

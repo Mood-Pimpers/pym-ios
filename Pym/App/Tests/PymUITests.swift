@@ -1,10 +1,3 @@
-//
-//  PymUITests.swift
-//  PymUITests
-//
-//  Created by Simon Ammer on 21.12.20.
-//
-
 import XCTest
 
 class PymUITests: XCTestCase {

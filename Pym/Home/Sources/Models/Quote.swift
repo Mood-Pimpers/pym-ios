@@ -1,10 +1,3 @@
-//
-//  Quote.swift
-//  Home
-//
-//  Created by Daniel Bauer on 21.12.20.
-//
-
 import Foundation
 
 public struct Quote: Identifiable {
