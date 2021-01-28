@@ -40,13 +40,15 @@ public struct MoodView: View {
 
             Spacer()
 
-            PrimaryButton(action: next) {
+            Button(action: next, label: {
                 Text("continue")
                     .bold()
                 Spacer()
-            }
-            .disabled(mood == nil)
-            .padding(16)
+                Image(systemName: "arrow.right")
+            })
+                .buttonStyle(PrimaryButtonStyle())
+                .disabled(mood == nil)
+                .padding(16)
         }
     }
 
@@ -63,12 +65,13 @@ struct FeelingView: View {
             Text("FEELING")
             Spacer()
 
-            PrimaryButton(action: next) {
+            Button(action: next, label: {
                 Text("continue")
                     .bold()
                 Spacer()
-            }
-            .padding(16)
+            })
+                .buttonStyle(PrimaryButtonStyle())
+                .padding(16)
         }
     }
 
@@ -85,12 +88,13 @@ struct ActivityView: View {
             Text("ACTIVITY")
             Spacer()
 
-            PrimaryButton(action: finish) {
+            Button(action: finish, label: {
                 Text("finish")
                     .bold()
                 Spacer()
-            }
-            .padding(16)
+            })
+                .buttonStyle(PrimaryButtonStyle())
+                .padding(16)
         }
     }
 

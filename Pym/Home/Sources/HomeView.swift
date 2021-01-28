@@ -58,11 +58,12 @@ public struct HomeView: View {
 
                     VStack {
                         Title("track your mood")
-                        PrimaryButton(action: toggleMoodCheckin) {
+                        Button(action: toggleMoodCheckin, label: {
                             Text("mood checkin")
                             Spacer()
-                        }
-                        .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
+                        })
+                            .buttonStyle(PrimaryButtonStyle())
+                            .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
                     }
                     .padding(8)
 

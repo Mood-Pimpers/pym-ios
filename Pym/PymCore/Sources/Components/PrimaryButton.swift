@@ -1,32 +1,41 @@
 import SwiftUI
 
-public struct PrimaryButton<Content>: View where Content: View {
-    let content: () -> Content
-    let action: () -> Void
+public struct PrimaryButtonStyle: ButtonStyle {
+    public init() {}
 
-    public init(action: @escaping () -> Void, @ViewBuilder content: @escaping () -> Content) {
-        self.content = content
-        self.action = action
+    public func makeBody(configuration: ButtonStyle.Configuration) -> some View {
+        PrimaryButton(configuration: configuration)
     }
 
-    public var body: some View {
-        Button(action: self.action) {
-            HStack(alignment: .center) {
-                content()
+    struct PrimaryButton: View {
+        let configuration: ButtonStyle.Configuration
+        @Environment(\.isEnabled) private var isEnabled: Bool
+
+        var body: some View {
+            HStack {
+                configuration.label
             }
+            .foregroundColor(.black)
+            .padding(15)
+            .background(isEnabled ? Color.primaryColor : Color.neutralLightColor)
+            .compositingGroup()
+            .cornerRadius(8.0)
+            .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
+            .opacity(configuration.isPressed ? 0.8 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
         }
-        .padding(16)
-        .background(Color.primaryColor)
-        .foregroundColor(.black)
-        .cornerRadius(8.0)
-        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
     }
 }
 
-struct PrimaryButton_Previews: PreviewProvider {
+struct PrimaryButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButton(action: { print("Action") }, content: {
-            Text("Nicer button")
-        })
+        VStack {
+            Button(action: {}, label: { Text("Active Button") })
+                .buttonStyle(PrimaryButtonStyle())
+
+            Button(action: {}, label: { Text("Disabled Button") })
+                .buttonStyle(PrimaryButtonStyle())
+                .disabled(true)
+        }
     }
 }
