@@ -1,3 +1,10 @@
+//
+//  QuoteCard.swift
+//  Home
+//
+//  Created by Daniel Bauer on 21.12.20.
+//
+
 import Kingfisher
 import SwiftUI
 
