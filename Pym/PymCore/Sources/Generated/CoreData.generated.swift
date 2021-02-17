@@ -32,7 +32,24 @@ public class Activity: NSManagedObject {
     // swiftlint:disable discouraged_optional_boolean discouraged_optional_collection
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
+    @NSManaged public var entries: Set<MoodEntry>?
     // swiftlint:enable discouraged_optional_boolean discouraged_optional_collection
+}
+
+// MARK: Relationship Entries
+
+public extension Activity {
+    @objc(addEntriesObject:)
+    @NSManaged func addToEntries(_ value: MoodEntry)
+
+    @objc(removeEntriesObject:)
+    @NSManaged func removeFromEntries(_ value: MoodEntry)
+
+    @objc(addEntries:)
+    @NSManaged func addToEntries(_ values: Set<MoodEntry>)
+
+    @objc(removeEntries:)
+    @NSManaged func removeFromEntries(_ values: Set<MoodEntry>)
 }
 
 // MARK: - MoodEntry
