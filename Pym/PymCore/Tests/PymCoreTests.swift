@@ -1,4 +1,3 @@
-@testable import PymCore
 import XCTest
 
 class PymCoreTests: XCTestCase {

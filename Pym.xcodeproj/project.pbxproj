@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10E7A8A259C96D400337DDC /* Pym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B10E7A88259C96D400337DDC /* Pym.xcdatamodeld */; };
+		2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F5125DDAD0A00B0A978 /* Pym.xcdatamodeld */; };
+		2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F8825DDADA200B0A978 /* CoreData.generated.swift */; };
+		2F729FA825DDAEF700B0A978 /* MoodEntryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35F25A25DC67DA003BE10A /* MoodEntryExtensions.swift */; };
+		2F729FBD25DDAF0600B0A978 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35F20425DC6491003BE10A /* Enums.swift */; };
+		2FF4653125DDA63400D60BAC /* CoreDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4653025DDA63400D60BAC /* CoreDataModelTests.swift */; };
+		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
 		B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7A96259C973D00337DDC /* PersistenceController.swift */; };
-		B10E7AAD259C97DC00337DDC /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */; };
 		B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D4252259C75F200D507BE /* HomeView.swift */; };
 		B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
 		B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44CF259C85F700D507BE /* Strings.generated.swift */; };
-		B165555D259D2AEB000EBB63 /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */; };
 		B16D424C259C75F200D507BE /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16D4243259C75F200D507BE /* Home.framework */; };
 		B16D4258259C75F200D507BE /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16D4243259C75F200D507BE /* Home.framework */; };
 		B16D4259259C75F200D507BE /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16D4243259C75F200D507BE /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,7 +50,6 @@
 		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
 		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
 		B1FB7708259109A60010F791 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7707259109A60010F791 /* Preview Assets.xcassets */; };
-		B1FB7713259109A60010F791 /* PymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7712259109A60010F791 /* PymTests.swift */; };
 		B1FB773A25910C060010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B1FB773B25910C060010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB7791259135030010F791 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
@@ -416,9 +418,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B10E7A89259C96D400337DDC /* Pym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pym.xcdatamodel; sourceTree = "<group>"; };
+		2F35F20425DC6491003BE10A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		2F35F25A25DC67DA003BE10A /* MoodEntryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodEntryExtensions.swift; sourceTree = "<group>"; };
+		2F729F5225DDAD0A00B0A978 /* Pym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pym.xcdatamodel; sourceTree = "<group>"; };
+		2F729F8825DDADA200B0A978 /* CoreData.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.generated.swift; sourceTree = "<group>"; };
+		2FF4653025DDA63400D60BAC /* CoreDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelTests.swift; sourceTree = "<group>"; };
+		2FF4654625DDA67A00D60BAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		B10E7A96259C973D00337DDC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.generated.swift; sourceTree = "<group>"; };
 		B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitAssets.generated.swift; sourceTree = "<group>"; };
 		B16D4243259C75F200D507BE /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16D424B259C75F200D507BE /* HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,7 +449,6 @@
 		B1FB7707259109A60010F791 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FB7709259109A60010F791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pym/Info.plist; sourceTree = "<group>"; };
 		B1FB770E259109A60010F791 /* PymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1FB7712259109A60010F791 /* PymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymTests.swift; sourceTree = "<group>"; };
 		B1FB7719259109A60010F791 /* PymUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PymUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB771D259109A60010F791 /* PymUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymUITests.swift; sourceTree = "<group>"; };
 		B1FB773325910C060010F791 /* PymCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PymCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -563,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50E35AC25A21A64001D3A8E /* Kingfisher in Frameworks */,
+				2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */,
 				B1FB789B259149E00010F791 /* PymCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,9 +632,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F2C032925DC3F4300C35AA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F35F25A25DC67DA003BE10A /* MoodEntryExtensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F2C032A25DC3F4E00C35AA1 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		2F729EE625DDAC4100B0A978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B10E7A95259C972800337DDC /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				2F35F20425DC6491003BE10A /* Enums.swift */,
+				2F2C032A25DC3F4E00C35AA1 /* DTOs */,
+				2F2C032925DC3F4300C35AA1 /* Models */,
 				B10E7A96259C973D00337DDC /* PersistenceController.swift */,
 			);
 			path = Persistence;
@@ -721,7 +752,7 @@
 				B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */,
 				B16D44D0259C85F700D507BE /* Assets.generated.swift */,
 				B16D44CF259C85F700D507BE /* Strings.generated.swift */,
-				B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */,
+				2F729F8825DDADA200B0A978 /* CoreData.generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -779,6 +810,7 @@
 		B1FB7789259135030010F791 /* PymCore */ = {
 			isa = PBXGroup;
 			children = (
+				2F729EE625DDAC4100B0A978 /* Resources */,
 				B1FB77D4259141800010F791 /* Sources */,
 				B1FB77D62591419A0010F791 /* Tests */,
 			);
@@ -800,10 +832,10 @@
 		B1FB77C725913FB80010F791 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F729F5125DDAD0A00B0A978 /* Pym.xcdatamodeld */,
 				B1FB7704259109A60010F791 /* Assets.xcassets */,
 				B16D44F5259C878300D507BE /* Localizable.strings */,
 				B1FB7706259109A60010F791 /* Preview Content */,
-				B10E7A88259C96D400337DDC /* Pym.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -832,6 +864,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FB7797259135030010F791 /* PymCoreTests.swift */,
+				2FF4653025DDA63400D60BAC /* CoreDataModelTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -839,7 +872,6 @@
 		B1FB77DE259147110010F791 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B1FB7712259109A60010F791 /* PymTests.swift */,
 				B1FB771D259109A60010F791 /* PymUITests.swift */,
 			);
 			path = Tests;
@@ -874,6 +906,7 @@
 		B1FB783E2591481E0010F791 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FF4654625DDA67A00D60BAC /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1413,6 +1446,7 @@
 					};
 					B1FB770D259109A60010F791 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
 						TestTargetID = B1FB76FC259109A30010F791;
 					};
 					B1FB7718259109A60010F791 = {
@@ -1746,10 +1780,9 @@
 				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
-				B10E7A8A259C96D400337DDC /* Pym.xcdatamodeld in Sources */,
+				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
 				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,
-				B165555D259D2AEB000EBB63 /* CoreData.generated.swift in Sources */,
 				B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1758,7 +1791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB7713259109A60010F791 /* PymTests.swift in Sources */,
+				2FF4653125DDA63400D60BAC /* CoreDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1782,11 +1815,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */,
-				B10E7AAD259C97DC00337DDC /* CoreData.generated.swift in Sources */,
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
+				2F729FBD25DDAF0600B0A978 /* Enums.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
+				2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */,
 				B1FB77D8259141B10010F791 /* PymCore.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
+				2F729FA825DDAEF700B0A978 /* MoodEntryExtensions.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
 			);
@@ -2495,6 +2530,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Pym/Info.plist;
@@ -2506,6 +2542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.pym.PymTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pym.app/Pym";
@@ -2517,6 +2554,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Pym/Info.plist;
@@ -3254,12 +3292,12 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		B10E7A88259C96D400337DDC /* Pym.xcdatamodeld */ = {
+		2F729F5125DDAD0A00B0A978 /* Pym.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B10E7A89259C96D400337DDC /* Pym.xcdatamodel */,
+				2F729F5225DDAD0A00B0A978 /* Pym.xcdatamodel */,
 			);
-			currentVersion = B10E7A89259C96D400337DDC /* Pym.xcdatamodel */;
+			currentVersion = 2F729F5225DDAD0A00B0A978 /* Pym.xcdatamodel */;
 			path = Pym.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
