@@ -1,10 +1,3 @@
-//
-//  TrackingContext.swift
-//  PymCore
-//
-//  Created by Manuel Fuchs on 17.02.21.
-//
-
 import Foundation
 
 public struct DataAccessController {

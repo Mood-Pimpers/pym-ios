@@ -1,10 +1,3 @@
-//
-//  ExternalDataSource.swift
-//  Pym
-//
-//  Created by Manuel Fuchs on 18.02.21.
-//
-
 import Foundation
 
 public protocol ExternalDataSource {
