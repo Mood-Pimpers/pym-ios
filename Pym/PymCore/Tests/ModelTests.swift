@@ -2,7 +2,7 @@ import CoreData
 @testable import PymCore
 import XCTest
 
-class CoreDataModelTests: XCTestCase {
+class ModelTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -12,7 +12,7 @@ class CoreDataModelTests: XCTestCase {
     }
 
     func testFeelingArrayResolve1() throws {
-        let entry = MoodEntry(context: PersistenceController.preview.container.viewContext)
+        let entry = MoodEntryModel(context: PersistenceController.preview.container.viewContext)
 
         entry.feelingsValue = 30
         let expectedFeelings: [Feeling] = [.upset, .irritated, .clear, .curious]
@@ -22,7 +22,7 @@ class CoreDataModelTests: XCTestCase {
     }
 
     func testFeelingArrayResolve2() throws {
-        let entry = MoodEntry(context: PersistenceController.preview.container.viewContext)
+        let entry = MoodEntryModel(context: PersistenceController.preview.container.viewContext)
 
         let expectedFeelings: [Feeling] = [.angry, .enthusiastic, .worried, .irritated]
         entry.feelings = expectedFeelings
@@ -33,7 +33,7 @@ class CoreDataModelTests: XCTestCase {
     }
 
     func testRatingResolve() throws {
-        let entry = MoodEntry(context: PersistenceController.preview.container.viewContext)
+        let entry = MoodEntryModel(context: PersistenceController.preview.container.viewContext)
 
         for expectedRating in [MoodRating.bad, MoodRating.good, MoodRating.great, MoodRating.moderate, MoodRating.poor] {
             entry.rating = expectedRating

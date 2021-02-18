@@ -18,4 +18,13 @@ public class MoodEntry {
         self.init(date: date, rating: rating, feelings: feelings, activities: activities)
         self.id = id
     }
+
+    convenience init(from model: MoodEntryModel) {
+        self.init(date: model.date,
+                  rating: model.rating,
+                  feelings: model.feelings,
+                  activities: model.activities.filter { $0.name != nil }
+                      .map { $0.name! })
+        id = model.id
+    }
 }
