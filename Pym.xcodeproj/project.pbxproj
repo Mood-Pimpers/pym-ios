@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F41636825DEF3BA0009D45D /* ExternalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */; };
+		2F41637425DEF3CA0009D45D /* ExternalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41637325DEF3CA0009D45D /* ExternalEvent.swift */; };
 		2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F5125DDAD0A00B0A978 /* Pym.xcdatamodeld */; };
 		2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F8825DDADA200B0A978 /* CoreData.generated.swift */; };
 		2F729FA825DDAEF700B0A978 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35F25A25DC67DA003BE10A /* ModelExtensions.swift */; };
@@ -422,6 +424,8 @@
 /* Begin PBXFileReference section */
 		2F35F20425DC6491003BE10A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		2F35F25A25DC67DA003BE10A /* ModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
+		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
+		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
 		2F729F5225DDAD0A00B0A978 /* Pym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pym.xcdatamodel; sourceTree = "<group>"; };
 		2F729F8825DDADA200B0A978 /* CoreData.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.generated.swift; sourceTree = "<group>"; };
 		2F72A03E25DDC12400B0A978 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
@@ -652,6 +656,15 @@
 			path = DTOs;
 			sourceTree = "<group>";
 		};
+		2F41636625DEF3AB0009D45D /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */,
+				2F41637325DEF3CA0009D45D /* ExternalEvent.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		B10E7A95259C972800337DDC /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,6 +863,7 @@
 		B1FB77D4259141800010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2F41636625DEF3AB0009D45D /* DataSources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
 				B10E7A95259C972800337DDC /* Persistence */,
 				B16D44CE259C85D700D507BE /* Generated */,
@@ -1780,6 +1794,8 @@
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
+				2F41636825DEF3BA0009D45D /* ExternalDataSource.swift in Sources */,
+				2F41637425DEF3CA0009D45D /* ExternalEvent.swift in Sources */,
 				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,
 				B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */,
 			);

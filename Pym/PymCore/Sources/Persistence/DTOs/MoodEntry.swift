@@ -1,11 +1,11 @@
 import Foundation
 
-public class MoodEntry {
-    let id: UUID
-    let date: Date
-    let rating: MoodRating
-    let feelings: [Feeling]
-    let activities: [String]
+public class MoodEntry: Identifiable {
+    public let id: UUID
+    public let date: Date
+    public let rating: MoodRating
+    public let feelings: [Feeling]
+    public let activities: [String]
 
     init(id: UUID, date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
         self.id = id
