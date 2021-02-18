@@ -1,7 +1,7 @@
 import CoreData
 import Foundation
 
-public extension MoodEntry {
+public extension MoodEntryModel {
     var rating: MoodRating {
         get {
             MoodRating(rawValue: ratingValue)!

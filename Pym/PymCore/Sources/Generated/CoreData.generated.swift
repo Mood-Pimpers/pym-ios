@@ -9,11 +9,11 @@ import Foundation
 // swiftlint:disable attributes file_length vertical_whitespace_closing_braces
 // swiftlint:disable identifier_name line_length type_body_length
 
-// MARK: - Activity
+// MARK: - ActivityModel
 
-public class Activity: NSManagedObject {
+public class ActivityModel: NSManagedObject {
     public class var entityName: String {
-        "Activity"
+        "ActivityModel"
     }
 
     public class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -21,42 +21,42 @@ public class Activity: NSManagedObject {
     }
 
     @available(*, deprecated, renamed: "makeFetchRequest", message: "To avoid collisions with the less concrete method in `NSManagedObject`, please use `makeFetchRequest()` instead.")
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Activity> {
-        NSFetchRequest<Activity>(entityName: entityName)
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<ActivityModel> {
+        NSFetchRequest<ActivityModel>(entityName: entityName)
     }
 
-    @nonobjc public class func makeFetchRequest() -> NSFetchRequest<Activity> {
-        NSFetchRequest<Activity>(entityName: entityName)
+    @nonobjc public class func makeFetchRequest() -> NSFetchRequest<ActivityModel> {
+        NSFetchRequest<ActivityModel>(entityName: entityName)
     }
 
     // swiftlint:disable discouraged_optional_boolean discouraged_optional_collection
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var entries: Set<MoodEntry>?
+    @NSManaged public var entries: Set<MoodEntryModel>?
     // swiftlint:enable discouraged_optional_boolean discouraged_optional_collection
 }
 
 // MARK: Relationship Entries
 
-public extension Activity {
+public extension ActivityModel {
     @objc(addEntriesObject:)
-    @NSManaged func addToEntries(_ value: MoodEntry)
+    @NSManaged func addToEntries(_ value: MoodEntryModel)
 
     @objc(removeEntriesObject:)
-    @NSManaged func removeFromEntries(_ value: MoodEntry)
+    @NSManaged func removeFromEntries(_ value: MoodEntryModel)
 
     @objc(addEntries:)
-    @NSManaged func addToEntries(_ values: Set<MoodEntry>)
+    @NSManaged func addToEntries(_ values: Set<MoodEntryModel>)
 
     @objc(removeEntries:)
-    @NSManaged func removeFromEntries(_ values: Set<MoodEntry>)
+    @NSManaged func removeFromEntries(_ values: Set<MoodEntryModel>)
 }
 
-// MARK: - MoodEntry
+// MARK: - MoodEntryModel
 
-public class MoodEntry: NSManagedObject {
+public class MoodEntryModel: NSManagedObject {
     public class var entityName: String {
-        "MoodEntry"
+        "MoodEntryModel"
     }
 
     public class func entity(in managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -64,12 +64,12 @@ public class MoodEntry: NSManagedObject {
     }
 
     @available(*, deprecated, renamed: "makeFetchRequest", message: "To avoid collisions with the less concrete method in `NSManagedObject`, please use `makeFetchRequest()` instead.")
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<MoodEntry> {
-        NSFetchRequest<MoodEntry>(entityName: entityName)
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<MoodEntryModel> {
+        NSFetchRequest<MoodEntryModel>(entityName: entityName)
     }
 
-    @nonobjc public class func makeFetchRequest() -> NSFetchRequest<MoodEntry> {
-        NSFetchRequest<MoodEntry>(entityName: entityName)
+    @nonobjc public class func makeFetchRequest() -> NSFetchRequest<MoodEntryModel> {
+        NSFetchRequest<MoodEntryModel>(entityName: entityName)
     }
 
     // swiftlint:disable discouraged_optional_boolean discouraged_optional_collection
@@ -77,24 +77,24 @@ public class MoodEntry: NSManagedObject {
     @NSManaged public var feelingsValue: Int16
     @NSManaged public var id: UUID
     @NSManaged public var ratingValue: Int16
-    @NSManaged public var activities: Set<Activity>
+    @NSManaged public var activities: Set<ActivityModel>
     // swiftlint:enable discouraged_optional_boolean discouraged_optional_collection
 }
 
 // MARK: Relationship Activities
 
-public extension MoodEntry {
+public extension MoodEntryModel {
     @objc(addActivitiesObject:)
-    @NSManaged func addToActivities(_ value: Activity)
+    @NSManaged func addToActivities(_ value: ActivityModel)
 
     @objc(removeActivitiesObject:)
-    @NSManaged func removeFromActivities(_ value: Activity)
+    @NSManaged func removeFromActivities(_ value: ActivityModel)
 
     @objc(addActivities:)
-    @NSManaged func addToActivities(_ values: Set<Activity>)
+    @NSManaged func addToActivities(_ values: Set<ActivityModel>)
 
     @objc(removeActivities:)
-    @NSManaged func removeFromActivities(_ values: Set<Activity>)
+    @NSManaged func removeFromActivities(_ values: Set<ActivityModel>)
 }
 
 // swiftlint:enable identifier_name line_length type_body_length
