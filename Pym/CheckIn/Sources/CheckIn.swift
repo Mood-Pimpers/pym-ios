@@ -7,32 +7,18 @@ public struct MoodEntry {
     let activities: [String]
 }
 
-struct SelectableElement<TContent>: View where TContent: View {
-    let isSelected: Bool
-    let content: TContent
-    let action: () -> Void
-
-    var body: some View {
-        content
-            .frame(width: 64, height: 64)
-            .background(isSelected ? Color.primaryColor : Color.white)
-            .cornerRadius(4)
-            .shadow(color: .neutralLightColor, radius: 8)
-            .onTapGesture(perform: action)
-    }
-}
-
 public struct MoodView: View {
     @StateObject var viewRouter: ViewRouter
     @State private var mood: Int?
 
     public var body: some View {
         VStack {
+            Title("How are you feeling?")
             HStack {
                 ForEach(1 ..< 6) { index in
                     SelectableElement(
                         isSelected: mood == index,
-                        content: Text("\(index)"),
+                        content: { Text("\(index)") },
                         action: { mood = index }
                     )
                 }
@@ -50,33 +36,11 @@ public struct MoodView: View {
                 .disabled(mood == nil)
                 .padding(16)
         }
+        .padding(16)
     }
 
     private func next() {
         viewRouter.currentPage = .feeling
-    }
-}
-
-struct FeelingView: View {
-    @StateObject var viewRouter: ViewRouter
-
-    public var body: some View {
-        VStack {
-            Text("FEELING")
-            Spacer()
-
-            Button(action: next, label: {
-                Text("continue")
-                    .bold()
-                Spacer()
-            })
-                .buttonStyle(PrimaryButtonStyle())
-                .padding(16)
-        }
-    }
-
-    private func next() {
-        viewRouter.currentPage = .activity
     }
 }
 
@@ -85,7 +49,7 @@ struct ActivityView: View {
 
     public var body: some View {
         VStack {
-            Text("ACTIVITY")
+            Title("Why are you feeling this way?")
             Spacer()
 
             Button(action: finish, label: {

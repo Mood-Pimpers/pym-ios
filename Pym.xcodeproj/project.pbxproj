@@ -85,6 +85,8 @@
 		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
 		F5322F5825A62B0300D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
 		F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
+		F5346C9225C3145700F15190 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingView.swift */; };
+		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */; };
 /* End PBXBuildFile section */
@@ -466,6 +468,8 @@
 		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		F51B335725A5CFE300C08F21 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F5346C9125C3145700F15190 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
+		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -891,7 +895,9 @@
 		B1FB7874259149890010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F5346C9D25C314F400F15190 /* Components */,
 				B1FB792025914A5F0010F791 /* CheckIn.swift */,
+				F5346C9125C3145700F15190 /* FeelingView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -936,6 +942,14 @@
 				F51B335725A5CFE300C08F21 /* Quote.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5346C9D25C314F400F15190 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
@@ -1821,6 +1835,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
+				F5346C9225C3145700F15190 /* FeelingView.swift in Sources */,
+				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
