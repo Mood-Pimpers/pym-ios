@@ -1,10 +1,3 @@
-//
-//  DataAccessControllerTests.swift
-//  PymTests
-//
-//  Created by Manuel Fuchs on 18.02.21.
-//
-
 @testable import PymCore
 import XCTest
 

@@ -50,8 +50,7 @@ public struct DataAccessController {
         request.fetchLimit = 1
 
         if let results = try? context.fetch(request),
-           results.count == 1
-        {
+           results.count == 1 {
             return results.first
         } else {
             return nil
