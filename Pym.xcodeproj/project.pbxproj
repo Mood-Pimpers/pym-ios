@@ -11,6 +11,17 @@
 		B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7A96259C973D00337DDC /* PersistenceController.swift */; };
 		B10E7AAD259C97DC00337DDC /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */; };
 		B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D4252259C75F200D507BE /* HomeView.swift */; };
+		B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156694C25DE9B8D00DEB355 /* PickerPageView.swift */; };
+		B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156694C25DE9B8D00DEB355 /* PickerPageView.swift */; };
+		B156696E25DEB15B00DEB355 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156696D25DEB15B00DEB355 /* WelcomeView.swift */; };
+		B156697B25DEB16700DEB355 /* HealthImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156697A25DEB16700DEB355 /* HealthImportView.swift */; };
+		B156699225DEB1AB00DEB355 /* MoodReminderIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */; };
+		B15669A925DEB1E400DEB355 /* MoodReminderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */; };
+		B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */; };
+		B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */; };
+		B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156697A25DEB16700DEB355 /* HealthImportView.swift */; };
+		B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156696D25DEB15B00DEB355 /* WelcomeView.swift */; };
+		B15669FF25DEB20E00DEB355 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7835259147F90010F791 /* OnboardingView.swift */; };
 		B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
@@ -30,7 +41,6 @@
 		B16D4307259C771E00D507BE /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16D42F2259C771E00D507BE /* Settings.framework */; };
 		B16D4308259C771E00D507BE /* Settings.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16D42F2259C771E00D507BE /* Settings.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B16D432C259C773F00D507BE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D432B259C773F00D507BE /* SettingsView.swift */; };
-		B16D4478259C80F000D507BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B16D4477259C80F000D507BE /* ComposableArchitecture */; };
 		B16D448F259C810000D507BE /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = B16D448E259C810000D507BE /* SwiftyBeaver */; };
 		B16D44A5259C83F600D507BE /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
 		B16D44A6259C83F600D507BE /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,6 +53,7 @@
 		B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44CF259C85F700D507BE /* Strings.generated.swift */; };
 		B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
 		B16D44F3259C878300D507BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B16D44F5259C878300D507BE /* Localizable.strings */; };
+		B1DDFE6825DFBBD90075546F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1DDFE6725DFBBD90075546F /* ComposableArchitecture */; };
 		B1FB7701259109A30010F791 /* PymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7700259109A30010F791 /* PymApp.swift */; };
 		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
 		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
@@ -60,7 +71,7 @@
 		B1FB781F259147CB0010F791 /* OnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB781E259147CB0010F791 /* OnboardingTests.swift */; };
 		B1FB7824259147CB0010F791 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB780F259147CB0010F791 /* Onboarding.framework */; };
 		B1FB7825259147CB0010F791 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB780F259147CB0010F791 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1FB7836259147F90010F791 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7835259147F90010F791 /* Onboarding.swift */; };
+		B1FB7836259147F90010F791 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7835259147F90010F791 /* OnboardingView.swift */; };
 		B1FB7858259149540010F791 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
 		B1FB785F259149540010F791 /* CheckInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB785E259149540010F791 /* CheckInTests.swift */; };
 		B1FB7864259149540010F791 /* CheckIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; };
@@ -419,6 +430,11 @@
 		B10E7A89259C96D400337DDC /* Pym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pym.xcdatamodel; sourceTree = "<group>"; };
 		B10E7A96259C973D00337DDC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.generated.swift; sourceTree = "<group>"; };
+		B156694C25DE9B8D00DEB355 /* PickerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPageView.swift; sourceTree = "<group>"; };
+		B156696D25DEB15B00DEB355 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		B156697A25DEB16700DEB355 /* HealthImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImportView.swift; sourceTree = "<group>"; };
+		B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderIntroView.swift; sourceTree = "<group>"; };
+		B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderSettingsView.swift; sourceTree = "<group>"; };
 		B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitAssets.generated.swift; sourceTree = "<group>"; };
 		B16D4243259C75F200D507BE /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16D424B259C75F200D507BE /* HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,7 +470,7 @@
 		B1FB780F259147CB0010F791 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB7817259147CB0010F791 /* OnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB781E259147CB0010F791 /* OnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTests.swift; sourceTree = "<group>"; };
-		B1FB7835259147F90010F791 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		B1FB7835259147F90010F791 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B1FB784F259149540010F791 /* CheckIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB7857259149540010F791 /* CheckInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB785E259149540010F791 /* CheckInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTests.swift; sourceTree = "<group>"; };
@@ -553,7 +569,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B16D4478259C80F000D507BE /* ComposableArchitecture in Frameworks */,
+				B1DDFE6825DFBBD90075546F /* ComposableArchitecture in Frameworks */,
 				B16D448F259C810000D507BE /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,7 +874,11 @@
 		B1FB7833259147DA0010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B1FB7835259147F90010F791 /* Onboarding.swift */,
+				B1FB7835259147F90010F791 /* OnboardingView.swift */,
+				B156696D25DEB15B00DEB355 /* WelcomeView.swift */,
+				B156697A25DEB16700DEB355 /* HealthImportView.swift */,
+				B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */,
+				B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -943,6 +963,7 @@
 			children = (
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
+				B156694C25DE9B8D00DEB355 /* PickerPageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1208,8 +1229,8 @@
 			);
 			name = PymCommon;
 			packageProductDependencies = (
-				B16D4477259C80F000D507BE /* ComposableArchitecture */,
 				B16D448E259C810000D507BE /* SwiftyBeaver */,
+				B1DDFE6725DFBBD90075546F /* ComposableArchitecture */,
 			);
 			productName = PymCommon;
 			productReference = B1FB773325910C060010F791 /* PymCommon.framework */;
@@ -1467,9 +1488,9 @@
 			);
 			mainGroup = B1FB76F4259109A30010F791;
 			packageReferences = (
-				B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				F50E358825A21909001D3A8E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
 			projectDirPath = "";
@@ -1742,10 +1763,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15669A925DEB1E400DEB355 /* MoodReminderSettingsView.swift in Sources */,
 				F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */,
 				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
+				B15669FF25DEB20E00DEB355 /* OnboardingView.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
+				B156696E25DEB15B00DEB355 /* WelcomeView.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
+				B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
+				B156699225DEB1AB00DEB355 /* MoodReminderIntroView.swift in Sources */,
+				B156697B25DEB16700DEB355 /* HealthImportView.swift in Sources */,
 				B10E7A8A259C96D400337DDC /* Pym.xcdatamodeld in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
 				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,
@@ -1786,6 +1813,7 @@
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
 				B1FB77D8259141B10010F791 /* PymCore.swift in Sources */,
+				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
@@ -1804,7 +1832,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB7836259147F90010F791 /* Onboarding.swift in Sources */,
+				B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */,
+				B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */,
+				B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */,
+				B1FB7836259147F90010F791 /* OnboardingView.swift in Sources */,
+				B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3209,20 +3241,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.0;
-			};
-		};
 		B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.9.3;
+			};
+		};
+		B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.0;
 			};
 		};
 		F50E358825A21909001D3A8E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -3236,15 +3268,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B16D4477259C80F000D507BE /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
 		B16D448E259C810000D507BE /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
+		};
+		B1DDFE6725DFBBD90075546F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 		F50E35AB25A21A64001D3A8E /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

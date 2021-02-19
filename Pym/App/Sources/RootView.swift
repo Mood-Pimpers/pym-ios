@@ -1,3 +1,4 @@
+import CheckIn
 import Explorer
 import Home
 import Insights
@@ -22,7 +23,7 @@ struct RootView: View {
                         .tabItem {
                             Image.insights.renderingMode(.template).colorMultiply(.black)
                         }
-                    Text("TODO: Add alert")
+                    CheckInView()
                         .tabItem {}
                     ExplorerView()
                         .tabItem {
