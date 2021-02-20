@@ -6,7 +6,7 @@ extension MoodEntryModel {
         get {
             Feeling.allCases
                 .sorted { $0 > $1 }
-                .reduce(ReduceState(feelingsValue, [])) { (state, feeling) -> ReduceState in
+                .reduce(ReduceState(feelingsValue, [])) { state, feeling in
                     feeling.rawValue <= state.remainingValue
                         ? ReduceState(state.remainingValue - Int16(feeling.rawValue), state.feelings + [feeling])
                         : state
