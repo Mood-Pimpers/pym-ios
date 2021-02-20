@@ -13,13 +13,14 @@
 		2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */; };
 		2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */; };
 		2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41637325DEF3CA0009D45D /* ExternalEvent.swift */; };
-		2F48D67B25DFB42D00B29B28 /* ExtDataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5A125DFA87000B29B28 /* ExtDataAccessController.swift */; };
+		2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */; };
 		2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F5125DDAD0A00B0A978 /* Pym.xcdatamodeld */; };
 		2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F729F8825DDADA200B0A978 /* CoreData.generated.swift */; };
-		2F729FA825DDAEF700B0A978 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35F25A25DC67DA003BE10A /* ModelExtensions.swift */; };
 		2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A03E25DDC12400B0A978 /* MoodEntry.swift */; };
 		2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A06025DDC2D700B0A978 /* DataAccessController.swift */; };
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
+		2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */; };
+		2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2037625E114B600EC0925 /* FeelingsExtension.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
@@ -411,10 +412,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F35F25A25DC67DA003BE10A /* ModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
 		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
-		2F48D5A125DFA87000B29B28 /* ExtDataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtDataAccessController.swift; sourceTree = "<group>"; };
+		2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataAccess.swift; sourceTree = "<group>"; };
 		2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHealthKitDataSource.swift; sourceTree = "<group>"; };
 		2F48D62625DFB37700B29B28 /* FakeHealthKitDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHealthKitDataSourceTests.swift; sourceTree = "<group>"; };
 		2F6B6D7925DEFE6F00E59436 /* DataAccessControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessControllerTests.swift; sourceTree = "<group>"; };
@@ -423,6 +423,8 @@
 		2F72A03E25DDC12400B0A978 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		2F72A06025DDC2D700B0A978 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRatingExtension.swift; sourceTree = "<group>"; };
+		2FA2037625E114B600EC0925 /* FeelingsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsExtension.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -620,7 +622,8 @@
 		2F2C032925DC3F4300C35AA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2F35F25A25DC67DA003BE10A /* ModelExtensions.swift */,
+				2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */,
+				2FA2037625E114B600EC0925 /* FeelingsExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -641,7 +644,7 @@
 				2F48D5AD25DFA8F100B29B28 /* HealthKit */,
 				2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */,
 				2F41637325DEF3CA0009D45D /* ExternalEvent.swift */,
-				2F48D5A125DFA87000B29B28 /* ExtDataAccessController.swift */,
+				2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -1205,7 +1208,6 @@
 				B1FB772F25910C060010F791 /* Sources */,
 				B1FB773025910C060010F791 /* Frameworks */,
 				B1FB773125910C060010F791 /* Resources */,
-				2FD2973F25DFC2D400A195E3 /* SwiftDate */,
 			);
 			buildRules = (
 			);
@@ -1613,24 +1615,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2FD2973F25DFC2D400A195E3 /* SwiftDate */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftDate;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where langs are checked out\nLANGS_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/SwiftDate/Sources/SwiftDate/Formatters/RelativeFormatter/langs\"\n\nif [ -z \"${LANGS_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the langs in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncp -f -R \"${LANGS_PATH}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\"\n";
-		};
 		B188A6A5259DDE6800F1AFB9 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1770,16 +1754,17 @@
 				2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */,
 				2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */,
 				2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */,
+				2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
 				2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */,
 				2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */,
 				2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */,
-				2F48D67B25DFB42D00B29B28 /* ExtDataAccessController.swift in Sources */,
+				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
-				2F729FA825DDAEF700B0A978 /* ModelExtensions.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
+				2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
 				2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */,
 			);
