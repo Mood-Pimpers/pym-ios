@@ -7,16 +7,16 @@ public class MoodEntry {
     public let feelings: [Feeling]
     public let activities: [String]
 
-    convenience init(date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
-        self.init(id: nil, date: date, rating: rating, feelings: feelings, activities: activities)
-    }
-
     init(id: UUID?, date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
+        self.id = id
         self.date = date
         self.rating = rating
         self.feelings = feelings
         self.activities = activities
-        self.id = id
+    }
+
+    convenience init(date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
+        self.init(id: nil, date: date, rating: rating, feelings: feelings, activities: activities)
     }
 
     convenience init(from model: MoodEntryModel) {
