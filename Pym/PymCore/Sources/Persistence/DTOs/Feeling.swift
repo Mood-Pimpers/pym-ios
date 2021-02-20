@@ -1,6 +1,4 @@
-import Foundation
-
-public enum Feeling: Int, CaseIterable, Comparable {
+public enum Feeling: Int {
     case angry = 1
     case upset = 2
     case irritated = 4
@@ -15,7 +13,9 @@ public enum Feeling: Int, CaseIterable, Comparable {
     case amazed = 2056
     case surprised = 4112
     case confused = 8224
+}
 
+extension Feeling: CaseIterable, Comparable {
     public static func < (lhs: Feeling, rhs: Feeling) -> Bool {
         lhs.rawValue < rhs.rawValue
     }

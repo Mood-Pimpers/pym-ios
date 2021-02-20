@@ -1,14 +1,7 @@
-//
-//  ExtDataAccessController.swift
-//  Pym
-//
-//  Created by Manuel Fuchs on 19.02.21.
-//
-
 import Foundation
 
-public struct ExtDataAccessController {
-    public static let shared = ExtDataAccessController()
+public struct ExternalDataAccess {
+    public static let shared = ExternalDataAccess()
     private let sources: [ExternalDataSource]
 
     private init() {

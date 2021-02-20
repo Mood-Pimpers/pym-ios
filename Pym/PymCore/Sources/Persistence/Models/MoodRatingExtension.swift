@@ -1,8 +1,12 @@
-//
-//  MoodRatingExtension.swift
-//  PymCore
-//
-//  Created by Manuel Fuchs on 20.02.21.
-//
-
 import Foundation
+
+extension MoodEntryModel {
+    var rating: MoodRating {
+        get {
+            MoodRating(rawValue: ratingValue)!
+        }
+        set(newRating) {
+            ratingValue = newRating.rawValue
+        }
+    }
+}

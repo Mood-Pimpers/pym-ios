@@ -1,8 +1,20 @@
-//
-//  FeelingExtension.swift
-//  PymCore
-//
-//  Created by Manuel Fuchs on 20.02.21.
-//
+extension MoodEntryModel {
+    // swiftlint-disable: syntactic_sugar
+    typealias ReduceState = (remainingValue: Int16, feelings: [Feeling])
 
-import Foundation
+    var feelings: [Feeling] {
+        get {
+            Feeling.allCases
+                .sorted { $0 > $1 }
+                .reduce(ReduceState(feelingsValue, [])) { (state, feeling) -> ReduceState in
+                    feeling.rawValue <= state.remainingValue
+                        ? ReduceState(state.remainingValue - Int16(feeling.rawValue), state.feelings + [feeling])
+                        : state
+                }
+                .feelings
+        }
+        set(newFeelings) {
+            feelingsValue = Int16(newFeelings.reduce(0) { $0 + $1.rawValue })
+        }
+    }
+}

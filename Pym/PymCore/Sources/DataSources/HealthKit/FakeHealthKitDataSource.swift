@@ -18,18 +18,19 @@ public class FakeHealthKitDataSource: ExternalDataSource {
             if let index = eventMemory.index(forKey: date) {
                 events.append(contentsOf: eventMemory[index].value)
             } else {
-                var newEvents: [ExternalEvent] = []
-                for _ in 1 ... Int.random(in: 1 ... 5) {
-                    newEvents.append(ExternalEvent(
-                        id: UUID(),
-                        title: possibleActivities[Int.random(in: 0 ... possibleActivities.count - 1)],
-                        timestamp: date
-                            .adding(.hour, value: Int.random(in: 0 ... 23))
-                            .adding(.minute, value: Int.random(in: 0 ... 59))
-                            .adding(.second, value: Int.random(in: 0 ... 59)),
-                        content: "Distance: \(Double.random(in: 1 ... 25))"
-                    ))
-                }
+                let newEvents = (1 ... Int.random(in: 1 ... 5))
+                    .map { _ in
+                        ExternalEvent(
+                            id: UUID(),
+                            title: possibleActivities[Int.random(in: 0 ... possibleActivities.count - 1)],
+                            timestamp: date
+                                .adding(.hour, value: Int.random(in: 0 ... 23))
+                                .adding(.minute, value: Int.random(in: 0 ... 59))
+                                .adding(.second, value: Int.random(in: 0 ... 59)),
+                            content: "Distance: \(Double.random(in: 1 ... 25))"
+                        )
+                    }
+
                 eventMemory[date] = newEvents
                 events.append(contentsOf: newEvents)
             }
