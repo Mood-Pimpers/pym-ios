@@ -22,7 +22,7 @@ public class FakeHealthKitDataSource: ExternalDataSource {
                 for _ in 1 ... Int.random(in: 1 ... 5) {
                     newEvents.append(ExternalEvent(
                         id: UUID(),
-                        title: possibleActivities.shuffled().first!,
+                        title: possibleActivities[Int.random(in: 0 ... possibleActivities.count - 1)],
                         timestamp: date
                             .adding(.hour, value: Int.random(in: 0 ... 23))
                             .adding(.minute, value: Int.random(in: 0 ... 59))
