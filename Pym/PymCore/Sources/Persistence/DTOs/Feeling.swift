@@ -1,13 +1,5 @@
 import Foundation
 
-public enum MoodRating: Int16 {
-    case bad = 1
-    case poor = 2
-    case moderate = 3
-    case good = 4
-    case great = 5
-}
-
 public enum Feeling: Int, CaseIterable, Comparable {
     case angry = 1
     case upset = 2
