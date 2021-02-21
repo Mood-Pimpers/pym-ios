@@ -18,16 +18,19 @@ struct RootView: View {
                         .tabItem {
                             Image.home.colorMultiply(.blackColor)
                         }
+
                     InsightsView()
                         .tabItem {
                             Image.insights.renderingMode(.template).colorMultiply(.black)
                         }
-                    Text("TODO: Add alert")
-                        .tabItem {}
+
+                    Spacer()
+
                     ExplorerView()
                         .tabItem {
                             Image.explorer.colorMultiply(.blackColor)
                         }
+
                     SettingsView()
                         .tabItem {
                             Image.settings.colorMultiply(.blackColor)
