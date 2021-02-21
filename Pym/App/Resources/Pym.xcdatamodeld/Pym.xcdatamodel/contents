@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActivityModel" representedClassName="PymCore.ActivityModel" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MoodEntryModel" inverseName="activities" inverseEntity="MoodEntryModel"/>
+    </entity>
+    <entity name="MoodEntryModel" representedClassName="PymCore.MoodEntryModel" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="feelingsValue" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="ratingValue" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="activities" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityModel" inverseName="entries" inverseEntity="ActivityModel"/>
+    </entity>
+    <elements>
+        <element name="ActivityModel" positionX="288.4912719726562" positionY="-169.95947265625" width="128" height="88"/>
+        <element name="MoodEntryModel" positionX="279.6931762695312" positionY="21.792236328125" width="128" height="118"/>
+    </elements>
 </model>
