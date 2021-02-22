@@ -21,11 +21,7 @@ struct ActivityView: View {
                 }
                 .padding(8)
             },
-            action: {
-                if !selectedActivities.contains(activity) {
-                    selectedActivities.append(activity)
-                }
-            },
+            action: { select(activity) },
             width: geometry.size.width / 2 - 16 - 4
         )
     }
@@ -48,6 +44,12 @@ struct ActivityView: View {
                     .buttonStyle(PrimaryButtonStyle())
             }
             .padding(16)
+        }
+    }
+
+    private func select(_ activity: String) {
+        if !selectedActivities.contains(activity) {
+            selectedActivities.append(activity)
         }
     }
 

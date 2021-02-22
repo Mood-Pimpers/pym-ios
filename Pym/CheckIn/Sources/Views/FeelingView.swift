@@ -34,11 +34,7 @@ struct FeelingView: View {
                 }
                 .padding(8)
             },
-            action: {
-                if !selectedFeelings.contains(feeling.name) {
-                    selectedFeelings.append(feeling.name)
-                }
-            },
+            action: { select(feeling) },
             width: geometry.size.width / 2 - 16 - 4
         )
     }
@@ -68,7 +64,7 @@ struct FeelingView: View {
         viewRouter.currentPage = .activity
     }
 
-    private func select(feeling: Feeling) {
+    private func select(_ feeling: Feeling) {
         if !selectedFeelings.contains(feeling.name) {
             selectedFeelings.append(feeling.name)
         }
