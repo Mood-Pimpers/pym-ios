@@ -1,5 +1,5 @@
-import SwiftUI
 import PymCore
+import SwiftUI
 
 public extension Feeling {
     var color: Color {
