@@ -32,7 +32,7 @@ extension Sequence where Self.Element: Hashable {
 }
 
 struct FeelingView: View {
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var viewRouter: CheckInViewRouter
 
     @State var selectedFeelings: [String] = []
 
@@ -103,6 +103,6 @@ struct FeelingView: View {
 
 struct FeelingView_Previews: PreviewProvider {
     static var previews: some View {
-        FeelingView(viewRouter: ViewRouter())
+        FeelingView(viewRouter: CheckInViewRouter())
     }
 }
