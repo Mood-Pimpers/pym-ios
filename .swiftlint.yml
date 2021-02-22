@@ -9,6 +9,7 @@ included:
 - Pym/Settings
 excluded:
 - Pym/PymCore/Sources/Generated
+- Pym/PymCore/Sources/SwifterSwift
 
 opt_in_rules:
   - file_header
