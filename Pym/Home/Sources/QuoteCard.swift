@@ -8,7 +8,7 @@ let fade = LinearGradient(
     endPoint: .bottom
 )
 
-public struct QuoteCard: View {
+struct QuoteCard: View {
     let quote: Quote
     let metrics: GeometryProxy
     @State private var show: Bool = false
@@ -51,6 +51,21 @@ public struct QuoteCard: View {
     }
 }
 
+struct QuoteCard_Previews: PreviewProvider {
+    static var previews: some View {
+        let quote = Quote(
+            id: 1,
+            text: "Be yourself; everyone else is already taken.",
+            author: "Oscar Wilde",
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
+        )
+
+        GeometryReader { metrics in
+            QuoteCard(quote, metrics)
+        }
+    }
+}
+
 struct QuoteModalView: View {
     @Environment(\.presentationMode) var presentationMode
 
@@ -63,10 +78,12 @@ struct QuoteModalView: View {
     }
 
     var body: some View {
-        let width = metrics.size.width +
-            metrics.safeAreaInsets.leading +
-            metrics.safeAreaInsets.trailing
-        let height = metrics.size.height + metrics.safeAreaInsets.bottom + metrics.safeAreaInsets.top
+        let width = metrics.size.width
+            + metrics.safeAreaInsets.leading
+            + metrics.safeAreaInsets.trailing
+        let height = metrics.size.height
+            + metrics.safeAreaInsets.bottom
+            + metrics.safeAreaInsets.top
 
         ZStack(alignment: .center) {
             KFImage(quote.url(Int(width), Int(height)))
@@ -90,8 +107,6 @@ struct QuoteModalView: View {
             .frame(width: width)
         }
 
-        // KFImage(quote.url(Int(width), Int(height)))
-        // .frame(maxWidth: .infinity, maxHeight: .infinity)
         .frame(maxWidth: width, maxHeight: height)
         .background(Color.red)
         .edgesIgnoringSafeArea(.all)

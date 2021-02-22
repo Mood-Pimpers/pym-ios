@@ -98,7 +98,6 @@
 		F5346C9225C3145700F15190 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingView.swift */; };
 		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
-		F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -477,7 +476,6 @@
 		F5346C9125C3145700F15190 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
 		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
-		F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -696,7 +694,6 @@
 				F51B335625A5CFD700C08F21 /* Models */,
 				B16D4252259C75F200D507BE /* HomeView.swift */,
 				F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */,
-				F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1690,7 +1687,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */,
 				F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */,
 				F51B335825A5CFE300C08F21 /* Quote.swift in Sources */,
 				B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */,

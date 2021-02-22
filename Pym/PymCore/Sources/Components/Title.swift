@@ -14,7 +14,7 @@ public struct Title: View {
                 .font(.title)
             Spacer()
         }
-        .padding(EdgeInsets(top: 16 + 8, leading: 0, bottom: 8, trailing: 0))
+        // .padding(EdgeInsets(top: 16 + 8, leading: 0, bottom: 8, trailing: 0))
     }
 }
 
