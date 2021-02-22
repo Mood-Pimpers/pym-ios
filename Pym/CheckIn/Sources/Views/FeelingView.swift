@@ -1,35 +1,19 @@
 import PymCore
 import SwiftUI
 
-struct Feeling: Hashable {
-    let color: Color
-    let name: String
-}
-
 struct FeelingView: View {
     @StateObject var viewRouter: CheckInViewRouter
-    @State var selectedFeelings: [String] = []
-
-    private let feelings = [
-        Feeling(color: Color.red, name: "angry"),
-        Feeling(color: Color.red, name: "upset"),
-        Feeling(color: Color.red, name: "irritated"),
-        Feeling(color: Color.orange, name: "clear"),
-        Feeling(color: Color.orange, name: "curious"),
-        Feeling(color: Color.orange, name: "enthusiastic"),
-        Feeling(color: Color.yellow, name: "happy"),
-        Feeling(color: Color.yellow, name: "relaxed")
-    ]
+    @State var selectedFeelings: [Feeling] = []
 
     private func feelingSelectable(_ feeling: Feeling, _ geometry: GeometryProxy) -> some View {
         SelectableElement(
-            isSelected: selectedFeelings.contains(feeling.name),
+            isSelected: selectedFeelings.contains(feeling),
             content: {
                 HStack {
                     feeling.color
                         .frame(width: 12, height: 12)
                         .cornerRadius(8)
-                    Text(feeling.name)
+                    Text(feeling.description)
                     Spacer()
                 }
                 .padding(8)
@@ -43,7 +27,7 @@ struct FeelingView: View {
         GeometryReader { geometry in
             VStack {
                 Title("Describe your feelings?")
-                TwoColumnView(elements: feelings) { feeling in
+                TwoColumnView(elements: Feeling.allCases) { feeling in
                     feelingSelectable(feeling, geometry)
                 }
 
@@ -65,8 +49,8 @@ struct FeelingView: View {
     }
 
     private func select(_ feeling: Feeling) {
-        if !selectedFeelings.contains(feeling.name) {
-            selectedFeelings.append(feeling.name)
+        if !selectedFeelings.contains(feeling) {
+            selectedFeelings.append(feeling)
         }
     }
 }
