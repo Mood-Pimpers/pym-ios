@@ -1,14 +1,20 @@
 import SwiftUI
 
 public struct PickerPageView<Content>: View where Content: View {
-    @State public var currentIndex = 0
+    @Binding public var currentIndex: Int
     var pages: Int
-    var spacing: CGFloat
+    var spacing: CGFloat = 0.8
     var content: () -> Content
 
-    public init(spacing: CGFloat? = 8.0, pages: Int = 0, @ViewBuilder content: @escaping () -> Content) {
-        self.pages = pages
+    public init(
+        spacing: CGFloat? = nil,
+        pages: Int = 0,
+        currentIndex: Binding<Int>,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
         self.spacing = spacing ?? 0.8
+        self.pages = pages
+        _currentIndex = currentIndex
         self.content = content
     }
 
@@ -28,6 +34,13 @@ public struct PickerPageView<Content>: View where Content: View {
                 content()
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .onAppear {
+                let value = currentIndex
+                currentIndex = -1
+                DispatchQueue.main.async {
+                    currentIndex = value
+                }
+            }
             .frame(maxHeight: .infinity)
         }
     }
@@ -35,7 +48,7 @@ public struct PickerPageView<Content>: View where Content: View {
 
 struct PickerPageView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerPageView(pages: 3, content: {
+        PickerPageView(pages: 3, currentIndex: .constant(0), content: {
             Text("One")
             Text("Two")
             Text("Three")

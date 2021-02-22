@@ -27,15 +27,10 @@
 		B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D4252259C75F200D507BE /* HomeView.swift */; };
 		B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156694C25DE9B8D00DEB355 /* PickerPageView.swift */; };
 		B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156694C25DE9B8D00DEB355 /* PickerPageView.swift */; };
-		B156696E25DEB15B00DEB355 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156696D25DEB15B00DEB355 /* WelcomeView.swift */; };
-		B156697B25DEB16700DEB355 /* HealthImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156697A25DEB16700DEB355 /* HealthImportView.swift */; };
-		B156699225DEB1AB00DEB355 /* MoodReminderIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */; };
-		B15669A925DEB1E400DEB355 /* MoodReminderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */; };
 		B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */; };
 		B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */; };
 		B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156697A25DEB16700DEB355 /* HealthImportView.swift */; };
 		B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156696D25DEB15B00DEB355 /* WelcomeView.swift */; };
-		B15669FF25DEB20E00DEB355 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7835259147F90010F791 /* OnboardingView.swift */; };
 		B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
@@ -67,6 +62,10 @@
 		B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
 		B16D44F3259C878300D507BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B16D44F5259C878300D507BE /* Localizable.strings */; };
 		B1DDFE6825DFBBD90075546F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1DDFE6725DFBBD90075546F /* ComposableArchitecture */; };
+		B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */; };
+		B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */; };
+		B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */; };
+		B1FA9AAF25E44D950029EB36 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FA9AAE25E44D950029EB36 /* HealthKit.framework */; };
 		B1FB7701259109A30010F791 /* PymApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7700259109A30010F791 /* PymApp.swift */; };
 		B1FB7703259109A30010F791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB7702259109A30010F791 /* RootView.swift */; };
 		B1FB7705259109A60010F791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FB7704259109A60010F791 /* Assets.xcassets */; };
@@ -453,7 +452,6 @@
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		2FF4654625DDA67A00D60BAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		B10E7A96259C973D00337DDC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		B10E7AAC259C97DC00337DDC /* CoreData.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.generated.swift; sourceTree = "<group>"; };
 		B156694C25DE9B8D00DEB355 /* PickerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPageView.swift; sourceTree = "<group>"; };
 		B156696D25DEB15B00DEB355 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		B156697A25DEB16700DEB355 /* HealthImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImportView.swift; sourceTree = "<group>"; };
@@ -476,6 +474,11 @@
 		B16D44D0259C85F700D507BE /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		B16D44F4259C878300D507BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B16D4516259C8AF400D507BE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImportViewModel.swift; sourceTree = "<group>"; };
+		B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderIntroViewModel.swift; sourceTree = "<group>"; };
+		B1FA9AAD25E44D950029EB36 /* Pym.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Pym.entitlements; path = Pym/Pym.entitlements; sourceTree = "<group>"; };
+		B1FA9AAE25E44D950029EB36 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B1FB76FD259109A30010F791 /* Pym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB7700259109A30010F791 /* PymApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymApp.swift; sourceTree = "<group>"; };
 		B1FB7702259109A30010F791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -575,6 +578,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FA9AAF25E44D950029EB36 /* HealthKit.framework in Frameworks */,
 				B1FB779D259135030010F791 /* PymCore.framework in Frameworks */,
 				B1FB7824259147CB0010F791 /* Onboarding.framework in Frameworks */,
 				B1FB7864259149540010F791 /* CheckIn.framework in Frameworks */,
@@ -709,6 +713,7 @@
 				2F2C032A25DC3F4E00C35AA1 /* Dtos */,
 				B10E7A96259C973D00337DDC /* PersistenceController.swift */,
 				2F72A06025DDC2D700B0A978 /* DataAccessController.swift */,
+				B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -808,6 +813,7 @@
 		B1FB76F4259109A30010F791 = {
 			isa = PBXGroup;
 			children = (
+				B1FA9AAD25E44D950029EB36 /* Pym.entitlements */,
 				B1FB7709259109A60010F791 /* Info.plist */,
 				B1FB77C625913FA50010F791 /* App */,
 				B1FB7789259135030010F791 /* PymCore */,
@@ -941,7 +947,9 @@
 			children = (
 				B1FB7835259147F90010F791 /* OnboardingView.swift */,
 				B156696D25DEB15B00DEB355 /* WelcomeView.swift */,
+				B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */,
 				B156697A25DEB16700DEB355 /* HealthImportView.swift */,
+				B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */,
 				B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */,
 				B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */,
 			);
@@ -960,6 +968,7 @@
 			isa = PBXGroup;
 			children = (
 				2FF4654625DDA67A00D60BAC /* CoreData.framework */,
+				B1FA9AAE25E44D950029EB36 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1832,17 +1841,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15669A925DEB1E400DEB355 /* MoodReminderSettingsView.swift in Sources */,
 				F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */,
 				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
-				B15669FF25DEB20E00DEB355 /* OnboardingView.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
-				B156696E25DEB15B00DEB355 /* WelcomeView.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
 				B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
-				B156699225DEB1AB00DEB355 /* MoodReminderIntroView.swift in Sources */,
-				B156697B25DEB16700DEB355 /* HealthImportView.swift in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
 				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,
 				B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */,
@@ -1874,10 +1878,10 @@
 				2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */,
 				F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */,
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
-				B1FB77D8259141B10010F791 /* PymCore.swift in Sources */,
 				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
+				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
@@ -1904,9 +1908,11 @@
 			files = (
 				B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */,
 				B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */,
+				B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */,
 				B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */,
 				B1FB7836259147F90010F791 /* OnboardingView.swift in Sources */,
 				B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */,
+				B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2552,6 +2558,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -2565,7 +2572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2575,6 +2582,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -2588,7 +2596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -2,6 +2,8 @@ import PymCore
 import SwiftUI
 
 struct MoodReminderIntroView: View {
+    @StateObject var viewModel = MoodReminderIntroViewModel()
+    @State private var showingAlert = false
     let next: () -> Void
 
     var body: some View {
@@ -22,9 +24,13 @@ struct MoodReminderIntroView: View {
             }
             .padding(16)
 
-            Button(action: {}, label: {
+            Button(action: {
+                showingAlert = true
+            }, label: {
                 Text("No thanks")
             }).foregroundColor(.black)
+        }.alert(isPresented: $showingAlert) {
+            Alert(title: Text("Are you sure?"), message: Text("Studies show that people who got daily reminders are 88% more likely to keep their new habit."), primaryButton: .default(Text("Create a new habit")), secondaryButton: .cancel(Text("Disable")))
         }
     }
 }

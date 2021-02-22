@@ -2,6 +2,8 @@ import PymCore
 import SwiftUI
 
 struct HealthImportView: View {
+    @StateObject var viewModel = HealthImportViewModel()
+    @State private var showingAlert = false
     let next: () -> Void
 
     var body: some View {
@@ -30,9 +32,14 @@ struct HealthImportView: View {
             }
             .padding(16)
 
-            Button(action: {}, label: {
+            Button(action: {
+                showingAlert = true
+            }, label: {
                 Text("No thanks")
             }).foregroundColor(.black)
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Are you sure?"), message: Text("Connecting with Apple Health greatly increases the accuracy of your experience."), primaryButton: .default(Text("Connect with Apple Health")), secondaryButton: .cancel(Text("Disable")))
         }
     }
 }

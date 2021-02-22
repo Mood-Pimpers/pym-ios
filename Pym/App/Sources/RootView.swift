@@ -2,12 +2,14 @@ import CheckIn
 import Explorer
 import Home
 import Insights
+import Onboarding
 import PymCore
 import Settings
 import SwiftUI
 
 struct RootView: View {
     @ObservedObject private var modalService = ModalService.shared
+    @AppStorage(Defaults.Keys.firstAppLaunch) var firstAppLaunch: Double = 0.0
 
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
@@ -15,9 +17,12 @@ struct RootView: View {
     }
 
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-                TabView {
+        if firstAppLaunch == 0.0 {
+            OnboardingView()
+        } else {
+            ZStack {
+                GeometryReader { geometry in
+                    TabView {
                     HomeView()
                         .tabItem { Image.home }
                     InsightsView()
@@ -28,17 +33,18 @@ struct RootView: View {
                         .tabItem { Image.explorer }
                     SettingsView()
                         .tabItem { Image.settings }
-                }
-                .accentColor(.primaryColor)
-
+                    }
+                    .accentColor(.primaryColor)
+                
                 Button(action: modalService.toggleMoodCheckin, label: {
-                    Image.add
-                        .resizable()
-                        .frame(width: 28, height: 28)
+                Image.add
+                    .resizable()
+                    .frame(width: 28, height: 28)
                 })
                     .buttonStyle(PrimaryButtonStyle())
                     .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
                     .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
+                }
             }
         }
     }
