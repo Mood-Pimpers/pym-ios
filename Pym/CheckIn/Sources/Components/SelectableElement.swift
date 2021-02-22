@@ -1,15 +1,17 @@
 import SwiftUI
 
-struct SelectableElement<TContent>: View where TContent: View {
+struct SelectableElement<Content>: View
+    where Content: View
+{
     let isSelected: Bool
-    let content: TContent
+    let content: Content
     let action: () -> Void
     let width: CGFloat
     let height: CGFloat
 
     init(
         isSelected: Bool,
-        @ViewBuilder content: () -> TContent,
+        @ViewBuilder content: () -> Content,
         action: @escaping () -> Void,
         width: CGFloat = 64,
         height: CGFloat = 64

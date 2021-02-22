@@ -101,6 +101,8 @@
 		F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodView.swift */; };
 		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
 		F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */; };
+		F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */; };
+		F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F864525E3FD9D0001ADFD /* PairSequence.swift */; };
 		F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 /* End PBXBuildFile section */
@@ -484,6 +486,8 @@
 		F58F861C25E3B4DE0001ADFD /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
 		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
 		F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewRouter.swift; sourceTree = "<group>"; };
+		F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
+		F58F864525E3FD9D0001ADFD /* PairSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairSequence.swift; sourceTree = "<group>"; };
 		F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalView.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -872,6 +876,7 @@
 		B1FB77D4259141800010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F58F864425E3FD800001ADFD /* Extensions */,
 				2F7C1E9A25DFC9A100A7C857 /* SwifterSwift */,
 				2F41636625DEF3AB0009D45D /* DataSources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
@@ -946,11 +951,9 @@
 		B1FB7874259149890010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F58F864F25E3FEC90001ADFD /* Views */,
 				F5346C9D25C314F400F15190 /* Components */,
 				B1FB792025914A5F0010F791 /* CheckIn.swift */,
-				F5346C9125C3145700F15190 /* FeelingView.swift */,
-				F58F861225E3B4A80001ADFD /* ActivityView.swift */,
-				F58F861C25E3B4DE0001ADFD /* MoodView.swift */,
 				F58F862625E3B5100001ADFD /* CheckInPage.swift */,
 				F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */,
 			);
@@ -1003,8 +1006,27 @@
 			isa = PBXGroup;
 			children = (
 				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
+				F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F58F864425E3FD800001ADFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58F864525E3FD9D0001ADFD /* PairSequence.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58F864F25E3FEC90001ADFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5346C9125C3145700F15190 /* FeelingView.swift */,
+				F58F861225E3B4A80001ADFD /* ActivityView.swift */,
+				F58F861C25E3B4DE0001ADFD /* MoodView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
@@ -1827,9 +1849,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
+				F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */,
 				F58F861325E3B4A80001ADFD /* ActivityView.swift in Sources */,
 				F5346C9225C3145700F15190 /* FeelingView.swift in Sources */,
 				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
+				F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */,
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
 				F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */,
 				F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */,
