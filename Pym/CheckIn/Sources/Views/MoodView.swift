@@ -3,7 +3,7 @@ import SwiftUI
 
 public struct MoodView: View {
     @StateObject var viewRouter: CheckInViewRouter
-    @State private var mood: Int?
+    @State private var mood: Int? // TODO: Use mood rating
 
     public var body: some View {
         VStack {

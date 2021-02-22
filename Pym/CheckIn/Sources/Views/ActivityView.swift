@@ -5,6 +5,7 @@ struct ActivityView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var selectedActivities: [String] = []
 
+    // TODO: Load activities from core data
     private let activities = [
         "work",
         "friends",

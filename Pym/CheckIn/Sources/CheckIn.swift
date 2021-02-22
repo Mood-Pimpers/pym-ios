@@ -1,13 +1,6 @@
 import PymCore
 import SwiftUI
 
-// TODO: Use Dto instead!
-public struct MoodEntry {
-    let mood: Int
-    let feelings: [String]
-    let activities: [String]
-}
-
 public struct CheckInView: View {
     @StateObject var viewRouter = CheckInViewRouter()
 
