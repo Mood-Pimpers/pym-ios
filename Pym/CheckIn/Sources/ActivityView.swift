@@ -15,8 +15,8 @@ struct ActivityView: View {
                 Spacer()
             })
                 .buttonStyle(PrimaryButtonStyle())
-                .padding(16)
         }
+        .padding(16)
     }
 
     private func finish() {

@@ -4,16 +4,26 @@ struct SelectableElement<TContent>: View where TContent: View {
     let isSelected: Bool
     let content: TContent
     let action: () -> Void
+    let width: CGFloat
+    let height: CGFloat
 
-    init(isSelected: Bool, @ViewBuilder content: () -> TContent, action: @escaping () -> Void) {
+    init(
+        isSelected: Bool,
+        @ViewBuilder content: () -> TContent,
+        action: @escaping () -> Void,
+        width: CGFloat = 64,
+        height: CGFloat = 64
+    ) {
         self.isSelected = isSelected
         self.content = content()
         self.action = action
+        self.width = width
+        self.height = height
     }
 
     var body: some View {
         content
-            .frame(width: 64, height: 64)
+            .frame(width: width, height: height)
             .background(isSelected ? Color.primaryColor : Color.white)
             .cornerRadius(4)
             .shadow(color: .neutralLightColor, radius: 8)

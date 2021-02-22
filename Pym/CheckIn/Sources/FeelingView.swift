@@ -33,7 +33,6 @@ extension Sequence where Self.Element: Hashable {
 
 struct FeelingView: View {
     @StateObject var viewRouter: CheckInViewRouter
-
     @State var selectedFeelings: [String] = []
 
     private let feelings = [
@@ -51,17 +50,22 @@ struct FeelingView: View {
         SelectableElement(
             isSelected: selectedFeelings.contains(feeling.name),
             content: {
-                Text(feeling.name)
-                    .frame(maxWidth: geometry.size.width / 2)
+                HStack {
+                    feeling.color
+                        .frame(width: 12, height: 12)
+                        .cornerRadius(8)
+                    Text(feeling.name)
+                    Spacer()
+                }
+                .padding(8)
             },
             action: {
                 if !selectedFeelings.contains(feeling.name) {
                     selectedFeelings.append(feeling.name)
                 }
-            }
+            },
+            width: geometry.size.width / 2 - 16 - 4
         )
-        .padding(4)
-        .frame(minWidth: geometry.size.width / 2)
     }
 
     public var body: some View {

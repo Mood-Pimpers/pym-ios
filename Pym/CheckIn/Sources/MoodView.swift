@@ -8,13 +8,16 @@ public struct MoodView: View {
     public var body: some View {
         VStack {
             Title("How are you feeling?")
-            HStack {
-                ForEach(1 ..< 6) { index in
-                    SelectableElement(
-                        isSelected: mood == index,
-                        content: { Text("\(index)") },
-                        action: { mood = index }
-                    )
+            GeometryReader { metrics in
+                HStack {
+                    ForEach(1 ..< 6) { index in
+                        SelectableElement(
+                            isSelected: mood == index,
+                            content: { Text("\(index)") },
+                            action: { mood = index },
+                            width: metrics.size.width / 5 - 8
+                        )
+                    }
                 }
             }
 
@@ -28,7 +31,6 @@ public struct MoodView: View {
             })
                 .buttonStyle(PrimaryButtonStyle())
                 .disabled(mood == nil)
-                .padding(16)
         }
         .padding(16)
     }
