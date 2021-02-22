@@ -74,7 +74,7 @@ struct FeelingView: View {
                 Title("Describe your feelings?")
 
                 ScrollView {
-                    VStack {
+                    VStack(alignment: .leading) {
                         ForEach(Array(feelings.pairs()), id: \.self) { feelingPairs in
                             HStack {
                                 feelingSelectable(feeling: feelingPairs.first, geometry: geometry)
