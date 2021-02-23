@@ -7,6 +7,7 @@ import SwiftUI
 struct RootView: View {
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
+        UITabBar.appearance().unselectedItemTintColor = UIColor.black
     }
 
     var body: some View {
@@ -14,24 +15,15 @@ struct RootView: View {
             GeometryReader { geometry in
                 TabView {
                     HomeView()
-                        .background(Color.backgroundColor)
-                        .tabItem {
-                            Image.home.colorMultiply(.blackColor)
-                        }
+                        .tabItem { Image.home }
                     InsightsView()
-                        .tabItem {
-                            Image.insights.renderingMode(.template).colorMultiply(.black)
-                        }
+                        .tabItem { Image.insights }
                     Text("TODO: Add alert")
                         .tabItem {}
                     ExplorerView()
-                        .tabItem {
-                            Image.explorer.colorMultiply(.blackColor)
-                        }
+                        .tabItem { Image.explorer }
                     SettingsView()
-                        .tabItem {
-                            Image.settings.colorMultiply(.blackColor)
-                        }
+                        .tabItem { Image.settings }
                 }
                 .accentColor(.primaryColor)
 

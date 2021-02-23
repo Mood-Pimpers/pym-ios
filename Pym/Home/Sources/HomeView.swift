@@ -19,6 +19,7 @@ struct FullScreenModalView: View {
 }
 
 public struct HomeView: View {
+    // TODO: Load quotes from a service
     @State private var quotes = [
         Quote(
             id: 1,
@@ -45,26 +46,39 @@ public struct HomeView: View {
             url: { width, height in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         )
     ]
+    @State private var showMoodCheckin = false
 
     public init() {}
-
-    @State private var showMoodCheckin = false
 
     public var body: some View {
         GeometryReader { metrics in
             ScrollView(.vertical) {
                 VStack {
-                    QuoteView(quotes: quotes, metrics: metrics)
+                    VStack(spacing: 0) {
+                        Title("good morning.")
+                            .padding([.leading, .trailing], 16)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 0) {
+                                ForEach(quotes, id: \.id) { quote in
+                                    QuoteCard(quote: quote, metrics: metrics)
+                                }
+                            }
+                            .padding([.leading, .trailing], 8)
+                        }
+                    }
+                    .padding([.top, .bottom], 16)
 
                     VStack {
                         Title("track your mood")
-                        PrimaryButton(action: toggleMoodCheckin) {
+                        Button(action: toggleMoodCheckin, label: {
                             Text("mood checkin")
                             Spacer()
-                        }
-                        .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
+                            Image(systemName: "arrow.right")
+                        })
+                            .buttonStyle(PrimaryButtonStyle())
+                            .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
                     }
-                    .padding(8)
+                    .padding(16)
 
                     Spacer()
                 }
