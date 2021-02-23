@@ -3,7 +3,7 @@ import SwiftUI
 
 struct FeelingView: View {
     @StateObject var viewRouter: CheckInViewRouter
-    @State var selectedFeelings: [Feeling] = []
+    @State var selectedFeelings: Set<Feeling> = []
 
     private func feelingSelectable(_ feeling: Feeling, _ geometry: GeometryProxy) -> some View {
         SelectableElement(
@@ -49,9 +49,7 @@ struct FeelingView: View {
     }
 
     private func select(_ feeling: Feeling) {
-        if !selectedFeelings.contains(feeling) {
-            selectedFeelings.append(feeling)
-        }
+        selectedFeelings.toggle(feeling)
     }
 }
 

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ActivityView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State var selectedActivities: [String] = []
+    @State var selectedActivities: Set<String> = []
 
     // TODO: Load activities from core data
     private let activities = [
@@ -49,9 +49,7 @@ struct ActivityView: View {
     }
 
     private func select(_ activity: String) {
-        if !selectedActivities.contains(activity) {
-            selectedActivities.append(activity)
-        }
+        selectedActivities.toggle(activity)
     }
 
     private func finish() {
