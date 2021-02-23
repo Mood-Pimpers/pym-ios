@@ -21,14 +21,16 @@ public struct SettingsView: View {
                             if notify {
                                 HStack {
                                     Toggle("Morning", isOn: $onMorning)
-                                        .labelsHidden()
                                     DatePicker("Morning", selection: $morning, displayedComponents: .hourAndMinute)
+                                        .datePickerStyle(GraphicalDatePickerStyle())
+                                        .labelsHidden()
                                 }
 
                                 HStack {
                                     Toggle("Evening", isOn: $onMorning)
-                                        .labelsHidden()
                                     DatePicker("Evening", selection: $morning, displayedComponents: .hourAndMinute)
+                                        .datePickerStyle(GraphicalDatePickerStyle())
+                                        .labelsHidden()
                                 }
                             }
                         }
