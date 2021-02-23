@@ -26,8 +26,9 @@ struct FeelingView: View {
     public var body: some View {
         VStack {
             Title("Describe your feelings?")
-            TwoColumnView(
+            Columns(
                 elements: Feeling.allCases,
+                columns: 2,
                 content: feelingSelectable
             )
 

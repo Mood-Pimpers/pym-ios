@@ -8,24 +8,16 @@ public struct MoodView: View {
     public var body: some View {
         VStack {
             Title("How are you feeling?")
-            GeometryReader { metrics in
-                // TODO: Use ColumnView component instead
-                let count = CGFloat(MoodRating.allCases.count)
-                let width = metrics.size.width / count
-                let spacing = 8 * (count - 1) / count
-                HStack {
-                    ForEach(MoodRating.allCases, id: \.self) { rating in
-                        VStack(spacing: 8) {
-                            SelectableElement(
-                                isSelected: mood == rating,
-                                content: { rating.image },
-                                action: { mood = rating },
-                                width: width - spacing
-                            )
-                            Text(rating.description)
-                                .font(.caption)
-                        }
-                    }
+            Columns(elements: MoodRating.allCases) { rating, width in
+                VStack(spacing: 8) {
+                    SelectableElement(
+                        isSelected: mood == rating,
+                        content: { rating.image },
+                        action: { mood = rating },
+                        width: width
+                    )
+                    Text(rating.description)
+                        .font(.caption)
                 }
             }
 

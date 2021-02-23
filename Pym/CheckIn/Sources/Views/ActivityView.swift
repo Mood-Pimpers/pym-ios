@@ -31,9 +31,11 @@ struct ActivityView: View {
         GeometryReader { _ in
             VStack {
                 Title("Why are you feeling this way?")
-                TwoColumnView(elements: activities) { activity, width in
-                    activitySelectable(activity, width)
-                }
+                Columns(
+                    elements: activities,
+                    columns: 2,
+                    content: activitySelectable
+                )
 
                 Spacer()
 
