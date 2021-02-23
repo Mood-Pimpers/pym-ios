@@ -1,85 +1,8 @@
 import PymCore
 import SwiftUI
 
-public struct MoodView: View {
-    @StateObject var viewRouter: ViewRouter
-
-    public var body: some View {
-        VStack {
-            Text("MOOD")
-            Spacer()
-
-            PrimaryButton(action: next) {
-                Text("continue")
-                    .bold()
-                Spacer()
-            }
-            .padding(16)
-        }
-    }
-
-    private func next() {
-        viewRouter.currentPage = .feeling
-    }
-}
-
-struct FeelingView: View {
-    @StateObject var viewRouter: ViewRouter
-
-    public var body: some View {
-        VStack {
-            Text("FEELING")
-            Spacer()
-
-            PrimaryButton(action: next) {
-                Text("continue")
-                    .bold()
-                Spacer()
-            }
-            .padding(16)
-        }
-    }
-
-    private func next() {
-        viewRouter.currentPage = .activity
-    }
-}
-
-struct ActivityView: View {
-    @Environment(\.presentationMode) var presentationMode
-
-    public var body: some View {
-        VStack {
-            Text("ACTIVITY")
-            Spacer()
-
-            PrimaryButton(action: finish) {
-                Text("finish")
-                    .bold()
-                Spacer()
-            }
-            .padding(16)
-        }
-    }
-
-    private func finish() {
-        presentationMode.wrappedValue.dismiss()
-    }
-}
-
-enum CheckInPage {
-    case mood
-    case feeling
-    case activity
-}
-
-class ViewRouter: ObservableObject {
-    @Published var currentPage: CheckInPage = .mood
-}
-
 public struct CheckInView: View {
-    // @State private var current: Test = .mood
-    @StateObject var viewRouter = ViewRouter()
+    @StateObject var viewRouter = CheckInViewRouter()
 
     public init() {}
 

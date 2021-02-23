@@ -8,15 +8,10 @@ let fade = LinearGradient(
     endPoint: .bottom
 )
 
-public struct QuoteCard: View {
+struct QuoteCard: View {
     let quote: Quote
     let metrics: GeometryProxy
-    @State private var show: Bool = false
-
-    init(_ quote: Quote, _ metrics: GeometryProxy) {
-        self.quote = quote
-        self.metrics = metrics
-    }
+    @State private var show = false
 
     public var body: some View {
         let width: CGFloat = metrics.size.width * 0.8
@@ -44,59 +39,24 @@ public struct QuoteCard: View {
         .cornerRadius(8)
         .shadow(color: Color.dropShadowColor, radius: 8)
         .padding(8) // So dropshadow is shown
-        .fullScreenCover(isPresented: $show, content: { QuoteModalView(quote, metrics) })
+        .fullScreenCover(isPresented: $show, content: { QuoteModalView(quote: quote, metrics: metrics) })
         .onTapGesture {
             show.toggle()
         }
     }
 }
 
-struct QuoteModalView: View {
-    @Environment(\.presentationMode) var presentationMode
+struct QuoteCard_Previews: PreviewProvider {
+    static var previews: some View {
+        let quote = Quote(
+            id: 1,
+            text: "Be yourself; everyone else is already taken.",
+            author: "Oscar Wilde",
+            url: { width, height in URL(string: "https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
+        )
 
-    let quote: Quote
-    let metrics: GeometryProxy
-
-    init(_ quote: Quote, _ metrics: GeometryProxy) {
-        self.quote = quote
-        self.metrics = metrics
-    }
-
-    var body: some View {
-        let width = metrics.size.width +
-            metrics.safeAreaInsets.leading +
-            metrics.safeAreaInsets.trailing
-        let height = metrics.size.height + metrics.safeAreaInsets.bottom + metrics.safeAreaInsets.top
-
-        ZStack(alignment: .center) {
-            KFImage(quote.url(Int(width), Int(height)))
-                .frame(width: width, height: height)
-                .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 4)
-            fade
-                .frame(width: width, height: height)
-            HStack(alignment: .top, spacing: 8) {
-                Text("\"")
-                    .font(.title)
-                    .bold()
-                VStack(alignment: .leading, spacing: 16) {
-                    Text(quote.text)
-                        .font(.title)
-                    Text("- \(quote.author)")
-                        .font(.title2)
-                }
-            }
-            .foregroundColor(.white)
-            .padding(16)
-            .frame(width: width)
-        }
-
-        // KFImage(quote.url(Int(width), Int(height)))
-        // .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .frame(maxWidth: width, maxHeight: height)
-        .background(Color.red)
-        .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            presentationMode.wrappedValue.dismiss()
+        GeometryReader { metrics in
+            QuoteCard(quote: quote, metrics: metrics)
         }
     }
 }
