@@ -23,6 +23,8 @@
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
 		2F9AEF4F25E5ADE7006BB731 /* DayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */; };
 		2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */; };
+		2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
+		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */; };
 		2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2037625E114B600EC0925 /* FeelingsExtension.swift */; };
 		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
@@ -442,6 +444,7 @@
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLabel.swift; sourceTree = "<group>"; };
 		2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLabel.swift; sourceTree = "<group>"; };
+		2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayJournal.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRatingExtension.swift; sourceTree = "<group>"; };
 		2FA2037625E114B600EC0925 /* FeelingsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsExtension.swift; sourceTree = "<group>"; };
 		2FBC26A325E44FB000F2D2BE /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
@@ -717,6 +720,14 @@
 			path = HorizonCalendar;
 			sourceTree = "<group>";
 		};
+		2F9AEFCE25E5B4A2006BB731 /* DayJournal */ = {
+			isa = PBXGroup;
+			children = (
+				2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */,
+			);
+			path = DayJournal;
+			sourceTree = "<group>";
+		};
 		B10E7A95259C972800337DDC /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +781,7 @@
 		B16D42C8259C769E00D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2F9AEFCE25E5B4A2006BB731 /* DayJournal */,
 				2F13CF8025E43F0C00E81B36 /* Calendar */,
 				B16D42E0259C76D700D507BE /* ExplorerView.swift */,
 			);
@@ -1799,6 +1811,7 @@
 				2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */,
 				2FBC26A425E44FB000F2D2BE /* CalendarModel.swift in Sources */,
 				2F9AEF4F25E5ADE7006BB731 /* DayLabel.swift in Sources */,
+				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
 				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
 				B16D42E1259C76D700D507BE /* ExplorerView.swift in Sources */,
 			);
@@ -1834,6 +1847,7 @@
 			files = (
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
+				2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
 				B1FB7701259109A30010F791 /* PymApp.swift in Sources */,

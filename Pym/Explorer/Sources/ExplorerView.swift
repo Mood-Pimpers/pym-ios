@@ -9,10 +9,10 @@ public struct ExplorerView: View {
     public var body: some View {
         VStack(alignment: .center) {
             VStack(alignment: .leading) {
-                Text("Data Explorer")
-                    .fontWeight(.bold)
-                    .font(.system(size: 30))
-                    .padding([.top, .leading], 15)
+//                Text("Data Explorer")
+//                    .fontWeight(.bold)
+//                    .font(.system(size: 30))
+//                    .padding([.top, .leading], 15)
 
                 PymCalendarView()
                     .environmentObject(model)
@@ -21,9 +21,7 @@ public struct ExplorerView: View {
             .background(Color.primaryColor)
             .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
 
-            Text(model.selectedDay?.date.dateString() ?? "nothing selected")
-
-            Spacer()
+            DayJournal(of: $model.selectedDate)
         }
     }
 }

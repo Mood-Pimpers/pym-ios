@@ -33,3 +33,28 @@ struct DayLabel: CalendarItemViewRepresentable {
         view.text = "\(viewModel.day.day)"
     }
 }
+
+extension CalendarViewContent {
+    func addPymDayStyle(_ model: CalendarModel) -> CalendarViewContent {
+        withDayItemModelProvider { day in
+            var properties = DayLabel.InvariantViewProperties(
+                font: UIFont.systemFont(ofSize: 18),
+                textColor: .darkGray,
+                backgroundColor: .clear
+            )
+
+            if day == model.selectedDay {
+                properties.textColor = .red
+            } else if day.day % 2 == 0 {
+                properties.textColor = .gray
+            } else {
+                properties.textColor = .black
+            }
+
+            return CalendarItemModel<DayLabel>(
+                invariantViewProperties: properties,
+                viewModel: .init(day: day)
+            )
+        }
+    }
+}

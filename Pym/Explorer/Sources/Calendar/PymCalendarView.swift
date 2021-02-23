@@ -25,34 +25,9 @@ struct PymCalendarView: UIViewRepresentable {
             calendar: calendar,
             visibleDateRange: startDate ... endDate,
             monthsLayout: .horizontal(options: HorizontalMonthsLayoutOptions())
-        ).withDayItemModelProvider { day in
-            var properties = DayLabel.InvariantViewProperties(
-                font: UIFont.systemFont(ofSize: 18),
-                textColor: .darkGray,
-                backgroundColor: .clear
-            )
-
-            if day == calendarModel.selectedDay {
-                properties.textColor = .red
-            } else if day.day % 2 == 0 {
-                properties.textColor = .gray
-            } else {
-                properties.textColor = .black
-            }
-
-            return CalendarItemModel<DayLabel>(
-                invariantViewProperties: properties,
-                viewModel: .init(day: day)
-            )
-        }
-        .withMonthHeaderItemModelProvider { (month) -> AnyCalendarItemModel in
-            CalendarItemModel<MonthHeader>(
-                invariantViewProperties: .init(font: UIFont.systemFont(ofSize: 12.0),
-                                               textColor: .blue,
-                                               backgroundColor: .clear),
-                viewModel: .init(month: month)
-            )
-        }
+        )
+        .addPymDayStyle(calendarModel)
+        .addPymMonthHeaderStyle()
     }
 }
 

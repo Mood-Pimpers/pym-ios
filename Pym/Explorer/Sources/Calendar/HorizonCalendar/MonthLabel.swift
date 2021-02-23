@@ -3,29 +3,20 @@ import UIKit
 
 struct MonthHeader: CalendarItemViewRepresentable {
     /// Properties that are set once when we initialize the view.
-    struct InvariantViewProperties: Hashable {
-        let font: UIFont
-        var textColor: UIColor
-        let backgroundColor: UIColor
-    }
+    struct InvariantViewProperties: Hashable {}
 
     /// Properties that will vary depending on the particular date being displayed.
     struct ViewModel: Equatable {
         let month: Month
     }
 
-    static func makeView(withInvariantViewProperties invariantViewProperties: InvariantViewProperties) -> UILabel {
+    static func makeView(withInvariantViewProperties _: InvariantViewProperties) -> UILabel {
         let label = UILabel()
-
-        label.backgroundColor = invariantViewProperties.backgroundColor
-        label.font = invariantViewProperties.font
-        label.textColor = invariantViewProperties.textColor
-
-        label.textAlignment = .center
+        label.backgroundColor = .clear
+        label.font = .systemFont(ofSize: 25)
+        label.textColor = .black
+        label.textAlignment = .left
         label.clipsToBounds = true
-        label.layer.cornerRadius = 12
-        label.layer.borderColor = CGColor(red: 100, green: 0, blue: 0, alpha: 100)
-
         return label
     }
 
@@ -38,5 +29,13 @@ struct MonthHeader: CalendarItemViewRepresentable {
         let monthAndYearText = dateFormatter.string(from: monthDate)
 
         view.text = monthAndYearText
+    }
+}
+
+extension CalendarViewContent {
+    func addPymMonthHeaderStyle() -> CalendarViewContent {
+        withMonthHeaderItemModelProvider {
+            CalendarItemModel<MonthHeader>(invariantViewProperties: .init(), viewModel: .init(month: $0))
+        }
     }
 }
