@@ -15,12 +15,12 @@ struct WelcomeView: View {
             Text("Your personal mood tracker.")
 
             Spacer()
-            PrimaryButton(action: next) {
+            Button(action: next) {
                 Text("Start your journey")
                     .bold()
                 Spacer()
-            }
-            .padding(16)
+            }.buttonStyle(PrimaryButtonStyle())
+                .padding(16)
         }
     }
 }

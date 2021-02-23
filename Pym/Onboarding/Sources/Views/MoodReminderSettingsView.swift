@@ -35,12 +35,12 @@ struct MoodReminderSettingsView: View {
             }
 
             Spacer()
-            PrimaryButton(action: next) {
+            Button(action: next) {
                 Text("Get things ready!")
                     .bold()
                 Spacer()
-            }
-            .padding(16)
+            }.buttonStyle(PrimaryButtonStyle())
+                .padding(16)
         }
     }
 }

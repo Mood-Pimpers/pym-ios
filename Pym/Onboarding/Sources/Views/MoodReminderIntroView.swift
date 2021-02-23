@@ -2,7 +2,7 @@ import PymCore
 import SwiftUI
 
 struct MoodReminderIntroView: View {
-    @StateObject var viewModel = MoodReminderIntroViewModel()
+    @StateObject var viewModel: MoodReminderIntroViewModel
     @State private var showingAlert = false
     let next: () -> Void
 
@@ -17,12 +17,12 @@ struct MoodReminderIntroView: View {
                 .multilineTextAlignment(.center)
 
             Spacer()
-            PrimaryButton(action: next) {
+            Button(action: next) {
                 Text("Yes, of course!")
                     .bold()
                 Spacer()
-            }
-            .padding(16)
+            }.buttonStyle(PrimaryButtonStyle())
+                .padding(16)
 
             Button(action: {
                 showingAlert = true
@@ -37,6 +37,8 @@ struct MoodReminderIntroView: View {
 
 struct MoodReminderIntroView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodReminderIntroView(next: {})
+        let viewModelFactory = ViewModelFactory()
+
+        MoodReminderIntroView(viewModel: viewModelFactory.makeMoodReminderIntroViewModel(), next: {})
     }
 }

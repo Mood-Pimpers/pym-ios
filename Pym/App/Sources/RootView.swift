@@ -23,16 +23,16 @@ struct RootView: View {
             ZStack {
                 GeometryReader { geometry in
                     TabView {
-                    HomeView()
-                        .tabItem { Image.home }
-                    InsightsView()
-                        .tabItem { Image.insights }
-                    Text("TODO: Add alert")
-                        .tabItem {}
-                    ExplorerView()
-                        .tabItem { Image.explorer }
-                    SettingsView()
-                        .tabItem { Image.settings }
+                        HomeView()
+                            .tabItem { Image.home }
+                        InsightsView()
+                            .tabItem { Image.insights }
+                        Text("TODO: Add alert")
+                            .tabItem {}
+                        ExplorerView()
+                            .tabItem { Image.explorer }
+                        SettingsView()
+                            .tabItem { Image.settings }
                     }
                     .accentColor(.primaryColor)
                 

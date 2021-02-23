@@ -23,6 +23,8 @@
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
+		B10DD27025E5663C00811739 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */; };
+		B10DD29E25E56B6500811739 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DD28425E56B1500811739 /* ViewModelFactory.swift */; };
 		B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7A96259C973D00337DDC /* PersistenceController.swift */; };
 		B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D4252259C75F200D507BE /* HomeView.swift */; };
 		B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156694C25DE9B8D00DEB355 /* PickerPageView.swift */; };
@@ -451,6 +453,8 @@
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		2FF4654625DDA67A00D60BAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
+		B10DD28425E56B1500811739 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		B10E7A96259C973D00337DDC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		B156694C25DE9B8D00DEB355 /* PickerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPageView.swift; sourceTree = "<group>"; };
 		B156696D25DEB15B00DEB355 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -679,7 +683,7 @@
 			path = Dtos;
 			sourceTree = "<group>";
 		};
-		2F41636625DEF3AB0009D45D /* DataSources */ = {
+		2F41636625DEF3AB0009D45D /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
 				2F48D5AD25DFA8F100B29B28 /* HealthKit */,
@@ -687,13 +691,14 @@
 				2F41637325DEF3CA0009D45D /* ExternalEvent.swift */,
 				2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */,
 			);
-			path = DataSources;
+			path = "Data Sources";
 			sourceTree = "<group>";
 		};
 		2F48D5AD25DFA8F100B29B28 /* HealthKit */ = {
 			isa = PBXGroup;
 			children = (
 				2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */,
+				B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */,
 			);
 			path = HealthKit;
 			sourceTree = "<group>";
@@ -704,6 +709,28 @@
 				2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */,
 			);
 			path = SwifterSwift;
+			sourceTree = "<group>";
+		};
+		B10DD28225E56AEC00811739 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */,
+				B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */,
+				B10DD28425E56B1500811739 /* ViewModelFactory.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B10DD28325E56AF200811739 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1FB7835259147F90010F791 /* OnboardingView.swift */,
+				B156696D25DEB15B00DEB355 /* WelcomeView.swift */,
+				B156697A25DEB16700DEB355 /* HealthImportView.swift */,
+				B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */,
+				B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B10E7A95259C972800337DDC /* Persistence */ = {
@@ -906,7 +933,7 @@
 				F55A2BD225E6C0B3007BA1C8 /* Services */,
 				F58F864425E3FD800001ADFD /* Extensions */,
 				2F7C1E9A25DFC9A100A7C857 /* SwifterSwift */,
-				2F41636625DEF3AB0009D45D /* DataSources */,
+				2F41636625DEF3AB0009D45D /* Data Sources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
 				B10E7A95259C972800337DDC /* Persistence */,
 				B16D44CE259C85D700D507BE /* Generated */,
@@ -945,13 +972,8 @@
 		B1FB7833259147DA0010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B1FB7835259147F90010F791 /* OnboardingView.swift */,
-				B156696D25DEB15B00DEB355 /* WelcomeView.swift */,
-				B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */,
-				B156697A25DEB16700DEB355 /* HealthImportView.swift */,
-				B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */,
-				B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */,
-				B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */,
+				B10DD28325E56AF200811739 /* Views */,
+				B10DD28225E56AEC00811739 /* ViewModels */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1841,8 +1863,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */,
-				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
@@ -1867,6 +1887,7 @@
 				B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */,
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
+				B10DD27025E5663C00811739 /* HealthKitAssistant.swift in Sources */,
 				2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */,
 				2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */,
 				2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */,
@@ -1911,6 +1932,7 @@
 				B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */,
 				B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */,
 				B1FB7836259147F90010F791 /* OnboardingView.swift in Sources */,
+				B10DD29E25E56B6500811739 /* ViewModelFactory.swift in Sources */,
 				B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */,
 				B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */,
 			);
@@ -2561,7 +2583,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ADEA59CAEV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2569,7 +2591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
+				PRODUCT_BUNDLE_IDENTIFIER = at.ammerzon.pym.Pym;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2585,7 +2607,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ADEA59CAEV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2593,7 +2615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.pym.Pym;
+				PRODUCT_BUNDLE_IDENTIFIER = at.ammerzon.pym.Pym;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
