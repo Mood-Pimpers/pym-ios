@@ -2,11 +2,17 @@ import PymCore
 import SwiftUI
 
 public struct CheckInView: View {
+    let onClose: (_ entry: MoodEntry) -> Void
+
     @StateObject var viewRouter = CheckInViewRouter()
 
-    public init() {}
+    @State private var mood = MoodRating.moderate
+    @State private var feelings: [Feeling] = []
+    @State private var activities: [String] = []
 
     public var body: some View {
+        // TODO: Use Simons component when in main
+
         VStack {
             HStack(spacing: 8) {
                 (viewRouter.currentPage == .mood ? Color.primaryColor : Color.neutralLightColor)
@@ -23,9 +29,22 @@ public struct CheckInView: View {
 
             Spacer()
             switch viewRouter.currentPage {
-            case .mood: MoodView(viewRouter: viewRouter)
-            case .feeling: FeelingView(viewRouter: viewRouter)
-            case .activity: ActivityView()
+            case .mood:
+                MoodView { rating in
+                    viewRouter.currentPage = .feeling
+                    self.mood = rating
+                }
+            case .feeling:
+                FeelingView { feelings in
+                    viewRouter.currentPage = .activity
+                    self.feelings = feelings
+                }
+            case .activity:
+                ActivityView { activities in
+                    self.activities = activities
+                    let entry = MoodEntry(date: Date(), rating: mood, feelings: feelings, activities: activities)
+                    onClose(entry)
+                }
             }
             Spacer()
         }
@@ -34,6 +53,6 @@ public struct CheckInView: View {
 
 struct CheckInView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckInView()
+        CheckInView { print("close \($0.id)") }
     }
 }

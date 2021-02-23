@@ -2,22 +2,6 @@ import CheckIn
 import PymCore
 import SwiftUI
 
-struct FullScreenModalView: View {
-    @Environment(\.presentationMode) var presentationMode
-
-    var body: some View {
-        VStack {
-            CheckInView()
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.backgroundColor)
-        .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            // presentationMode.wrappedValue.dismiss()
-        }
-    }
-}
-
 public struct HomeView: View {
     // TODO: Load quotes from a service
     @State private var quotes = [
@@ -76,7 +60,7 @@ public struct HomeView: View {
                             Image(systemName: "arrow.right")
                         })
                             .buttonStyle(PrimaryButtonStyle())
-                            .sheet(isPresented: $showMoodCheckin, content: FullScreenModalView.init)
+                            .sheet(isPresented: $showMoodCheckin, content: CheckInModalView.init)
                     }
                     .padding(16)
 

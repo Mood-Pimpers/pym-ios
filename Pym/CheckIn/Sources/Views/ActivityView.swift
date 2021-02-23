@@ -2,8 +2,8 @@ import PymCore
 import SwiftUI
 
 struct ActivityView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @State var selectedActivities: Set<String> = []
+    let next: (_ activities: [String]) -> Void
+    @State private var selectedActivities: Set<String> = []
 
     // TODO: Load activities from core data
     private let activities = [
@@ -39,7 +39,7 @@ struct ActivityView: View {
 
                 Spacer()
 
-                Button(action: finish, label: {
+                Button(action: callNext, label: {
                     Text("finish")
                         .bold()
                     Spacer()
@@ -54,13 +54,13 @@ struct ActivityView: View {
         selectedActivities.toggle(activity)
     }
 
-    private func finish() {
-        presentationMode.wrappedValue.dismiss()
+    private func callNext() {
+        next(Array(selectedActivities))
     }
 }
 
 struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityView()
+        ActivityView { print($0) }
     }
 }

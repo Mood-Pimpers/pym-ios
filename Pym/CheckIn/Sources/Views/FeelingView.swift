@@ -2,8 +2,8 @@ import PymCore
 import SwiftUI
 
 struct FeelingView: View {
-    @StateObject var viewRouter: CheckInViewRouter
-    @State var selectedFeelings: Set<Feeling> = []
+    let next: (_ feeling: [Feeling]) -> Void
+    @State private var selectedFeelings: Set<Feeling> = []
 
     private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
         SelectableElement(
@@ -34,7 +34,7 @@ struct FeelingView: View {
 
             Spacer()
 
-            Button(action: next, label: {
+            Button(action: callNext, label: {
                 Text("continue")
                     .bold()
                 Spacer()
@@ -44,8 +44,8 @@ struct FeelingView: View {
         .padding(16)
     }
 
-    private func next() {
-        viewRouter.currentPage = .activity
+    private func callNext() {
+        next(Array(selectedFeelings))
     }
 
     private func select(_ feeling: Feeling) {
@@ -55,6 +55,6 @@ struct FeelingView: View {
 
 struct FeelingView_Previews: PreviewProvider {
     static var previews: some View {
-        FeelingView(viewRouter: CheckInViewRouter())
+        FeelingView { print($0) }
     }
 }

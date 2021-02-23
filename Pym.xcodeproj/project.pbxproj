@@ -106,6 +106,7 @@
 		F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */; };
 		F5CF8D8725E54E3E00DFBD07 /* Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D7525E5491500DFBD07 /* Columns.swift */; };
 		F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6B25E548E500DFBD07 /* Array.swift */; };
+		F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -494,6 +495,7 @@
 		F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		F5CF8D6B25E548E500DFBD07 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		F5CF8D7525E5491500DFBD07 /* Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columns.swift; sourceTree = "<group>"; };
+		F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -961,6 +963,7 @@
 				B1FB792025914A5F0010F791 /* CheckIn.swift */,
 				F58F862625E3B5100001ADFD /* CheckInPage.swift */,
 				F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */,
+				F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1869,6 +1872,7 @@
 				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
 				F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */,
 				F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */,
+				F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */,
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
 				F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */,
 				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,

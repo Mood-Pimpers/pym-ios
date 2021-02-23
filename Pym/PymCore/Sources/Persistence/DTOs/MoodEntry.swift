@@ -15,11 +15,15 @@ public class MoodEntry {
         self.activities = activities
     }
 
-    convenience init(date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
+    public convenience init() {
+        self.init(id: UUID(), date: Date(), rating: MoodRating.moderate, feelings: [], activities: [])
+    }
+
+    public convenience init(date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
         self.init(id: UUID(), date: date, rating: rating, feelings: feelings, activities: activities)
     }
 
-    convenience init(from model: MoodEntryModel) {
+    public convenience init(from model: MoodEntryModel) {
         self.init(id: model.id,
                   date: model.date,
                   rating: model.rating,

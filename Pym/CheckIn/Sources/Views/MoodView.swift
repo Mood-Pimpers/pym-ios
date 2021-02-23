@@ -1,11 +1,11 @@
 import PymCore
 import SwiftUI
 
-public struct MoodView: View {
-    @StateObject var viewRouter: CheckInViewRouter
+struct MoodView: View {
+    let next: (_ rating: MoodRating) -> Void
     @State private var mood: MoodRating?
 
-    public var body: some View {
+    var body: some View {
         VStack {
             Title("How are you feeling?")
             Columns(elements: MoodRating.allCases) { rating, width in
@@ -23,7 +23,7 @@ public struct MoodView: View {
 
             Spacer()
 
-            Button(action: next, label: {
+            Button(action: callNext, label: {
                 Text("continue")
                     .bold()
                 Spacer()
@@ -35,13 +35,15 @@ public struct MoodView: View {
         .padding(16)
     }
 
-    private func next() {
-        viewRouter.currentPage = .feeling
+    private func callNext() {
+        if let mood = mood {
+            next(mood)
+        }
     }
 }
 
 struct MoodView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodView(viewRouter: CheckInViewRouter())
+        MoodView { print($0) }
     }
 }
