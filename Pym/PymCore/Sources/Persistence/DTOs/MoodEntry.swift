@@ -1,13 +1,13 @@
 import Foundation
 
 public class MoodEntry {
-    public var id: UUID?
+    public var id: UUID
     public let date: Date
     public let rating: MoodRating
     public let feelings: [Feeling]
     public let activities: [String]
 
-    init(id: UUID?, date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
+    private init(id: UUID, date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
         self.id = id
         self.date = date
         self.rating = rating
@@ -16,7 +16,7 @@ public class MoodEntry {
     }
 
     convenience init(date: Date, rating: MoodRating, feelings: [Feeling], activities: [String]) {
-        self.init(id: nil, date: date, rating: rating, feelings: feelings, activities: activities)
+        self.init(id: UUID(), date: date, rating: rating, feelings: feelings, activities: activities)
     }
 
     convenience init(from model: MoodEntryModel) {

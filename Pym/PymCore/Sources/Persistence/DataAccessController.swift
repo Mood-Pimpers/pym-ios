@@ -13,7 +13,7 @@ public struct DataAccessController {
     public func store(entry dto: MoodEntry) {
         let context = DataAccessController.persistenceController.container.viewContext
         let model = MoodEntryModel(context: context)
-        model.id = UUID()
+        model.id = dto.id
         model.date = dto.date
         model.feelings = dto.feelings
         model.rating = dto.rating
