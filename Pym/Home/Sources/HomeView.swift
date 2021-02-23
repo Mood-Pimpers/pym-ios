@@ -70,6 +70,7 @@ public struct HomeView: View {
         }
     }
 
+    // TODO: Maybe put this in a global service as it is currently used here and in "RootView"
     private func toggleMoodCheckin() {
         showMoodCheckin.toggle()
     }
