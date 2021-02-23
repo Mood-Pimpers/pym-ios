@@ -5,3 +5,9 @@ public enum MoodRating: Int16 {
     case good
     case great
 }
+
+extension MoodRating: CaseIterable, Comparable {
+    public static func < (lhs: MoodRating, rhs: MoodRating) -> Bool {
+        lhs.rawValue < rhs.rawValue
+    }
+}

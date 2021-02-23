@@ -1,7 +1,7 @@
 import PymCore
 import SwiftUI
 
-struct ActivityView: View {  
+struct ActivityView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var selectedActivities: Set<String> = []
 
@@ -12,7 +12,7 @@ struct ActivityView: View {
         "school"
     ]
 
-    private func activitySelectable(_ activity: String, _ geometry: GeometryProxy) -> some View {
+    private func activitySelectable(_ activity: String, _ width: CGFloat) -> some View {
         SelectableElement(
             isSelected: selectedActivities.contains(activity),
             content: {
@@ -23,16 +23,16 @@ struct ActivityView: View {
                 .padding(8)
             },
             action: { select(activity) },
-            width: geometry.size.width / 2 - 16 - 4 // TODO: maybe find a better solution!
+            width: width
         )
     }
 
     public var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             VStack {
                 Title("Why are you feeling this way?")
-                TwoColumnView(elements: activities) { activity in
-                    activitySelectable(activity, geometry)
+                TwoColumnView(elements: activities) { activity, width in
+                    activitySelectable(activity, width)
                 }
 
                 Spacer()

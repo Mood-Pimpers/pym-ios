@@ -105,6 +105,7 @@
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C93A2225E4135100EE8DFC /* Feeling.swift */; };
 		F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D2725E5397200DFBD07 /* Set.swift */; };
+		F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +493,7 @@
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5C93A2225E4135100EE8DFC /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		F5CF8D2725E5397200DFBD07 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1046,6 +1048,7 @@
 			children = (
 				F5C93A2225E4135100EE8DFC /* Feeling.swift */,
 				F5CF8D2725E5397200DFBD07 /* Set.swift */,
+				F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1865,6 +1868,7 @@
 				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
 				F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */,
 				F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */,
+				F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */,
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
 				F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */,
 				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,

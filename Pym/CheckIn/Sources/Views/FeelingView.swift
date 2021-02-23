@@ -5,7 +5,7 @@ struct FeelingView: View {
     @StateObject var viewRouter: CheckInViewRouter
     @State var selectedFeelings: Set<Feeling> = []
 
-    private func feelingSelectable(_ feeling: Feeling, _ geometry: GeometryProxy) -> some View {
+    private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
         SelectableElement(
             isSelected: selectedFeelings.contains(feeling),
             content: {
@@ -19,29 +19,28 @@ struct FeelingView: View {
                 .padding(8)
             },
             action: { select(feeling) },
-            width: geometry.size.width / 2 - 16 - 4
+            width: width
         )
     }
 
     public var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Title("Describe your feelings?")
-                TwoColumnView(elements: Feeling.allCases) { feeling in
-                    feelingSelectable(feeling, geometry)
-                }
+        VStack {
+            Title("Describe your feelings?")
+            TwoColumnView(
+                elements: Feeling.allCases,
+                content: feelingSelectable
+            )
 
+            Spacer()
+
+            Button(action: next, label: {
+                Text("continue")
+                    .bold()
                 Spacer()
-
-                Button(action: next, label: {
-                    Text("continue")
-                        .bold()
-                    Spacer()
-                })
-                    .buttonStyle(PrimaryButtonStyle())
-            }
-            .padding(16)
+            })
+                .buttonStyle(PrimaryButtonStyle())
         }
+        .padding(16)
     }
 
     private func next() {
