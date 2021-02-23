@@ -1,15 +1,14 @@
 import PymCore
 import SwiftUI
 
-// TODO: Use real images
 extension MoodRating {
     var image: Image {
         switch self {
-        case .bad: return Image(systemName: "person")
-        case .poor: return Image(systemName: "person")
-        case .moderate: return Image(systemName: "person")
-        case .good: return Image(systemName: "person")
-        case .great: return Image(systemName: "person")
+        case .bad: return Image.moodBad
+        case .poor: return Image.moodPoor
+        case .moderate: return Image.moodModerate
+        case .good: return Image.moodGood
+        case .great: return Image.moodGreat
         }
     }
 }
