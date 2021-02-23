@@ -7,7 +7,7 @@ public struct PrimaryButtonStyle: ButtonStyle {
         PrimaryButton(configuration: configuration)
     }
 
-    struct PrimaryButton: View {
+    private struct PrimaryButton: View {
         let configuration: ButtonStyle.Configuration
         @Environment(\.isEnabled) private var isEnabled: Bool
 

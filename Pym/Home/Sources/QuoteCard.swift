@@ -11,12 +11,7 @@ let fade = LinearGradient(
 struct QuoteCard: View {
     let quote: Quote
     let metrics: GeometryProxy
-    @State private var show: Bool = false
-
-    init(_ quote: Quote, _ metrics: GeometryProxy) {
-        self.quote = quote
-        self.metrics = metrics
-    }
+    @State private var show = false
 
     public var body: some View {
         let width: CGFloat = metrics.size.width * 0.8
@@ -44,7 +39,7 @@ struct QuoteCard: View {
         .cornerRadius(8)
         .shadow(color: Color.dropShadowColor, radius: 8)
         .padding(8) // So dropshadow is shown
-        .fullScreenCover(isPresented: $show, content: { QuoteModalView(quote, metrics) })
+        .fullScreenCover(isPresented: $show, content: { QuoteModalView(quote: quote, metrics: metrics) })
         .onTapGesture {
             show.toggle()
         }
@@ -61,7 +56,7 @@ struct QuoteCard_Previews: PreviewProvider {
         )
 
         GeometryReader { metrics in
-            QuoteCard(quote, metrics)
+            QuoteCard(quote: quote, metrics: metrics)
         }
     }
 }

@@ -1,7 +1,7 @@
 import PymCore
 import SwiftUI
 
-public extension Feeling {
+extension Feeling {
     var color: Color {
         switch self {
         case .angry, .upset, .irritated: return Color.red

@@ -1,8 +1,6 @@
 import SwiftUI
 
-struct SelectableElement<Content>: View
-    where Content: View
-{
+struct SelectableElement<Content>: View where Content: View {
     let isSelected: Bool
     let content: Content
     let action: () -> Void

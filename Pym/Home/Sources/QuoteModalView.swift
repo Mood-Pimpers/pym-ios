@@ -7,11 +7,6 @@ struct QuoteModalView: View {
     let quote: Quote
     let metrics: GeometryProxy
 
-    init(_ quote: Quote, _ metrics: GeometryProxy) {
-        self.quote = quote
-        self.metrics = metrics
-    }
-
     var body: some View {
         let width = metrics.size.width
             + metrics.safeAreaInsets.leading

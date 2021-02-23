@@ -60,7 +60,7 @@ public struct HomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 0) {
                                 ForEach(quotes, id: \.id) { quote in
-                                    QuoteCard(quote, metrics)
+                                    QuoteCard(quote: quote, metrics: metrics)
                                 }
                             }
                             .padding([.leading, .trailing], 8)

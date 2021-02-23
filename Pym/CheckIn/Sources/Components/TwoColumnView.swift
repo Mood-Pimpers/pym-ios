@@ -22,9 +22,3 @@ struct TwoColumnView<Element, Content>: View
         }
     }
 }
-
-/* struct TwoColumnView_Previews: PreviewProvider {
-     static var previews: some View {
-         TwoColumnView()
-     }
- } */
