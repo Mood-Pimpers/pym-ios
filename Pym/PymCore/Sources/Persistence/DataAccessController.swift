@@ -5,7 +5,7 @@ public struct DataAccessController {
     static var persistenceController = PersistenceController.shared
 
     private init() {
-        if getActivities().count == 0 {
+        if getActivities().isEmpty {
             DataAccessController.seedActivities()
         }
     }
@@ -52,7 +52,7 @@ public struct DataAccessController {
         request.returnsObjectsAsFaults = false
 
         if let results = try? context.fetch(request) {
-            return results.map { $0.name! }
+            return results.compactMap(\.name)
         } else {
             return []
         }
