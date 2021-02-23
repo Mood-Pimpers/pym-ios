@@ -1,7 +1,7 @@
 import PymCore
 import SwiftUI
 
-struct ActivityView: View {
+struct ActivityView: View {  
     @Environment(\.presentationMode) var presentationMode
     @State var selectedActivities: Set<String> = []
 
@@ -23,7 +23,7 @@ struct ActivityView: View {
                 .padding(8)
             },
             action: { select(activity) },
-            width: geometry.size.width / 2 - 16 - 4
+            width: geometry.size.width / 2 - 16 - 4 // TODO: maybe find a better solution!
         )
     }
 
