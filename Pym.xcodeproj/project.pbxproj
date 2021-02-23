@@ -100,10 +100,18 @@
 		F52DC8C125A61FC100809061 /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5322F2325A62AC000D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
 		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
-		F5322F5825A62B0300D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
-		F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
+		F5346C9225C3145700F15190 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingView.swift */; };
+		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
+		F58F861325E3B4A80001ADFD /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861225E3B4A80001ADFD /* ActivityView.swift */; };
+		F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodView.swift */; };
+		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
+		F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */; };
+		F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */; };
+		F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F864525E3FD9D0001ADFD /* PairSequence.swift */; };
+		F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
-		F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */; };
+		F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C93A2225E4135100EE8DFC /* Feeling.swift */; };
+		F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D2725E5397200DFBD07 /* Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -485,8 +493,18 @@
 		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		F51B335725A5CFE300C08F21 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F5346C9125C3145700F15190 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
+		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
+		F58F861225E3B4A80001ADFD /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		F58F861C25E3B4DE0001ADFD /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
+		F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewRouter.swift; sourceTree = "<group>"; };
+		F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
+		F58F864525E3FD9D0001ADFD /* PairSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairSequence.swift; sourceTree = "<group>"; };
+		F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalView.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
-		F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		F5C93A2225E4135100EE8DFC /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
+		F5CF8D2725E5397200DFBD07 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -726,7 +744,7 @@
 				F51B335625A5CFD700C08F21 /* Models */,
 				B16D4252259C75F200D507BE /* HomeView.swift */,
 				F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */,
-				F5AC0DCB25A5F8D9007ACEF5 /* QuoteView.swift */,
+				F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -895,6 +913,7 @@
 		B1FB77D4259141800010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F58F864425E3FD800001ADFD /* Extensions */,
 				2F7C1E9A25DFC9A100A7C857 /* SwifterSwift */,
 				2F41636625DEF3AB0009D45D /* DataSources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
@@ -969,7 +988,12 @@
 		B1FB7874259149890010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F5C93A2125E4133F00EE8DFC /* Extensions */,
+				F58F864F25E3FEC90001ADFD /* Views */,
+				F5346C9D25C314F400F15190 /* Components */,
 				B1FB792025914A5F0010F791 /* CheckIn.swift */,
+				F58F862625E3B5100001ADFD /* CheckInPage.swift */,
+				F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1016,6 +1040,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F5346C9D25C314F400F15190 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
+				F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F58F864425E3FD800001ADFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58F864525E3FD9D0001ADFD /* PairSequence.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58F864F25E3FEC90001ADFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5346C9125C3145700F15190 /* FeelingView.swift */,
+				F58F861225E3B4A80001ADFD /* ActivityView.swift */,
+				F58F861C25E3B4DE0001ADFD /* MoodView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1024,6 +1075,15 @@
 				2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F5C93A2125E4133F00EE8DFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5C93A2225E4135100EE8DFC /* Feeling.swift */,
+				F5CF8D2725E5397200DFBD07 /* Set.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1716,8 +1776,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5AC0DCC25A5F8D9007ACEF5 /* QuoteView.swift in Sources */,
 				F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */,
+				F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */,
 				F51B335825A5CFE300C08F21 /* Quote.swift in Sources */,
 				B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */,
 			);
@@ -1772,8 +1832,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5322F6325A62B0500D2CE7B /* PrimaryButton.swift in Sources */,
-				F5322F5825A62B0300D2CE7B /* Title.swift in Sources */,
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
@@ -1847,6 +1905,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
+				F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */,
+				F58F861325E3B4A80001ADFD /* ActivityView.swift in Sources */,
+				F5346C9225C3145700F15190 /* FeelingView.swift in Sources */,
+				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
+				F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */,
+				F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */,
+				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
+				F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */,
+				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,
+				F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
