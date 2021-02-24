@@ -2,7 +2,7 @@ import PymCore
 import SwiftUI
 
 struct FeelingView: View {
-    let next: (_ feeling: [Feeling]) -> Void
+    let next: (_ feeling: Set<Feeling>) -> Void
     @State private var selectedFeelings: Set<Feeling> = []
 
     private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
@@ -45,7 +45,7 @@ struct FeelingView: View {
     }
 
     private func callNext() {
-        next(Array(selectedFeelings))
+        next(selectedFeelings)
     }
 
     private func select(_ feeling: Feeling) {

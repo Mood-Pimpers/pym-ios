@@ -2,15 +2,10 @@ import PymCore
 import SwiftUI
 
 struct ActivityView: View {
-    let next: (_ activities: [String]) -> Void
-    @State private var selectedActivities: Set<String> = []
+    let activities: Set<String>
+    let next: (_ activities: Set<String>) -> Void
 
-    // TODO: Load activities from core data
-    private let activities = [
-        "work",
-        "friends",
-        "school"
-    ]
+    @State private var selectedActivities: Set<String> = []
 
     private func activitySelectable(_ activity: String, _ width: CGFloat) -> some View {
         SelectableElement(
@@ -32,7 +27,7 @@ struct ActivityView: View {
             VStack {
                 Title("Why are you feeling this way?")
                 Columns(
-                    elements: activities,
+                    elements: Array(activities),
                     columns: 2,
                     content: activitySelectable
                 )
@@ -55,12 +50,12 @@ struct ActivityView: View {
     }
 
     private func callNext() {
-        next(Array(selectedActivities))
+        next(selectedActivities)
     }
 }
 
 struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityView { print($0) }
+        ActivityView(activities: ["work", "school"]) { print($0) }
     }
 }

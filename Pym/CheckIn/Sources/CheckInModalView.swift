@@ -8,18 +8,14 @@ public struct CheckInModalView: View {
 
     public var body: some View {
         VStack {
-            CheckInView(onClose: save)
+            CheckInView(onClose: close)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.backgroundColor)
         .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            // presentationMode.wrappedValue.dismiss()
-        }
     }
 
-    private func save(entry _: MoodEntry) {
-        // TODO: Save entry
+    private func close(entry _: MoodEntry) {
         presentationMode.wrappedValue.dismiss()
     }
 }

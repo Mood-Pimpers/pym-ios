@@ -7,8 +7,18 @@ public struct CheckInView: View {
     @StateObject var viewRouter = CheckInViewRouter()
 
     @State private var mood = MoodRating.moderate
-    @State private var feelings: [Feeling] = []
-    @State private var activities: [String] = []
+    @State private var feelings: Set<Feeling> = []
+
+    // TODO: typealias Activity = String ???
+    @State private var activities: Set<String> = []
+
+    private let dataAccess = DataAccessController.shared
+    private let allActivities: Set<String>
+
+    public init(onClose: @escaping (_ entry: MoodEntry) -> Void) {
+        self.onClose = onClose
+        allActivities = dataAccess.getActivities()
+    }
 
     public var body: some View {
         // TODO: Use Simons component when in main
@@ -30,24 +40,35 @@ public struct CheckInView: View {
             Spacer()
             switch viewRouter.currentPage {
             case .mood:
-                MoodView { rating in
+                MoodView { selectedMood in
                     viewRouter.currentPage = .feeling
-                    self.mood = rating
+                    self.mood = selectedMood
                 }
             case .feeling:
-                FeelingView { feelings in
+                FeelingView { selectedFeelings in
                     viewRouter.currentPage = .activity
-                    self.feelings = feelings
+                    self.feelings = selectedFeelings
                 }
             case .activity:
-                ActivityView { activities in
-                    self.activities = activities
-                    let entry = MoodEntry(date: Date(), rating: mood, feelings: feelings, activities: activities)
-                    onClose(entry)
+                ActivityView(activities: allActivities) { selectedActivities in
+                    self.activities = selectedActivities
+                    finish()
                 }
             }
             Spacer()
         }
+    }
+
+    private func finish() {
+        let entry = MoodEntry(
+            date: Date(),
+            rating: mood,
+            feelings: feelings,
+            activities: activities
+        )
+
+        dataAccess.store(entry: entry)
+        onClose(entry)
     }
 }
 
