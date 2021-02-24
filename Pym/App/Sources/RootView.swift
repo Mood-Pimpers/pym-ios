@@ -1,10 +1,14 @@
+import CheckIn
 import Explorer
 import Home
 import Insights
+import PymCore
 import Settings
 import SwiftUI
 
 struct RootView: View {
+    @ObservedObject private var modalService = ModalService.shared
+
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
         UITabBar.appearance().unselectedItemTintColor = UIColor.black
@@ -27,16 +31,14 @@ struct RootView: View {
                 }
                 .accentColor(.primaryColor)
 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14)
-                        .fill(Color.primaryColor)
-                        .frame(width: 60, height: 60)
-                        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 1)
+                Button(action: modalService.toggleMoodCheckin, label: {
                     Image.add
                         .resizable()
                         .frame(width: 28, height: 28)
-                }
-                .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
+                })
+                    .buttonStyle(PrimaryButtonStyle())
+                    .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
+                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
             }
         }
     }
