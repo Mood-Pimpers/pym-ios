@@ -47,9 +47,9 @@ public struct CheckInView: View {
     }
 
     public var body: some View {
-        // TODO: Use Simons component when in main
         VStack {
             if viewRouter.currentPage != .finish {
+                // TODO: Use Simons component when in main
                 HStack(spacing: 8) {
                     (viewRouter.currentPage == .mood ? Color.primaryColor : Color.neutralLightColor)
                         .cornerRadius(4)
@@ -102,27 +102,10 @@ public struct CheckInView: View {
             Spacer()
         }
         .onAppear(perform: onAppear)
-        // TODO: maybe put in extension method?
-        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-            .onEnded { value in
-                if value.translation.width < 0 {
-                    // left
-                    next()
-                }
-
-                if value.translation.width > 0 {
-                    // right
-                    previous()
-                }
-
-                if value.translation.height < 0 {
-                    // up
-                }
-
-                if value.translation.height > 0 {
-                    // down
-                }
-            })
+        .onSwipe(
+            left: next,
+            right: previous
+        )
     }
 
     private func previous() {
