@@ -88,6 +88,7 @@ public struct CheckInView: View {
             Spacer()
         }
         .onAppear(perform: onAppear)
+        // TODO: maybe put in extension method?
         .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onEnded { value in
                 if value.translation.width < 0 {
