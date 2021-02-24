@@ -13,7 +13,7 @@ extension MoodEntryModel {
 
 extension MoodEntryModel {
     // swiftlint-disable: syntactic_sugar
-    typealias ReduceState = (remainingValue: Int16, feelings: Set<Feeling>)
+    typealias ReduceState = (remainingValue: Int32, feelings: Set<Feeling>)
 
     var feelings: Set<Feeling> {
         get {
@@ -22,7 +22,7 @@ extension MoodEntryModel {
                 .reduce(ReduceState(feelingsValue, [])) { state, feeling in
                     feeling.rawValue <= state.remainingValue
                         ? ReduceState(
-                            state.remainingValue - Int16(feeling.rawValue),
+                            state.remainingValue - Int32(feeling.rawValue),
                             state.feelings.inserting(feeling)
                         )
                         : state
@@ -30,7 +30,7 @@ extension MoodEntryModel {
                 .feelings
         }
         set(newFeelings) {
-            feelingsValue = Int16(newFeelings.reduce(0) { $0 + $1.rawValue })
+            feelingsValue = Int32(newFeelings.reduce(0) { $0 + $1.rawValue })
         }
     }
 }

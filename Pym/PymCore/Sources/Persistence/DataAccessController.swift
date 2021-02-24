@@ -45,14 +45,14 @@ public struct DataAccessController {
         }
     }
 
-    public func getActivities() -> Set<Activity> {
+    public func getActivities() -> [Activity] {
         let context = DataAccessController.persistenceController.container.viewContext
 
         let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
         request.returnsObjectsAsFaults = false
 
         if let results = try? context.fetch(request) {
-            return Set(results.compactMap(\.name))
+            return results.compactMap(\.name)
         } else {
             return []
         }

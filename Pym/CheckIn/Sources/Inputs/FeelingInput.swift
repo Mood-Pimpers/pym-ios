@@ -1,10 +1,9 @@
 import PymCore
 import SwiftUI
 
-// TODO: Rename to FeelingInput
-struct FeelingView: View {
-    @Binding var feelings: Set<Feeling> // TODO: as array
-    @Binding var allFeelings: Set<Feeling>
+struct FeelingInput: View {
+    @Binding var feelings: Set<Feeling>
+    @Binding var allFeelings: [Feeling]
 
     private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
         SelectableElement(
@@ -26,7 +25,7 @@ struct FeelingView: View {
 
     public var body: some View {
         Columns(
-            elements: Array(allFeelings),
+            elements: allFeelings,
             columns: 2,
             content: feelingSelectable
         )
@@ -37,11 +36,11 @@ struct FeelingView: View {
     }
 }
 
-struct FeelingView_Previews: PreviewProvider {
+struct FeelingInput_Previews: PreviewProvider {
     static var previews: some View {
-        FeelingView(
-            feelings: Binding<Set<Feeling>>.constant([]),
-            allFeelings: Binding<Set<Feeling>>.constant(Set(Feeling.allCases))
+        FeelingInput(
+            feelings: Binding.constant([]),
+            allFeelings: Binding.constant(Feeling.allCases)
         )
     }
 }

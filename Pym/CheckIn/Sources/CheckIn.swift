@@ -11,11 +11,11 @@ public struct CheckInView: View {
     @State private var activities: Set<Activity> = []
 
     private let dataAccess = DataAccessController.shared
-    @State private var allFeelings: Set<Feeling> = []
-    @State private var allActivities: Set<Activity> = []
+    @State private var allFeelings: [Feeling] = []
+    @State private var allActivities: [Activity] = []
 
     private func onAppear() {
-        allFeelings = Set(Feeling.allCases)
+        allFeelings = Feeling.allCases
         allActivities = dataAccess.getActivities()
     }
 
@@ -63,13 +63,13 @@ public struct CheckInView: View {
             case .mood:
                 checkInSubView(
                     title: "How are you feeling?",
-                    content: MoodView(mood: $mood),
+                    content: MoodInput(mood: $mood),
                     buttonText: "continue"
                 )
             case .feeling:
                 checkInSubView(
                     title: "Describe your feelings?",
-                    content: FeelingView(
+                    content: FeelingInput(
                         feelings: $feelings,
                         allFeelings: $allFeelings
                     ),
@@ -78,7 +78,7 @@ public struct CheckInView: View {
             case .activity:
                 checkInSubView(
                     title: "Why are you feeling this way?",
-                    content: ActivityView(
+                    content: ActivityInput(
                         activities: $activities,
                         allActivities: $allActivities
                     ),

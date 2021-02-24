@@ -1,8 +1,7 @@
 import PymCore
 import SwiftUI
 
-// TODO: Rename to mood input
-struct MoodView: View {
+struct MoodInput: View {
     @Binding var mood: MoodRating?
 
     var body: some View {
@@ -21,8 +20,8 @@ struct MoodView: View {
     }
 }
 
-struct MoodView_Previews: PreviewProvider {
+struct MoodInput_Previews: PreviewProvider {
     static var previews: some View {
-        MoodView(mood: Binding<MoodRating?>.constant(MoodRating.good))
+        MoodInput(mood: Binding<MoodRating?>.constant(MoodRating.good))
     }
 }

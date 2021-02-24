@@ -1,10 +1,9 @@
 import PymCore
 import SwiftUI
 
-// TODO: Rename to ActivityInput
-struct ActivityView: View {
+struct ActivityInput: View {
     @Binding var activities: Set<Activity>
-    @Binding var allActivities: Set<Activity> // TODO: as array
+    @Binding var allActivities: [Activity]
 
     private func activitySelectable(_ activity: Activity, _ width: CGFloat) -> some View {
         SelectableElement(
@@ -23,7 +22,7 @@ struct ActivityView: View {
 
     public var body: some View {
         Columns(
-            elements: Array(allActivities),
+            elements: allActivities,
             columns: 2,
             content: activitySelectable
         )
@@ -34,11 +33,11 @@ struct ActivityView: View {
     }
 }
 
-struct ActivityView_Previews: PreviewProvider {
+struct ActivityInput_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityView(
+        ActivityInput(
             activities: Binding<Set<Activity>>.constant([]),
-            allActivities: Binding<Set<Activity>>.constant(["Work", "University"])
+            allActivities: Binding<[Activity]>.constant(["Work", "University"])
         )
     }
 }
