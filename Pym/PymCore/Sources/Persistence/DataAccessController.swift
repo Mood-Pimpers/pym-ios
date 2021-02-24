@@ -4,7 +4,11 @@ public struct DataAccessController {
     public static let shared = DataAccessController()
     static var persistenceController = PersistenceController.shared
 
-    private init() {}
+    private init() {
+        if getActivities().isEmpty {
+            DataAccessController.seedActivities()
+        }
+    }
 
     public func store(entry dto: MoodEntry) {
         let context = DataAccessController.persistenceController.container.viewContext
@@ -34,9 +38,21 @@ public struct DataAccessController {
         request.returnsObjectsAsFaults = false
         request.predicate = NSPredicate(format: "(date >= %@) AND (date <= %@)", startDate as NSDate, endDate as NSDate)
 
-        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
         if let results = try? context.fetch(request) {
             return results.map { MoodEntry(from: $0) }
+        } else {
+            return []
+        }
+    }
+
+    public func getActivities() -> [String] {
+        let context = DataAccessController.persistenceController.container.viewContext
+
+        let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
+        request.returnsObjectsAsFaults = false
+
+        if let results = try? context.fetch(request) {
+            return results.compactMap(\.name)
         } else {
             return []
         }
@@ -55,5 +71,14 @@ public struct DataAccessController {
         } else {
             return nil
         }
+    }
+
+    private static func seedActivities() {
+        for activityName in ["work", "friends", "school", "relationship", "traveling", "food", "exercise", "weather", "hobbies", "shopping", "relaxing"] {
+            let activity = ActivityModel(context: persistenceController.container.viewContext)
+            activity.id = UUID()
+            activity.name = activityName
+        }
+        persistenceController.saveContext()
     }
 }
