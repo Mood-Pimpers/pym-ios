@@ -1,15 +1,14 @@
 import PymCore
 import SwiftUI
 
+// TODO: Rename to ActivityInput
 struct ActivityView: View {
-    let activities: Set<Activity>
-    let next: (_ activities: Set<Activity>) -> Void
-
-    @State private var selectedActivities: Set<Activity> = []
+    @Binding var activities: Set<Activity>
+    @Binding var allActivities: Set<Activity> // TODO: as array
 
     private func activitySelectable(_ activity: Activity, _ width: CGFloat) -> some View {
         SelectableElement(
-            isSelected: selectedActivities.contains(activity),
+            isSelected: activities.contains(activity),
             content: {
                 HStack {
                     Text(activity)
@@ -23,39 +22,23 @@ struct ActivityView: View {
     }
 
     public var body: some View {
-        GeometryReader { _ in
-            VStack {
-                Title("Why are you feeling this way?")
-                Columns(
-                    elements: Array(activities),
-                    columns: 2,
-                    content: activitySelectable
-                )
-
-                Spacer()
-
-                Button(action: callNext, label: {
-                    Text("finish")
-                        .bold()
-                    Spacer()
-                })
-                    .buttonStyle(PrimaryButtonStyle())
-            }
-            .padding(16)
-        }
+        Columns(
+            elements: Array(allActivities),
+            columns: 2,
+            content: activitySelectable
+        )
     }
 
     private func select(_ activity: String) {
-        selectedActivities.toggle(activity)
-    }
-
-    private func callNext() {
-        next(selectedActivities)
+        activities.toggle(activity)
     }
 }
 
 struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityView(activities: ["work", "school"]) { print($0) }
+        ActivityView(
+            activities: Binding<Set<Activity>>.constant([]),
+            allActivities: Binding<Set<Activity>>.constant(["Work", "University"])
+        )
     }
 }

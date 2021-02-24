@@ -1,15 +1,14 @@
 import PymCore
 import SwiftUI
 
+// TODO: Rename to FeelingInput
 struct FeelingView: View {
-    let feelings: Set<Feeling>
-    let next: (_ feeling: Set<Feeling>) -> Void
-
-    @State private var selectedFeelings: Set<Feeling> = []
+    @Binding var feelings: Set<Feeling> // TODO: as array
+    @Binding var allFeelings: Set<Feeling>
 
     private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
         SelectableElement(
-            isSelected: selectedFeelings.contains(feeling),
+            isSelected: feelings.contains(feeling),
             content: {
                 HStack {
                     feeling.color
@@ -26,37 +25,23 @@ struct FeelingView: View {
     }
 
     public var body: some View {
-        VStack {
-            Title("Describe your feelings?")
-            Columns(
-                elements: Array(feelings),
-                columns: 2,
-                content: feelingSelectable
-            )
-
-            Spacer()
-
-            Button(action: callNext, label: {
-                Text("continue")
-                    .bold()
-                Spacer()
-            })
-                .buttonStyle(PrimaryButtonStyle())
-        }
-        .padding(16)
-    }
-
-    private func callNext() {
-        next(selectedFeelings)
+        Columns(
+            elements: Array(allFeelings),
+            columns: 2,
+            content: feelingSelectable
+        )
     }
 
     private func select(_ feeling: Feeling) {
-        selectedFeelings.toggle(feeling)
+        feelings.toggle(feeling)
     }
 }
 
 struct FeelingView_Previews: PreviewProvider {
     static var previews: some View {
-        FeelingView(feelings: Set(Feeling.allCases)) { print($0) }
+        FeelingView(
+            feelings: Binding<Set<Feeling>>.constant([]),
+            allFeelings: Binding<Set<Feeling>>.constant(Set(Feeling.allCases))
+        )
     }
 }
