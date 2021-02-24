@@ -3,6 +3,7 @@ import PymCore
 import SwiftUI
 
 public struct HomeView: View {
+    @ObservedObject private var modalService = ModalService.shared
     // TODO: Load quotes from a service
     @State private var quotes = [
         Quote(
@@ -30,7 +31,6 @@ public struct HomeView: View {
             url: { width, height in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         )
     ]
-    @State private var showMoodCheckin = false
 
     public init() {}
 
@@ -54,13 +54,12 @@ public struct HomeView: View {
 
                     VStack {
                         Title("track your mood")
-                        Button(action: toggleMoodCheckin, label: {
+                        Button(action: modalService.toggleMoodCheckin, label: {
                             Text("mood checkin")
                             Spacer()
                             Image(systemName: "arrow.right")
                         })
                             .buttonStyle(PrimaryButtonStyle())
-                            .sheet(isPresented: $showMoodCheckin, content: CheckInModalView.init)
                     }
                     .padding(16)
 
@@ -68,11 +67,6 @@ public struct HomeView: View {
                 }
             }
         }
-    }
-
-    // TODO: Maybe put this in a global service as it is currently used here and in "RootView"
-    private func toggleMoodCheckin() {
-        showMoodCheckin.toggle()
     }
 }
 

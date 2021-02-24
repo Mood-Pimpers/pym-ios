@@ -7,7 +7,7 @@ import Settings
 import SwiftUI
 
 struct RootView: View {
-    @State private var showMoodCheckin = false
+    @ObservedObject private var modalService = ModalService.shared
 
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
@@ -31,20 +31,16 @@ struct RootView: View {
                 }
                 .accentColor(.primaryColor)
 
-                Button(action: toggleMoodCheckin, label: {
+                Button(action: modalService.toggleMoodCheckin, label: {
                     Image.add
                         .resizable()
                         .frame(width: 28, height: 28)
                 })
                     .buttonStyle(PrimaryButtonStyle())
                     .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
-                    .sheet(isPresented: $showMoodCheckin, content: CheckInModalView.init)
+                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
             }
         }
-    }
-
-    private func toggleMoodCheckin() {
-        showMoodCheckin.toggle()
     }
 }
 
