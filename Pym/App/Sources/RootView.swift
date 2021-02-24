@@ -37,7 +37,6 @@ struct RootView: View {
                         .frame(width: 28, height: 28)
                 })
                     .buttonStyle(PrimaryButtonStyle())
-                    .onTapGesture(perform: toggleMoodCheckin)
                     .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
                     .sheet(isPresented: $showMoodCheckin, content: CheckInModalView.init)
             }
