@@ -14,6 +14,10 @@ public struct CheckInView: View {
     @State private var allFeelings: [Feeling] = []
     @State private var allActivities: [Activity] = []
 
+    private var finishAnimationTime: DispatchTime {
+        DispatchTime.now() + 0.2
+    }
+
     private func onAppear() {
         allFeelings = Feeling.allCases
         allActivities = dataAccess.getActivities()
@@ -45,18 +49,20 @@ public struct CheckInView: View {
     public var body: some View {
         // TODO: Use Simons component when in main
         VStack {
-            HStack(spacing: 8) {
-                (viewRouter.currentPage == .mood ? Color.primaryColor : Color.neutralLightColor)
-                    .cornerRadius(4)
+            if viewRouter.currentPage != .finish {
+                HStack(spacing: 8) {
+                    (viewRouter.currentPage == .mood ? Color.primaryColor : Color.neutralLightColor)
+                        .cornerRadius(4)
 
-                (viewRouter.currentPage == .feeling ? Color.primaryColor : Color.neutralLightColor)
-                    .cornerRadius(4)
+                    (viewRouter.currentPage == .feeling ? Color.primaryColor : Color.neutralLightColor)
+                        .cornerRadius(4)
 
-                (viewRouter.currentPage == .activity ? Color.primaryColor : Color.neutralLightColor)
-                    .cornerRadius(4)
+                    (viewRouter.currentPage == .activity ? Color.primaryColor : Color.neutralLightColor)
+                        .cornerRadius(4)
+                }
+                .frame(maxWidth: .infinity, maxHeight: 8.0)
+                .padding(8)
             }
-            .frame(maxWidth: .infinity, maxHeight: 8.0)
-            .padding(8)
 
             Spacer()
             switch viewRouter.currentPage {
@@ -82,8 +88,16 @@ public struct CheckInView: View {
                         activities: $activities,
                         allActivities: $allActivities
                     ),
-                    buttonText: "finish"
+                    buttonText: "save"
                 )
+            case .finish:
+                VStack {
+                    Image.duckFinish
+                    Text("Mood Entry Added")
+                        .font(.title)
+                        .padding(.top, 20)
+                }
+                .padding(16)
             }
             Spacer()
         }
@@ -115,6 +129,7 @@ public struct CheckInView: View {
         switch viewRouter.currentPage {
         case .mood, .feeling: viewRouter.currentPage = .mood
         case .activity: viewRouter.currentPage = .feeling
+        case .finish: viewRouter.currentPage = .finish
         }
     }
 
@@ -127,7 +142,10 @@ public struct CheckInView: View {
         case .feeling:
             viewRouter.currentPage = .activity
         case .activity:
-            finish()
+            viewRouter.currentPage = .finish
+            DispatchQueue.main.asyncAfter(deadline: finishAnimationTime, execute: finish)
+        case .finish:
+            print("Something went wrong.")
         }
     }
 
