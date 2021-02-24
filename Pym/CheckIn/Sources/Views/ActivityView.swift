@@ -2,12 +2,12 @@ import PymCore
 import SwiftUI
 
 struct ActivityView: View {
-    let activities: Set<String>
-    let next: (_ activities: Set<String>) -> Void
+    let activities: Set<Activity>
+    let next: (_ activities: Set<Activity>) -> Void
 
-    @State private var selectedActivities: Set<String> = []
+    @State private var selectedActivities: Set<Activity> = []
 
-    private func activitySelectable(_ activity: String, _ width: CGFloat) -> some View {
+    private func activitySelectable(_ activity: Activity, _ width: CGFloat) -> some View {
         SelectableElement(
             isSelected: selectedActivities.contains(activity),
             content: {

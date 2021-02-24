@@ -8,12 +8,10 @@ public struct CheckInView: View {
 
     @State private var mood = MoodRating.moderate
     @State private var feelings: Set<Feeling> = []
-
-    // TODO: typealias Activity = String ???
-    @State private var activities: Set<String> = []
+    @State private var activities: Set<Activity> = []
 
     private let dataAccess = DataAccessController.shared
-    private let allActivities: Set<String>
+    private let allActivities: Set<Activity>
 
     public init(onClose: @escaping (_ entry: MoodEntry) -> Void) {
         self.onClose = onClose

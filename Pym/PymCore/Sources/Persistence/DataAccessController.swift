@@ -45,7 +45,7 @@ public struct DataAccessController {
         }
     }
 
-    public func getActivities() -> Set<String> {
+    public func getActivities() -> Set<Activity> {
         let context = DataAccessController.persistenceController.container.viewContext
 
         let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
@@ -58,7 +58,7 @@ public struct DataAccessController {
         }
     }
 
-    private func getActivityBy(name activityName: String) -> ActivityModel? {
+    private func getActivityBy(name activityName: Activity) -> ActivityModel? {
         let context = DataAccessController.persistenceController.container.viewContext
 
         let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
