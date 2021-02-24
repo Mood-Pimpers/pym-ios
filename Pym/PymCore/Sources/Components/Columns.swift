@@ -1,6 +1,7 @@
 import SwiftUI
 
 public struct Columns<Element, Content>: View where Element: Hashable, Content: View {
+    // TODO: Use Sequence instead of an Array...
     let elements: [Element]
     let columns: Int
     let spacing: CGFloat

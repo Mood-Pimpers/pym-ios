@@ -12,10 +12,12 @@ public struct CheckInView: View {
 
     private let dataAccess = DataAccessController.shared
     private let allActivities: Set<Activity>
+    private let allFeelings: Set<Feeling>
 
     public init(onClose: @escaping (_ entry: MoodEntry) -> Void) {
         self.onClose = onClose
         allActivities = dataAccess.getActivities()
+        allFeelings = Set(Feeling.allCases)
     }
 
     public var body: some View {
@@ -43,7 +45,7 @@ public struct CheckInView: View {
                     self.mood = selectedMood
                 }
             case .feeling:
-                FeelingView { selectedFeelings in
+                FeelingView(feelings: allFeelings) { selectedFeelings in
                     viewRouter.currentPage = .activity
                     self.feelings = selectedFeelings
                 }

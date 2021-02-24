@@ -2,7 +2,9 @@ import PymCore
 import SwiftUI
 
 struct FeelingView: View {
+    let feelings: Set<Feeling>
     let next: (_ feeling: Set<Feeling>) -> Void
+
     @State private var selectedFeelings: Set<Feeling> = []
 
     private func feelingSelectable(_ feeling: Feeling, _ width: CGFloat) -> some View {
@@ -27,7 +29,7 @@ struct FeelingView: View {
         VStack {
             Title("Describe your feelings?")
             Columns(
-                elements: Feeling.allCases,
+                elements: Array(feelings),
                 columns: 2,
                 content: feelingSelectable
             )
@@ -55,6 +57,6 @@ struct FeelingView: View {
 
 struct FeelingView_Previews: PreviewProvider {
     static var previews: some View {
-        FeelingView { print($0) }
+        FeelingView(feelings: Set(Feeling.allCases)) { print($0) }
     }
 }
