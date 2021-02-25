@@ -1,13 +1,27 @@
+import Combine
 import PymCore
 import SwiftUI
 
 class EnableTimeViewModel: ObservableObject {
-    @Published var isEnabled: Bool
-    @Published var time: Date
+    var onChange: (() -> Void)?
+
+    @Published var isEnabled: Bool {
+        didSet { callOnChange() }
+    }
+
+    @Published var time: Date {
+        didSet { callOnChange() }
+    }
 
     init(isEnabled: Bool, notifyOn time: Date) {
         self.isEnabled = isEnabled
         self.time = time
+    }
+
+    private func callOnChange() {
+        if let onChange = onChange {
+            onChange()
+        }
     }
 }
 
@@ -16,28 +30,62 @@ struct EnableTimeView: View {
     @ObservedObject var viewModel: EnableTimeViewModel
 
     var body: some View {
-        HStack {
+        VStack {
             Toggle(title, isOn: $viewModel.isEnabled)
-            DatePicker("Morning", selection: $viewModel.time, displayedComponents: .hourAndMinute)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .labelsHidden()
+            if viewModel.isEnabled {
+                DatePicker(title, selection: $viewModel.time, displayedComponents: .hourAndMinute)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                    .labelsHidden()
+            }
         }
     }
 }
 
 class SettingsViewModel: ObservableObject {
-    let dataAccess = DataAccessController.shared
+    private let dataAccess = DataAccessController.shared
+    private let notificationService = NotificationService.shared
+    // TODO: Use service instead?
+    private let defaults = UserDefaults.standard
 
-    @Published var getsNotified: Bool
+    @Published var notificationStatus = NotificationAuthorizationStatus.notAsked
+
     @Published var morning: EnableTimeViewModel
     @Published var evening: EnableTimeViewModel
 
     @Published var showEreaseAllWarning = false
 
     init() {
-        getsNotified = true
-        morning = EnableTimeViewModel(isEnabled: true, notifyOn: Date())
-        evening = EnableTimeViewModel(isEnabled: false, notifyOn: Date())
+        morning = EnableTimeViewModel(
+            isEnabled: defaults.bool(forKey: "notify.morning.enabled"),
+            notifyOn: UserDefaults.standard.object(forKey: "notify.morning.time") as? Date ?? Date()
+        )
+
+        evening = EnableTimeViewModel(
+            isEnabled: defaults.bool(forKey: "notify.evening.enabled"),
+            notifyOn: UserDefaults.standard.object(forKey: "notify.evening.time") as? Date ?? Date()
+        )
+
+        morning.onChange = update
+        evening.onChange = update
+    }
+
+    private func update() {
+        update(identifier: "morning", morning, content: notificationService.morningNotification)
+        update(identifier: "evening", evening, content: notificationService.eveningNotification)
+    }
+
+    private func update(identifier: String, _ viewModel: EnableTimeViewModel, content: UNMutableNotificationContent) {
+        defaults.set(viewModel.isEnabled, forKey: "notify.\(identifier).enabled")
+        defaults.set(viewModel.time, forKey: "notify.\(identifier).time")
+
+        notificationService.remove(withIdentifier: "notify.\(identifier)")
+        if viewModel.isEnabled {
+            notificationService.schedule(
+                identifier: "notify.\(identifier)",
+                on: viewModel.time,
+                content: content
+            )
+        }
     }
 
     func ereaseAllData() {
@@ -57,20 +105,21 @@ public struct SettingsView: View {
                 List {
                     Section(
                         header: Text("Mood Tracking Schedule"),
-                        content: {
-                            Toggle("Get Notifications", isOn: $viewModel.getsNotified)
-
-                            if viewModel.getsNotified {
-                                EnableTimeView(
-                                    title: "Morning",
-                                    viewModel: viewModel.morning
-                                )
-
-                                EnableTimeView(
-                                    title: "Evening",
-                                    viewModel: viewModel.evening
-                                )
+                        footer: HStack {
+                            if viewModel.notificationStatus == .error {
+                                Text("Not allowed :(")
                             }
+                        },
+                        content: {
+                            EnableTimeView(
+                                title: "Morning",
+                                viewModel: viewModel.morning
+                            )
+
+                            EnableTimeView(
+                                title: "Evening",
+                                viewModel: viewModel.evening
+                            )
                         }
                     )
 
@@ -98,7 +147,7 @@ public struct SettingsView: View {
                         }
                     )
                 }
-                .listStyle(GroupedListStyle())
+                .listStyle(InsetGroupedListStyle())
             }
             .navigationTitle("Settings")
         }
