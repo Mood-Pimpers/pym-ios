@@ -12,6 +12,7 @@
 		2F18B61425DFB85F00CA050C /* DataAccessControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6D7925DEFE6F00E59436 /* DataAccessControllerTests.swift */; };
 		2F18B62925DFB86500CA050C /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4653025DDA63400D60BAC /* ModelTests.swift */; };
 		2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */; };
+		2F27410125E8420100803554 /* ContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F27410025E8420100803554 /* ContentCard.swift */; };
 		2F2DA81725E4665E0046A774 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */; };
 		2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */; };
 		2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */; };
@@ -432,6 +433,7 @@
 /* Begin PBXFileReference section */
 		2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymCalendarView.swift; sourceTree = "<group>"; };
 		2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBackgroundLayer.swift; sourceTree = "<group>"; };
+		2F27410025E8420100803554 /* ContentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCard.swift; sourceTree = "<group>"; };
 		2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
 		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
@@ -1085,9 +1087,10 @@
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F51B334A25A5CF2E00C08F21 /* Title.swift */,
+				2F27410025E8420100803554 /* ContentCard.swift */,
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
 				2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */,
+				F51B334A25A5CF2E00C08F21 /* Title.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1883,6 +1886,7 @@
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
+				2F27410125E8420100803554 /* ContentCard.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */,
