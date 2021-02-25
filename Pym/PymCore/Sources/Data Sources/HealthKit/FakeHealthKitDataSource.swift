@@ -9,7 +9,8 @@ public class FakeHealthKitDataSource: ExternalDataSource {
         "Running",
         "Skiing",
         "Walking",
-        "Climbing"
+        "Climbing",
+        "Sleeping"
     ]
 
     public func getEvents(from startDate: Date, until endDate: Date) -> [ExternalEvent] {
