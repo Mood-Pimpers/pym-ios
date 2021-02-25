@@ -1,41 +1,49 @@
+import CheckIn
 import Explorer
 import Home
 import Insights
+import Onboarding
+import PymCore
 import Settings
 import SwiftUI
 
 struct RootView: View {
+    @ObservedObject private var modalService = ModalService.shared
+    @AppStorage(Defaults.Keys.firstAppLaunch) var firstAppLaunch: Double = 0.0
+
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
         UITabBar.appearance().unselectedItemTintColor = UIColor.black
     }
 
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-                TabView {
-                    HomeView()
-                        .tabItem { Image.home }
-                    InsightsView()
-                        .tabItem { Image.insights }
-                    Spacer()
-                    ExplorerView()
-                        .tabItem { Image.explorer }
-                    SettingsView()
-                        .tabItem { Image.settings }
-                }
-                .accentColor(.primaryColor)
+        if firstAppLaunch == 0.0 {
+            OnboardingView()
+        } else {
+            ZStack {
+                GeometryReader { geometry in
+                    TabView {
+                        HomeView()
+                            .tabItem { Image.home }
+                        InsightsView()
+                            .tabItem { Image.insights }
+                        Spacer()
+                        ExplorerView()
+                            .tabItem { Image.explorer }
+                        SettingsView()
+                            .tabItem { Image.settings }
+                    }
+                    .accentColor(.primaryColor)
 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14)
-                        .fill(Color.primaryColor)
-                        .frame(width: 60, height: 60)
-                        .shadow(color: Color.dropShadowColor, radius: 8, x: 0, y: 1)
-                    Image.add
-                        .resizable()
-                        .frame(width: 28, height: 28)
+                    Button(action: modalService.toggleMoodCheckin, label: {
+                        Image.add
+                            .resizable()
+                            .frame(width: 28, height: 28)
+                    })
+                        .buttonStyle(PrimaryButtonStyle())
+                        .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
+                        .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
                 }
-                .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
             }
         }
     }
