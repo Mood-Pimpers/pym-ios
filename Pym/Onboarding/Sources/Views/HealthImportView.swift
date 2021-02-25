@@ -7,7 +7,7 @@ struct HealthImportView: View {
     @State private var showingAlert = false
     let next: () -> Void
 
-    fileprivate func handleHealthKitAuthorization() {
+    private func handleHealthKitAuthorization() {
         viewModel.authorizeHealthKit { result in
             switch result {
             case .success:
@@ -37,7 +37,8 @@ struct HealthImportView: View {
             Text("Increase further experience by showing health mood correlations.").multilineTextAlignment(.center)
 
             Spacer()
-            Button(action: { handleHealthKitAuthorization() }) {
+
+            Button(action: handleHealthKitAuthorization) {
                 Text("Allow using health data")
                     .bold()
                 Spacer()
@@ -66,9 +67,7 @@ struct HealthImportView: View {
             })
                 .foregroundColor(.black)
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Are you sure?"), message: Text("Connecting with Apple Health greatly increases the accuracy of your experience."), primaryButton: .default(Text("Connect with Apple Health")), secondaryButton: .cancel(Text("Disable"), action: {
-                        next()
-                    }))
+                    Alert(title: Text("Are you sure?"), message: Text("Connecting with Apple Health greatly increases the accuracy of your experience."), primaryButton: .default(Text("Connect with Apple Health")), secondaryButton: .cancel(Text("Disable"), action: next))
                 }
         }
     }
