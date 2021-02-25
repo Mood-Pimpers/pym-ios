@@ -2,7 +2,6 @@ import PymCore
 import SwiftUI
 
 struct MoodReminderSettingsView: View {
-    @Environment(\.colorScheme) var colorScheme
     @State private var morningReminder = Date()
     @State private var eveningReminder = Date()
 
@@ -20,18 +19,12 @@ struct MoodReminderSettingsView: View {
 
             HStack {
                 Text("Morning")
-                DatePicker("", selection: $morningReminder, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
-                    .colorMultiply(colorScheme == .dark ? .black : .white)
-                    .colorInvert()
+                TimePicker(selection: $morningReminder)
             }
 
             HStack {
                 Text("Evening")
-                DatePicker("", selection: $eveningReminder, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
-                    .colorMultiply(colorScheme == .dark ? .black : .white)
-                    .colorInvert()
+                TimePicker(selection: $eveningReminder)
             }
 
             Spacer()
@@ -48,5 +41,18 @@ struct MoodReminderSettingsView: View {
 struct MoodReminderSettingsView_Previews: PreviewProvider {
     static var previews: some View {
         MoodReminderSettingsView(next: {})
+    }
+}
+
+struct TimePicker: View {
+    @Environment(\.colorScheme) var colorScheme
+
+    var selection: Binding<Date>
+
+    var body: some View {
+        DatePicker("", selection: selection, displayedComponents: .hourAndMinute)
+            .labelsHidden()
+            .colorMultiply(colorScheme == .dark ? .black : .white)
+            .colorInvert()
     }
 }

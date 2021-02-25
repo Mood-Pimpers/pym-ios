@@ -1,10 +1,3 @@
-//
-//  Defaults.swift
-//  PymCore
-//
-//  Created by Simon Ammer on 21.02.21.
-//
-
 import Foundation
 
 public enum Defaults {

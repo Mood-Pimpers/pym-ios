@@ -74,7 +74,7 @@ public class MoodEntryModel: NSManagedObject {
 
     // swiftlint:disable discouraged_optional_boolean discouraged_optional_collection
     @NSManaged public var date: Date
-    @NSManaged public var feelingsValue: Int16
+    @NSManaged public var feelingsValue: Int32
     @NSManaged public var id: UUID
     @NSManaged public var ratingValue: Int16
     @NSManaged public var activities: Set<ActivityModel>

@@ -26,6 +26,15 @@ public enum Asset {
     public static let chartNegativeColor = ColorAsset(name: "ChartNegativeColor")
     public static let chartPositiveColor = ColorAsset(name: "ChartPositiveColor")
     public static let dropShadowColor = ColorAsset(name: "DropShadowColor")
+    public static let duckFinish = ImageAsset(name: "DuckFinish")
+    public enum Mood {
+        public static let moodBad = ImageAsset(name: "MoodBad")
+        public static let moodGood = ImageAsset(name: "MoodGood")
+        public static let moodGreat = ImageAsset(name: "MoodGreat")
+        public static let moodModerate = ImageAsset(name: "MoodModerate")
+        public static let moodPoor = ImageAsset(name: "MoodPoor")
+    }
+
     public static let neutralLightColor = ColorAsset(name: "NeutralLightColor")
     public enum Onboarding {
         public static let duck = ImageAsset(name: "Duck")

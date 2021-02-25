@@ -21,8 +21,9 @@ struct MoodReminderIntroView: View {
                 Text("Yes, of course!")
                     .bold()
                 Spacer()
-            }.buttonStyle(PrimaryButtonStyle())
-                .padding(16)
+            }
+            .buttonStyle(PrimaryButtonStyle())
+            .padding(16)
 
             Button(action: {
                 showingAlert = true
@@ -30,7 +31,12 @@ struct MoodReminderIntroView: View {
                 Text("No thanks")
             }).foregroundColor(.black)
         }.alert(isPresented: $showingAlert) {
-            Alert(title: Text("Are you sure?"), message: Text("Studies show that people who got daily reminders are 88% more likely to keep their new habit."), primaryButton: .default(Text("Create a new habit")), secondaryButton: .cancel(Text("Disable")))
+            Alert(title: Text("Are you sure?"),
+                  message: Text("Studies show that people who got daily reminders are 88% more likely to keep their new habit."),
+                  primaryButton: .default(Text("Create a new habit")),
+                  secondaryButton: .cancel(Text("Disable"), action: {
+                      next()
+                  }))
         }
     }
 }

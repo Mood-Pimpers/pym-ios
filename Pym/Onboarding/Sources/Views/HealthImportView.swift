@@ -7,6 +7,17 @@ struct HealthImportView: View {
     @State private var showingAlert = false
     let next: () -> Void
 
+    fileprivate func handleHealthKitAuthorization() {
+        viewModel.authorizeHealthKit { result in
+            switch result {
+            case .success:
+                next()
+            default:
+                break
+            }
+        }
+    }
+
     var body: some View {
         VStack {
             Spacer()
@@ -26,16 +37,7 @@ struct HealthImportView: View {
             Text("Increase further experience by showing health mood correlations.").multilineTextAlignment(.center)
 
             Spacer()
-            Button(action: {
-                viewModel.authorizeHealthKit { result in
-                    switch result {
-                    case .success:
-                        next()
-                    default:
-                        break
-                    }
-                }
-            }) {
+            Button(action: { handleHealthKitAuthorization() }) {
                 Text("Allow using health data")
                     .bold()
                 Spacer()

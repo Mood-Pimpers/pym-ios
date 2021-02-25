@@ -12,7 +12,7 @@ public enum HealthKitError: Error, Identifiable {
 public class HealthKitAssistant {
     public class func authorizeHealthKit(completion: @escaping (Bool, HealthKitError?) -> Void) {
         guard HKHealthStore.isHealthDataAvailable() else {
-            completion(false, HealthKitError.notAvailableOnDevice)
+            completion(false, .notAvailableOnDevice)
             return
         }
 
@@ -20,7 +20,7 @@ public class HealthKitAssistant {
             let sleepAnalysis = HKObjectType.categoryType(forIdentifier: .sleepAnalysis),
             HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) != nil
         else {
-            completion(false, HealthKitError.dataTypeNotAvailable)
+            completion(false, .dataTypeNotAvailable)
             return
         }
 
