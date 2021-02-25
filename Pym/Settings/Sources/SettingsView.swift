@@ -1,11 +1,53 @@
 import PymCore
 import SwiftUI
 
+class EnableTimeViewModel: ObservableObject {
+    @Published var isEnabled: Bool
+    @Published var time: Date
+
+    init(isEnabled: Bool, notifyOn time: Date) {
+        self.isEnabled = isEnabled
+        self.time = time
+    }
+}
+
+struct EnableTimeView: View {
+    let title: String
+    @ObservedObject var viewModel: EnableTimeViewModel
+
+    var body: some View {
+        HStack {
+            Toggle(title, isOn: $viewModel.isEnabled)
+            DatePicker("Morning", selection: $viewModel.time, displayedComponents: .hourAndMinute)
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .labelsHidden()
+        }
+    }
+}
+
+class SettingsViewModel: ObservableObject {
+    let dataAccess = DataAccessController.shared
+
+    @Published var getsNotified: Bool
+    @Published var morning: EnableTimeViewModel
+    @Published var evening: EnableTimeViewModel
+
+    @Published var showEreaseAllWarning = false
+
+    init() {
+        getsNotified = true
+        morning = EnableTimeViewModel(isEnabled: true, notifyOn: Date())
+        evening = EnableTimeViewModel(isEnabled: false, notifyOn: Date())
+    }
+
+    func ereaseAllData() {
+        // TODO: How to handle errors here?
+        dataAccess.deleteAllEntries()
+    }
+}
+
 public struct SettingsView: View {
-    @State private var text = ""
-    @State private var notify = true
-    @State private var onMorning = true
-    @State private var morning = Date()
+    @ObservedObject private var viewModel = SettingsViewModel()
 
     public init() {}
 
@@ -16,22 +58,18 @@ public struct SettingsView: View {
                     Section(
                         header: Text("Mood Tracking Schedule"),
                         content: {
-                            Toggle("Get Notifications", isOn: $notify)
+                            Toggle("Get Notifications", isOn: $viewModel.getsNotified)
 
-                            if notify {
-                                HStack {
-                                    Toggle("Morning", isOn: $onMorning)
-                                    DatePicker("Morning", selection: $morning, displayedComponents: .hourAndMinute)
-                                        .datePickerStyle(GraphicalDatePickerStyle())
-                                        .labelsHidden()
-                                }
+                            if viewModel.getsNotified {
+                                EnableTimeView(
+                                    title: "Morning",
+                                    viewModel: viewModel.morning
+                                )
 
-                                HStack {
-                                    Toggle("Evening", isOn: $onMorning)
-                                    DatePicker("Evening", selection: $morning, displayedComponents: .hourAndMinute)
-                                        .datePickerStyle(GraphicalDatePickerStyle())
-                                        .labelsHidden()
-                                }
+                                EnableTimeView(
+                                    title: "Evening",
+                                    viewModel: viewModel.evening
+                                )
                             }
                         }
                     )
@@ -39,9 +77,24 @@ public struct SettingsView: View {
                     Section(
                         header: Text("Data Cleanup"),
                         content: {
-                            Button(action: {}, label: {
-                                Text("Erase my data")
-                            })
+                            Button(
+                                action: { viewModel.showEreaseAllWarning = true },
+                                label: { Text("Erase my data") }
+                            )
+                            .alert(
+                                isPresented: $viewModel.showEreaseAllWarning,
+                                content: {
+                                    Alert(
+                                        title: Text("Erease all entries?"),
+                                        primaryButton: .destructive(
+                                            Text("Delete All"),
+                                            action: viewModel.ereaseAllData
+                                        ),
+                                        secondaryButton: .cancel(
+                                            Text("Cancel"))
+                                    )
+                                }
+                            )
                         }
                     )
                 }

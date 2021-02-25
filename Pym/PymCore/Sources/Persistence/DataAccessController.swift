@@ -45,6 +45,21 @@ public struct DataAccessController {
         }
     }
 
+    public func deleteAllEntries() -> Bool {
+        let context = DataAccessController.persistenceController.container.viewContext
+
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: MoodEntryModel.entityName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try context.execute(deleteRequest)
+            return true
+        } catch let error as NSError {
+            // TODO: handle the error
+            return false
+        }
+    }
+
     public func getActivities() -> [Activity] {
         let context = DataAccessController.persistenceController.container.viewContext
 
