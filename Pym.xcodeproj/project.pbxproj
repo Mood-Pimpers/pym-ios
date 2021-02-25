@@ -11,6 +11,7 @@
 		2F18B60925DFB85300CA050C /* FakeHealthKitDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D62625DFB37700B29B28 /* FakeHealthKitDataSourceTests.swift */; };
 		2F18B61425DFB85F00CA050C /* DataAccessControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6D7925DEFE6F00E59436 /* DataAccessControllerTests.swift */; };
 		2F18B62925DFB86500CA050C /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4653025DDA63400D60BAC /* ModelTests.swift */; };
+		2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */; };
 		2F2DA81725E4665E0046A774 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */; };
 		2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */; };
 		2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */; };
@@ -430,6 +431,7 @@
 
 /* Begin PBXFileReference section */
 		2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymCalendarView.swift; sourceTree = "<group>"; };
+		2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBackgroundLayer.swift; sourceTree = "<group>"; };
 		2F2DA7FD25E4663B0046A774 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
 		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
@@ -784,6 +786,7 @@
 				2F9AEFCE25E5B4A2006BB731 /* DayJournal */,
 				2F13CF8025E43F0C00E81B36 /* Calendar */,
 				B16D42E0259C76D700D507BE /* ExplorerView.swift */,
+				2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1814,6 +1817,7 @@
 				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
 				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
 				B16D42E1259C76D700D507BE /* ExplorerView.swift in Sources */,
+				2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
