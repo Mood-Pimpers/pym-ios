@@ -35,11 +35,8 @@ public class HealthKitAssistant {
                 return completion(false, .authorizationError)
             }
 
-            if healthStore.authorizationStatus(for: sleepAnalysis) == .sharingAuthorized, healthStore.authorizationStatus(for: HKObjectType.workoutType()) == .sharingAuthorized {
-                return completion(true, nil)
-            } else {
-                return completion(false, .authorizationError)
-            }
+            // an app cannot determine whether or not a user has granted permission to read HealthKit data
+            return completion(true, nil)
         }
     }
 }
