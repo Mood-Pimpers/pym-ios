@@ -19,8 +19,7 @@
 		2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A03E25DDC12400B0A978 /* MoodEntry.swift */; };
 		2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A06025DDC2D700B0A978 /* DataAccessController.swift */; };
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
-		2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */; };
-		2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2037625E114B600EC0925 /* FeelingsExtension.swift */; };
+		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
@@ -93,18 +92,24 @@
 		F52DC8C125A61FC100809061 /* CheckIn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB784F259149540010F791 /* CheckIn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5322F2325A62AC000D2CE7B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B334A25A5CF2E00C08F21 /* Title.swift */; };
 		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
-		F5346C9225C3145700F15190 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingView.swift */; };
+		F5346C9225C3145700F15190 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingInput.swift */; };
 		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
-		F58F861325E3B4A80001ADFD /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861225E3B4A80001ADFD /* ActivityView.swift */; };
-		F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodView.swift */; };
+		F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B7225E67DF8007BA1C8 /* Set.swift */; };
+		F55A2B8525E67EDD007BA1C8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B8425E67EDD007BA1C8 /* Activity.swift */; };
+		F55A2BAF25E6AD01007BA1C8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2BAE25E6AD01007BA1C8 /* View.swift */; };
+		F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */; };
+		F58F861325E3B4A80001ADFD /* ActivityInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861225E3B4A80001ADFD /* ActivityInput.swift */; };
+		F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodInput.swift */; };
 		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
 		F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */; };
-		F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */; };
-		F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F864525E3FD9D0001ADFD /* PairSequence.swift */; };
 		F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C93A2225E4135100EE8DFC /* Feeling.swift */; };
 		F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D2725E5397200DFBD07 /* Set.swift */; };
+		F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */; };
+		F5CF8D8725E54E3E00DFBD07 /* Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D7525E5491500DFBD07 /* Columns.swift */; };
+		F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6B25E548E500DFBD07 /* Array.swift */; };
+		F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -431,8 +436,7 @@
 		2F72A03E25DDC12400B0A978 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		2F72A06025DDC2D700B0A978 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRatingExtension.swift; sourceTree = "<group>"; };
-		2FA2037625E114B600EC0925 /* FeelingsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsExtension.swift; sourceTree = "<group>"; };
+		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -480,18 +484,24 @@
 		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		F51B335725A5CFE300C08F21 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
-		F5346C9125C3145700F15190 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
+		F5346C9125C3145700F15190 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
 		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
-		F58F861225E3B4A80001ADFD /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		F58F861C25E3B4DE0001ADFD /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		F55A2B7225E67DF8007BA1C8 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		F55A2B8425E67EDD007BA1C8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F55A2BAE25E6AD01007BA1C8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalService.swift; sourceTree = "<group>"; };
+		F58F861225E3B4A80001ADFD /* ActivityInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInput.swift; sourceTree = "<group>"; };
+		F58F861C25E3B4DE0001ADFD /* MoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInput.swift; sourceTree = "<group>"; };
 		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
 		F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewRouter.swift; sourceTree = "<group>"; };
-		F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
-		F58F864525E3FD9D0001ADFD /* PairSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairSequence.swift; sourceTree = "<group>"; };
 		F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalView.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5C93A2225E4135100EE8DFC /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		F5CF8D2725E5397200DFBD07 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
+		F5CF8D6B25E548E500DFBD07 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		F5CF8D7525E5491500DFBD07 /* Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columns.swift; sourceTree = "<group>"; };
+		F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,23 +647,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F2C032925DC3F4300C35AA1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */,
-				2FA2037625E114B600EC0925 /* FeelingsExtension.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2F2C032A25DC3F4E00C35AA1 /* DTOs */ = {
+		2F2C032A25DC3F4E00C35AA1 /* Dtos */ = {
 			isa = PBXGroup;
 			children = (
 				2FF0A39F25E1130B00234F4E /* MoodRating.swift */,
 				2FF0A3A925E1131B00234F4E /* Feeling.swift */,
 				2F72A03E25DDC12400B0A978 /* MoodEntry.swift */,
+				F55A2B8425E67EDD007BA1C8 /* Activity.swift */,
 			);
-			path = DTOs;
+			path = Dtos;
 			sourceTree = "<group>";
 		};
 		2F41636625DEF3AB0009D45D /* DataSources */ = {
@@ -686,8 +688,8 @@
 		B10E7A95259C972800337DDC /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				2F2C032A25DC3F4E00C35AA1 /* DTOs */,
-				2F2C032925DC3F4300C35AA1 /* Models */,
+				F55A2B6925E67DB0007BA1C8 /* Extensions */,
+				2F2C032A25DC3F4E00C35AA1 /* Dtos */,
 				B10E7A96259C973D00337DDC /* PersistenceController.swift */,
 				2F72A06025DDC2D700B0A978 /* DataAccessController.swift */,
 			);
@@ -878,6 +880,7 @@
 		B1FB77D4259141800010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F55A2BD225E6C0B3007BA1C8 /* Services */,
 				F58F864425E3FD800001ADFD /* Extensions */,
 				2F7C1E9A25DFC9A100A7C857 /* SwifterSwift */,
 				2F41636625DEF3AB0009D45D /* DataSources */,
@@ -954,11 +957,12 @@
 			isa = PBXGroup;
 			children = (
 				F5C93A2125E4133F00EE8DFC /* Extensions */,
-				F58F864F25E3FEC90001ADFD /* Views */,
+				F58F864F25E3FEC90001ADFD /* Inputs */,
 				F5346C9D25C314F400F15190 /* Components */,
 				B1FB792025914A5F0010F791 /* CheckIn.swift */,
 				F58F862625E3B5100001ADFD /* CheckInPage.swift */,
 				F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */,
+				F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1009,32 +1013,49 @@
 			isa = PBXGroup;
 			children = (
 				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
-				F58F863A25E3FBC30001ADFD /* TwoColumnView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F55A2B6925E67DB0007BA1C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F55A2BD225E6C0B3007BA1C8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F58F864425E3FD800001ADFD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F58F864525E3FD9D0001ADFD /* PairSequence.swift */,
+				F5CF8D6B25E548E500DFBD07 /* Array.swift */,
+				F55A2B7225E67DF8007BA1C8 /* Set.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F58F864F25E3FEC90001ADFD /* Views */ = {
+		F58F864F25E3FEC90001ADFD /* Inputs */ = {
 			isa = PBXGroup;
 			children = (
-				F5346C9125C3145700F15190 /* FeelingView.swift */,
-				F58F861225E3B4A80001ADFD /* ActivityView.swift */,
-				F58F861C25E3B4DE0001ADFD /* MoodView.swift */,
+				F5346C9125C3145700F15190 /* FeelingInput.swift */,
+				F58F861225E3B4A80001ADFD /* ActivityInput.swift */,
+				F58F861C25E3B4DE0001ADFD /* MoodInput.swift */,
 			);
-			path = Views;
+			path = Inputs;
 			sourceTree = "<group>";
 		};
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F5CF8D7525E5491500DFBD07 /* Columns.swift */,
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
 			);
@@ -1046,6 +1067,8 @@
 			children = (
 				F5C93A2225E4135100EE8DFC /* Feeling.swift */,
 				F5CF8D2725E5397200DFBD07 /* Set.swift */,
+				F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */,
+				F55A2BAE25E6AD01007BA1C8 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1808,22 +1831,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */,
+				F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */,
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
 				2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */,
 				2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */,
 				2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */,
-				2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
 				2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */,
+				F5CF8D8725E54E3E00DFBD07 /* Columns.swift in Sources */,
+				F55A2B8525E67EDD007BA1C8 /* Activity.swift in Sources */,
 				2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */,
 				2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */,
+				F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */,
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
-				2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */,
+				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
+				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
+				F55A2BAF25E6AD01007BA1C8 /* View.swift in Sources */,
 				2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1859,14 +1887,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
-				F58F863B25E3FBC30001ADFD /* TwoColumnView.swift in Sources */,
-				F58F861325E3B4A80001ADFD /* ActivityView.swift in Sources */,
-				F5346C9225C3145700F15190 /* FeelingView.swift in Sources */,
+				F58F861325E3B4A80001ADFD /* ActivityInput.swift in Sources */,
+				F5346C9225C3145700F15190 /* FeelingInput.swift in Sources */,
 				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
-				F58F864625E3FD9D0001ADFD /* PairSequence.swift in Sources */,
 				F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */,
+				F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */,
+				F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */,
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
-				F58F861D25E3B4DE0001ADFD /* MoodView.swift in Sources */,
+				F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */,
 				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,
 				F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */,
 			);

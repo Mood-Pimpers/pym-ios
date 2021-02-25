@@ -4,7 +4,7 @@ public class FakeHealthKitDataSource: ExternalDataSource {
     public var sourceName = "HealthKit"
 
     private var eventMemory: [Date: [ExternalEvent]] = [:]
-    private let possibleActivities: [String] = [
+    private let possibleActivities: [Activity] = [
         "Workout",
         "Running",
         "Skiing",
