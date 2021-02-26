@@ -22,9 +22,13 @@ struct DayLabel: CalendarItemViewRepresentable {
         label.textColor = invariantViewProperties.textColor
 
         label.textAlignment = .center
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 12
         label.layer.borderColor = CGColor(red: 100, green: 0, blue: 0, alpha: 100)
+
+        label.layer.borderWidth = 1
+        label.layer.masksToBounds = false
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.cornerRadius = label.frame.height / 2
+        label.clipsToBounds = true
 
         return label
     }
@@ -40,7 +44,7 @@ extension CalendarViewContent {
             var properties = DayLabel.InvariantViewProperties(
                 font: UIFont.systemFont(ofSize: 18),
                 textColor: .darkGray,
-                backgroundColor: .clear
+                backgroundColor: .red
             )
 
             if day == model.selectedDay {

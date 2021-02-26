@@ -5,15 +5,32 @@ import SwiftUI
 struct PymCalendarView: UIViewRepresentable {
     @EnvironmentObject var viewModel: CalendarViewModel
 
-    func makeUIView(context _: Context) -> CalendarView {
-        let calendar = CalendarView(initialContent: makeContent())
-        calendar.backgroundColor = .clear
-        calendar.daySelectionHandler = { viewModel.selectedDay = $0 }
-        return calendar
+    func makeUIView(context _: Context) -> UIView {
+        let calendarView = CalendarView(initialContent: makeContent())
+        calendarView.backgroundColor = .clear
+        calendarView.daySelectionHandler = { viewModel.selectedDay = $0 }
+
+        calendarView.layoutMargins = .zero
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+
+        let viewParent = UIView()
+        viewParent.layoutMargins = .zero
+        viewParent.addSubview(calendarView)
+
+        NSLayoutConstraint.activate([
+            calendarView.leadingAnchor.constraint(equalTo: viewParent.layoutMarginsGuide.leadingAnchor),
+            calendarView.trailingAnchor.constraint(equalTo: viewParent.layoutMarginsGuide.trailingAnchor),
+            calendarView.topAnchor.constraint(equalTo: viewParent.layoutMarginsGuide.topAnchor),
+            calendarView.bottomAnchor.constraint(equalTo: viewParent.layoutMarginsGuide.bottomAnchor)
+        ])
+
+        return viewParent
     }
 
-    func updateUIView(_ calendar: CalendarView, context _: Context) {
-        calendar.setContent(makeContent())
+    func updateUIView(_ viewParent: UIView, context _: Context) {
+        if let calendar = viewParent.subviews.first as? CalendarView {
+            calendar.setContent(makeContent())
+        }
     }
 
     private func makeContent() -> CalendarViewContent {
@@ -26,6 +43,8 @@ struct PymCalendarView: UIViewRepresentable {
         )
         .addPymDayStyle(viewModel)
         .addPymMonthHeaderStyle()
+        .withVerticalDayMargin(15)
+        .withHorizontalDayMargin(15)
     }
 }
 

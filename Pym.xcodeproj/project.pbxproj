@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F13CF7725E43F0500E81B36 /* PymCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */; };
+		2F13CF7725E43F0500E81B36 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */; };
 		2F18B60925DFB85300CA050C /* FakeHealthKitDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D62625DFB37700B29B28 /* FakeHealthKitDataSourceTests.swift */; };
 		2F18B61425DFB85F00CA050C /* DataAccessControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6D7925DEFE6F00E59436 /* DataAccessControllerTests.swift */; };
 		2F18B62925DFB86500CA050C /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4653025DDA63400D60BAC /* ModelTests.swift */; };
@@ -23,13 +23,13 @@
 		2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A03E25DDC12400B0A978 /* MoodEntry.swift */; };
 		2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A06025DDC2D700B0A978 /* DataAccessController.swift */; };
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
-		2F9AEF4F25E5ADE7006BB731 /* DayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */; };
-		2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */; };
+		2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */; };
+		2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */; };
 		2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
 		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
-		2FBC26A425E44FB000F2D2BE /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */; };
+		2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */; };
 		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
@@ -448,7 +448,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PymCalendarView.swift; sourceTree = "<group>"; };
+		2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBackgroundLayer.swift; sourceTree = "<group>"; };
 		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
 		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
@@ -463,11 +463,11 @@
 		2F72A03E25DDC12400B0A978 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		2F72A06025DDC2D700B0A978 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLabel.swift; sourceTree = "<group>"; };
-		2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLabel.swift; sourceTree = "<group>"; };
+		2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDayLabel.swift; sourceTree = "<group>"; };
+		2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMonthLabel.swift; sourceTree = "<group>"; };
 		2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayJournal.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
-		2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
@@ -696,9 +696,10 @@
 		2F13CF8025E43F0C00E81B36 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				2F9AEF4425E5ADBE006BB731 /* HorizonCalendar */,
-				2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */,
-				2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */,
+				2F7C75EB25E961E7003A2AE7 /* Extensions */,
+				2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */,
+				2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */,
+				2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -742,14 +743,12 @@
 			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
-		2F9AEF4425E5ADBE006BB731 /* HorizonCalendar */ = {
+		2F7C75EB25E961E7003A2AE7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */,
 				2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */,
-				2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */,
 			);
-			path = HorizonCalendar;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2F9AEFCE25E5B4A2006BB731 /* DayJournal */ = {
@@ -838,8 +837,9 @@
 			children = (
 				2F9AEFCE25E5B4A2006BB731 /* DayJournal */,
 				2F13CF8025E43F0C00E81B36 /* Calendar */,
-				B16D42E0259C76D700D507BE /* ExplorerView.swift */,
 				2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */,
+				B16D42E0259C76D700D507BE /* ExplorerView.swift */,
+				2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1889,10 +1889,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F13CF7725E43F0500E81B36 /* PymCalendarView.swift in Sources */,
-				2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */,
-				2FBC26A425E44FB000F2D2BE /* CalendarViewModel.swift in Sources */,
-				2F9AEF4F25E5ADE7006BB731 /* DayLabel.swift in Sources */,
+				2F13CF7725E43F0500E81B36 /* CalendarView.swift in Sources */,
+				2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */,
+				2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */,
+				2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */,
 				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
 				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
 				B16D42E1259C76D700D507BE /* ExplorerView.swift in Sources */,

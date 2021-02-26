@@ -10,8 +10,15 @@ class CalendarViewModel: ObservableObject {
             }
         }
     }
+
     @Published var selectedDate: Date?
 
-    let calendarStartDate = DataAccessController.shared.getEarliestEntry()?.date ?? Date()
+    let calendarStartDate = /* DataAccessController.shared.getEarliestEntry()?.date ?? Date() */ Date().adding(.month, value: -3)
     let calendarEndDate = Date()
+
+    func getMoodRatingsFor(day: Date) -> [MoodRating] {
+        DataAccessController.shared
+            .getEntries(fromDay: day)
+            .map(\.rating)
+    }
 }

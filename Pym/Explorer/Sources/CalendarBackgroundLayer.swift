@@ -1,10 +1,3 @@
-//
-//  CalendarBackgroundLayer.swift
-//  Explorer
-//
-//  Created by Manuel Fuchs on 25.02.21.
-//
-
 import SwiftUI
 
 struct CalendarBackgroundLayer: View {

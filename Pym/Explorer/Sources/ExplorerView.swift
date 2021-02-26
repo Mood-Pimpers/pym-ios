@@ -16,7 +16,6 @@ public struct ExplorerView: View {
 
                 PymCalendarView()
                     .environmentObject(calendarViewModel)
-                    .frame(width: geometry.size.width, height: geometry.size.height)
 
                 VStack {
                     Rectangle()
