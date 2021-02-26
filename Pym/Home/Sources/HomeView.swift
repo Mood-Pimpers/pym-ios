@@ -14,7 +14,7 @@ public struct HomeView: View {
     }
 
     public var body: some View {
-        GeometryReader { metrics in
+        GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
                     VStack(spacing: 0) {
@@ -23,7 +23,7 @@ public struct HomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 0) {
                                 ForEach(quotes, id: \.id) { quote in
-                                    QuoteCard(quote: quote, geometry: metrics)
+                                    QuoteCard(quote: quote, geometry: geometry)
                                 }
                             }
                             .padding([.leading, .trailing], 8)
