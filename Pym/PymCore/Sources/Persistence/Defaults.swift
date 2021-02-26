@@ -15,6 +15,14 @@ public extension UserDefaults {
 }
 
 public extension UserDefaults {
+    var wasNotificationAuthRequested: Bool {
+        bool(forKey: Keys.wasNotificationAuthRequested.rawValue)
+    }
+
+    func setNotificationAuthRequested() {
+        set(true, forKey: Keys.wasNotificationAuthRequested.rawValue)
+    }
+
     var notifyMorningEnabled: Bool {
         bool(forKey: Keys.notifyMorningEnabled.rawValue)
     }
@@ -39,12 +47,6 @@ public extension UserDefaults {
     func setNotifyEvening(isEnabled: Bool, on time: Date) {
         set(isEnabled, forKey: Keys.notifyEveningEnabled.rawValue)
         set(time, forKey: Keys.notifyEveningTime.rawValue)
-    }
-
-    func removeAll() {
-        Keys.allCases.forEach {
-            removeObject(forKey: $0.rawValue)
-        }
     }
 
     private func time(hour: Int, minute: Int = 0) -> Date {

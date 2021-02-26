@@ -27,7 +27,7 @@ struct RootView: View {
                             .tabItem { Image.home }
                         InsightsView()
                             .tabItem { Image.insights }
-                        Text("TODO: Add alert")
+                        Text("")
                             .tabItem {}
                         ExplorerView()
                             .tabItem { Image.explorer }
@@ -36,14 +36,17 @@ struct RootView: View {
                     }
                     .accentColor(.primaryColor)
 
-                    Button(action: modalService.toggleMoodCheckin, label: {
-                        Image.add
-                            .resizable()
-                            .frame(width: 28, height: 28)
-                    })
-                        .buttonStyle(PrimaryButtonStyle())
-                        .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
-                        .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
+                    Button(
+                        action: modalService.toggleMoodCheckin,
+                        label: {
+                            Image.add
+                                .resizable()
+                                .frame(width: 28, height: 28)
+                        }
+                    )
+                    .buttonStyle(PrimaryButtonStyle())
+                    .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
+                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
                 }
             }
         }

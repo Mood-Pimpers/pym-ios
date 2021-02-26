@@ -10,11 +10,11 @@ struct HealthImportView: View {
             HStack {
                 Image.pymLogo
                     .resizable()
-                    .frame(width: 64.0, height: 64.0)
+                    .frame(width: 64, height: 64)
                 Text("+")
                 Image.healthLogo
                     .resizable()
-                    .frame(width: 64.0, height: 64.0)
+                    .frame(width: 64, height: 64)
             }
             Text("Use Apple Health?")
                 .bold()

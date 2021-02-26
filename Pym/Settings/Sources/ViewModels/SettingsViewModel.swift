@@ -37,7 +37,6 @@ class SettingsViewModel: ObservableObject {
     }
 
     func ereaseAllData() {
-        // TODO: How to handle errors here?
         dataAccess.deleteAllEntries()
     }
 }

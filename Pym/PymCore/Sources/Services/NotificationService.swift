@@ -21,7 +21,7 @@ public class NotificationService: ObservableObject {
 
     @Published public var status = NotificationAuthorizationStatus.notAsked
 
-    public var morningNotification: UNMutableNotificationContent {
+    private var morningNotification: UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.title = "Good morning"
         content.subtitle = "Enter your morning entry"
@@ -29,7 +29,7 @@ public class NotificationService: ObservableObject {
         return content
     }
 
-    public var eveningNotification: UNMutableNotificationContent {
+    private var eveningNotification: UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.title = "Good evening"
         content.subtitle = "Enter your evening entry"
@@ -38,8 +38,9 @@ public class NotificationService: ObservableObject {
     }
 
     private init() {
-        // TODO: extension method
-        if defaults.bool(forKey: UserDefaults.Keys.wasNotificationAuthRequested.rawValue) {
+        // If the notification authorization as requested before the
+        // requestAuthorization call is used to determine the current status ( see: `NotificationAuthorizationStatus`)
+        if defaults.wasNotificationAuthRequested {
             requestAuthorization()
         }
     }
@@ -58,7 +59,7 @@ public class NotificationService: ObservableObject {
                 status = .notAllowed
             }
 
-            self.defaults.set(true, forKey: UserDefaults.Keys.wasNotificationAuthRequested.rawValue)
+            self.defaults.setNotificationAuthRequested()
             self.status = status
 
             if let completion = completion {

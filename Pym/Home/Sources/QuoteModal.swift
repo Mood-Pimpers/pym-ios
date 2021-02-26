@@ -1,19 +1,20 @@
 import Kingfisher
+import PymCore
 import SwiftUI
 
-struct QuoteModalView: View {
+struct QuoteModal: View {
     @Environment(\.presentationMode) var presentationMode
 
     let quote: Quote
-    let metrics: GeometryProxy
+    let geometry: GeometryProxy
 
     var body: some View {
-        let width = metrics.size.width
-            + metrics.safeAreaInsets.leading
-            + metrics.safeAreaInsets.trailing
-        let height = metrics.size.height
-            + metrics.safeAreaInsets.bottom
-            + metrics.safeAreaInsets.top
+        let width = geometry.size.width
+            + geometry.safeAreaInsets.leading
+            + geometry.safeAreaInsets.trailing
+        let height = geometry.size.height
+            + geometry.safeAreaInsets.bottom
+            + geometry.safeAreaInsets.top
 
         ZStack(alignment: .center) {
             KFImage(quote.url(Int(width), Int(height)))
@@ -36,9 +37,8 @@ struct QuoteModalView: View {
             .padding(16)
             .frame(width: width)
         }
-
         .frame(maxWidth: width, maxHeight: height)
-        .background(Color.red)
+        .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .onTapGesture {
             presentationMode.wrappedValue.dismiss()

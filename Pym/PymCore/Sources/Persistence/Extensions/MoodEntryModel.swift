@@ -12,7 +12,6 @@ extension MoodEntryModel {
 }
 
 extension MoodEntryModel {
-    // swiftlint-disable: syntactic_sugar
     typealias ReduceState = (remainingValue: Int32, feelings: Set<Feeling>)
 
     var feelings: Set<Feeling> {

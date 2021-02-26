@@ -1,5 +1,6 @@
 // DateExtensions.swift - Copyright 2020 SwifterSwift
-// source: https://raw.githubusercontent.com/SwifterSwift/SwifterSwift/master/Sources/SwifterSwift/Foundation/DateExtensions.swift
+// Currently copied because there is no Swift Package available..
+// Source: https://raw.githubusercontent.com/SwifterSwift/SwifterSwift/master/Sources/SwifterSwift/Foundation/DateExtensions.swift
 
 import Foundation
 

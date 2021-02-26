@@ -97,7 +97,7 @@
 		B1FB791725914A490010F791 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* InsightsView.swift */; };
 		B1FB792125914A5F0010F791 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckInView.swift */; };
 		F50E35AC25A21A64001D3A8E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F50E35AB25A21A64001D3A8E /* Kingfisher */; };
-		F51B335825A5CFE300C08F21 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B335725A5CFE300C08F21 /* Quote.swift */; };
+		F52943AA25E93B480023893C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B335725A5CFE300C08F21 /* Quote.swift */; };
 		F52DC89725A61E8C00809061 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
 		F52DC89825A61E8C00809061 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F52DC8B125A61EF700809061 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
@@ -110,7 +110,6 @@
 		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
 		F553D3AA25E8E995008E93F6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */; };
 		F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D39625E8E924008E93F6 /* EnableTimeView.swift */; };
-		F553D3F625E8EEC9008E93F6 /* EnableTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */; };
 		F553D42A25E8FBC8008E93F6 /* MoodReminderSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */; };
 		F553D43425E90DA3008E93F6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D43325E90DA3008E93F6 /* OnboardingPage.swift */; };
 		F553D45625E92714008E93F6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D45525E92714008E93F6 /* View.swift */; };
@@ -121,7 +120,7 @@
 		F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodInput.swift */; };
 		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
 		F5A5958925E7BA2700B9B53E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5958825E7BA2700B9B53E /* NotificationService.swift */; };
-		F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */; };
+		F5AAB47E25E3B18C0093DE91 /* QuoteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C93A2225E4135100EE8DFC /* Feeling.swift */; };
 		F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D2725E5397200DFBD07 /* Set.swift */; };
@@ -519,7 +518,6 @@
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F5346C9125C3145700F15190 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
 		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
-		F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableTimeViewModel.swift; sourceTree = "<group>"; };
 		F553D39625E8E924008E93F6 /* EnableTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableTimeView.swift; sourceTree = "<group>"; };
 		F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderSettingsViewModel.swift; sourceTree = "<group>"; };
@@ -532,7 +530,7 @@
 		F58F861C25E3B4DE0001ADFD /* MoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInput.swift; sourceTree = "<group>"; };
 		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
 		F5A5958825E7BA2700B9B53E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalView.swift; sourceTree = "<group>"; };
+		F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModal.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5C93A2225E4135100EE8DFC /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		F5CF8D2725E5397200DFBD07 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
@@ -689,6 +687,7 @@
 		2F2C032A25DC3F4E00C35AA1 /* Dtos */ = {
 			isa = PBXGroup;
 			children = (
+				F51B335725A5CFE300C08F21 /* Quote.swift */,
 				2FF0A39F25E1130B00234F4E /* MoodRating.swift */,
 				2FF0A3A925E1131B00234F4E /* Feeling.swift */,
 				2F72A03E25DDC12400B0A978 /* MoodEntry.swift */,
@@ -772,10 +771,9 @@
 		B16D427C259C760700D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F51B335625A5CFD700C08F21 /* Models */,
 				B16D4252259C75F200D507BE /* HomeView.swift */,
 				F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */,
-				F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */,
+				F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1070,14 +1068,6 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F51B335625A5CFD700C08F21 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F51B335725A5CFE300C08F21 /* Quote.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		F5346C9D25C314F400F15190 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,7 +1132,6 @@
 			isa = PBXGroup;
 			children = (
 				F553D39625E8E924008E93F6 /* EnableTimeView.swift */,
-				F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */,
 				F5CF8D7525E5491500DFBD07 /* Columns.swift */,
 				2F60811225E8469400E142CC /* ContentCard.swift */,
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
@@ -1850,8 +1839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */,
-				F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */,
-				F51B335825A5CFE300C08F21 /* Quote.swift in Sources */,
+				F5AAB47E25E3B18C0093DE91 /* QuoteModal.swift in Sources */,
 				B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1942,13 +1930,13 @@
 				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
+				F52943AA25E93B480023893C /* Quote.swift in Sources */,
 				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,
 				F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */,
 				2F60812525E8470100E142CC /* RoundedCorner.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
 				F553D45625E92714008E93F6 /* View.swift in Sources */,
-				F553D3F625E8EEC9008E93F6 /* EnableTimeViewModel.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,

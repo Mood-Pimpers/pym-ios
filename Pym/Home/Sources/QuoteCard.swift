@@ -1,4 +1,5 @@
 import Kingfisher
+import PymCore
 import SwiftUI
 
 let fade = LinearGradient(
@@ -10,11 +11,11 @@ let fade = LinearGradient(
 
 struct QuoteCard: View {
     let quote: Quote
-    let metrics: GeometryProxy
+    let geometry: GeometryProxy
     @State private var show = false
 
     public var body: some View {
-        let width: CGFloat = metrics.size.width * 0.8
+        let width: CGFloat = geometry.size.width * 0.8
         let height: CGFloat = width / 1.5
 
         ZStack(alignment: .bottom) {
@@ -39,7 +40,9 @@ struct QuoteCard: View {
         .cornerRadius(8)
         .shadow(color: Color.dropShadowColor, radius: 8)
         .padding(8) // So dropshadow is shown
-        .fullScreenCover(isPresented: $show, content: { QuoteModalView(quote: quote, metrics: metrics) })
+        .fullScreenCover(isPresented: $show) {
+            QuoteModal(quote: quote, geometry: geometry)
+        }
         .onTapGesture {
             show.toggle()
         }
@@ -56,7 +59,7 @@ struct QuoteCard_Previews: PreviewProvider {
         )
 
         GeometryReader { metrics in
-            QuoteCard(quote: quote, metrics: metrics)
+            QuoteCard(quote: quote, geometry: metrics)
         }
     }
 }
