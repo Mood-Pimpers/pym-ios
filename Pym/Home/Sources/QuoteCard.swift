@@ -58,8 +58,8 @@ struct QuoteCard_Previews: PreviewProvider {
             url: { width, height in URL(string: "https://images.unsplash.com/photo-1540206395-68808572332f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
         )
 
-        GeometryReader { metrics in
-            QuoteCard(quote: quote, geometry: metrics)
+        GeometryReader { geometry in
+            QuoteCard(quote: quote, geometry: geometry)
         }
     }
 }
