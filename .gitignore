@@ -194,5 +194,3 @@ $RECYCLE.BIN/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos,windows,linux,xcode,carthage,swiftpackagemanager,cocoapods
-
-Pym/PymCore/Sources/Generated/
