@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @ObservedObject private var modalService = ModalService.shared
-    @AppStorage(Defaults.Keys.firstAppLaunch) var firstAppLaunch: Double = 0.0
+    @AppStorage(UserDefaults.Keys.firstAppLaunch.rawValue) var firstAppLaunch: Double = 0.0
 
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color

@@ -31,7 +31,6 @@ struct HealthImportView: View {
                 Spacer()
             }
             .buttonStyle(PrimaryButtonStyle())
-            .padding(16)
             .alert(item: $viewModel.healthKitError, content: healthKitErrorAlert)
 
             Button(
@@ -48,6 +47,7 @@ struct HealthImportView: View {
                 )
             }
         }
+        .padding(16)
     }
 
     private func healthKitErrorAlert(error: HealthKitError?) -> Alert {

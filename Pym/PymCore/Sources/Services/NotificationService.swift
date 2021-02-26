@@ -13,9 +13,13 @@ public enum Notification {
     }
 }
 
-public class NotificationService {
+public class NotificationService: ObservableObject {
     public static let shared = NotificationService()
+
     private let notificationCenter = UNUserNotificationCenter.current()
+    private let defaults = UserDefaults.standard
+
+    @Published public var status = NotificationAuthorizationStatus.notAsked
 
     public var morningNotification: UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
@@ -33,38 +37,63 @@ public class NotificationService {
         return content
     }
 
-    private init() {}
+    private init() {
+        // TODO: extension method
+        if defaults.bool(forKey: UserDefaults.Keys.wasNotificationAuthRequested.rawValue) {
+            requestAuthorization()
+        }
+    }
 
-    public func requestAuthorization(completion: @escaping (_ status: NotificationAuthorizationStatus) -> Void) {
+    public func requestAuthorization(
+        completion: ((_ status: NotificationAuthorizationStatus) -> Void)? = nil
+    ) {
         notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            let status: NotificationAuthorizationStatus
             if success {
-                completion(.allowed)
+                status = .allowed
             } else if let error = error {
-                completion(.notAllowed)
+                status = .notAllowed
                 print(error.localizedDescription)
             } else {
-                completion(.notAllowed)
+                status = .notAllowed
+            }
+
+            self.defaults.set(true, forKey: UserDefaults.Keys.wasNotificationAuthRequested.rawValue)
+            self.status = status
+
+            if let completion = completion {
+                completion(status)
             }
         }
     }
 
     public func schedule(identifier: Notification.Identifier, on time: Date, content: UNMutableNotificationContent) {
-        var date = DateComponents()
-        date.hour = time.hour
-        date.minute = time.minute
+        func schedule() {
+            var date = DateComponents()
+            date.hour = time.hour
+            date.minute = time.minute
 
-        let trigger = UNCalendarNotificationTrigger(
-            dateMatching: date,
-            repeats: true
-        )
+            let trigger = UNCalendarNotificationTrigger(
+                dateMatching: date,
+                repeats: true
+            )
 
-        let request = UNNotificationRequest(
-            identifier: identifier.rawValue,
-            content: content,
-            trigger: trigger
-        )
+            let request = UNNotificationRequest(
+                identifier: identifier.rawValue,
+                content: content,
+                trigger: trigger
+            )
 
-        notificationCenter.add(request)
+            notificationCenter.add(request)
+        }
+
+        if status == .notAsked {
+            requestAuthorization(completion: { _ in
+                schedule()
+            })
+        } else {
+            schedule()
+        }
     }
 
     public func remove(withIdentifier identifier: Notification.Identifier) {

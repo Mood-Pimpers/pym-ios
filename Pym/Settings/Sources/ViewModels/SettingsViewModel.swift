@@ -6,8 +6,6 @@ class SettingsViewModel: ObservableObject {
     private let notificationService = NotificationService.shared
     private let defaults = UserDefaults.standard
 
-    @Published var notificationStatus = NotificationAuthorizationStatus.notAsked
-
     @Published var morning: EnableTimeViewModel
     @Published var evening: EnableTimeViewModel
 

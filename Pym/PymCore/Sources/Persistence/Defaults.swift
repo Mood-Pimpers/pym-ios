@@ -1,47 +1,50 @@
 import Foundation
 
-public enum Defaults {
-    /// User Defaults Keys
-    public struct Keys {
-        private init() {}
+public extension UserDefaults {
+    enum Keys: String, CaseIterable {
+        case firstAppLaunch
 
-        public static let firstAppLaunch = "firstAppLaunch"
+        case wasNotificationAuthRequested
 
-        public static let wasNotificationAuthRequested = "wasNotificationAuthRequested"
+        case notifyMorningEnabled
+        case notifyMorningTime
 
-        public static let notifyMorningEnabled = "notify.morning.enabled"
-        public static let notifyMorningTime = "notify.morning.time"
-
-        public static let notifyEveningEnabled = "notify.evening.enabled"
-        public static let notifyEveningTime = "notify.evening.time"
+        case notifyEveningEnabled
+        case notifyEveningTime
     }
 }
 
 public extension UserDefaults {
     var notifyMorningEnabled: Bool {
-        bool(forKey: Defaults.Keys.notifyMorningEnabled)
+        bool(forKey: Keys.notifyMorningEnabled.rawValue)
     }
 
     var notifyMorningTime: Date {
-        object(forKey: Defaults.Keys.notifyMorningTime) as? Date ?? time(hour: 9)
+        object(forKey: Keys.notifyMorningTime.rawValue) as? Date ?? time(hour: 9)
     }
 
     func setNotifyMorning(isEnabled: Bool, on time: Date) {
-        set(isEnabled, forKey: Defaults.Keys.notifyMorningEnabled)
-        set(time, forKey: Defaults.Keys.notifyMorningTime)
+        set(isEnabled, forKey: Keys.notifyMorningEnabled.rawValue)
+        set(time, forKey: Keys.notifyMorningTime.rawValue)
     }
 
     var notifyEveningEnabled: Bool {
-        bool(forKey: Defaults.Keys.notifyEveningEnabled)
+        bool(forKey: Keys.notifyEveningEnabled.rawValue)
     }
 
     var notifyEveningTime: Date {
-        object(forKey: Defaults.Keys.notifyEveningTime) as? Date ?? time(hour: 21)
+        object(forKey: Keys.notifyEveningTime.rawValue) as? Date ?? time(hour: 21)
     }
 
     func setNotifyEvening(isEnabled: Bool, on time: Date) {
-        set(isEnabled, forKey: Defaults.Keys.notifyEveningEnabled)
-        set(time, forKey: Defaults.Keys.notifyEveningTime)
+        set(isEnabled, forKey: Keys.notifyEveningEnabled.rawValue)
+        set(time, forKey: Keys.notifyEveningTime.rawValue)
+    }
+
+    func removeAll() {
+        Keys.allCases.forEach {
+            removeObject(forKey: $0.rawValue)
+        }
     }
 
     private func time(hour: Int, minute: Int = 0) -> Date {

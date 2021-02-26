@@ -23,10 +23,7 @@ class MoodReminderIntroViewModel: ObservableObject {
     }
 
     func continueWithNotifications() {
-        notificationService.requestAuthorization(completion: { status in
-            self.defaults.set(true, forKey: Defaults.Keys.wasNotificationAuthRequested)
-            self.next(status)
-        })
+        notificationService.requestAuthorization(completion: next)
     }
 
     func continueWithoutNotifications() {

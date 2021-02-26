@@ -13,11 +13,6 @@ public struct SettingsView: View {
                 List {
                     Section(
                         header: Text("Mood Tracking Schedule"),
-                        footer: HStack {
-                            if viewModel.notificationStatus == .notAllowed {
-                                Text("Not allowed :(")
-                            }
-                        },
                         content: {
                             EnableTimeView(
                                 title: "Morning",

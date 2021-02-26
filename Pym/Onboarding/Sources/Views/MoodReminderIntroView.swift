@@ -21,7 +21,6 @@ struct MoodReminderIntroView: View {
                 Spacer()
             }
             .buttonStyle(PrimaryButtonStyle())
-            .padding(16)
 
             Button(action: viewModel.toggleNotificationWarning) {
                 Text("No thanks")
@@ -36,6 +35,7 @@ struct MoodReminderIntroView: View {
                 secondaryButton: .cancel(Text("Disable"), action: viewModel.continueWithoutNotifications)
             )
         }
+        .padding(16)
     }
 }
 

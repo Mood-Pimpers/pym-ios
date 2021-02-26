@@ -3,39 +3,38 @@ import SwiftUI
 
 public struct OnboardingView: View {
     let viewModelFactory = ViewModelFactory()
-    @AppStorage(Defaults.Keys.firstAppLaunch) var firstAppLaunch: Double = 0.0
-    @State var currentIndex = 0
+    @AppStorage(UserDefaults.Keys.firstAppLaunch.rawValue) var firstAppLaunch: Double = 0.0
+    @State var currentPage = OnboardingPage.welcome
 
     public init() {}
 
     public var body: some View {
         ZStack {
-            Color.backgroundColor
-                .ignoresSafeArea()
-            PickerPageView(pages: 4, currentIndex: $currentIndex, content: {
+            Color.backgroundColor.ignoresSafeArea()
+            PickerPageView(currentPage: $currentPage) {
                 WelcomeView(
-                    next: { currentIndex = 1 })
-                    .tag(0)
+                    next: { currentPage = .healthImport })
+                    .tag(OnboardingPage.welcome)
                 HealthImportView(
                     viewModel: viewModelFactory.makeHealthImportViewModel(
-                        next: { currentIndex = 2 }))
-                    .tag(1)
+                        next: { currentPage = .moodReminderIntro }))
+                    .tag(OnboardingPage.healthImport)
                 MoodReminderIntroView(
                     viewModel: viewModelFactory.makeMoodReminderIntroViewModel(
                         next: notificationStep))
-                    .tag(2)
+                    .tag(OnboardingPage.moodReminderIntro)
                 MoodReminderSettingsView(
                     viewModel: viewModelFactory.makeMoodReminderSettingsViewModel(
                         next: finish))
-                    .tag(3)
-            })
+                    .tag(OnboardingPage.moodReminderSettings)
+            }
         }
     }
 
     private func notificationStep(status: NotificationAuthorizationStatus) {
         switch status {
         case .notAsked, .notAllowed: finish()
-        case .allowed: currentIndex = 3
+        case .allowed: currentPage = .moodReminderSettings
         }
     }
 

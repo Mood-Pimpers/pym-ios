@@ -29,8 +29,8 @@ struct MoodReminderSettingsView: View {
                 Spacer()
             }
             .buttonStyle(PrimaryButtonStyle())
-            .padding(16)
         }
+        .padding(16)
     }
 }
 
