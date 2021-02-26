@@ -3,7 +3,14 @@ import SwiftUI
 public enum NotificationAuthorizationStatus {
     case notAsked
     case allowed
-    case error
+    case notAllowed
+}
+
+public enum Notification {
+    public enum Identifier: String {
+        case notifyMorning = "notify.morning"
+        case notifyEvening = "notify.evening"
+    }
 }
 
 public class NotificationService {
@@ -33,20 +40,18 @@ public class NotificationService {
             if success {
                 completion(.allowed)
             } else if let error = error {
-                completion(.error)
+                completion(.notAllowed)
                 print(error.localizedDescription)
             } else {
-                completion(.error)
+                completion(.notAllowed)
             }
         }
     }
 
-    public func schedule(identifier: String, on time: Date, content: UNMutableNotificationContent) {
+    public func schedule(identifier: Notification.Identifier, on time: Date, content: UNMutableNotificationContent) {
         var date = DateComponents()
         date.hour = time.hour
         date.minute = time.minute
-
-        print("\(date.hour):\(date.minute)")
 
         let trigger = UNCalendarNotificationTrigger(
             dateMatching: date,
@@ -54,7 +59,7 @@ public class NotificationService {
         )
 
         let request = UNNotificationRequest(
-            identifier: identifier,
+            identifier: identifier.rawValue,
             content: content,
             trigger: trigger
         )
@@ -62,7 +67,21 @@ public class NotificationService {
         notificationCenter.add(request)
     }
 
-    public func remove(withIdentifier id: String) {
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: [id])
+    public func remove(withIdentifier identifier: Notification.Identifier) {
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier.rawValue])
+    }
+
+    public func scheduleNotifyMorning(isEnabled: Bool, on time: Date) {
+        remove(withIdentifier: Notification.Identifier.notifyMorning)
+        if isEnabled {
+            schedule(identifier: Notification.Identifier.notifyMorning, on: time, content: morningNotification)
+        }
+    }
+
+    public func scheduleNotifyEvening(isEnabled: Bool, on time: Date) {
+        remove(withIdentifier: Notification.Identifier.notifyEvening)
+        if isEnabled {
+            schedule(identifier: Notification.Identifier.notifyEvening, on: time, content: eveningNotification)
+        }
     }
 }

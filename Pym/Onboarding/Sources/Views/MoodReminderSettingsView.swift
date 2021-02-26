@@ -2,57 +2,44 @@ import PymCore
 import SwiftUI
 
 struct MoodReminderSettingsView: View {
-    @State private var morningReminder = Date()
-    @State private var eveningReminder = Date()
-
-    let next: () -> Void
+    @StateObject var viewModel: MoodReminderSettingsViewModel
 
     var body: some View {
         VStack {
             Spacer()
-            Image("Duck")
+            Image.duck
             Text("When should I remind you?")
                 .bold()
                 .font(.title)
                 .padding(5)
                 .multilineTextAlignment(.center)
 
-            HStack {
-                Text("Morning")
-                TimePicker(selection: $morningReminder)
+            List {
+                Section(content: {
+                    EnableTimeView(title: "Morning", viewModel: viewModel.morning)
+                    EnableTimeView(title: "Evening", viewModel: viewModel.evening)
+                })
             }
-
-            HStack {
-                Text("Evening")
-                TimePicker(selection: $eveningReminder)
-            }
+            .listStyle(InsetGroupedListStyle())
 
             Spacer()
-            Button(action: next) {
+            Button(action: viewModel.saveAndNext) {
                 Text("Get things ready!")
                     .bold()
                 Spacer()
-            }.buttonStyle(PrimaryButtonStyle())
-                .padding(16)
+            }
+            .buttonStyle(PrimaryButtonStyle())
+            .padding(16)
         }
     }
 }
 
 struct MoodReminderSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodReminderSettingsView(next: {})
-    }
-}
+        let viewModelFactory = ViewModelFactory()
 
-struct TimePicker: View {
-    @Environment(\.colorScheme) var colorScheme
-
-    var selection: Binding<Date>
-
-    var body: some View {
-        DatePicker("", selection: selection, displayedComponents: .hourAndMinute)
-            .labelsHidden()
-            .colorMultiply(colorScheme == .dark ? .black : .white)
-            .colorInvert()
+        MoodReminderSettingsView(
+            viewModel: viewModelFactory.makeMoodReminderSettingsViewModel(
+                next: {}))
     }
 }

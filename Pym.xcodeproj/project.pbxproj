@@ -106,6 +106,10 @@
 		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
 		F5346C9225C3145700F15190 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingInput.swift */; };
 		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
+		F553D3AA25E8E995008E93F6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */; };
+		F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D39625E8E924008E93F6 /* EnableTimeView.swift */; };
+		F553D3F625E8EEC9008E93F6 /* EnableTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */; };
+		F553D42A25E8FBC8008E93F6 /* MoodReminderSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */; };
 		F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B7225E67DF8007BA1C8 /* Set.swift */; };
 		F55A2B8525E67EDD007BA1C8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B8425E67EDD007BA1C8 /* Activity.swift */; };
 		F55A2BAF25E6AD01007BA1C8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2BAE25E6AD01007BA1C8 /* View.swift */; };
@@ -511,6 +515,10 @@
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F5346C9125C3145700F15190 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
 		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
+		F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableTimeViewModel.swift; sourceTree = "<group>"; };
+		F553D39625E8E924008E93F6 /* EnableTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableTimeView.swift; sourceTree = "<group>"; };
+		F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderSettingsViewModel.swift; sourceTree = "<group>"; };
 		F55A2B7225E67DF8007BA1C8 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		F55A2B8425E67EDD007BA1C8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F55A2BAE25E6AD01007BA1C8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -719,6 +727,7 @@
 				B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */,
 				B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */,
 				B10DD28425E56B1500811739 /* ViewModelFactory.swift */,
+				F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -823,6 +832,8 @@
 		B16D432A259C772F00D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F553D38B25E8E8F7008E93F6 /* Views */,
+				F553D38A25E8E8F0008E93F6 /* ViewModels */,
 				B16D432B259C773F00D507BE /* SettingsView.swift */,
 			);
 			path = Sources;
@@ -1071,6 +1082,21 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F553D38A25E8E8F0008E93F6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F553D38B25E8E8F7008E93F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F55A2B6925E67DB0007BA1C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1110,6 +1136,8 @@
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F553D39625E8E924008E93F6 /* EnableTimeView.swift */,
+				F553D38C25E8E904008E93F6 /* EnableTimeViewModel.swift */,
 				F5CF8D7525E5491500DFBD07 /* Columns.swift */,
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
@@ -1851,6 +1879,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16D432C259C773F00D507BE /* SettingsView.swift in Sources */,
+				F553D3AA25E8E995008E93F6 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1907,8 +1936,10 @@
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
 				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,
+				F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
+				F553D3F625E8EEC9008E93F6 /* EnableTimeViewModel.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
@@ -1932,6 +1963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */,
+				F553D42A25E8FBC8008E93F6 /* MoodReminderSettingsViewModel.swift in Sources */,
 				B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */,
 				B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */,
 				B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */,

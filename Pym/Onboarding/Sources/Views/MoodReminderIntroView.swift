@@ -3,21 +3,19 @@ import SwiftUI
 
 struct MoodReminderIntroView: View {
     @StateObject var viewModel: MoodReminderIntroViewModel
-    @State private var showingAlert = false
-    let next: () -> Void
 
     var body: some View {
         VStack {
             Spacer()
-            Image("Duck")
+            Image.duck
             Text("Should I remind you to track your mood?")
                 .bold()
                 .font(.title)
-                .padding(5)
+                .padding(8)
                 .multilineTextAlignment(.center)
 
             Spacer()
-            Button(action: next) {
+            Button(action: viewModel.continueWithNotifications) {
                 Text("Yes, of course!")
                     .bold()
                 Spacer()
@@ -25,18 +23,18 @@ struct MoodReminderIntroView: View {
             .buttonStyle(PrimaryButtonStyle())
             .padding(16)
 
-            Button(action: {
-                showingAlert = true
-            }, label: {
+            Button(action: viewModel.toggleNotificationWarning) {
                 Text("No thanks")
-            }).foregroundColor(.black)
-        }.alert(isPresented: $showingAlert) {
-            Alert(title: Text("Are you sure?"),
-                  message: Text("Studies show that people who got daily reminders are 88% more likely to keep their new habit."),
-                  primaryButton: .default(Text("Create a new habit")),
-                  secondaryButton: .cancel(Text("Disable"), action: {
-                      next()
-                  }))
+            }
+            .foregroundColor(.black)
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Are you sure?"),
+                message: Text("Studies show that people who got daily reminders are 88% more likely to keep their new habit."),
+                primaryButton: .default(Text("Create a new habit")),
+                secondaryButton: .cancel(Text("Disable"), action: viewModel.continueWithoutNotifications)
+            )
         }
     }
 }
@@ -45,6 +43,8 @@ struct MoodReminderIntroView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModelFactory = ViewModelFactory()
 
-        MoodReminderIntroView(viewModel: viewModelFactory.makeMoodReminderIntroViewModel(), next: {})
+        MoodReminderIntroView(
+            viewModel: viewModelFactory.makeMoodReminderIntroViewModel(
+                next: { status in print(status) }))
     }
 }

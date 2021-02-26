@@ -7,11 +7,11 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             Spacer()
-            Image("Duck")
+            Image.duck
             Text("Hi, I'm Pym!")
                 .bold()
                 .font(.title)
-                .padding(5)
+                .padding(8)
             Text("Your personal mood tracker.")
 
             Spacer()
@@ -19,8 +19,9 @@ struct WelcomeView: View {
                 Text("Start your journey")
                     .bold()
                 Spacer()
-            }.buttonStyle(PrimaryButtonStyle())
-                .padding(16)
+            }
+            .buttonStyle(PrimaryButtonStyle())
+            .padding(16)
         }
     }
 }
