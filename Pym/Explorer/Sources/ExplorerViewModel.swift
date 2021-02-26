@@ -1,7 +1,8 @@
 import HorizonCalendar
+import PymCore
 import SwiftUI
 
-class CalendarModel: ObservableObject {
+class CalendarViewModel: ObservableObject {
     @Published var selectedDay: Day? {
         didSet {
             if selectedDay != oldValue {
@@ -9,6 +10,8 @@ class CalendarModel: ObservableObject {
             }
         }
     }
-
     @Published var selectedDate: Date?
+
+    let calendarStartDate = DataAccessController.shared.getEarliestEntry()?.date ?? Date()
+    let calendarEndDate = Date()
 }

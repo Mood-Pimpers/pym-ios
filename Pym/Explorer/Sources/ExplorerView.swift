@@ -2,7 +2,7 @@ import PymCore
 import SwiftUI
 
 public struct ExplorerView: View {
-    @ObservedObject var model = CalendarModel()
+    @ObservedObject var calendarViewModel = CalendarViewModel()
 
     public init() {}
 
@@ -15,7 +15,7 @@ public struct ExplorerView: View {
                     .frame(height: calendarBackgroundHeight)
 
                 PymCalendarView()
-                    .environmentObject(model)
+                    .environmentObject(calendarViewModel)
                     .frame(width: geometry.size.width, height: geometry.size.height)
 
                 VStack {
@@ -23,7 +23,7 @@ public struct ExplorerView: View {
                         .foregroundColor(.clear)
                         .frame(height: calendarBackgroundHeight)
 
-                    DayJournal(of: $model.selectedDate)
+                    DayJournal(of: $calendarViewModel.selectedDate)
 
                     ContentCard { alignment in
                         alignment.top(.leading) {

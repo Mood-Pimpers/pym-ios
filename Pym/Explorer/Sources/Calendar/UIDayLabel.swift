@@ -35,7 +35,7 @@ struct DayLabel: CalendarItemViewRepresentable {
 }
 
 extension CalendarViewContent {
-    func addPymDayStyle(_ model: CalendarModel) -> CalendarViewContent {
+    func addPymDayStyle(_ model: CalendarViewModel) -> CalendarViewContent {
         withDayItemModelProvider { day in
             var properties = DayLabel.InvariantViewProperties(
                 font: UIFont.systemFont(ofSize: 18),

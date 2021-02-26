@@ -98,3 +98,10 @@ public struct DataAccessController {
         persistenceController.saveContext()
     }
 }
+
+public extension DataAccessController {
+    func getEntries(fromDay day: Date) -> [MoodEntry] {
+        // ! force-cast justified, since nil is only returned when an unsupported date-component is passed -> day is supported.
+        getEntries(from: day.beginning(of: .day)!, until: day.end(of: .day)!)
+    }
+}

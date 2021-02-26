@@ -27,12 +27,10 @@
 		2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */; };
 		2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
-		2FA2036D25E114AA00EC0925 /* MoodRatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */; };
-		2FA2037725E114B600EC0925 /* FeelingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2037625E114B600EC0925 /* FeelingsExtension.swift */; };
-		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
-		2FBC26A425E44FB000F2D2BE /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* CalendarModel.swift */; };
-		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
+		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
+		2FBC26A425E44FB000F2D2BE /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */; };
+		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
@@ -468,11 +466,9 @@
 		2F9AEF4525E5ADD1006BB731 /* DayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLabel.swift; sourceTree = "<group>"; };
 		2F9AEF6025E5AE07006BB731 /* MonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLabel.swift; sourceTree = "<group>"; };
 		2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayJournal.swift; sourceTree = "<group>"; };
-		2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRatingExtension.swift; sourceTree = "<group>"; };
-		2FA2037625E114B600EC0925 /* FeelingsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsExtension.swift; sourceTree = "<group>"; };
-		2FBC26A325E44FB000F2D2BE /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
-		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
+		2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -702,21 +698,12 @@
 			children = (
 				2F9AEF4425E5ADBE006BB731 /* HorizonCalendar */,
 				2F13CF6D25E43EFA00E81B36 /* PymCalendarView.swift */,
-				2FBC26A325E44FB000F2D2BE /* CalendarModel.swift */,
+				2FBC26A325E44FB000F2D2BE /* CalendarViewModel.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		2F2C032925DC3F4300C35AA1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2FA2036C25E114AA00EC0925 /* MoodRatingExtension.swift */,
-				2FA2037625E114B600EC0925 /* FeelingsExtension.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2F2C032A25DC3F4E00C35AA1 /* DTOs */ = {
+		2F2C032A25DC3F4E00C35AA1 /* Dtos */ = {
 			isa = PBXGroup;
 			children = (
 				2FF0A39F25E1130B00234F4E /* MoodRating.swift */,
@@ -1904,7 +1891,7 @@
 			files = (
 				2F13CF7725E43F0500E81B36 /* PymCalendarView.swift in Sources */,
 				2F9AEF6A25E5AE24006BB731 /* MonthLabel.swift in Sources */,
-				2FBC26A425E44FB000F2D2BE /* CalendarModel.swift in Sources */,
+				2FBC26A425E44FB000F2D2BE /* CalendarViewModel.swift in Sources */,
 				2F9AEF4F25E5ADE7006BB731 /* DayLabel.swift in Sources */,
 				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
 				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
@@ -3375,11 +3362,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
 			productName = HorizonCalendar;
-		};
-		B16D4477259C80F000D507BE /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B16D4476259C80F000D507BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 		B16D448E259C810000D507BE /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;

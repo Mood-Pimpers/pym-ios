@@ -1,13 +1,14 @@
 import HorizonCalendar
+import PymCore
 import SwiftUI
 
 struct PymCalendarView: UIViewRepresentable {
-    @EnvironmentObject var calendarModel: CalendarModel
+    @EnvironmentObject var viewModel: CalendarViewModel
 
     func makeUIView(context _: Context) -> CalendarView {
         let calendar = CalendarView(initialContent: makeContent())
         calendar.backgroundColor = .clear
-        calendar.daySelectionHandler = { calendarModel.selectedDay = $0 }
+        calendar.daySelectionHandler = { viewModel.selectedDay = $0 }
         return calendar
     }
 
@@ -18,21 +19,18 @@ struct PymCalendarView: UIViewRepresentable {
     private func makeContent() -> CalendarViewContent {
         let calendar = Calendar.current
 
-        let startDate = calendar.date(from: DateComponents(year: 2020, month: 01, day: 01))!
-        let endDate = calendar.date(from: DateComponents(year: 2021, month: 12, day: 31))!
-
         return CalendarViewContent(
             calendar: calendar,
-            visibleDateRange: startDate ... endDate,
+            visibleDateRange: viewModel.calendarStartDate ... viewModel.calendarEndDate,
             monthsLayout: .horizontal(options: HorizontalMonthsLayoutOptions())
         )
-        .addPymDayStyle(calendarModel)
+        .addPymDayStyle(viewModel)
         .addPymMonthHeaderStyle()
     }
 }
 
 struct CalendarView_Previews: PreviewProvider {
-    static let model = CalendarModel()
+    static let model = CalendarViewModel()
 
     static var previews: some View {
         PymCalendarView()
