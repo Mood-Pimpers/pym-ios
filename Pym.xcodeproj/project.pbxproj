@@ -833,7 +833,6 @@
 		B16D432A259C772F00D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F553D38B25E8E8F7008E93F6 /* Views */,
 				F553D38A25E8E8F0008E93F6 /* ViewModels */,
 				B16D432B259C773F00D507BE /* SettingsView.swift */,
 			);
@@ -1082,13 +1081,6 @@
 				F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		F553D38B25E8E8F7008E93F6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F55A2B6925E67DB0007BA1C8 /* Extensions */ = {

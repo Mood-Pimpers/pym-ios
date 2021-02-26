@@ -33,6 +33,7 @@ public struct SettingsView: View {
                                 action: { viewModel.showEreaseAllWarning = true },
                                 label: { Text("Erase my data") }
                             )
+                            .accentColor(.red)
                             .alert(
                                 isPresented: $viewModel.showEreaseAllWarning,
                                 content: {
