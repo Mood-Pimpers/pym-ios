@@ -55,7 +55,7 @@ public struct DataAccessController {
         do {
             try context.execute(deleteRequest)
             return true
-        } catch _ as NSError {
+        } catch {
             return false
         }
     }

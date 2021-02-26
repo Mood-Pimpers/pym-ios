@@ -24,29 +24,6 @@ public struct CheckInView: View {
         allActivities = dataAccess.getActivities()
     }
 
-    public func checkInSubView<Content>(
-        title: String,
-        content: Content,
-        buttonText: String
-    ) -> some View
-        where Content: View {
-        VStack {
-            Title(title)
-            content
-            Spacer()
-
-            Button(action: next, label: {
-                Text(buttonText)
-                    .bold()
-                Spacer()
-                Image(systemName: "arrow.right")
-            })
-                .buttonStyle(PrimaryButtonStyle())
-                .disabled(mood == nil)
-        }
-        .padding(16)
-    }
-
     public var body: some View {
         VStack {
             if showFinishAnimation {
@@ -59,31 +36,35 @@ public struct CheckInView: View {
                 .padding(16)
             } else {
                 PickerPageView(currentPage: $currentPage) {
-                    checkInSubView(
+                    CheckInSubView(
                         title: "How are you feeling?",
-                        content: MoodInput(mood: $mood),
-                        buttonText: "continue"
+                        content: { MoodInput(mood: $mood) },
+                        buttonText: "continue",
+                        next: next,
+                        canNext: { mood != nil }
                     )
                     .tag(CheckInPage.mood)
                     .disableDrag(when: { mood == nil })
 
-                    checkInSubView(
+                    CheckInSubView(
                         title: "Describe your feelings?",
-                        content: FeelingInput(
+                        content: { FeelingInput(
                             feelings: $feelings,
                             allFeelings: $allFeelings
-                        ),
-                        buttonText: "continue"
+                        ) },
+                        buttonText: "continue",
+                        next: next
                     )
                     .tag(CheckInPage.feeling)
 
-                    checkInSubView(
+                    CheckInSubView(
                         title: "Why are you feeling this way?",
-                        content: ActivityInput(
+                        content: { ActivityInput(
                             activities: $activities,
                             allActivities: $allActivities
-                        ),
-                        buttonText: "save"
+                        ) },
+                        buttonText: "save",
+                        next: next
                     )
                     .tag(CheckInPage.activity)
                 }

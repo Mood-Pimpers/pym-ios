@@ -119,6 +119,7 @@
 		F58F861325E3B4A80001ADFD /* ActivityInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861225E3B4A80001ADFD /* ActivityInput.swift */; };
 		F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodInput.swift */; };
 		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
+		F596CBD925E9747200DCE3EB /* CheckInSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596CBD825E9747200DCE3EB /* CheckInSubView.swift */; };
 		F5A5958925E7BA2700B9B53E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5958825E7BA2700B9B53E /* NotificationService.swift */; };
 		F5AAB47E25E3B18C0093DE91 /* QuoteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
@@ -529,6 +530,7 @@
 		F58F861225E3B4A80001ADFD /* ActivityInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInput.swift; sourceTree = "<group>"; };
 		F58F861C25E3B4DE0001ADFD /* MoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInput.swift; sourceTree = "<group>"; };
 		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
+		F596CBD825E9747200DCE3EB /* CheckInSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSubView.swift; sourceTree = "<group>"; };
 		F5A5958825E7BA2700B9B53E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModal.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
@@ -1071,6 +1073,7 @@
 			isa = PBXGroup;
 			children = (
 				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
+				F596CBD825E9747200DCE3EB /* CheckInSubView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1985,6 +1988,7 @@
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
 				F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */,
 				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,
+				F596CBD925E9747200DCE3EB /* CheckInSubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
