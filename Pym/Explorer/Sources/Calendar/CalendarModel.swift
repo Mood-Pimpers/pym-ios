@@ -4,7 +4,9 @@ import SwiftUI
 class CalendarModel: ObservableObject {
     @Published var selectedDay: Day? {
         didSet {
-            selectedDate = oldValue?.date
+            if selectedDay != oldValue {
+                selectedDate = selectedDay?.date
+            }
         }
     }
 
