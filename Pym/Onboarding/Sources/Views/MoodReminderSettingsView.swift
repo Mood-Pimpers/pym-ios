@@ -8,6 +8,8 @@ struct MoodReminderSettingsView: View {
         VStack {
             Spacer()
             Image.duck
+                .resizable()
+                .frame(width: 100, height: 100)
             Text("When should I remind you?")
                 .bold()
                 .font(.title)
