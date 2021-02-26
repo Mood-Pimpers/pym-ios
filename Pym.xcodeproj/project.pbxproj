@@ -55,6 +55,11 @@
 		B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */; };
 		B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156697A25DEB16700DEB355 /* HealthImportView.swift */; };
 		B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156696D25DEB15B00DEB355 /* WelcomeView.swift */; };
+		B156FC2F25E91AEE00BD487C /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = B156FC2E25E91AEE00BD487C /* SwiftUICharts */; };
+		B157FB8125E7E83900133197 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157FB8025E7E83900133197 /* RoundedCorner.swift */; };
+		B157FBDD25E8176400133197 /* MoodTrendLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157FBDC25E8176400133197 /* MoodTrendLineChart.swift */; };
+		B157FBE725E8177F00133197 /* MoodCorrelationBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157FBE625E8177F00133197 /* MoodCorrelationBarChart.swift */; };
+		B157FBF625E8335C00133197 /* WeekdayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157FBF525E8335C00133197 /* WeekdayFormatter.swift */; };
 		B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */; };
 		B1655547259D2AE6000EBB63 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
@@ -85,7 +90,6 @@
 		B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44CF259C85F700D507BE /* Strings.generated.swift */; };
 		B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
 		B16D44F3259C878300D507BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B16D44F5259C878300D507BE /* Localizable.strings */; };
-		B1DDFE6825DFBBD90075546F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B1DDFE6725DFBBD90075546F /* ComposableArchitecture */; };
 		B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */; };
 		B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */; };
 		B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */; };
@@ -507,6 +511,10 @@
 		B156697A25DEB16700DEB355 /* HealthImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImportView.swift; sourceTree = "<group>"; };
 		B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderIntroView.swift; sourceTree = "<group>"; };
 		B15669A825DEB1E400DEB355 /* MoodReminderSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderSettingsView.swift; sourceTree = "<group>"; };
+		B157FB8025E7E83900133197 /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		B157FBDC25E8176400133197 /* MoodTrendLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrendLineChart.swift; sourceTree = "<group>"; };
+		B157FBE625E8177F00133197 /* MoodCorrelationBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationBarChart.swift; sourceTree = "<group>"; };
+		B157FBF525E8335C00133197 /* WeekdayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayFormatter.swift; sourceTree = "<group>"; };
 		B16554DC259D109D000EBB63 /* UIKitAssets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitAssets.generated.swift; sourceTree = "<group>"; };
 		B16D4243259C75F200D507BE /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16D424B259C75F200D507BE /* HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -648,7 +656,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1DDFE6825DFBBD90075546F /* ComposableArchitecture in Frameworks */,
 				B16D448F259C810000D507BE /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16D44AF259C840300D507BE /* PymCore.framework in Frameworks */,
+				B156FC2F25E91AEE00BD487C /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +869,23 @@
 				B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B156FBDF25E8F46600BD487C /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				B157FBDC25E8176400133197 /* MoodTrendLineChart.swift */,
+				B157FBE625E8177F00133197 /* MoodCorrelationBarChart.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		B157FBF425E8334E00133197 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				B157FBF525E8335C00133197 /* WeekdayFormatter.swift */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 		B16D4244259C75F200D507BE /* Home */ = {
@@ -1165,7 +1190,12 @@
 		B1FB790C25914A2B0010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				2FA4BB7025EB985A00168B7D /* Correlation */,
+=======
+				B156FBDF25E8F46600BD487C /* Charts */,
+				B157FBF425E8334E00133197 /* Formatter */,
+>>>>>>> Add mood trend line chart
 				B1FB791625914A490010F791 /* InsightsView.swift */,
 			);
 			path = Sources;
@@ -1242,6 +1272,10 @@
 				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
 				B156694C25DE9B8D00DEB355 /* PickerPageView.swift */,
 				2F60812425E8470100E142CC /* RoundedCorner.swift */,
+				B156694C25DE9B8D00DEB355 /* PickerPageView.swift */,
+				F52DC8CE25A620E800809061 /* PrimaryButton.swift */,
+				B157FB8025E7E83900133197 /* RoundedCorner.swift */,
+				F51B334A25A5CF2E00C08F21 /* Title.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1485,7 +1519,6 @@
 			name = PymCommon;
 			packageProductDependencies = (
 				B16D448E259C810000D507BE /* SwiftyBeaver */,
-				B1DDFE6725DFBBD90075546F /* ComposableArchitecture */,
 			);
 			productName = PymCommon;
 			productReference = B1FB773325910C060010F791 /* PymCommon.framework */;
@@ -1630,6 +1663,9 @@
 				B16D44B2259C840300D507BE /* PBXTargetDependency */,
 			);
 			name = Insights;
+			packageProductDependencies = (
+				B156FC2E25E91AEE00BD487C /* SwiftUICharts */,
+			);
 			productName = Insights;
 			productReference = B1FB78E725914A230010F791 /* Insights.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1739,8 +1775,12 @@
 			packageReferences = (
 				B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				F50E358825A21909001D3A8E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+<<<<<<< HEAD
 				2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 				B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+=======
+				B156FC2D25E91AEE00BD487C /* XCRemoteSwiftPackageReference "ChartView" */,
+>>>>>>> Add mood trend line chart
 			);
 			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
 			projectDirPath = "";
@@ -2061,6 +2101,7 @@
 				2F60812525E8470100E142CC /* RoundedCorner.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
+				B157FB8125E7E83900133197 /* RoundedCorner.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
@@ -2133,8 +2174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B157FBE725E8177F00133197 /* MoodCorrelationBarChart.swift in Sources */,
 				B1FB791725914A490010F791 /* InsightsView.swift in Sources */,
+<<<<<<< HEAD
 				2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */,
+=======
+				B157FBDD25E8176400133197 /* MoodTrendLineChart.swift in Sources */,
+				B157FBF625E8335C00133197 /* WeekdayFormatter.swift in Sources */,
+>>>>>>> Add mood trend line chart
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3421,20 +3468,20 @@
 				minimumVersion = 1.7.2;
 			};
 		};
+		B156FC2D25E91AEE00BD487C /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mood-Pimpers/ChartView";
+			requirement = {
+				kind = revision;
+				revision = abaab4a15bc8003ed581c245b604f3eda2409475;
+			};
+		};
 		B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.9.3;
-			};
-		};
-		B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.0;
 			};
 		};
 		F50E358825A21909001D3A8E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -3452,16 +3499,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
 			productName = HorizonCalendar;
+		B156FC2E25E91AEE00BD487C /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B156FC2D25E91AEE00BD487C /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 		B16D448E259C810000D507BE /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
-		};
-		B1DDFE6725DFBBD90075546F /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 		F50E35AB25A21A64001D3A8E /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
