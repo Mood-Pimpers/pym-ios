@@ -1,12 +1,12 @@
 import HorizonCalendar
+import PymCore
 import UIKit
 
 struct DayLabel: CalendarItemViewRepresentable {
     /// Properties that are set once when we initialize the view.
     struct InvariantViewProperties: Hashable {
-        let font: UIFont
-        var textColor: UIColor
-        let backgroundColor: UIColor
+        let isSelected: Bool
+        let meanRating: Double?
     }
 
     /// Properties that will vary depending on the particular date being displayed.
@@ -17,18 +17,25 @@ struct DayLabel: CalendarItemViewRepresentable {
     static func makeView(withInvariantViewProperties invariantViewProperties: InvariantViewProperties) -> UILabel {
         let label = UILabel()
 
-        label.backgroundColor = invariantViewProperties.backgroundColor
-        label.font = invariantViewProperties.font
-        label.textColor = invariantViewProperties.textColor
+        if let meanRating = invariantViewProperties.meanRating {
+            label.font = UIFont.systemFont(ofSize: 18, weight: invariantViewProperties.isSelected ? .bold : .regular)
+
+            if meanRating < 0 {
+                label.backgroundColor = UIColor(.chartNegativeColor)
+            } else {
+                label.backgroundColor = UIColor(.chartPositiveColor)
+            }
+        } else {
+            // nothing tracked on this day
+            label.font = UIFont.systemFont(ofSize: 18)
+            label.textColor = .white
+            label.backgroundColor = .clear
+        }
 
         label.textAlignment = .center
-        label.layer.borderColor = CGColor(red: 100, green: 0, blue: 0, alpha: 100)
-
-        label.layer.borderWidth = 1
-        label.layer.masksToBounds = false
-        label.layer.borderColor = UIColor.black.cgColor
-        label.layer.cornerRadius = label.frame.height / 2
         label.clipsToBounds = true
+        label.layer.cornerRadius = 20
+        label.layer.borderColor = .none
 
         return label
     }
@@ -41,22 +48,23 @@ struct DayLabel: CalendarItemViewRepresentable {
 extension CalendarViewContent {
     func addPymDayStyle(_ model: CalendarViewModel) -> CalendarViewContent {
         withDayItemModelProvider { day in
-            var properties = DayLabel.InvariantViewProperties(
-                font: UIFont.systemFont(ofSize: 18),
-                textColor: .darkGray,
-                backgroundColor: .red
-            )
+            let ratings = model.getMoodRatingsFor(day: day.date)
 
-            if day == model.selectedDay {
-                properties.textColor = .red
-            } else if day.day % 2 == 0 {
-                properties.textColor = .gray
+            let meanRating: Double?
+            if ratings.count > 0 {
+                let ratingsSum = ratings
+                    .map { Int($0.rawValue - 3) }
+                    .reduce(0, +)
+                meanRating = Double(ratingsSum) / Double(ratings.count)
             } else {
-                properties.textColor = .black
+                meanRating = nil
             }
 
             return CalendarItemModel<DayLabel>(
-                invariantViewProperties: properties,
+                invariantViewProperties: DayLabel.InvariantViewProperties(
+                    isSelected: day == model.selectedDay,
+                    meanRating: meanRating
+                ),
                 viewModel: .init(day: day)
             )
         }

@@ -17,8 +17,18 @@ class CalendarViewModel: ObservableObject {
     let calendarEndDate = Date()
 
     func getMoodRatingsFor(day: Date) -> [MoodRating] {
-        DataAccessController.shared
-            .getEntries(fromDay: day)
-            .map(\.rating)
+//        DataAccessController.shared
+//            .getEntries(fromDay: day)
+//            .map(\.rating)
+        switch day.day % 5 {
+        case 0:
+            return [.great, .good]
+        case 1:
+            return [.bad, .poor]
+        case 2:
+            return [.moderate]
+        default:
+            return []
+        }
     }
 }

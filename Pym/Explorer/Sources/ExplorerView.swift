@@ -16,6 +16,7 @@ public struct ExplorerView: View {
 
                 PymCalendarView()
                     .environmentObject(calendarViewModel)
+                    .padding(10)
 
                 VStack {
                     Rectangle()
