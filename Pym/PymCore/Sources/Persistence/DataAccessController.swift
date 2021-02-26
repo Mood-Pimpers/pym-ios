@@ -58,6 +58,22 @@ public struct DataAccessController {
         }
     }
 
+    public func getEarliestEntry() -> MoodEntry? {
+        let context = DataAccessController.persistenceController.container.viewContext
+
+        let request = NSFetchRequest<MoodEntryModel>(entityName: MoodEntryModel.entityName)
+        request.returnsObjectsAsFaults = false
+        request.fetchLimit = 1
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(MoodEntryModel.date), ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+
+        if let results = try? context.fetch(request) {
+            return results.map { MoodEntry(from: $0) }.first
+        } else {
+            return nil
+        }
+    }
+
     private func getActivityBy(name activityName: Activity) -> ActivityModel? {
         let context = DataAccessController.persistenceController.container.viewContext
 

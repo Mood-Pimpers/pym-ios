@@ -28,4 +28,23 @@ class DataAccessControllerTests: XCTestCase {
         let activities = DataAccessController.shared.getActivities()
         XCTAssertLessThan(0, activities.count)
     }
+
+    func testGetEarliestEntryDate() throws {
+        let boundary = 10
+        for index in 1 ... boundary {
+            let date = Date().adding(.month, value: -index)
+            DataAccessController.shared.store(entry: MoodEntry(date: date, rating: MoodRating.allCases.randomElement()!, feelings: Set<Feeling>(), activities: Set<Activity>()))
+        }
+
+        let expectedEarliestDate = Date().adding(.month, value: -boundary)
+
+        let earliestEntry = DataAccessController.shared.getEarliestEntry()
+        XCTAssertNotNil(earliestEntry)
+
+        let actualEarliestDate = earliestEntry!.date
+        XCTAssertEqual(expectedEarliestDate.era, actualEarliestDate.era)
+        XCTAssertEqual(expectedEarliestDate.year, actualEarliestDate.year)
+        XCTAssertEqual(expectedEarliestDate.month, actualEarliestDate.month)
+        XCTAssertEqual(expectedEarliestDate.day, actualEarliestDate.day)
+    }
 }
