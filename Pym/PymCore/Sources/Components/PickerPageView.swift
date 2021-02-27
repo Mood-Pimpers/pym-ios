@@ -4,14 +4,17 @@ public struct PickerPageView<Page, Content>: View where Page: Hashable & CaseIte
     @Binding public var currentPage: Page
     var spacing: CGFloat = 8.0
     var content: () -> Content
+    let disableDragWhen: () -> Bool
 
     public init(
         spacing: CGFloat? = nil,
         currentPage: Binding<Page>,
+        disableDragWhen: @escaping () -> Bool = { true },
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.spacing = spacing ?? 8.0
         _currentPage = currentPage
+        self.disableDragWhen = disableDragWhen
         self.content = content
     }
 
@@ -29,6 +32,9 @@ public struct PickerPageView<Page, Content>: View where Page: Hashable & CaseIte
             Spacer()
             TabView(selection: $currentPage) {
                 content()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .contentShape(Rectangle())
+                    .gesture(disableDragWhen() ? DragGesture() : nil)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .frame(maxHeight: .infinity)

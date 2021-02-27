@@ -1,18 +1,18 @@
 import PymCore
 import SwiftUI
 
-public struct CheckInModalView: View {
+public struct CheckInModal: View {
     @Environment(\.presentationMode) var presentationMode
 
     public init() {}
 
     public var body: some View {
-        VStack {
+        ZStack {
+            Color.backgroundColor.ignoresSafeArea()
             CheckInView(onClose: close)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.backgroundColor)
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.top)
     }
 
     private func close(entry _: MoodEntry) {

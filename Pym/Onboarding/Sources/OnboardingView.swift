@@ -15,25 +15,21 @@ public struct OnboardingView: View {
                 WelcomeView(
                     next: { currentPage = .healthImport })
                     .tag(OnboardingPage.welcome)
-                    .disableDrag()
 
                 HealthImportView(
                     viewModel: viewModelFactory.makeHealthImportViewModel(
                         next: { currentPage = .moodReminderIntro }))
                     .tag(OnboardingPage.healthImport)
-                    .disableDrag()
 
                 MoodReminderIntroView(
                     viewModel: viewModelFactory.makeMoodReminderIntroViewModel(
                         next: notificationStep))
                     .tag(OnboardingPage.moodReminderIntro)
-                    .disableDrag()
 
                 MoodReminderSettingsView(
                     viewModel: viewModelFactory.makeMoodReminderSettingsViewModel(
                         next: finish))
                     .tag(OnboardingPage.moodReminderSettings)
-                    .disableDrag()
             }
         }
     }

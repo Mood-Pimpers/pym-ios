@@ -46,7 +46,7 @@ struct RootView: View {
                     )
                     .buttonStyle(PrimaryButtonStyle())
                     .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
-                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
+                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModal.init)
                 }
             }
         }

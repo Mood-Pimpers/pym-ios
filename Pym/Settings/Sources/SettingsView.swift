@@ -53,8 +53,9 @@ public struct SettingsView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
             }
-            .navigationTitle("Settings")
+            .navigationBarTitle("Settings", displayMode: .automatic)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
