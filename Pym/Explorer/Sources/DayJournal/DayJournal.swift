@@ -26,7 +26,11 @@ struct DayJournal_Previews: PreviewProvider {
     static let viewModel = ExplorerViewModel()
 
     static var previews: some View {
-        DayJournal()
-            .environmentObject(viewModel)
+        GeometryReader { _ in
+            DayJournal()
+                .environmentObject(viewModel)
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .background(Color.backgroundColor)
+        }
     }
 }

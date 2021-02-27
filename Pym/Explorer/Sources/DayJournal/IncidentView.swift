@@ -8,7 +8,19 @@ struct IncidentView: View {
 
     var body: some View {
         if let moodEntry = incident.incident as? MoodEntry {
-            MoodEntryCard(imageSideLength: imageSideLength, spacing: cardSpacing, moodEntry: moodEntry)
+            MoodEntryCard(
+                imageSideLength: imageSideLength,
+                spacing: cardSpacing,
+                moodEntry: moodEntry
+            )
+        } else if let externalEvent = incident.incident as? ExternalEvent {
+            if ExternalDataSourceIdentifier.healthKit == externalEvent.source {
+                HealthKitCard(
+                    imageSideLength: imageSideLength,
+                    spacing: cardSpacing,
+                    activity: externalEvent
+                )
+            }
         }
     }
 }
@@ -18,19 +30,21 @@ struct IncidentView_Previews: PreviewProvider {
         VStack {
             Spacer()
 
-            IncidentView(incident: IncidentContainer(incident: MoodEntry(date: Date(), rating: .great, feelings: [.clear, .amazed], activities: ["University"])))
-
-            IncidentView(incident: IncidentContainer(incident: MoodEntry(date: Date(), rating: .good, feelings: [.anxious, .enthusiastic], activities: ["School"])))
-
-            IncidentView(incident: IncidentContainer(incident: MoodEntry(date: Date(), rating: .moderate, feelings: [.confused, .distressed, .irritated], activities: ["University", "Work"])))
-
-            IncidentView(incident: IncidentContainer(incident: MoodEntry(date: Date(), rating: .poor, feelings: [.scared, .angry], activities: ["University"])))
-
-            IncidentView(incident: IncidentContainer(incident: MoodEntry(date: Date(), rating: .bad, feelings: [.sad, .upset, .worried], activities: ["University"])))
+            IncidentView(incident: IncidentContainer(incident: MoodEntry(
+                date: Date(),
+                rating: .moderate,
+                feelings: [.confused, .distressed, .irritated],
+                activities: ["University", "Work"]
+            )))
 
             Spacer()
 
-            IncidentView(incident: IncidentContainer(incident: ExternalEvent(title: "Running", at: Date(), with: (5.3, 35, 6.31))))
+            IncidentView(incident: IncidentContainer(incident: ExternalEvent(
+                title: HealthKitActivity.skiing.description,
+                at: Date(),
+                from: .healthKit,
+                with: (HealthKitActivity.skiing, 35.2, 6.31)
+            )))
 
             Spacer()
         }

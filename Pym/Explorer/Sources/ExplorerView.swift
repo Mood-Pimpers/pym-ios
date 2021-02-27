@@ -29,6 +29,10 @@ public struct ExplorerView: View {
 
                         Spacer()
                     }
+
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(height: 100)
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
             }

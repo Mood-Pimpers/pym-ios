@@ -70,7 +70,40 @@ struct MoodEntryCard_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
             VStack {
-                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(date: Date(), rating: .great, feelings: [.angry], activities: ["University"]))
+                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(
+                    date: Date(),
+                    rating: .great,
+                    feelings: [.clear, .amazed],
+                    activities: ["University"]
+                ))
+
+                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(
+                    date: Date(),
+                    rating: .good,
+                    feelings: [.anxious, .enthusiastic],
+                    activities: ["School"]
+                ))
+
+                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(
+                    date: Date(),
+                    rating: .moderate,
+                    feelings: [.confused, .distressed, .irritated],
+                    activities: ["University", "Work"]
+                ))
+
+                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(
+                    date: Date(),
+                    rating: .poor,
+                    feelings: [.scared, .angry],
+                    activities: ["University"]
+                ))
+
+                MoodEntryCard(imageSideLength: 22.5, spacing: 15, moodEntry: MoodEntry(
+                    date: Date(),
+                    rating: .bad,
+                    feelings: [.sad, .upset, .worried],
+                    activities: ["University"]
+                ))
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
             .background(Color.backgroundColor)

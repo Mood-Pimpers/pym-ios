@@ -34,7 +34,13 @@ class ExplorerViewModel: ObservableObject {
 
     func getIncidents(forDay day: Date) -> [IncidentContainer] {
         var incidents: [IncidentContainer] = [] /* DataAccessController.shared.getEntries(fromDay: day) */
-        incidents.append(IncidentContainer(incident: MoodEntry(date: day, rating: .good, feelings: [.amazed, .clear], activities: ["University", "Work"])))
+        incidents.append(IncidentContainer(incident: MoodEntry(
+            date: day,
+            rating: MoodRating.allCases.randomElement()!,
+            feelings: [.amazed, .clear],
+            activities: ["University", "Work"]
+        )
+        ))
 
         incidents.append(contentsOf: ExternalDataAccess.shared.getEvents(fromDay: day).map { IncidentContainer(incident: $0) })
         return incidents
