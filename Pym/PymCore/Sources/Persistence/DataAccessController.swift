@@ -1,8 +1,12 @@
 import CoreData
 
+public typealias ChangeListener = (Date) -> Void
+
 public struct DataAccessController {
-    public static let shared = DataAccessController()
+    public static var shared = DataAccessController()
     static var persistenceController = PersistenceController.shared
+
+    private var changeListeners: [ChangeListener] = []
 
     private init() {
         if getActivities().isEmpty {
@@ -29,6 +33,10 @@ public struct DataAccessController {
         DataAccessController.persistenceController.saveContext()
 
         dto.id = model.id
+
+        for listener in changeListeners {
+            listener(dto.timestamp)
+        }
     }
 
     public func getEntries(from startDate: Date, until endDate: Date) -> [MoodEntry] {
@@ -89,30 +97,6 @@ public struct DataAccessController {
         }
     }
 
-    private func getActivityBy(name activityName: Activity) -> ActivityModel? {
-        let context = DataAccessController.persistenceController.container.viewContext
-
-        let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
-        request.predicate = NSPredicate(format: "name = '\(activityName)'")
-        request.fetchLimit = 1
-
-        if let results = try? context.fetch(request),
-           results.count == 1 {
-            return results.first
-        } else {
-            return nil
-        }
-    }
-
-    private static func seedActivities() {
-        for activityName in ["work", "friends", "school", "relationship", "traveling", "food", "exercise", "weather", "hobbies", "shopping", "relaxing"] {
-            let activity = ActivityModel(context: persistenceController.container.viewContext)
-            activity.id = UUID()
-            activity.name = activityName
-        }
-        persistenceController.saveContext()
-    }
-
     public func getQuotes() -> [Quote] {
         [
             Quote(
@@ -140,6 +124,34 @@ public struct DataAccessController {
                 url: { width, height in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
             )
         ]
+    }
+
+    public mutating func addChangeListener(_ changeListener: @escaping ChangeListener) {
+        changeListeners.append(changeListener)
+    }
+
+    private func getActivityBy(name activityName: Activity) -> ActivityModel? {
+        let context = DataAccessController.persistenceController.container.viewContext
+
+        let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
+        request.predicate = NSPredicate(format: "name = '\(activityName)'")
+        request.fetchLimit = 1
+
+        if let results = try? context.fetch(request),
+           results.count == 1 {
+            return results.first
+        } else {
+            return nil
+        }
+    }
+
+    private static func seedActivities() {
+        for activityName in ["work", "friends", "school", "relationship", "traveling", "food", "exercise", "weather", "hobbies", "shopping", "relaxing"] {
+            let activity = ActivityModel(context: persistenceController.container.viewContext)
+            activity.id = UUID()
+            activity.name = activityName
+        }
+        persistenceController.saveContext()
     }
 }
 

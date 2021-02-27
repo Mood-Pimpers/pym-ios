@@ -8,10 +8,7 @@ struct PymCalendarView: UIViewRepresentable {
     func makeUIView(context _: Context) -> UIView {
         let calendarView = CalendarView(initialContent: makeContent())
         calendarView.backgroundColor = .clear
-        calendarView.daySelectionHandler = {
-            viewModel.selectedDay = $0
-            print("click received")
-        }
+        calendarView.daySelectionHandler = { viewModel.selectedDay = $0 }
 
         calendarView.layoutMargins = .zero
         calendarView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +43,7 @@ struct PymCalendarView: UIViewRepresentable {
         )
         .addPymDayStyle(viewModel)
         .addPymMonthHeaderStyle()
-        .withVerticalDayMargin(15)
+        .withVerticalDayMargin(10)
         .withHorizontalDayMargin(15)
     }
 }

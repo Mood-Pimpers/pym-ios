@@ -9,7 +9,7 @@ public struct ExplorerView: View {
     public var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
-                let calendarBackgroundHeight: CGFloat = 460
+                let calendarBackgroundHeight: CGFloat = 425
 
                 CalendarBackgroundLayer()
                     .frame(height: calendarBackgroundHeight)
