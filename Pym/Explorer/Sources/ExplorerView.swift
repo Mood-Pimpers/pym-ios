@@ -2,7 +2,7 @@ import PymCore
 import SwiftUI
 
 public struct ExplorerView: View {
-    @ObservedObject var viewModel = ExplorerViewModel()
+    @StateObject var viewModel = ExplorerViewModel()
 
     public init() {}
 
