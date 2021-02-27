@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @ObservedObject private var modalService = ModalService.shared
-    @AppStorage(Defaults.Keys.firstAppLaunch) var firstAppLaunch: Double = 0.0
+    @AppStorage(UserDefaults.Keys.firstAppLaunch.rawValue) var firstAppLaunch: Double = 0.0
 
     public init() {
         UITabBar.appearance().barTintColor = Asset.whiteColor.color
@@ -35,14 +35,17 @@ struct RootView: View {
                     }
                     .accentColor(.primaryColor)
 
-                    Button(action: modalService.toggleMoodCheckin, label: {
-                        Image.add
-                            .resizable()
-                            .frame(width: 28, height: 28)
-                    })
-                        .buttonStyle(PrimaryButtonStyle())
-                        .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
-                        .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModalView.init)
+                    Button(
+                        action: modalService.toggleMoodCheckin,
+                        label: {
+                            Image.add
+                                .resizable()
+                                .frame(width: 28, height: 28)
+                        }
+                    )
+                    .buttonStyle(PrimaryButtonStyle())
+                    .offset(x: geometry.size.width / 2 - 30, y: geometry.size.height - 70)
+                    .sheet(isPresented: $modalService.showMoodCheckin, content: CheckInModal.init)
                 }
             }
         }

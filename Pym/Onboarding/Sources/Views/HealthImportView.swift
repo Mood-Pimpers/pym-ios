@@ -1,74 +1,76 @@
 import PymCore
 import SwiftUI
 
-// swiftlint:disable multiple_closures_with_trailing_closure
 struct HealthImportView: View {
     @ObservedObject var viewModel: HealthImportViewModel
-    @State private var showingAlert = false
-    let next: () -> Void
-
-    private func handleHealthKitAuthorization() {
-        viewModel.authorizeHealthKit { result in
-            switch result {
-            case .success:
-                next()
-            default:
-                break
-            }
-        }
-    }
 
     var body: some View {
         VStack {
             Spacer()
             HStack {
-                Image("Pym Logo")
+                Image.pymLogo
                     .resizable()
-                    .frame(width: 64.0, height: 64.0)
+                    .frame(width: 64, height: 64)
                 Text("+")
-                Image("Health Logo")
+                Image.healthLogo
                     .resizable()
-                    .frame(width: 64.0, height: 64.0)
+                    .frame(width: 64, height: 64)
             }
             Text("Use Apple Health?")
                 .bold()
                 .font(.title)
-                .padding(5)
-            Text("Increase further experience by showing health mood correlations.").multilineTextAlignment(.center)
+                .padding(8)
+            Text("Increase further experience by showing health mood correlations.")
+                .multilineTextAlignment(.center)
 
             Spacer()
 
-            Button(action: handleHealthKitAuthorization) {
+            Button(action: viewModel.handleHealthKitAuthorization) {
                 Text("Allow using health data")
                     .bold()
                 Spacer()
-            }.buttonStyle(PrimaryButtonStyle())
-                .padding(16)
-                .alert(item: $viewModel.healthKitError) { error in
-                    let errorTitle = Text("HealthKit error")
-                    switch error {
-                    case .notAvailableOnDevice:
-                        return Alert(title: errorTitle, message: Text("Unfortunately, HealthKit is not available on your device."), dismissButton: .default(Text("Ok")) {
-                            next()
-                        })
-                    case .dataTypeNotAvailable:
-                        return Alert(title: errorTitle, message: Text("Unfourtunatelly, the needed HealthKit sources are not available."), dismissButton: .default(Text("Ok")) {
-                            next()
-                        })
-                    default:
-                        return Alert(title: errorTitle, message: Text("Error authorizing the app. Visit settings and give permissions."), dismissButton: .cancel())
-                    }
-                }
+            }
+            .buttonStyle(PrimaryButtonStyle())
+            .alert(item: $viewModel.healthKitError, content: healthKitErrorAlert)
 
-            Button(action: {
-                showingAlert = true
-            }, label: {
-                Text("No thanks")
-            })
-                .foregroundColor(.black)
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Are you sure?"), message: Text("Connecting with Apple Health greatly increases the accuracy of your experience."), primaryButton: .default(Text("Connect with Apple Health")), secondaryButton: .cancel(Text("Disable"), action: next))
-                }
+            Button(
+                action: viewModel.toggleWarning,
+                label: { Text("No thanks") }
+            )
+            .foregroundColor(.black)
+            .alert(isPresented: $viewModel.showingAlert) {
+                Alert(
+                    title: Text("Are you sure?"),
+                    message: Text("Connecting with Apple Health greatly increases the accuracy of your experience."),
+                    primaryButton: .default(Text("Connect with Apple Health")),
+                    secondaryButton: .cancel(Text("Disable"), action: viewModel.next)
+                )
+            }
+        }
+        .padding(16)
+    }
+
+    private func healthKitErrorAlert(error: HealthKitError?) -> Alert {
+        let errorTitle = Text("HealthKit error")
+        switch error {
+        case .notAvailableOnDevice:
+            return Alert(
+                title: errorTitle,
+                message: Text("Unfortunately, HealthKit is not available on your device."),
+                dismissButton: .default(Text("Ok"), action: viewModel.next)
+            )
+        case .dataTypeNotAvailable:
+            return Alert(
+                title: errorTitle,
+                message: Text("Unfourtunatelly, the needed HealthKit sources are not available."),
+                dismissButton: .default(Text("Ok"), action: viewModel.next)
+            )
+        default:
+            return Alert(
+                title: errorTitle,
+                message: Text("Error authorizing the app. Visit settings and give permissions."),
+                dismissButton: .cancel()
+            )
         }
     }
 }
@@ -80,7 +82,9 @@ struct OnboardingImportView_Previews: PreviewProvider {
         ZStack {
             Color.backgroundColor
                 .ignoresSafeArea()
-            HealthImportView(viewModel: viewModelFactory.makeHealthImportViewModel(), next: {})
+            HealthImportView(
+                viewModel: viewModelFactory.makeHealthImportViewModel(
+                    next: {}))
         }
     }
 }

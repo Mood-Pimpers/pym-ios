@@ -1,6 +1,5 @@
-enum CheckInPage {
+enum CheckInPage: CaseIterable {
     case mood
     case feeling
     case activity
-    case finish
 }

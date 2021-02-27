@@ -111,9 +111,9 @@
 		B1FB78FC25914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
 		B1FB78FD25914A230010F791 /* Insights.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB791725914A490010F791 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* InsightsView.swift */; };
-		B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckIn.swift */; };
+		B1FB792125914A5F0010F791 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB792025914A5F0010F791 /* CheckInView.swift */; };
 		F50E35AC25A21A64001D3A8E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F50E35AB25A21A64001D3A8E /* Kingfisher */; };
-		F51B335825A5CFE300C08F21 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B335725A5CFE300C08F21 /* Quote.swift */; };
+		F52943AA25E93B480023893C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B335725A5CFE300C08F21 /* Quote.swift */; };
 		F52DC89725A61E8C00809061 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
 		F52DC89825A61E8C00809061 /* PymCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F52DC8B125A61EF700809061 /* PymCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB7788259135030010F791 /* PymCore.framework */; };
@@ -124,22 +124,26 @@
 		F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DC8CE25A620E800809061 /* PrimaryButton.swift */; };
 		F5346C9225C3145700F15190 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9125C3145700F15190 /* FeelingInput.swift */; };
 		F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5346C9E25C314FC00F15190 /* SelectableElement.swift */; };
+		F553D3AA25E8E995008E93F6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */; };
+		F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D39625E8E924008E93F6 /* EnableTimeView.swift */; };
+		F553D42A25E8FBC8008E93F6 /* MoodReminderSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */; };
+		F553D43425E90DA3008E93F6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D43325E90DA3008E93F6 /* OnboardingPage.swift */; };
 		F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B7225E67DF8007BA1C8 /* Set.swift */; };
 		F55A2B8525E67EDD007BA1C8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2B8425E67EDD007BA1C8 /* Activity.swift */; };
-		F55A2BAF25E6AD01007BA1C8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2BAE25E6AD01007BA1C8 /* View.swift */; };
 		F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */; };
 		F58F861325E3B4A80001ADFD /* ActivityInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861225E3B4A80001ADFD /* ActivityInput.swift */; };
 		F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F861C25E3B4DE0001ADFD /* MoodInput.swift */; };
 		F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F862625E3B5100001ADFD /* CheckInPage.swift */; };
-		F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */; };
-		F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */; };
+		F596CBD925E9747200DCE3EB /* CheckInSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596CBD825E9747200DCE3EB /* CheckInSubView.swift */; };
+		F5A5958925E7BA2700B9B53E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5958825E7BA2700B9B53E /* NotificationService.swift */; };
+		F5AAB47E25E3B18C0093DE91 /* QuoteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */; };
 		F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */; };
 		F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C93A2225E4135100EE8DFC /* Feeling.swift */; };
 		F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D2725E5397200DFBD07 /* Set.swift */; };
 		F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */; };
 		F5CF8D8725E54E3E00DFBD07 /* Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D7525E5491500DFBD07 /* Columns.swift */; };
 		F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8D6B25E548E500DFBD07 /* Array.swift */; };
-		F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */; };
+		F5CF8DB225E554E200DFBD07 /* CheckInModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8DB125E554E200DFBD07 /* CheckInModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -539,28 +543,32 @@
 		B1FB78EF25914A230010F791 /* InsightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB78F625914A230010F791 /* InsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTests.swift; sourceTree = "<group>"; };
 		B1FB791625914A490010F791 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
-		B1FB792025914A5F0010F791 /* CheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn.swift; sourceTree = "<group>"; };
+		B1FB792025914A5F0010F791 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		F51B335725A5CFE300C08F21 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		F52DC8CE25A620E800809061 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		F5346C9125C3145700F15190 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
 		F5346C9E25C314FC00F15190 /* SelectableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableElement.swift; sourceTree = "<group>"; };
+		F553D39625E8E924008E93F6 /* EnableTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableTimeView.swift; sourceTree = "<group>"; };
+		F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderSettingsViewModel.swift; sourceTree = "<group>"; };
+		F553D43325E90DA3008E93F6 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		F55A2B7225E67DF8007BA1C8 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		F55A2B8425E67EDD007BA1C8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		F55A2BAE25E6AD01007BA1C8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalService.swift; sourceTree = "<group>"; };
 		F58F861225E3B4A80001ADFD /* ActivityInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInput.swift; sourceTree = "<group>"; };
 		F58F861C25E3B4DE0001ADFD /* MoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInput.swift; sourceTree = "<group>"; };
 		F58F862625E3B5100001ADFD /* CheckInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInPage.swift; sourceTree = "<group>"; };
-		F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewRouter.swift; sourceTree = "<group>"; };
-		F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalView.swift; sourceTree = "<group>"; };
+		F596CBD825E9747200DCE3EB /* CheckInSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSubView.swift; sourceTree = "<group>"; };
+		F5A5958825E7BA2700B9B53E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModal.swift; sourceTree = "<group>"; };
 		F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCard.swift; sourceTree = "<group>"; };
 		F5C93A2225E4135100EE8DFC /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		F5CF8D2725E5397200DFBD07 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		F5CF8D6B25E548E500DFBD07 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		F5CF8D7525E5491500DFBD07 /* Columns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columns.swift; sourceTree = "<group>"; };
-		F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModalView.swift; sourceTree = "<group>"; };
+		F5CF8DB125E554E200DFBD07 /* CheckInModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -722,6 +730,7 @@
 		2F2C032A25DC3F4E00C35AA1 /* Dtos */ = {
 			isa = PBXGroup;
 			children = (
+				F51B335725A5CFE300C08F21 /* Quote.swift */,
 				2FF0A39F25E1130B00234F4E /* MoodRating.swift */,
 				2FF0A3A925E1131B00234F4E /* Feeling.swift */,
 				2F72A03E25DDC12400B0A978 /* MoodEntry.swift */,
@@ -803,6 +812,7 @@
 				B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */,
 				B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */,
 				B10DD28425E56B1500811739 /* ViewModelFactory.swift */,
+				F553D40725E8FAB5008E93F6 /* MoodReminderSettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -810,7 +820,6 @@
 		B10DD28325E56AF200811739 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1FB7835259147F90010F791 /* OnboardingView.swift */,
 				B156696D25DEB15B00DEB355 /* WelcomeView.swift */,
 				B156697A25DEB16700DEB355 /* HealthImportView.swift */,
 				B156699125DEB1AB00DEB355 /* MoodReminderIntroView.swift */,
@@ -844,10 +853,9 @@
 		B16D427C259C760700D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F51B335625A5CFD700C08F21 /* Models */,
 				B16D4252259C75F200D507BE /* HomeView.swift */,
 				F5AC0DB525A5F61C007ACEF5 /* QuoteCard.swift */,
-				F5AAB47D25E3B18C0093DE91 /* QuoteModalView.swift */,
+				F5AAB47D25E3B18C0093DE91 /* QuoteModal.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -911,6 +919,7 @@
 		B16D432A259C772F00D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F553D38A25E8E8F0008E93F6 /* ViewModels */,
 				B16D432B259C773F00D507BE /* SettingsView.swift */,
 			);
 			path = Sources;
@@ -1065,6 +1074,8 @@
 			children = (
 				B10DD28325E56AF200811739 /* Views */,
 				B10DD28225E56AEC00811739 /* ViewModels */,
+				F553D43325E90DA3008E93F6 /* OnboardingPage.swift */,
+				B1FB7835259147F90010F791 /* OnboardingView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1102,10 +1113,9 @@
 				F5C93A2125E4133F00EE8DFC /* Extensions */,
 				F58F864F25E3FEC90001ADFD /* Inputs */,
 				F5346C9D25C314F400F15190 /* Components */,
-				B1FB792025914A5F0010F791 /* CheckIn.swift */,
+				B1FB792025914A5F0010F791 /* CheckInView.swift */,
 				F58F862625E3B5100001ADFD /* CheckInPage.swift */,
-				F58F863025E3B52A0001ADFD /* CheckInViewRouter.swift */,
-				F5CF8DB125E554E200DFBD07 /* CheckInModalView.swift */,
+				F5CF8DB125E554E200DFBD07 /* CheckInModal.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1144,20 +1154,21 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F51B335625A5CFD700C08F21 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F51B335725A5CFE300C08F21 /* Quote.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		F5346C9D25C314F400F15190 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				F5346C9E25C314FC00F15190 /* SelectableElement.swift */,
+				F596CBD825E9747200DCE3EB /* CheckInSubView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F553D38A25E8E8F0008E93F6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F553D3A025E8E945008E93F6 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F55A2B6925E67DB0007BA1C8 /* Extensions */ = {
@@ -1172,6 +1183,7 @@
 			isa = PBXGroup;
 			children = (
 				F55A2BC825E6BEA7007BA1C8 /* ModalService.swift */,
+				F5A5958825E7BA2700B9B53E /* NotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1198,6 +1210,7 @@
 		F5AC0DE525A60397007ACEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F553D39625E8E924008E93F6 /* EnableTimeView.swift */,
 				F5CF8D7525E5491500DFBD07 /* Columns.swift */,
 				2F60811225E8469400E142CC /* ContentCard.swift */,
 				F51B334A25A5CF2E00C08F21 /* Title.swift */,
@@ -1214,7 +1227,6 @@
 				F5C93A2225E4135100EE8DFC /* Feeling.swift */,
 				F5CF8D2725E5397200DFBD07 /* Set.swift */,
 				F5CF8D6125E5421D00DFBD07 /* MoodRating.swift */,
-				F55A2BAE25E6AD01007BA1C8 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1910,8 +1922,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AC0DB625A5F61C007ACEF5 /* QuoteCard.swift in Sources */,
-				F5AAB47E25E3B18C0093DE91 /* QuoteModalView.swift in Sources */,
-				F51B335825A5CFE300C08F21 /* Quote.swift in Sources */,
+				F5AAB47E25E3B18C0093DE91 /* QuoteModal.swift in Sources */,
 				B10E7BDB259CD23000337DDC /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1957,6 +1968,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16D432C259C773F00D507BE /* SettingsView.swift in Sources */,
+				F553D3AA25E8E995008E93F6 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1998,6 +2010,7 @@
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
 				B10DD27025E5663C00811739 /* HealthKitAssistant.swift in Sources */,
 				2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */,
+				F5A5958925E7BA2700B9B53E /* NotificationService.swift in Sources */,
 				2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */,
 				2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */,
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
@@ -2015,14 +2028,15 @@
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
 				2FDF8BE625EAE53400F75C57 /* HealthKitActivity.swift in Sources */,
+				F52943AA25E93B480023893C /* Quote.swift in Sources */,
 				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,
+				F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */,
 				2F60812525E8470100E142CC /* RoundedCorner.swift in Sources */,
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
-				F55A2BAF25E6AD01007BA1C8 /* View.swift in Sources */,
 				2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2042,6 +2056,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15669F425DEB1F700DEB355 /* WelcomeView.swift in Sources */,
+				F553D42A25E8FBC8008E93F6 /* MoodReminderSettingsViewModel.swift in Sources */,
 				B15669BF25DEB1EC00DEB355 /* MoodReminderSettingsView.swift in Sources */,
 				B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */,
 				B15669DF25DEB1F300DEB355 /* HealthImportView.swift in Sources */,
@@ -2049,6 +2064,7 @@
 				B10DD29E25E56B6500811739 /* ViewModelFactory.swift in Sources */,
 				B15669D425DEB1F000DEB355 /* MoodReminderIntroView.swift in Sources */,
 				B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */,
+				F553D43425E90DA3008E93F6 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2064,17 +2080,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB792125914A5F0010F791 /* CheckIn.swift in Sources */,
+				B1FB792125914A5F0010F791 /* CheckInView.swift in Sources */,
 				F58F861325E3B4A80001ADFD /* ActivityInput.swift in Sources */,
 				F5346C9225C3145700F15190 /* FeelingInput.swift in Sources */,
 				F5346C9F25C314FC00F15190 /* SelectableElement.swift in Sources */,
 				F5C93A2C25E4141100EE8DFC /* Feeling.swift in Sources */,
 				F5CF8D6225E5421D00DFBD07 /* MoodRating.swift in Sources */,
-				F5CF8DB225E554E200DFBD07 /* CheckInModalView.swift in Sources */,
+				F5CF8DB225E554E200DFBD07 /* CheckInModal.swift in Sources */,
 				F58F862725E3B5100001ADFD /* CheckInPage.swift in Sources */,
 				F58F861D25E3B4DE0001ADFD /* MoodInput.swift in Sources */,
 				F5CF8D2825E5397200DFBD07 /* Set.swift in Sources */,
-				F58F863125E3B52A0001ADFD /* CheckInViewRouter.swift in Sources */,
+				F596CBD925E9747200DCE3EB /* CheckInSubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
