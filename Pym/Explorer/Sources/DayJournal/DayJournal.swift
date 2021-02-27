@@ -5,7 +5,8 @@ struct DayJournal: View {
     @EnvironmentObject var viewModel: ExplorerViewModel
 
     var body: some View {
-        if let date = viewModel.selectedDate {
+        if let date = viewModel.selectedDate,
+           !viewModel.getMoodRatingsFor(day: date).isEmpty {
             let incidents = viewModel.getIncidents(forDay: date)
                 .sorted { $0.timestamp < $1.timestamp }
             ZStack {
