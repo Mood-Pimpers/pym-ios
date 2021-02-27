@@ -1,28 +1,25 @@
 import SwiftUI
 
-public struct PickerPageView<Content>: View where Content: View {
-    @Binding public var currentIndex: Int
-    var pages: Int
-    var spacing: CGFloat = 0.8
+public struct PickerPageView<Page, Content>: View where Page: Hashable & CaseIterable, Content: View {
+    @Binding public var currentPage: Page
+    var spacing: CGFloat = 8.0
     var content: () -> Content
 
     public init(
         spacing: CGFloat? = nil,
-        pages: Int = 0,
-        currentIndex: Binding<Int>,
+        currentPage: Binding<Page>,
         @ViewBuilder content: @escaping () -> Content
     ) {
-        self.spacing = spacing ?? 0.8
-        self.pages = pages
-        _currentIndex = currentIndex
+        self.spacing = spacing ?? 8.0
+        _currentPage = currentPage
         self.content = content
     }
 
     public var body: some View {
         VStack {
             HStack(spacing: spacing) {
-                ForEach(0 ..< pages, id: \.self) { pageIndex in
-                    (pageIndex == currentIndex ? Color.primaryColor : Color.neutralLightColor)
+                ForEach(Array(Page.allCases), id: \.self) { page in
+                    (page == currentPage ? Color.primaryColor : Color.neutralLightColor)
                         .cornerRadius(4)
                 }
             }
@@ -30,28 +27,27 @@ public struct PickerPageView<Content>: View where Content: View {
             .padding(8)
 
             Spacer()
-            TabView(selection: $currentIndex) {
+            TabView(selection: $currentPage) {
                 content()
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .onAppear {
-                let value = currentIndex
-                currentIndex = -1
-                DispatchQueue.main.async {
-                    currentIndex = value
-                }
-            }
             .frame(maxHeight: .infinity)
         }
     }
 }
 
 struct PickerPageView_Previews: PreviewProvider {
+    enum TestPage: CaseIterable {
+        case one
+        case two
+        case three
+    }
+
     static var previews: some View {
-        PickerPageView(pages: 3, currentIndex: .constant(0), content: {
-            Text("One")
-            Text("Two")
-            Text("Three")
-        })
+        PickerPageView(currentPage: .constant(TestPage.one)) {
+            Text("One").tag(TestPage.one)
+            Text("Two").tag(TestPage.two)
+            Text("Three").tag(TestPage.three)
+        }
     }
 }
