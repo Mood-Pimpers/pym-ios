@@ -46,7 +46,7 @@ struct DayLabel: CalendarItemViewRepresentable {
 }
 
 extension CalendarViewContent {
-    func addPymDayStyle(_ model: CalendarViewModel) -> CalendarViewContent {
+    func addPymDayStyle(_ model: ExplorerViewModel) -> CalendarViewContent {
         withDayItemModelProvider { day in
             let ratings = model.getMoodRatingsFor(day: day.date)
 

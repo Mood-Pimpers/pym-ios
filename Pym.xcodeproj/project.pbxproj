@@ -25,12 +25,16 @@
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
 		2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */; };
 		2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */; };
-		2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
 		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
 		2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */; };
 		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
+		2FDF8B0E25EAAE7B00F75C57 /* Timeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B0425EAADDF00F75C57 /* Timeable.swift */; };
+		2FDF8B2925EAB63D00F75C57 /* IncidentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */; };
+		2FDF8B4425EABA3B00F75C57 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */; };
+		2FDF8B7B25EAC17800F75C57 /* MoodEntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */; };
+		2FDF8B8425EAC17B00F75C57 /* ContentCardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B6925EAC13600F75C57 /* ContentCardExtensions.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
@@ -469,6 +473,11 @@
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
 		2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
+		2FDF8B0425EAADDF00F75C57 /* Timeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeable.swift; sourceTree = "<group>"; };
+		2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentContainer.swift; sourceTree = "<group>"; };
+		2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
+		2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryCard.swift; sourceTree = "<group>"; };
+		2FDF8B6925EAC13600F75C57 /* ContentCardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCardExtensions.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -754,9 +763,29 @@
 		2F9AEFCE25E5B4A2006BB731 /* DayJournal */ = {
 			isa = PBXGroup;
 			children = (
+				2FDF8B5D25EAC08700F75C57 /* ContentCards */,
 				2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */,
+				2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */,
+				2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */,
+				2FDF8B6925EAC13600F75C57 /* ContentCardExtensions.swift */,
 			);
 			path = DayJournal;
+			sourceTree = "<group>";
+		};
+		2FDF8B0325EAADCD00F75C57 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B0425EAADDF00F75C57 /* Timeable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2FDF8B5D25EAC08700F75C57 /* ContentCards */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */,
+			);
+			path = ContentCards;
 			sourceTree = "<group>";
 		};
 		B10DD28225E56AEC00811739 /* ViewModels */ = {
@@ -988,6 +1017,7 @@
 				2F41636625DEF3AB0009D45D /* Data Sources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
 				B10E7A95259C972800337DDC /* Persistence */,
+				2FDF8B0325EAADCD00F75C57 /* Protocols */,
 				B16D44CE259C85D700D507BE /* Generated */,
 			);
 			path = Sources;
@@ -1892,9 +1922,13 @@
 				2F13CF7725E43F0500E81B36 /* CalendarView.swift in Sources */,
 				2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */,
 				2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */,
+				2FDF8B8425EAC17B00F75C57 /* ContentCardExtensions.swift in Sources */,
+				2FDF8B7B25EAC17800F75C57 /* MoodEntryCard.swift in Sources */,
 				2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */,
+				2FDF8B4425EABA3B00F75C57 /* IncidentView.swift in Sources */,
 				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
 				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
+				2FDF8B2925EAB63D00F75C57 /* IncidentContainer.swift in Sources */,
 				B16D42E1259C76D700D507BE /* ExplorerView.swift in Sources */,
 				2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */,
 			);
@@ -1930,7 +1964,6 @@
 			files = (
 				B165553C259D2AE4000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				B1FB7703259109A30010F791 /* RootView.swift in Sources */,
-				2F9AEFD025E5B4AF006BB731 /* DayJournal.swift in Sources */,
 				2F729F5325DDAD0A00B0A978 /* Pym.xcdatamodeld in Sources */,
 				B156694D25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
 				B1655552259D2AE9000EBB63 /* Strings.generated.swift in Sources */,
@@ -1967,6 +2000,7 @@
 				F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */,
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
 				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
+				2FDF8B0E25EAAE7B00F75C57 /* Timeable.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
 				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,

@@ -1,21 +1,32 @@
+import PymCore
 import SwiftUI
 
 struct DayJournal: View {
-    @Binding var today: Date?
-
-    init(of today: Binding<Date?>) {
-        _today = today
-    }
+    @EnvironmentObject var viewModel: ExplorerViewModel
 
     var body: some View {
-        Text("Today is \(today?.dateString() ?? "unselected")")
+        if let date = viewModel.selectedDate {
+            let incidents = viewModel.getIncidents(forDay: date)
+                .sorted { $0.timestamp < $1.timestamp }
+            ZStack {
+                // TODO: add line
+
+                VStack {
+                    ForEach(incidents) {
+                        IncidentView(incident: $0)
+                            .padding([.horizontal], 15)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct DayJournal_Previews: PreviewProvider {
-    @State static var date: Date? = Date()
+    static let viewModel = ExplorerViewModel()
 
     static var previews: some View {
-        DayJournal(of: $date)
+        DayJournal()
+            .environmentObject(viewModel)
     }
 }

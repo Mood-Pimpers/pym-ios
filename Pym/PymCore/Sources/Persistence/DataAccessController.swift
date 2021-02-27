@@ -14,7 +14,7 @@ public struct DataAccessController {
         let context = DataAccessController.persistenceController.container.viewContext
         let model = MoodEntryModel(context: context)
         model.id = dto.id
-        model.date = dto.date
+        model.date = dto.timestamp
         model.feelings = dto.feelings
         model.rating = dto.rating
         dto.activities.forEach { activityName in

@@ -2,20 +2,20 @@ import PymCore
 import SwiftUI
 
 public struct ExplorerView: View {
-    @ObservedObject var calendarViewModel = CalendarViewModel()
+    @ObservedObject var viewModel = ExplorerViewModel()
 
     public init() {}
 
     public var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
-                let calendarBackgroundHeight: CGFloat = 425
+                let calendarBackgroundHeight: CGFloat = 460
 
                 CalendarBackgroundLayer()
                     .frame(height: calendarBackgroundHeight)
 
                 PymCalendarView()
-                    .environmentObject(calendarViewModel)
+                    .environmentObject(viewModel)
                     .padding(10)
 
                 VStack {
@@ -23,25 +23,12 @@ public struct ExplorerView: View {
                         .foregroundColor(.clear)
                         .frame(height: calendarBackgroundHeight)
 
-                    DayJournal(of: $calendarViewModel.selectedDate)
+                    ScrollView {
+                        DayJournal()
+                            .environmentObject(viewModel)
 
-                    ContentCard { alignment in
-                        alignment.top(.leading) {
-                            Text("top leading")
-                        }
-
-                        alignment.top {
-                            Text("top center")
-                        }
-
-                        Text("centered text")
-
-                        alignment.bottom {
-                            Text("The text is at the bottom")
-                        }
+                        Spacer()
                     }
-
-                    Spacer()
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
             }

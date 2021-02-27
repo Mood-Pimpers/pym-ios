@@ -3,7 +3,7 @@ import PymCore
 import SwiftUI
 
 struct PymCalendarView: UIViewRepresentable {
-    @EnvironmentObject var viewModel: CalendarViewModel
+    @EnvironmentObject var viewModel: ExplorerViewModel
 
     func makeUIView(context _: Context) -> UIView {
         let calendarView = CalendarView(initialContent: makeContent())
@@ -49,7 +49,7 @@ struct PymCalendarView: UIViewRepresentable {
 }
 
 struct CalendarView_Previews: PreviewProvider {
-    static let model = CalendarViewModel()
+    static let model = ExplorerViewModel()
 
     static var previews: some View {
         PymCalendarView()

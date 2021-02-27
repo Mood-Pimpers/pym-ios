@@ -2,7 +2,7 @@ import HorizonCalendar
 import PymCore
 import SwiftUI
 
-class CalendarViewModel: ObservableObject {
+class ExplorerViewModel: ObservableObject {
     @Published var selectedDay: Day? {
         didSet {
             if selectedDay != oldValue {
@@ -13,7 +13,7 @@ class CalendarViewModel: ObservableObject {
 
     @Published var selectedDate: Date?
 
-    let calendarStartDate = /* DataAccessController.shared.getEarliestEntry()?.date ?? Date() */ Date().adding(.month, value: -3)
+    let calendarStartDate = /* DataAccessController.shared.getEarliestEntry()?.date ?? Date() */ Date().adding(.month, value: -1)
     let calendarEndDate = Date()
 
     func getMoodRatingsFor(day: Date) -> [MoodRating] {
@@ -30,5 +30,13 @@ class CalendarViewModel: ObservableObject {
         default:
             return []
         }
+    }
+
+    func getIncidents(forDay day: Date) -> [IncidentContainer] {
+        var incidents: [IncidentContainer] = [] /* DataAccessController.shared.getEntries(fromDay: day) */
+        incidents.append(IncidentContainer(incident: MoodEntry(date: day, rating: .good, feelings: [.amazed, .clear], activities: ["University", "Work"])))
+
+        incidents.append(contentsOf: ExternalDataAccess.shared.getEvents(fromDay: day).map { IncidentContainer(incident: $0) })
+        return incidents
     }
 }
