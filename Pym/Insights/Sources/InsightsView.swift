@@ -2,11 +2,6 @@ import PymCore
 import SwiftUI
 import SwiftUICharts
 
-enum Periodicity: String, Equatable, CaseIterable {
-    case weekly = "Weekly"
-    case monthly = "Monthly"
-}
-
 public struct TrendIndicator: View {
     @Binding var percentage: Double
 
@@ -20,10 +15,10 @@ public struct TrendIndicator: View {
 }
 
 public struct InsightsView: View {
-    @State var periodicitySelection: Periodicity = .weekly
     @State var moodPercentage = 5.5
 
     private let leadingPadding: CGFloat = 20
+    private let titleTopPadding: CGFloat = 50
 
     public init() {}
 
@@ -37,17 +32,9 @@ public struct InsightsView: View {
                         .scaleEffect(1.5)
                         .offset(y: -100)
                     VStack {
-                        Picker("", selection: $periodicitySelection) {
-                            ForEach(Periodicity.allCases, id: \.rawValue) { value in
-                                Text(value.rawValue)
-                                    .tag(value)
-                            }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                        .frame(maxWidth: 200)
-
                         Title("Mood trend")
                             .padding(.leading, leadingPadding)
+                            .padding(.top, titleTopPadding)
 
                         HStack {
                             Text("Average Mood".uppercased())
@@ -77,11 +64,44 @@ public struct InsightsView: View {
                             Spacer()
                             Spacer()
                         }
+
+                        ContentCard { alignment in
+                            alignment.top(.leading) {
+                                Text("CURRENT WEEK")
+                                    .font(.system(size: 20, weight: Font.Weight.bold))
+                                    .padding([.top, .leading], 10)
+                            }
+
+                            alignment.bottom(.leading) {
+                                HStack(spacing: 15) {
+                                    Text("25. JAN")
+                                        .font(.system(size: 15, weight: Font.Weight.light))
+                                    Text("-")
+                                        .font(.system(size: 15, weight: Font.Weight.light))
+                                    Text("31. JAN")
+                                        .font(.system(size: 15, weight: Font.Weight.light))
+                                }
+                                .padding([.bottom, .leading], 10)
+                            }
+
+                            alignment.center(.trailing) {
+                                HStack {
+                                    Image.chevronLeft
+                                    Spacer()
+                                        .frame(maxWidth: 20)
+                                    Image.chevronRight
+                                }
+                                .padding([.trailing], 20)
+                            }
+                        }
+                        .neomorph()
+                        .padding([.leading, .trailing], 30)
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
             }
-            Text("Charts")
+            MoodCorrelationBarChart(positiveCorrelationData: ChartData(values: [("training", 5), ("weekend", 4), ("coffee", 3), ("socialize", 1)]), negativeCorrelationData: ChartData(values: [("driving", 1), ("tired", 2), ("fasting", 3), ("university", 4)]))
+            Spacer().frame(maxHeight: 100)
         }
     }
 }
