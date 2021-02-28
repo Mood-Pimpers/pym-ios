@@ -40,7 +40,7 @@ public extension ContentCard {
 // MARK: - Layout Extensionss
 
 public struct ContentCardAlignmentGuide {
-    func top<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
+    public func top<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
         GeometryReader { geometry in
             VStack {
                 contentBuilder()
@@ -50,14 +50,14 @@ public struct ContentCardAlignmentGuide {
         }
     }
 
-    func center<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
+    public func center<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
         GeometryReader { geometry in
             contentBuilder()
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: Alignment(horizontal: horizontalAlignment, vertical: .center))
         }
     }
 
-    func bottom<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
+    public func bottom<Content: View>(_ horizontalAlignment: HorizontalAlignment = .center, _ contentBuilder: @escaping () -> Content) -> some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()

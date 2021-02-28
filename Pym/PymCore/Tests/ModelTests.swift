@@ -15,7 +15,7 @@ class ModelTests: XCTestCase {
         let entry = MoodEntryModel(context: PersistenceController.preview.container.viewContext)
 
         entry.feelingsValue = 30
-        let expectedFeelings: [Feeling] = [.upset, .irritated, .clear, .curious]
+        let expectedFeelings: Set<Feeling> = [.upset, .irritated, .clear, .curious]
         let actualFeelings = entry.feelings
         XCTAssertEqual(expectedFeelings.count, actualFeelings.count)
         XCTAssertEqual(expectedFeelings.sorted(), actualFeelings.sorted())

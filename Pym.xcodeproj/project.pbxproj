@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F13CF7725E43F0500E81B36 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */; };
 		2F18B60925DFB85300CA050C /* FakeHealthKitDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D62625DFB37700B29B28 /* FakeHealthKitDataSourceTests.swift */; };
 		2F18B61425DFB85F00CA050C /* DataAccessControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B6D7925DEFE6F00E59436 /* DataAccessControllerTests.swift */; };
 		2F18B62925DFB86500CA050C /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4653025DDA63400D60BAC /* ModelTests.swift */; };
+		2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */; };
 		2F48D63C25DFB42300B29B28 /* FakeHealthKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */; };
 		2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */; };
 		2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41637325DEF3CA0009D45D /* ExternalEvent.swift */; };
@@ -21,12 +23,28 @@
 		2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A03E25DDC12400B0A978 /* MoodEntry.swift */; };
 		2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A06025DDC2D700B0A978 /* DataAccessController.swift */; };
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
+		2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */; };
+		2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */; };
+		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
 		2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */; };
 		2FA4BB8425EBA7A900168B7D /* MoodCorrelationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */; };
+		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
+		2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */; };
+		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
+		2FDF8B0E25EAAE7B00F75C57 /* Timeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B0425EAADDF00F75C57 /* Timeable.swift */; };
+		2FDF8B2925EAB63D00F75C57 /* IncidentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */; };
+		2FDF8B4425EABA3B00F75C57 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */; };
+		2FDF8B7B25EAC17800F75C57 /* MoodEntryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */; };
+		2FDF8B8425EAC17B00F75C57 /* ContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B6925EAC13600F75C57 /* ContentCard.swift */; };
+		2FDF8B9F25EADED200F75C57 /* ExternalDataSourceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8B8D25EADE8800F75C57 /* ExternalDataSourceIdentifier.swift */; };
+		2FDF8BCB25EAE00500F75C57 /* HealthKitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8BB925EADFD400F75C57 /* HealthKitCard.swift */; };
+		2FDF8BE625EAE53400F75C57 /* HealthKitActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF8BD425EAE48200F75C57 /* HealthKitActivity.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
+		2FFB249325EBADA300010CF5 /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB248125EBAD8300010CF5 /* MoodRating.swift */; };
+		2FFB24B625EBAE6200010CF5 /* HealthKitActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB24A425EBAE4B00010CF5 /* HealthKitActivity.swift */; };
 		B10DD27025E5663C00811739 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */; };
 		B10DD29E25E56B6500811739 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10DD28425E56B1500811739 /* ViewModelFactory.swift */; };
 		B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10E7A96259C973D00337DDC /* PersistenceController.swift */; };
@@ -444,6 +462,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBackgroundLayer.swift; sourceTree = "<group>"; };
 		2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSource.swift; sourceTree = "<group>"; };
 		2F41637325DEF3CA0009D45D /* ExternalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEvent.swift; sourceTree = "<group>"; };
 		2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataAccess.swift; sourceTree = "<group>"; };
@@ -457,13 +477,28 @@
 		2F72A03E25DDC12400B0A978 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		2F72A06025DDC2D700B0A978 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDayLabel.swift; sourceTree = "<group>"; };
+		2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMonthLabel.swift; sourceTree = "<group>"; };
+		2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayJournal.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
 		2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationService.swift; sourceTree = "<group>"; };
 		2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationServiceTests.swift; sourceTree = "<group>"; };
+		2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
+		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
+		2FDF8B0425EAADDF00F75C57 /* Timeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeable.swift; sourceTree = "<group>"; };
+		2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentContainer.swift; sourceTree = "<group>"; };
+		2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
+		2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryCard.swift; sourceTree = "<group>"; };
+		2FDF8B6925EAC13600F75C57 /* ContentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCard.swift; sourceTree = "<group>"; };
+		2FDF8B8D25EADE8800F75C57 /* ExternalDataSourceIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDataSourceIdentifier.swift; sourceTree = "<group>"; };
+		2FDF8BB925EADFD400F75C57 /* HealthKitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitCard.swift; sourceTree = "<group>"; };
+		2FDF8BD425EAE48200F75C57 /* HealthKitActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitActivity.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		2FF4654625DDA67A00D60BAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		2FFB248125EBAD8300010CF5 /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
+		2FFB24A425EBAE4B00010CF5 /* HealthKitActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitActivity.swift; sourceTree = "<group>"; };
 		B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		B10DD28425E56B1500811739 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		B10E7A96259C973D00337DDC /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -564,6 +599,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */,
 				B16D44B9259C841000D507BE /* PymCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +722,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F13CF8025E43F0C00E81B36 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2F7C75EB25E961E7003A2AE7 /* Extensions */,
+				2F13CF6D25E43EFA00E81B36 /* CalendarView.swift */,
+				2F9AEF4525E5ADD1006BB731 /* UIDayLabel.swift */,
+				2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		2F2C032A25DC3F4E00C35AA1 /* Dtos */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,9 +749,10 @@
 			isa = PBXGroup;
 			children = (
 				2F48D5AD25DFA8F100B29B28 /* HealthKit */,
-				2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */,
-				2F41637325DEF3CA0009D45D /* ExternalEvent.swift */,
 				2F48D5A125DFA87000B29B28 /* ExternalDataAccess.swift */,
+				2F41636725DEF3BA0009D45D /* ExternalDataSource.swift */,
+				2FDF8B8D25EADE8800F75C57 /* ExternalDataSourceIdentifier.swift */,
+				2F41637325DEF3CA0009D45D /* ExternalEvent.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -714,6 +762,7 @@
 			children = (
 				2F48D5AE25DFA8FF00B29B28 /* FakeHealthKitDataSource.swift */,
 				B10DD26F25E5663C00811739 /* HealthKitAssistant.swift */,
+				2FDF8BD425EAE48200F75C57 /* HealthKitActivity.swift */,
 			);
 			path = HealthKit;
 			sourceTree = "<group>";
@@ -732,6 +781,52 @@
 				2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */,
 			);
 			path = Correlation;
+			sourceTree = "<group>";
+		};
+		2F7C75EB25E961E7003A2AE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F9AEFCE25E5B4A2006BB731 /* DayJournal */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B5D25EAC08700F75C57 /* ContentCards */,
+				2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */,
+				2FDF8B1F25EAB51E00F75C57 /* IncidentContainer.swift */,
+				2FDF8B3A25EABA2B00F75C57 /* IncidentView.swift */,
+			);
+			path = DayJournal;
+			sourceTree = "<group>";
+		};
+		2FDF8B0325EAADCD00F75C57 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B0425EAADDF00F75C57 /* Timeable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2FDF8B5D25EAC08700F75C57 /* ContentCards */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B5E25EAC0A100F75C57 /* MoodEntryCard.swift */,
+				2FDF8BB925EADFD400F75C57 /* HealthKitCard.swift */,
+			);
+			path = ContentCards;
+			sourceTree = "<group>";
+		};
+		2FFB248025EBAD6800010CF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF8B6925EAC13600F75C57 /* ContentCard.swift */,
+				2FFB24A425EBAE4B00010CF5 /* HealthKitActivity.swift */,
+				2FFB248125EBAD8300010CF5 /* MoodRating.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B10DD28225E56AEC00811739 /* ViewModels */ = {
@@ -809,7 +904,12 @@
 		B16D42C8259C769E00D507BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2FFB248025EBAD6800010CF5 /* Extensions */,
+				2F9AEFCE25E5B4A2006BB731 /* DayJournal */,
+				2F13CF8025E43F0C00E81B36 /* Calendar */,
+				2F2725B125E7E48E00947CEC /* CalendarBackgroundLayer.swift */,
 				B16D42E0259C76D700D507BE /* ExplorerView.swift */,
+				2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -959,6 +1059,7 @@
 				2F41636625DEF3AB0009D45D /* Data Sources */,
 				F5AC0DE525A60397007ACEF5 /* Components */,
 				B10E7A95259C972800337DDC /* Persistence */,
+				2FDF8B0325EAADCD00F75C57 /* Protocols */,
 				B16D44CE259C85D700D507BE /* Generated */,
 			);
 			path = Sources;
@@ -1273,6 +1374,9 @@
 				B16D44BC259C841000D507BE /* PBXTargetDependency */,
 			);
 			name = Explorer;
+			packageProductDependencies = (
+				2FBC269125E4460300F2D2BE /* HorizonCalendar */,
+			);
 			productName = Explorer;
 			productReference = B16D42A0259C769500D507BE /* Explorer.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1635,6 +1739,7 @@
 			packageReferences = (
 				B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				F50E358825A21909001D3A8E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 				B1DDFE6625DFBBD90075546F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = B1FB76FE259109A30010F791 /* Products */;
@@ -1859,7 +1964,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F13CF7725E43F0500E81B36 /* CalendarView.swift in Sources */,
+				2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */,
+				2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */,
+				2FDF8B8425EAC17B00F75C57 /* ContentCard.swift in Sources */,
+				2FDF8B7B25EAC17800F75C57 /* MoodEntryCard.swift in Sources */,
+				2FFB24B625EBAE6200010CF5 /* HealthKitActivity.swift in Sources */,
+				2F9AEF4F25E5ADE7006BB731 /* UIDayLabel.swift in Sources */,
+				2FDF8B4425EABA3B00F75C57 /* IncidentView.swift in Sources */,
+				2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */,
+				2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */,
+				2FDF8BCB25EAE00500F75C57 /* HealthKitCard.swift in Sources */,
+				2FDF8B2925EAB63D00F75C57 /* IncidentContainer.swift in Sources */,
 				B16D42E1259C76D700D507BE /* ExplorerView.swift in Sources */,
+				2F2725B225E7E48E00947CEC /* CalendarBackgroundLayer.swift in Sources */,
+				2FFB249325EBADA300010CF5 /* MoodRating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1924,6 +2043,7 @@
 				B16D44D1259C85F700D507BE /* Strings.generated.swift in Sources */,
 				2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */,
 				F5CF8D8725E54E3E00DFBD07 /* Columns.swift in Sources */,
+				2FDF8B9F25EADED200F75C57 /* ExternalDataSourceIdentifier.swift in Sources */,
 				F55A2B8525E67EDD007BA1C8 /* Activity.swift in Sources */,
 				2F60811325E8469400E142CC /* ContentCard.swift in Sources */,
 				2F729F8925DDADA300B0A978 /* CoreData.generated.swift in Sources */,
@@ -1931,8 +2051,10 @@
 				F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */,
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
 				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
+				2FDF8B0E25EAAE7B00F75C57 /* Timeable.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
 				2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */,
+				2FDF8BE625EAE53400F75C57 /* HealthKitActivity.swift in Sources */,
 				F52943AA25E93B480023893C /* Quote.swift in Sources */,
 				B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */,
 				F553D3E525E8EEBC008E93F6 /* EnableTimeView.swift in Sources */,
@@ -2195,10 +2317,11 @@
 		B16D425A259C75F200D507BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2223,10 +2346,11 @@
 		B16D425B259C75F200D507BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2253,7 +2377,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2274,7 +2398,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2294,10 +2418,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2324,10 +2449,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2354,7 +2480,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2375,7 +2501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2395,10 +2521,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2425,10 +2552,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2455,7 +2583,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2476,7 +2604,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2619,7 +2747,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DEVELOPMENT_TEAM = U867RHRN56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2643,7 +2771,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pym/Pym.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pym/App/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = ADEA59CAEV;
+				DEVELOPMENT_TEAM = U867RHRN56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2661,11 +2789,11 @@
 		B1FB773D25910C060010F791 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2689,11 +2817,11 @@
 		B1FB773E25910C060010F791 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2718,10 +2846,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2748,10 +2877,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2778,7 +2908,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2799,7 +2929,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2819,10 +2949,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2849,10 +2980,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2879,7 +3011,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2900,7 +3032,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2920,10 +3052,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2950,10 +3083,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2980,6 +3114,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3000,6 +3135,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3019,10 +3155,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3049,10 +3186,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3079,7 +3217,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3100,7 +3238,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U867RHRN56;
 				INFOPLIST_FILE = Pym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3275,6 +3413,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.2;
+			};
+		};
 		B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -3302,6 +3448,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2FBC269125E4460300F2D2BE /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FBC269025E4460300F2D2BE /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
 		B16D448E259C810000D507BE /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B16D448D259C810000D507BE /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;

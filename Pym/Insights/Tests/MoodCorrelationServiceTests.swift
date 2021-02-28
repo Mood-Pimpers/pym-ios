@@ -27,17 +27,17 @@ class MoodCorrelationServiceTests: XCTestCase {
 
         let events: [ExternalEvent] = [
             // day1 activities
-            ExternalEvent(title: activity1, at: day1.adding(.hour, value: 9), with: "content"),
-            ExternalEvent(title: activity2, at: day1.adding(.hour, value: 15), with: "content"),
+            ExternalEvent(title: activity1, at: day1.adding(.hour, value: 9), from: .healthKit, with: "content"),
+            ExternalEvent(title: activity2, at: day1.adding(.hour, value: 15), from: .healthKit, with: "content"),
 
             // day2 activities
-            ExternalEvent(title: activity3, at: day2.adding(.hour, value: 11).adding(.minute, value: 15), with: "content"),
-            ExternalEvent(title: activity4, at: day2.adding(.hour, value: 16), with: "content"),
-            ExternalEvent(title: activity3, at: day2.adding(.hour, value: 20), with: "content"),
+            ExternalEvent(title: activity3, at: day2.adding(.hour, value: 11).adding(.minute, value: 15), from: .healthKit, with: "content"),
+            ExternalEvent(title: activity4, at: day2.adding(.hour, value: 16), from: .healthKit, with: "content"),
+            ExternalEvent(title: activity3, at: day2.adding(.hour, value: 20), from: .healthKit, with: "content"),
 
             // day3 activities
-            ExternalEvent(title: activity5, at: day3.adding(.hour, value: 5).adding(.second, value: 39), with: "content"),
-            ExternalEvent(title: activity5, at: day3.adding(.hour, value: 23).adding(.second, value: 17), with: "content")
+            ExternalEvent(title: activity5, at: day3.adding(.hour, value: 5).adding(.second, value: 39), from: .healthKit, with: "content"),
+            ExternalEvent(title: activity5, at: day3.adding(.hour, value: 23).adding(.second, value: 17), from: .healthKit, with: "content")
         ]
 
         let expectedActivity3Correlation = 0.33333

@@ -16,10 +16,9 @@ struct MoodCorrelationService {
         }
 
         flattenedEntries.append(contentsOf: events.compactMap { event -> (Activity, MoodRating)? in
-            // TODO: rename moodEntry.date into moodEntry.timestamp
             let entryTimeDistances = moodEntries
-                .filter { $0.date.beginning(of: .day) == event.timestamp.beginning(of: .day) }
-                .map { ($0, abs($0.date.distance(to: event.timestamp))) }
+                .filter { $0.timestamp.beginning(of: .day) == event.timestamp.beginning(of: .day) }
+                .map { ($0, abs($0.timestamp.distance(to: event.timestamp))) }
                 .sorted { $0.1 < $1.1 }
 
             if let closedEntry = entryTimeDistances.first {

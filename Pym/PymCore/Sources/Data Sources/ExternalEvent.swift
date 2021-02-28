@@ -1,16 +1,17 @@
 import Foundation
 
-public struct ExternalEvent: Identifiable, Equatable {
+public struct ExternalEvent: Equatable, Timeable {
     public let id: UUID
     public let title: String
     public let timestamp: Date
+    public let source: ExternalDataSourceIdentifier
     public let content: Any
 
-    // todo: remove constructor when merging with main and adapt code in InsightsServices
-    public init(title: String, at timestamp: Date, with content: Any) {
+    public init(title: String, at timestamp: Date, from source: ExternalDataSourceIdentifier, with content: Any) {
         id = UUID()
         self.title = title
         self.timestamp = timestamp
+        self.source = source
         self.content = content
     }
 
