@@ -2,7 +2,6 @@ import PymCore
 import SwiftUI
 import SwiftUICharts
 
-// swiftlint:disable multiple_closures_with_trailing_closure
 public struct TrendIndicator: View {
     @Binding var percentage: Double
 
@@ -107,7 +106,7 @@ public struct InsightsView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
             }
-            MoodCorrelationBarChart(positiveCorrelationData: ChartData(values: [("training", 5), ("weekend", 4), ("coffee", 3), ("socialize", 1)]), negativeCorrelationData: ChartData(values: [("driving", 1), ("tired", 2), ("fasting", 3), ("university", 4)]))
+            MoodCorrelationBarChart(positiveCorrelationData: $viewModel.positiveCorrelationValues, negativeCorrelationData: $viewModel.negativeCorrelationValues)
             Spacer().frame(maxHeight: 120)
         }
         .transition(.opacity)

@@ -20,17 +20,23 @@ struct MoodCorrelationBarChart: View {
         dropShadowColor: Color.gray
     )
 
-    @State var positiveCorrelationData: ChartData
-    @State var negativeCorrelationData: ChartData
+    @Binding var positiveCorrelationData: ChartData
+    @Binding var negativeCorrelationData: ChartData
 
     private let maxHeight: CGFloat = 200
 
     public var body: some View {
         if !positiveCorrelationData.onlyPoints().isEmpty || !negativeCorrelationData.onlyPoints().isEmpty {
             HStack {
-                BarChartView(data: positiveCorrelationData, title: "", style: positiveChartStyle)
-                Divider()
-                BarChartView(data: negativeCorrelationData, title: "", style: negativeChartStyle)
+                if !positiveCorrelationData.onlyPoints().isEmpty {
+                    BarChartView(data: positiveCorrelationData, title: "", style: positiveChartStyle)
+                }
+                if !positiveCorrelationData.onlyPoints().isEmpty, !negativeCorrelationData.onlyPoints().isEmpty {
+                    Divider()
+                }
+                if !negativeCorrelationData.onlyPoints().isEmpty {
+                    BarChartView(data: negativeCorrelationData, title: "", style: negativeChartStyle)
+                }
             }
             .frame(maxHeight: maxHeight)
         } else {
@@ -45,9 +51,10 @@ struct MoodCorrelationBarChart: View {
 }
 
 struct MoodCorrelationBarChart_Previews: PreviewProvider {
-    static var previews: some View {
-        MoodCorrelationBarChart(positiveCorrelationData: ChartData(values: [("training", 5), ("weekend", 4), ("coffee", 3), ("socialize", 1)]), negativeCorrelationData: ChartData(values: [("driving", 1), ("tired", 2), ("fasting", 3), ("university", 4)]))
+    @State static var positiveCorrelationData = ChartData(values: [("training", 5), ("weekend", 4), ("coffee", 3), ("socialize", 1)])
+    @State static var negativeCorrelationData = ChartData(values: [("driving", 1), ("tired", 2), ("fasting", 3), ("university", 4)])
 
-        MoodCorrelationBarChart(positiveCorrelationData: ChartData(values: [(String, Double)]()), negativeCorrelationData: ChartData(values: [(String, Double)]()))
+    static var previews: some View {
+        MoodCorrelationBarChart(positiveCorrelationData: $positiveCorrelationData, negativeCorrelationData: $negativeCorrelationData)
     }
 }

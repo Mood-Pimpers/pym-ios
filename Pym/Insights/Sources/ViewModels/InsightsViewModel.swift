@@ -1,10 +1,13 @@
 import PymCore
 import SwiftUI
+import SwiftUICharts
 
 class InsightsViewModel: ObservableObject {
     private let dateFormatter = DateFormatter()
     private let calendar = Calendar.current
     private let dataController = DataAccessController.shared
+    private let correlationService = MoodCorrelationService.shared
+    private let externalDataAccess = ExternalDataAccess.shared
     private var currentDate = Date()
     private var startWeekDate = Date()
     private var endWeekDate = Date()
@@ -16,6 +19,8 @@ class InsightsViewModel: ObservableObject {
     @Published var lastWeekMoodEntries = [Double]()
     @Published var currentWeekMoodEntries = [Double]()
     @Published var moodPercentage = 5.5
+    @Published var positiveCorrelationValues = ChartData(values: [(String, Double)]())
+    @Published var negativeCorrelationValues = ChartData(values: [(String, Double)]())
 
     init() {
         dateFormatter.dateFormat = "dd. MMM"
@@ -43,6 +48,10 @@ class InsightsViewModel: ObservableObject {
         lastWeekMoodEntries = moodValues(from: startWeekDate.lastWeek(), until: endWeekDate.lastWeek())
         currentWeekMoodEntries = moodValues(from: startWeekDate, until: endWeekDate)
         moodPercentage = calculateMoodTrend(for: lastWeekMoodEntries, and: currentWeekMoodEntries)
+
+        let correlationValues = correlationService.calculateCorrelations(of: dataController.getEntries(from: startWeekDate, until: endWeekDate), with: externalDataAccess.getEvents(from: startWeekDate, until: endWeekDate))
+        positiveCorrelationValues = ChartData(values: correlationValues.filter { $0.value >= 0 })
+        negativeCorrelationValues = ChartData(values: correlationValues.filter { $0.value < 0 })
 
         if calendar.isDate(currentDate, inSameDayAs: Date()) {
             nextWeekDisabled = true
