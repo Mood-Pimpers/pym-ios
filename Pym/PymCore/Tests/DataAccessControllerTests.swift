@@ -4,12 +4,12 @@ import XCTest
 extension MoodEntry: Equatable {
     public static func == (lhs: MoodEntry, rhs: MoodEntry) -> Bool {
         lhs.id == rhs.id
-            && lhs.date.era == rhs.date.era
-            && lhs.date.year == rhs.date.year
-            && lhs.date.month == rhs.date.month
-            && lhs.date.day == rhs.date.day
-            && lhs.date.hour == rhs.date.hour
-            && lhs.date.minute == rhs.date.minute
+            && lhs.timestamp.era == rhs.timestamp.era
+            && lhs.timestamp.year == rhs.timestamp.year
+            && lhs.timestamp.month == rhs.timestamp.month
+            && lhs.timestamp.day == rhs.timestamp.day
+            && lhs.timestamp.hour == rhs.timestamp.hour
+            && lhs.timestamp.minute == rhs.timestamp.minute
             && lhs.activities == rhs.activities
             && lhs.feelings == rhs.feelings
             && lhs.rating == rhs.rating
@@ -21,7 +21,9 @@ class DataAccessControllerTests: XCTestCase {
         DataAccessController.persistenceController = PersistenceController.preview
     }
 
-    override func tearDownWithError() throws {}
+    override func tearDownWithError() throws {
+        DataAccessController.shared.deleteAllEntries()
+    }
 
     func testStoreEntryTest() throws {
         let exptectedEntry = MoodEntry(date: Date(), rating: .bad, feelings: [.angry, .confused], activities: ["tennis", "programming", "work"])
@@ -33,15 +35,10 @@ class DataAccessControllerTests: XCTestCase {
         let actualEntry = actualEntries.first
         XCTAssertNotNil(actualEntry)
         XCTAssertEqual(exptectedEntry.activities.sorted(), actualEntry?.activities.sorted())
-        XCTAssertEqual(exptectedEntry.date, actualEntry?.date)
+        XCTAssertEqual(exptectedEntry.timestamp, actualEntry?.timestamp)
         XCTAssertEqual(exptectedEntry.feelings.sorted(), actualEntry?.feelings.sorted())
         XCTAssertEqual(exptectedEntry.id, actualEntry?.id)
         XCTAssertEqual(exptectedEntry.rating, actualEntry?.rating)
-    }
-
-    func testActivitiesSeed() throws {
-        let activities = DataAccessController.shared.getActivities()
-        XCTAssertLessThan(0, activities.count)
     }
 
     func testGetEarliestEntryDate() throws {
@@ -56,7 +53,7 @@ class DataAccessControllerTests: XCTestCase {
         let earliestEntry = DataAccessController.shared.getEarliestEntry()
         XCTAssertNotNil(earliestEntry)
 
-        let actualEarliestDate = earliestEntry!.date
+        let actualEarliestDate = earliestEntry!.timestamp
         XCTAssertEqual(expectedEarliestDate.era, actualEarliestDate.era)
         XCTAssertEqual(expectedEarliestDate.year, actualEarliestDate.year)
         XCTAssertEqual(expectedEarliestDate.month, actualEarliestDate.month)

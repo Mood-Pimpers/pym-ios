@@ -27,6 +27,8 @@
 		2F9AEF6A25E5AE24006BB731 /* UIMonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */; };
 		2F9AEFF925E5B5D2006BB731 /* DayJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
+		2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */; };
+		2FA4BB8425EBA7A900168B7D /* MoodCorrelationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */; };
 		2FBC269225E4460300F2D2BE /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBC269125E4460300F2D2BE /* HorizonCalendar */; };
 		2FBC26A425E44FB000F2D2BE /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */; };
 		2FD3B84425E451D40042A8DB /* HorizonCalendarDayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */; };
@@ -109,7 +111,6 @@
 		B1FB789B259149E00010F791 /* PymCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; };
 		B1FB789C259149E00010F791 /* PymCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB773325910C060010F791 /* PymCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB78F025914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
-		B1FB78F725914A230010F791 /* InsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB78F625914A230010F791 /* InsightsTests.swift */; };
 		B1FB78FC25914A230010F791 /* Insights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; };
 		B1FB78FD25914A230010F791 /* Insights.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1FB78E725914A230010F791 /* Insights.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1FB791725914A490010F791 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FB791625914A490010F791 /* InsightsView.swift */; };
@@ -480,6 +481,8 @@
 		2F9AEF6025E5AE07006BB731 /* UIMonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMonthLabel.swift; sourceTree = "<group>"; };
 		2F9AEFCF25E5B4AF006BB731 /* DayJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayJournal.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
+		2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationService.swift; sourceTree = "<group>"; };
+		2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationServiceTests.swift; sourceTree = "<group>"; };
 		2FBC26A325E44FB000F2D2BE /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		2FD3B84325E451D40042A8DB /* HorizonCalendarDayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonCalendarDayExtensions.swift; sourceTree = "<group>"; };
 		2FDF8B0425EAADDF00F75C57 /* Timeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeable.swift; sourceTree = "<group>"; };
@@ -545,7 +548,6 @@
 		B1FB785E259149540010F791 /* CheckInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTests.swift; sourceTree = "<group>"; };
 		B1FB78E725914A230010F791 /* Insights.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Insights.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FB78EF25914A230010F791 /* InsightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1FB78F625914A230010F791 /* InsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsTests.swift; sourceTree = "<group>"; };
 		B1FB791625914A490010F791 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
 		B1FB792025914A5F0010F791 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		F51B334A25A5CF2E00C08F21 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
@@ -771,6 +773,14 @@
 				2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */,
 			);
 			path = SwifterSwift;
+			sourceTree = "<group>";
+		};
+		2FA4BB7025EB985A00168B7D /* Correlation */ = {
+			isa = PBXGroup;
+			children = (
+				2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */,
+			);
+			path = Correlation;
 			sourceTree = "<group>";
 		};
 		2F7C75EB25E961E7003A2AE7 /* Extensions */ = {
@@ -1155,6 +1165,7 @@
 		B1FB790C25914A2B0010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2FA4BB7025EB985A00168B7D /* Correlation */,
 				B1FB791625914A490010F791 /* InsightsView.swift */,
 			);
 			path = Sources;
@@ -1163,7 +1174,7 @@
 		B1FB790D25914A320010F791 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B1FB78F625914A230010F791 /* InsightsTests.swift */,
+				2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -2123,6 +2134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB791725914A490010F791 /* InsightsView.swift in Sources */,
+				2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2130,7 +2142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FB78F725914A230010F791 /* InsightsTests.swift in Sources */,
+				2FA4BB8425EBA7A900168B7D /* MoodCorrelationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,8 @@ struct MoodEntryCard: View {
                         ForEach(
                             Array(moodEntry.feelings)
                                 .sorted { $0.description < $1.description },
-                            id: \.self) {
+                            id: \.self
+                        ) {
                             Text($0.description)
                                 .contentCardText()
                         }
