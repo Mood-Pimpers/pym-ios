@@ -21,9 +21,9 @@ struct DayLabel: CalendarItemViewRepresentable {
             label.font = UIFont.systemFont(ofSize: 18, weight: invariantViewProperties.isSelected ? .bold : .regular)
 
             if meanRating < 3 {
-                label.backgroundColor = UIColor(.chartNegativeColor)
+                label.backgroundColor = UIColor(.redGradientEnd)
             } else {
-                label.backgroundColor = UIColor(.chartPositiveColor)
+                label.backgroundColor = UIColor(.greenGradientEnd)
             }
         } else {
             // nothing tracked on this day

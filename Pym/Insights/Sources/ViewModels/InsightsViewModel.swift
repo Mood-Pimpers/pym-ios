@@ -19,7 +19,7 @@ class InsightsViewModel: ObservableObject {
 
     init() {
         dateFormatter.dateFormat = "dd. MMM"
-        currentDate = currentDate.startOfDay
+        currentDate = currentDate.beginning(of: .day)!
         calculateDates()
     }
 
@@ -35,8 +35,8 @@ class InsightsViewModel: ObservableObject {
     }
 
     func calculateDates() {
-        startWeekDate = currentDate.adding(.day, value: -(currentDate.weekday - 1))
-        endWeekDate = currentDate.adding(.day, value: 7 - currentDate.weekday)
+        startWeekDate = currentDate.beginning(of: .weekOfMonth)!
+        endWeekDate = currentDate.end(of: .weekOfMonth)!
         formattedStartWeekDate = dateFormatter.string(from: startWeekDate)
         formattedEndWeekDate = dateFormatter.string(from: endWeekDate)
 
@@ -64,11 +64,10 @@ class InsightsViewModel: ObservableObject {
     }
 
     private func moodValues(from: Date, until: Date) -> [Double] {
-        Dictionary(grouping: dataController.getEntries(from: from, until: until)) { $0.date.startOfDay }.flatMap { (_: Date, entries: [MoodEntry]) -> [Double] in
+        Dictionary(grouping: dataController.getEntries(from: from, until: until)) { $0.timestamp.beginning(of: .day)! }.flatMap { (_: Date, entries: [MoodEntry]) -> [Double] in
             // if more than two entries per day exist -> calculate the average for the last entries
             if entries.count > 2 {
-                return [Double(entries[0].rating.rawValue), entries.dropFirst().map { (entry: MoodEntry) -> Double in
-                    Double(entry.rating.rawValue)
+                return [Double(entries[0].rating.rawValue), entries.dropFirst().map { entry in Double(entry.rating.rawValue)
                 }.average()]
             }
 

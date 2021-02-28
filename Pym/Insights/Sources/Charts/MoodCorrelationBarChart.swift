@@ -26,7 +26,7 @@ struct MoodCorrelationBarChart: View {
     private let maxHeight: CGFloat = 200
 
     public var body: some View {
-        if !positiveCorrelationData.onlyPoints().isEmpty, !negativeCorrelationData.onlyPoints().isEmpty {
+        if !positiveCorrelationData.onlyPoints().isEmpty || !negativeCorrelationData.onlyPoints().isEmpty {
             HStack {
                 BarChartView(data: positiveCorrelationData, title: "", style: positiveChartStyle)
                 Divider()

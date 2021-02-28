@@ -74,34 +74,27 @@ public struct InsightsView: View {
                         ContentCard { alignment in
                             alignment.top(.leading) {
                                 Text(viewModel.dateTitle)
-                                    .font(.system(size: 20, weight: Font.Weight.bold))
-                                    .padding([.top, .leading], 10)
+                                    .contentCardTitle()
                             }
 
                             alignment.bottom(.leading) {
                                 HStack(spacing: 10) {
                                     Text(viewModel.formattedStartWeekDate)
-                                        .font(.system(size: 15, weight: Font.Weight.light))
                                     Text("-")
-                                        .font(.system(size: 15, weight: Font.Weight.light))
                                     Text(viewModel.formattedEndWeekDate)
-                                        .font(.system(size: 15, weight: Font.Weight.light))
                                 }
-                                .padding([.bottom, .leading], 10)
+                                .font(.system(size: 15, weight: Font.Weight.light))
+                                .contentCardSubtitle()
                             }
 
                             alignment.center(.trailing) {
                                 HStack {
-                                    Button(action: {
-                                        viewModel.previousWeek()
-                                    }) {
+                                    Button(action: viewModel.previousWeek) {
                                         Image.chevronLeft
                                     }
                                     Spacer()
                                         .frame(maxWidth: 20)
-                                    Button(action: {
-                                        viewModel.nextWeek()
-                                    }) {
+                                    Button(action: viewModel.nextWeek) {
                                         Image.chevronRight
                                     }.disabled(viewModel.nextWeekDisabled)
                                 }

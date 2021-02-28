@@ -24,6 +24,13 @@ enum Weekday: Int, CaseIterable {
     }
 }
 
+extension Image {
+    func chartIcon() -> some View {
+        resizable()
+            .frame(width: 15.0, height: 15.0)
+    }
+}
+
 struct MoodTrendLineChart: View {
     private let lastGradientColors = GradientColor(start: Color.grayGradientStart, end: Color.grayGradientEnd)
     private let currentGradientColors = GradientColor(start: Color.blackGradientStart, end: Color.blackGradientEnd)
@@ -37,20 +44,15 @@ struct MoodTrendLineChart: View {
                 HStack(alignment: .top) {
                     VStack {
                         Image.moodGreat
-                            .resizable()
-                            .frame(width: 15.0, height: 15.0)
+                            .chartIcon()
                         Image.moodGood
-                            .resizable()
-                            .frame(width: 15.0, height: 15.0)
+                            .chartIcon()
                         Image.moodModerate
-                            .resizable()
-                            .frame(width: 15.0, height: 15.0)
+                            .chartIcon()
                         Image.moodPoor
-                            .resizable()
-                            .frame(width: 15.0, height: 15.0)
+                            .chartIcon()
                         Image.moodBad
-                            .resizable()
-                            .frame(width: 15.0, height: 15.0)
+                            .chartIcon()
                     }
                     .padding(.top, 60)
 
