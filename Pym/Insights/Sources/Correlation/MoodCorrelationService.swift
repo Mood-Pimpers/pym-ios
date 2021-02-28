@@ -1,0 +1,42 @@
+import PymCore
+
+struct MoodCorrelationService {
+    static let shared = MoodCorrelationService()
+
+    private init() {}
+
+    /**
+      Calculates the correlation between MoodEntries and ExternalEvents.
+
+      - Returns: A dictionary containing a correlation value per activity. The correlation values are within the range [-1;1].
+     */
+    func calculateCorrelations(ofEntries moodEntries: [MoodEntry], withEvents events: [ExternalEvent]) -> [Activity: Double] {
+        var flattenedEntries = moodEntries.flatMap { entry in
+            entry.activities.map { activity in (activity, entry.rating) }
+        }
+
+        flattenedEntries.append(contentsOf: events.compactMap { event -> (Activity, MoodRating)? in
+            // TODO: rename moodEntry.date into moodEntry.timestamp
+            let entryTimeDistances = moodEntries
+                .filter { $0.date.beginning(of: .day) == event.timestamp.beginning(of: .day) }
+                .map { ($0, $0.date.distance(to: event.timestamp)) }
+                .sorted { $0.1 < $1.1 }
+
+            if let closedEntry = entryTimeDistances.first {
+                return (event.title, closedEntry.0.rating)
+            } else {
+                // no entry was tracked on the same date
+                return nil
+            }
+        })
+
+        return Dictionary(grouping: flattenedEntries) { $0.0 }
+            .mapValues { ratings -> Double in
+                let ratingsSum = ratings
+                    .map { ($0.1.rawValue - 3) / 2 } // linearize mood values to range [-1;1]
+                    .reduce(0, +)
+
+                return Double(ratingsSum) / Double(ratings.count)
+            }
+    }
+}

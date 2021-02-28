@@ -22,6 +22,8 @@
 		2F72A06125DDC2D700B0A978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72A06025DDC2D700B0A978 /* DataAccessController.swift */; };
 		2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */; };
 		2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */; };
+		2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */; };
+		2FA4BB8425EBA7A900168B7D /* MoodCorrelationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */; };
 		2FF0A3A025E1130B00234F4E /* MoodRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F25E1130B00234F4E /* MoodRating.swift */; };
 		2FF0A3AA25E1131B00234F4E /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3A925E1131B00234F4E /* Feeling.swift */; };
 		2FF4654725DDA67A00D60BAC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF4654625DDA67A00D60BAC /* CoreData.framework */; };
@@ -457,6 +459,8 @@
 		2F72A06025DDC2D700B0A978 /* DataAccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
 		2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		2FA2036C25E114AA00EC0925 /* MoodEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryModel.swift; sourceTree = "<group>"; };
+		2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationService.swift; sourceTree = "<group>"; };
+		2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationServiceTests.swift; sourceTree = "<group>"; };
 		2FF0A39F25E1130B00234F4E /* MoodRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRating.swift; sourceTree = "<group>"; };
 		2FF0A3A925E1131B00234F4E /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		2FF4653025DDA63400D60BAC /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -722,6 +726,14 @@
 				2F7C1E9B25DFC9B700A7C857 /* DateExtensions.swift */,
 			);
 			path = SwifterSwift;
+			sourceTree = "<group>";
+		};
+		2FA4BB7025EB985A00168B7D /* Correlation */ = {
+			isa = PBXGroup;
+			children = (
+				2FA4BB7125EB988100168B7D /* MoodCorrelationService.swift */,
+			);
+			path = Correlation;
 			sourceTree = "<group>";
 		};
 		B10DD28225E56AEC00811739 /* ViewModels */ = {
@@ -1054,6 +1066,7 @@
 		B1FB790C25914A2B0010F791 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2FA4BB7025EB985A00168B7D /* Correlation */,
 				B1FB791625914A490010F791 /* InsightsView.swift */,
 			);
 			path = Sources;
@@ -1063,6 +1076,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FB78F625914A230010F791 /* InsightsTests.swift */,
+				2FA4BB8325EBA7A900168B7D /* MoodCorrelationServiceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -2001,6 +2015,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB791725914A490010F791 /* InsightsView.swift in Sources */,
+				2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2009,6 +2024,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1FB78F725914A230010F791 /* InsightsTests.swift in Sources */,
+				2FA4BB8425EBA7A900168B7D /* MoodCorrelationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
