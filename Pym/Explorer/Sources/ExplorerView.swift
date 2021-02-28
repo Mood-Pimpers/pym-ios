@@ -19,8 +19,7 @@ public struct ExplorerView: View {
                     .padding(10)
 
                 VStack {
-                    Rectangle()
-                        .foregroundColor(.clear)
+                    Color.clear
                         .frame(height: calendarBackgroundHeight)
 
                     ScrollView {
@@ -30,8 +29,7 @@ public struct ExplorerView: View {
                         Spacer()
                     }
 
-                    Rectangle()
-                        .foregroundColor(.clear)
+                    Color.clear
                         .frame(height: 100)
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
