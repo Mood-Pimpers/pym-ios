@@ -88,6 +88,10 @@
 		B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16D44D0259C85F700D507BE /* Assets.generated.swift */; };
 		B16D44F3259C878300D507BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B16D44F5259C878300D507BE /* Localizable.strings */; };
 		B185ABC825E925B000B712E3 /* MoodCorrelationBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185ABC725E925B000B712E3 /* MoodCorrelationBarChart.swift */; };
+		B1B1A71925EAEA970047CE78 /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B1A71825EAEA970047CE78 /* InsightsViewModel.swift */; };
+		B1BEE07525EB9B4B00AA2357 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEE07425EB9B4B00AA2357 /* Date.swift */; };
+		B1BEE07F25EBB75500AA2357 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEE07E25EBB75500AA2357 /* Sequence.swift */; };
+		B1BEE08925EBB76500AA2357 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEE08825EBB76500AA2357 /* Collection.swift */; };
 		B1FA9A7525E2F5BB0029EB36 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */; };
 		B1FA9A8B25E44C8C0029EB36 /* HealthImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */; };
 		B1FA9AA125E44C9F0029EB36 /* MoodReminderIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */; };
@@ -529,6 +533,10 @@
 		B16D44F4259C878300D507BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B16D4516259C8AF400D507BE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B185ABC725E925B000B712E3 /* MoodCorrelationBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCorrelationBarChart.swift; sourceTree = "<group>"; };
+		B1B1A71825EAEA970047CE78 /* InsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewModel.swift; sourceTree = "<group>"; };
+		B1BEE07425EB9B4B00AA2357 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		B1BEE07E25EBB75500AA2357 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		B1BEE08825EBB76500AA2357 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		B1FA9A7425E2F5BB0029EB36 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		B1FA9A8A25E44C8C0029EB36 /* HealthImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImportViewModel.swift; sourceTree = "<group>"; };
 		B1FA9AA025E44C9F0029EB36 /* MoodReminderIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReminderIntroViewModel.swift; sourceTree = "<group>"; };
@@ -974,6 +982,14 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		B1B1A72225EAEAA70047CE78 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1B1A71825EAEA970047CE78 /* InsightsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B1FB76F4259109A30010F791 = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1196,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA4BB7025EB985A00168B7D /* Correlation */,
+				B1B1A72225EAEAA70047CE78 /* ViewModels */,
 				B156FBDF25E8F46600BD487C /* Charts */,
 				B157FBF425E8334E00133197 /* Formatter */,
 				B1FB791625914A490010F791 /* InsightsView.swift */,
@@ -1234,6 +1251,9 @@
 			children = (
 				F5CF8D6B25E548E500DFBD07 /* Array.swift */,
 				F55A2B7225E67DF8007BA1C8 /* Set.swift */,
+				B1BEE07425EB9B4B00AA2357 /* Date.swift */,
+				B1BEE07E25EBB75500AA2357 /* Sequence.swift */,
+				B1BEE08825EBB76500AA2357 /* Collection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2054,6 +2074,7 @@
 			files = (
 				B16554DD259D109D000EBB63 /* UIKitAssets.generated.swift in Sources */,
 				F5CF8DA025E54E7400DFBD07 /* Array.swift in Sources */,
+				B1BEE07F25EBB75500AA2357 /* Sequence.swift in Sources */,
 				F5322F2325A62AC000D2CE7B /* Title.swift in Sources */,
 				B10DD27025E5663C00811739 /* HealthKitAssistant.swift in Sources */,
 				2F48D66625DFB42A00B29B28 /* ExternalEvent.swift in Sources */,
@@ -2070,6 +2091,7 @@
 				2F72A03F25DDC12400B0A978 /* MoodEntry.swift in Sources */,
 				F55A2BDB25E6C0C5007BA1C8 /* ModalService.swift in Sources */,
 				2F48D67B25DFB42D00B29B28 /* ExternalDataAccess.swift in Sources */,
+				B1BEE08925EBB76500AA2357 /* Collection.swift in Sources */,
 				B156694E25DE9B8D00DEB355 /* PickerPageView.swift in Sources */,
 				2FDF8B0E25EAAE7B00F75C57 /* Timeable.swift in Sources */,
 				B16D44D2259C85F700D507BE /* Assets.generated.swift in Sources */,
@@ -2082,6 +2104,7 @@
 				F5322F4325A62AC600D2CE7B /* PrimaryButton.swift in Sources */,
 				2F7C1EAD25DFCB1B00A7C857 /* DateExtensions.swift in Sources */,
 				F55A2B7325E67DF8007BA1C8 /* Set.swift in Sources */,
+				B1BEE07525EB9B4B00AA2357 /* Date.swift in Sources */,
 				2FA2036D25E114AA00EC0925 /* MoodEntryModel.swift in Sources */,
 				B10E7A97259C973D00337DDC /* PersistenceController.swift in Sources */,
 				2F48D65125DFB42700B29B28 /* ExternalDataSource.swift in Sources */,
@@ -2158,6 +2181,7 @@
 				2FA4BB7225EB988100168B7D /* MoodCorrelationService.swift in Sources */,
 				B157FBDD25E8176400133197 /* MoodTrendLineChart.swift in Sources */,
 				B157FBF625E8335C00133197 /* WeekdayFormatter.swift in Sources */,
+				B1B1A71925EAEA970047CE78 /* InsightsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

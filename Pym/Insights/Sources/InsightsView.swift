@@ -2,12 +2,17 @@ import PymCore
 import SwiftUI
 import SwiftUICharts
 
+// swiftlint:disable multiple_closures_with_trailing_closure
 public struct TrendIndicator: View {
     @Binding var percentage: Double
 
     public var body: some View {
         if percentage > 0 {
             Image.arrowUp
+        } else if percentage == 0 {
+            Circle()
+                .fill(Color.lightGray)
+                .frame(width: 5, height: 5)
         } else {
             Image.arrowDown
         }
@@ -15,7 +20,7 @@ public struct TrendIndicator: View {
 }
 
 public struct InsightsView: View {
-    @State var moodPercentage = 5.5
+    @ObservedObject var viewModel = InsightsViewModel()
 
     private let leadingPadding: CGFloat = 20
     private let titleTopPadding: CGFloat = 50
@@ -38,14 +43,14 @@ public struct InsightsView: View {
 
                         HStack {
                             Text("Average Mood".uppercased())
-                            TrendIndicator(percentage: $moodPercentage)
-                            Text(String(format: "%.0f%%", moodPercentage))
+                            TrendIndicator(percentage: $viewModel.moodPercentage)
+                            Text(String(format: "%.0f%%", viewModel.moodPercentage))
                             Spacer()
                         }
                         .padding(.leading, leadingPadding)
                         .padding(.top, -10)
 
-                        MoodTrendLineChart(last: (0 ..< 12).map { _ in .random(in: 1 ... 5) }, current: (0 ..< 6).map { _ in .random(in: 1 ... 5) })
+                        MoodTrendLineChart(last: $viewModel.lastWeekMoodEntries, current: $viewModel.currentWeekMoodEntries)
                             .frame(maxHeight: 200)
                             .padding(.top, -50)
 
@@ -64,21 +69,22 @@ public struct InsightsView: View {
                             Spacer()
                             Spacer()
                         }
+                        .padding(.top, 10)
 
                         ContentCard { alignment in
                             alignment.top(.leading) {
-                                Text("CURRENT WEEK")
+                                Text(viewModel.dateTitle)
                                     .font(.system(size: 20, weight: Font.Weight.bold))
                                     .padding([.top, .leading], 10)
                             }
 
                             alignment.bottom(.leading) {
-                                HStack(spacing: 15) {
-                                    Text("25. JAN")
+                                HStack(spacing: 10) {
+                                    Text(viewModel.formattedStartWeekDate)
                                         .font(.system(size: 15, weight: Font.Weight.light))
                                     Text("-")
                                         .font(.system(size: 15, weight: Font.Weight.light))
-                                    Text("31. JAN")
+                                    Text(viewModel.formattedEndWeekDate)
                                         .font(.system(size: 15, weight: Font.Weight.light))
                                 }
                                 .padding([.bottom, .leading], 10)
@@ -86,10 +92,18 @@ public struct InsightsView: View {
 
                             alignment.center(.trailing) {
                                 HStack {
-                                    Image.chevronLeft
+                                    Button(action: {
+                                        viewModel.previousWeek()
+                                    }) {
+                                        Image.chevronLeft
+                                    }
                                     Spacer()
                                         .frame(maxWidth: 20)
-                                    Image.chevronRight
+                                    Button(action: {
+                                        viewModel.nextWeek()
+                                    }) {
+                                        Image.chevronRight
+                                    }.disabled(viewModel.nextWeekDisabled)
                                 }
                                 .padding([.trailing], 20)
                             }
@@ -101,7 +115,11 @@ public struct InsightsView: View {
                 .edgesIgnoringSafeArea(.all)
             }
             MoodCorrelationBarChart(positiveCorrelationData: ChartData(values: [("training", 5), ("weekend", 4), ("coffee", 3), ("socialize", 1)]), negativeCorrelationData: ChartData(values: [("driving", 1), ("tired", 2), ("fasting", 3), ("university", 4)]))
-            Spacer().frame(maxHeight: 100)
+            Spacer().frame(maxHeight: 120)
+        }
+        .transition(.opacity)
+        .onAppear {
+            viewModel.calculateDates()
         }
     }
 }

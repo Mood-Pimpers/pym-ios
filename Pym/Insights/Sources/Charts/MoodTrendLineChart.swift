@@ -28,8 +28,8 @@ struct MoodTrendLineChart: View {
     private let lastGradientColors = GradientColor(start: Color.grayGradientStart, end: Color.grayGradientEnd)
     private let currentGradientColors = GradientColor(start: Color.blackGradientStart, end: Color.blackGradientEnd)
 
-    @State var last: [Double]
-    @State var current: [Double]
+    @Binding var last: [Double]
+    @Binding var current: [Double]
 
     public var body: some View {
         GeometryReader { geometry in
@@ -54,15 +54,41 @@ struct MoodTrendLineChart: View {
                     }
                     .padding(.top, 60)
 
-                    MultiLineChartView(data: [
-                        (last, lastGradientColors),
-                        (current, currentGradientColors)
-                    ],
-                    title: "",
-                    style: Styles.lineChartStyleOne,
-                    form: CGSize(width: geometry.size.width - 70, height: 200),
-                    rateValue: 5,
-                    dropShadow: false, stepSize: 12)
+                    if last.isEmpty, current.count <= 1 {
+                        ZStack {
+                            Text("""
+                            A few more days of check-ins
+                            until you can unlock your personal
+                            stats
+                            """)
+                                .bold()
+                                .frame(maxWidth: geometry.size.width - 70, maxHeight: 200)
+                                .padding(.top, 15)
+                                .multilineTextAlignment(.center)
+                            MultiLineChartView(data: [
+                                ((0 ..< 12).map { _ in .random(in: 1 ... 5) }, lastGradientColors),
+                                ((0 ..< 12).map { _ in .random(in: 1 ... 5) }, currentGradientColors)
+                            ],
+                            title: "",
+                            style: Styles.lineChartStyleOne,
+                            form: CGSize(width: geometry.size.width - 70, height: 200),
+                            rateValue: 5,
+                            dropShadow: false, stepSize: 12)
+                                .transition(.opacity)
+                                .opacity(0.1)
+                        }
+                    } else {
+                        MultiLineChartView(data: [
+                            (last, lastGradientColors),
+                            (current, currentGradientColors)
+                        ],
+                        title: "",
+                        style: Styles.lineChartStyleOne,
+                        form: CGSize(width: geometry.size.width - 70, height: 200),
+                        rateValue: 5,
+                        dropShadow: false, stepSize: 12)
+                            .transition(.opacity)
+                    }
                 }
                 HStack {
                     Spacer()
@@ -81,7 +107,10 @@ struct MoodTrendLineChart: View {
 }
 
 struct MoodTrendLineChart_Previews: PreviewProvider {
+    @State static var last: [Double] = (0 ..< 12).map { _ in .random(in: 1 ... 5) }
+    @State static var current: [Double] = (0 ..< 6).map { _ in .random(in: 1 ... 5) }
+
     static var previews: some View {
-        MoodTrendLineChart(last: (0 ..< 12).map { _ in .random(in: 1 ... 5) }, current: (0 ..< 6).map { _ in .random(in: 1 ... 5) })
+        MoodTrendLineChart(last: $last, current: $current)
     }
 }
