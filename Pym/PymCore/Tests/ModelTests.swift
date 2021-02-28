@@ -24,7 +24,7 @@ class ModelTests: XCTestCase {
     func testFeelingArrayResolve2() throws {
         let entry = MoodEntryModel(context: PersistenceController.preview.container.viewContext)
 
-        let expectedFeelings: [Feeling] = [.angry, .enthusiastic, .worried, .irritated]
+        let expectedFeelings: Set<Feeling> = [.angry, .enthusiastic, .worried, .irritated]
         entry.feelings = expectedFeelings
         let actualFeelings = entry.feelings
 

@@ -10,7 +10,7 @@ struct MoodCorrelationService {
 
       - Returns: A dictionary containing a correlation value per activity. The correlation values are within the range [-1;1].
      */
-    func calculateCorrelations(ofEntries moodEntries: [MoodEntry], withEvents events: [ExternalEvent]) -> [Activity: Double] {
+    func calculateCorrelations(of moodEntries: [MoodEntry], with events: [ExternalEvent]) -> [Activity: Double] {
         var flattenedEntries = moodEntries.flatMap { entry in
             entry.activities.map { activity in (activity, entry.rating) }
         }
@@ -19,7 +19,7 @@ struct MoodCorrelationService {
             // TODO: rename moodEntry.date into moodEntry.timestamp
             let entryTimeDistances = moodEntries
                 .filter { $0.date.beginning(of: .day) == event.timestamp.beginning(of: .day) }
-                .map { ($0, $0.date.distance(to: event.timestamp)) }
+                .map { ($0, abs($0.date.distance(to: event.timestamp))) }
                 .sorted { $0.1 < $1.1 }
 
             if let closedEntry = entryTimeDistances.first {
@@ -33,10 +33,10 @@ struct MoodCorrelationService {
         return Dictionary(grouping: flattenedEntries) { $0.0 }
             .mapValues { ratings -> Double in
                 let ratingsSum = ratings
-                    .map { ($0.1.rawValue - 3) / 2 } // linearize mood values to range [-1;1]
+                    .map { Double($0.1.rawValue - 3) / Double(2) } // linearize mood values to range [-1;1]
                     .reduce(0, +)
 
-                return Double(ratingsSum) / Double(ratings.count)
+                return ratingsSum / Double(ratings.count)
             }
     }
 }
