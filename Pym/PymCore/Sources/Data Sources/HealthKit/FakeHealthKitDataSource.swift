@@ -1,17 +1,7 @@
 import Foundation
 
 public class FakeHealthKitDataSource: ExternalDataSource {
-    public var sourceName = "HealthKit"
-
     private var eventMemory: [Date: [ExternalEvent]] = [:]
-    private let possibleActivities: [Activity] = [
-        "Workout",
-        "Running",
-        "Skiing",
-        "Walking",
-        "Climbing",
-        "Sleeping"
-    ]
 
     public func getEvents(from startDate: Date, until endDate: Date) -> [ExternalEvent] {
         var events: [ExternalEvent] = []
@@ -19,16 +9,17 @@ public class FakeHealthKitDataSource: ExternalDataSource {
             if let index = eventMemory.index(forKey: date) {
                 events.append(contentsOf: eventMemory[index].value)
             } else {
-                let newEvents = (1 ... Int.random(in: 1 ... 5))
-                    .map { _ in
-                        ExternalEvent(
-                            id: UUID(),
-                            title: possibleActivities[Int.random(in: 0 ... possibleActivities.count - 1)],
-                            timestamp: date
+                let newEvents = (1 ... Int.random(in: 1 ... 3))
+                    .map { _ -> ExternalEvent in
+                        let activity = HealthKitActivity.allCases.randomElement()!
+                        return ExternalEvent(
+                            title: activity.description,
+                            at: date
                                 .adding(.hour, value: Int.random(in: 0 ... 23))
                                 .adding(.minute, value: Int.random(in: 0 ... 59))
                                 .adding(.second, value: Int.random(in: 0 ... 59)),
-                            content: "Distance: \(Double.random(in: 1 ... 25))"
+                            from: .healthKit,
+                            with: (activity, Double.random(in: 1 ... 25), Double(Int.random(in: 20 ... 55)))
                         )
                     }
 
@@ -42,7 +33,7 @@ public class FakeHealthKitDataSource: ExternalDataSource {
     private func iterateDays(from startDate: Date, until endDate: Date) -> [Date] {
         var days: [Date] = []
         var currentDate = startDate.beginning(of: .day)!
-        let endDay = endDate.beginning(of: .day)!
+        let endDay = endDate.end(of: .day)!
         while currentDate.unixTimestamp < endDay.unixTimestamp {
             days.append(currentDate)
             currentDate = currentDate.adding(.day, value: 1)

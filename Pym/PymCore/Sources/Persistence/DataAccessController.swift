@@ -1,8 +1,12 @@
 import CoreData
 
+public typealias ChangeListener = (Date) -> Void
+
 public struct DataAccessController {
-    public static let shared = DataAccessController()
+    public static var shared = DataAccessController()
     static var persistenceController = PersistenceController.shared
+
+    private var changeListeners: [ChangeListener] = []
 
     private init() {
         if getActivities().isEmpty {
@@ -14,7 +18,7 @@ public struct DataAccessController {
         let context = DataAccessController.persistenceController.container.viewContext
         let model = MoodEntryModel(context: context)
         model.id = dto.id
-        model.date = dto.date
+        model.date = dto.timestamp
         model.feelings = dto.feelings
         model.rating = dto.rating
         dto.activities.forEach { activityName in
@@ -29,6 +33,10 @@ public struct DataAccessController {
         DataAccessController.persistenceController.saveContext()
 
         dto.id = model.id
+
+        for listener in changeListeners {
+            listener(dto.timestamp)
+        }
     }
 
     public func getEntries(from startDate: Date, until endDate: Date) -> [MoodEntry] {
@@ -73,28 +81,20 @@ public struct DataAccessController {
         }
     }
 
-    private func getActivityBy(name activityName: Activity) -> ActivityModel? {
+    public func getEarliestEntry() -> MoodEntry? {
         let context = DataAccessController.persistenceController.container.viewContext
 
-        let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
-        request.predicate = NSPredicate(format: "name = '\(activityName)'")
+        let request = NSFetchRequest<MoodEntryModel>(entityName: MoodEntryModel.entityName)
+        request.returnsObjectsAsFaults = false
         request.fetchLimit = 1
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(MoodEntryModel.date), ascending: true)
+        request.sortDescriptors = [sortDescriptor]
 
-        if let results = try? context.fetch(request),
-           results.count == 1 {
-            return results.first
+        if let results = try? context.fetch(request) {
+            return results.map { MoodEntry(from: $0) }.first
         } else {
             return nil
         }
-    }
-
-    private static func seedActivities() {
-        for activityName in ["work", "friends", "school", "relationship", "traveling", "food", "exercise", "weather", "hobbies", "shopping", "relaxing"] {
-            let activity = ActivityModel(context: persistenceController.container.viewContext)
-            activity.id = UUID()
-            activity.name = activityName
-        }
-        persistenceController.saveContext()
     }
 
     public func getQuotes() -> [Quote] {
@@ -124,5 +124,40 @@ public struct DataAccessController {
                 url: { width, height in URL(string: "https://images.unsplash.com/photo-1543751737-d7cf492060cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=\(width)&h=\(height)&q=80")! }
             )
         ]
+    }
+
+    public mutating func addChangeListener(_ changeListener: @escaping ChangeListener) {
+        changeListeners.append(changeListener)
+    }
+
+    private func getActivityBy(name activityName: Activity) -> ActivityModel? {
+        let context = DataAccessController.persistenceController.container.viewContext
+
+        let request = NSFetchRequest<ActivityModel>(entityName: ActivityModel.entityName)
+        request.predicate = NSPredicate(format: "name = '\(activityName)'")
+        request.fetchLimit = 1
+
+        if let results = try? context.fetch(request),
+           results.count == 1 {
+            return results.first
+        } else {
+            return nil
+        }
+    }
+
+    private static func seedActivities() {
+        for activityName in ["work", "friends", "school", "relationship", "traveling", "food", "exercise", "weather", "hobbies", "shopping", "relaxing"] {
+            let activity = ActivityModel(context: persistenceController.container.viewContext)
+            activity.id = UUID()
+            activity.name = activityName
+        }
+        persistenceController.saveContext()
+    }
+}
+
+public extension DataAccessController {
+    func getEntries(fromDay day: Date) -> [MoodEntry] {
+        // ! force-cast justified, since nil is only returned when an unsupported date-component is passed -> day is supported.
+        getEntries(from: day.beginning(of: .day)!, until: day.end(of: .day)!)
     }
 }

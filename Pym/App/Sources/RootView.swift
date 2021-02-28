@@ -27,8 +27,7 @@ struct RootView: View {
                             .tabItem { Image.home }
                         InsightsView()
                             .tabItem { Image.insights }
-                        Text("")
-                            .tabItem {}
+                        Spacer()
                         ExplorerView()
                             .tabItem { Image.explorer }
                         SettingsView()
