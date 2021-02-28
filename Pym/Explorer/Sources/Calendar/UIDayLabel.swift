@@ -20,7 +20,7 @@ struct DayLabel: CalendarItemViewRepresentable {
         if let meanRating = invariantViewProperties.meanRating {
             label.font = UIFont.systemFont(ofSize: 18, weight: invariantViewProperties.isSelected ? .bold : .regular)
 
-            if meanRating < 0 {
+            if meanRating < 3 {
                 label.backgroundColor = UIColor(.chartNegativeColor)
             } else {
                 label.backgroundColor = UIColor(.chartPositiveColor)
@@ -53,7 +53,7 @@ extension CalendarViewContent {
             let meanRating: Double?
             if ratings.count > 0 {
                 let ratingsSum = ratings
-                    .map { Int($0.rawValue - 3) }
+                    .map { Int($0.rawValue) }
                     .reduce(0, +)
                 meanRating = Double(ratingsSum) / Double(ratings.count)
             } else {
