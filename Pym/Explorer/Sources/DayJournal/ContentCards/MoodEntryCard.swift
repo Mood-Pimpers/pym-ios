@@ -1,12 +1,6 @@
 import PymCore
 import SwiftUI
 
-private extension MoodEntry {
-    var feelingsArray: [Feeling] {
-        Array(feelings)
-    }
-}
-
 struct MoodEntryCard: View {
     let imageSideLength: CGFloat
     let spacing: CGFloat
@@ -25,7 +19,10 @@ struct MoodEntryCard: View {
 
                 alignment.bottom(.leading) {
                     HStack(spacing: 15) {
-                        ForEach(moodEntry.feelingsArray.sorted(), id: \.self) {
+                        ForEach(
+                            Array(moodEntry.feelings)
+                                .sorted { $0.description < $1.description },
+                            id: \.self) {
                             Text($0.description)
                                 .contentCardText()
                         }
