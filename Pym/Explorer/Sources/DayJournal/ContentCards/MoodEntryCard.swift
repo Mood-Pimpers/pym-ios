@@ -2,29 +2,6 @@ import PymCore
 import SwiftUI
 
 private extension MoodEntry {
-    var ratingImage: some View {
-        let image: Image
-        switch rating {
-        case .great:
-            image = Image.moodGreat
-        case .good:
-            image = Image.moodGood
-        case .moderate:
-            image = Image.moodModerate
-        case .poor:
-            image = Image.moodPoor
-        case .bad:
-            image = Image.moodBad
-        }
-
-        switch rating {
-        case .great, .good, .moderate:
-            return image.resizable().foregroundColor(.chartPositiveColor)
-        case .poor, .bad:
-            return image.resizable().foregroundColor(.chartNegativeColor)
-        }
-    }
-
     var feelingsArray: [Feeling] {
         Array(feelings)
     }
@@ -37,7 +14,7 @@ struct MoodEntryCard: View {
 
     var body: some View {
         HStack(spacing: spacing) {
-            moodEntry.ratingImage
+            moodEntry.rating.coloredImage
                 .frame(width: imageSideLength, height: imageSideLength)
 
             ContentCard { alignment in

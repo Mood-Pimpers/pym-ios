@@ -7,21 +7,6 @@ private extension Double {
     }
 }
 
-private extension HealthKitActivity {
-    var image: some View {
-        let emoji: String
-        switch self {
-        case .running:
-            emoji = "🏃‍♂️"
-        case .skiing:
-            emoji = "⛷"
-        case .swimming:
-            emoji = "🏊"
-        }
-        return Text(emoji)
-    }
-}
-
 struct HealthKitCard: View {
     let imageSideLength: CGFloat
     let spacing: CGFloat
