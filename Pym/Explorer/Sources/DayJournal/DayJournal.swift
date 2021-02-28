@@ -10,8 +10,6 @@ struct DayJournal: View {
             let incidents = viewModel.getIncidents(forDay: date)
                 .sorted { $0.timestamp < $1.timestamp }
             ZStack {
-                // TODO: add line
-
                 VStack {
                     ForEach(incidents) {
                         IncidentView(incident: $0)

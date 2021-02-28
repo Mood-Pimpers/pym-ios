@@ -6,9 +6,9 @@ extension MoodRating {
         let image = self.image
         switch self {
         case .great, .good, .moderate:
-            return image.resizable().foregroundColor(.chartPositiveColor)
+            return image.resizable().foregroundColor(.greenGradientEnd)
         case .poor, .bad:
-            return image.resizable().foregroundColor(.chartNegativeColor)
+            return image.resizable().foregroundColor(.redGradientEnd)
         }
     }
 }
